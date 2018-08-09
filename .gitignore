@@ -61,3 +61,4 @@ typings/
 .next
 /.idea
 /test/index.js
+.DS_Store
