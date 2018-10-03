@@ -17,11 +17,15 @@ export class Contentfully {
 
         // create query
         const json = await this.contentful.query("/entries",
-            _.assign({}, query, {
-                select: "fields,sys.id,sys.contentType",
-                include: 10,
-                limit: 1000
-            }));
+            _.assign({},
+                {
+                    include: 10,
+                    limit: 1000
+                },
+                query,
+        {
+                    select: "fields,sys.id,sys.contentType"
+                }));
 
         // parse includes
         const links = this._createLinks(json);
