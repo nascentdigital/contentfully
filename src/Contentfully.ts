@@ -13,7 +13,7 @@ export class Contentfully {
         this.contentful = contentful;
     }
 
-    public async getModels(query: any) {
+    public async getModels(query: any): Promise<QueryResult> {
 
         // create query
         const json = await this.contentful.query("/entries",
@@ -30,25 +30,25 @@ export class Contentfully {
         // parse includes
         const links = this._createLinks(json);
 
-        // return transformed items (should be flattened)
-        return this._parseEntries(json.items, links);
+        // get transformed items (should be flattened)
+        const items = this._parseEntries(json.items, links);
+
+        // return result
+        return {
+            items,
+            skip: json.skip,
+            limit: json.limit,
+            total: json.total
+        };
     }
 
     private _createLinks(json: any) {
 
         // create new links
-        const links = {};
+        const links: any = {};
 
-        // link assets and entries
-        this._linkAssets(_.get(json, "includes.Asset"), links);
-        this._linkEntries(_.get(json, "includes.Entry"), links);
-
-        // return links
-        return links;
-    }
-
-    private _linkAssets(assets: any, links: any) {
-        _.forEach(assets, asset => {
+        // link included assets
+        _.forEach(_.get(json, "includes.Asset"), asset => {
 
             // TODO: handle video too
 
@@ -61,14 +61,27 @@ export class Contentfully {
                 size: file.details.size
             };
         });
-    }
 
-    private _linkEntries(entries: any, links: any) {
-        _.forEach(entries, entry => {
+        // link included entries
+        _.forEach(_.get(json, "includes.Entry"), entry => {
             links[entry.sys.id] = {
                 _deferred: entry
             };
         });
+
+        // link payload entries
+        _.forEach(_.get(json, "items"), entry => {
+
+            // link if not already included
+            if (!links[entry.sys.id]) {
+                links[entry.sys.id] = {
+                    _deferred: entry
+                };
+            }
+        });
+
+        // return links
+        return links;
     }
 
     private _dereferenceLink(reference: any, links: any) {
@@ -93,7 +106,19 @@ export class Contentfully {
     private _parseEntries(entries: any, links: any) {
 
         // convert entries to models and return result
-        return _.map(entries, entry => this._parseEntry(entry, links));
+        return _.map(entries, entry => {
+
+            // process entry if not processed
+            const link = links[entry.sys.id];
+            if (link._deferred) {
+
+                // update entry with parsed value
+                _.assign(link, this._parseEntry(link._deferred, links));
+            }
+
+            // return processed link
+            return link;
+        });
     }
 
     private _parseEntry(entry: any, links: any) {
@@ -106,20 +131,28 @@ export class Contentfully {
                 return value;
             }
 
-            // handle array
+            // parse array of values
             if (_.isArray(value)) {
-                return _.map(value, item => this._dereferenceLink(item, links));
+                return _.map(value, item => this._parseValue(item, links));
             }
 
-            // handle values without a link
-            const sys = value.sys;
-            if (sys === undefined
-                || sys.type !== "Link") {
-                return value;
+            // or parse value
+            else {
+                return this._parseValue(value, links);
             }
-
-            // dereference link
-            return this._dereferenceLink(value, links);
         });
+    }
+
+    private _parseValue(value: any, links: any) {
+
+        // handle values without a link
+        const sys = value.sys;
+        if (sys === undefined
+            || sys.type !== "Link") {
+            return value;
+        }
+
+        // dereference link
+        return this._dereferenceLink(value, links);
     }
 }
