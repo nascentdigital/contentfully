@@ -1,6 +1,14 @@
 import _ from "lodash";
 import nodeFetch from "node-fetch";
 import {ContentfulClientOptions} from "./ContentfulClientOptions";
+import {
+    AuthenticationError,
+    AuthorizationError,
+    InvalidLocaleError,
+    InvalidRequestError,
+    NotFoundError,
+    ServerError
+} from "../errors";
 
 
 export class ContentfulClient {
@@ -54,11 +62,59 @@ export class ContentfulClient {
         const fetchClient: any = "fetch" in global ? fetch :  nodeFetch;
         const response = await fetchClient(url);
         if (!response.ok) {
-            const error = await response.text();
-            throw new Error(error);
+
+            // capture error
+            const errorData = await response.text();
+
+            // parse error (always throws)
+            throw this.parseError(errorData);
         }
 
         // extract response
         return await response.json();
+    }
+
+    private parseError(errorData: string): Error {
+
+        // parse error
+        try {
+
+            // throw if entity type isn't an error
+            const errorObject = JSON.parse(errorData);
+            if (_.get(errorObject, "sys.type", "") !== "Error") {
+                return new ServerError("Unexpected server error.");
+            }
+
+            // transform error
+            switch (errorObject.sys.id) {
+
+                case "AccessTokenInvalid":
+                    return new AuthenticationError(errorObject.message);
+
+                case "AccessDenied":
+                    return new AuthorizationError(errorObject.message);
+
+                case "BadRequest":
+                case "InvalidEntry":
+                case "InvalidQuery":
+                case "UnknownField":
+                    return errorObject.message.indexOf("Unknown locale") < 0
+                        ? new InvalidRequestError(errorObject.message)
+                        : new InvalidLocaleError(errorObject.message);
+
+                case "NotFound":
+                    return new NotFoundError(errorObject.message);
+
+                default:
+                    return new ServerError(errorObject.message);
+            }
+        }
+
+        // or suppress parsing error
+        catch (e) {
+        }
+
+        // fallback to throwing generic string
+        throw new ServerError(errorData);
     }
 }

@@ -1,5 +1,10 @@
 import _ from "lodash";
-import {ContentfulClient} from "./ContentfulClient";
+import {ContentfulClient} from "./contentful";
+import {
+    MediaTransform,
+    QueryOptions
+} from "./QueryOptions";
+import {QueryResult} from "./QueryResult";
 
 
 export class Contentfully {
@@ -13,12 +18,21 @@ export class Contentfully {
         this.contentful = contentful;
     }
 
-    public async getModels(query: any): Promise<QueryResult> {
+    public getModel(id: string): Promise<any> {
+        return this._query(`/entries/${id}`);
+    }
+
+    public getModels(query: any = {}, options: QueryOptions = {}): Promise<QueryResult> {
+        return this._query("/entries", query, options);
+    }
+
+    private async _query(path: string, query: any = {},
+                         options: QueryOptions = {}): Promise<QueryResult> {
 
         // create query
         const json = await this.contentful.query("/entries",
             _.assign({},
-                {
+        {
                     include: 10,
                     limit: 1000
                 },
@@ -28,7 +42,7 @@ export class Contentfully {
                 }));
 
         // parse includes
-        const links = this._createLinks(json);
+        const links = await this._createLinks(json, options.mediaTransform);
 
         // get transformed items (should be flattened)
         const items = this._parseEntries(json.items, links);
@@ -42,43 +56,50 @@ export class Contentfully {
         };
     }
 
-    private _createLinks(json: any) {
+    private async _createLinks(json: any, mediaTransform?: MediaTransform) {
 
         // create new links
         const links: any = {};
 
         // link included assets
-        _.forEach(_.get(json, "includes.Asset"), asset => {
+        for(const asset of _.get(json, "includes.Asset") || []) {
 
-            // TODO: handle video too
+            // TODO: handle non-image assets (e.g. video)
 
-            // extract media as asset
+            // capture media file
+            const sys = asset.sys;
             const file = asset.fields.file;
-            links[asset.sys.id] = {
+            let media = {
+                _id: sys.id,
                 url: file.url,
-                type: file.contentType,
+                contentType: file.contentType,
                 dimensions: _.pick(file.details.image, ["width", "height"]),
-                size: file.details.size
+                size: file.details.size,
+                version: sys.revision
             };
-        });
+
+            // apply any transform (if provided)
+            if (mediaTransform) {
+                media = await mediaTransform(media);
+            }
+
+            // map media
+            links[sys.id] = media;
+        }
 
         // link included entries
-        _.forEach(_.get(json, "includes.Entry"), entry => {
+        for (const entry of _.get(json, "includes.Entry") || []) {
             links[entry.sys.id] = {
                 _deferred: entry
             };
-        });
+        }
 
         // link payload entries
-        _.forEach(_.get(json, "items"), entry => {
-
-            // link if not already included
-            if (!links[entry.sys.id]) {
-                links[entry.sys.id] = {
-                    _deferred: entry
-                };
-            }
-        });
+        for (const entry of _.get(json, "items") || []) {
+            links[entry.sys.id] = {
+                _deferred: entry
+            };
+        }
 
         // return links
         return links;
@@ -86,10 +107,8 @@ export class Contentfully {
 
     private _dereferenceLink(reference: any, links: any) {
 
-        // get link
+        // get link (resolve if deferred)
         let link = links[reference.sys.id];
-
-        // resolve link if deferred
         if (link._deferred) {
 
             // update entry with parsed value
@@ -109,15 +128,24 @@ export class Contentfully {
         return _.map(entries, entry => {
 
             // process entry if not processed
-            const link = links[entry.sys.id];
-            if (link._deferred) {
+            const sys = entry.sys;
+            const modelId = sys.id;
+            const model = links[modelId];
+            if (model._deferred) {
 
                 // update entry with parsed value
-                _.assign(link, this._parseEntry(link._deferred, links));
+                _.assign(model, this._parseEntry(model._deferred, links));
+
+                // prune deferral
+                delete model._deferred;
             }
 
-            // return processed link
-            return link;
+            // add model metadata
+            model._id = modelId;
+            model._type = sys.contentType.sys.id;
+
+            // return model
+            return model;
         });
     }
 

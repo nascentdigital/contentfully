@@ -1,5 +1,5 @@
 
-interface QueryResult {
+export interface QueryResult {
     items: any;
     skip: number;
     limit: number;
