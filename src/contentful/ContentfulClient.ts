@@ -59,7 +59,7 @@ export class ContentfulClient {
         });
 
         // fetch data (throw if there is an error)
-        const fetchClient: any = "fetch" in global ? fetch :  nodeFetch;
+        const fetchClient = ContentfulClient.getFetchClient();
         const response = await fetchClient(url);
         if (!response.ok) {
 
@@ -72,6 +72,10 @@ export class ContentfulClient {
 
         // extract response
         return await response.json();
+    }
+
+    private static getFetchClient(): any {
+        return "fetch" in global ? fetch :  nodeFetch;
     }
 
     private parseError(errorData: string): Error {
