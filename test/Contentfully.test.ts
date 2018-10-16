@@ -124,4 +124,30 @@ describe("Content with linked entities and assets", () => {
         expect(rallyEngine).toBe(rotax900);
         expect(rotax900).not.toMatchObject(ROTAX_900);
     });
+
+    it("Should query the contentful client with the correct id retrieving a model", async () => {
+
+        // ensure mock has never been called
+        expect(MockContentfulClient).not.toHaveBeenCalled();
+
+        // create client
+        const contentfulClient = new ContentfulClient(contentfulOptions);
+        const contentfully = new Contentfully(contentfulClient);
+
+        const id = 'test1234';
+        const expectedPath = `/entries/${id}`;
+        const expectedDefaultOptions = {
+            include: 10,
+            limit: 1000,
+            select: "fields,sys.id,sys.contentType"
+        };
+
+        await contentfully.getModel(id);
+
+        // assert invocations
+        expect(MockContentfulClient).toHaveBeenCalledTimes(1);
+        expect(mockClientQuery).toHaveBeenCalledTimes(1);
+        expect(mockClientQuery).toHaveBeenCalledWith(expectedPath, expectedDefaultOptions);
+    });
+
 });

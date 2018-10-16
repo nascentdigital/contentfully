@@ -30,7 +30,7 @@ export class Contentfully {
                          options: QueryOptions = {}): Promise<QueryResult> {
 
         // create query
-        const json = await this.contentful.query("/entries",
+        const json = await this.contentful.query(path,
             _.assign({},
         {
                     include: 10,
