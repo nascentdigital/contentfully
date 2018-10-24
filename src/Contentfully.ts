@@ -1,11 +1,15 @@
 import _ from "lodash";
-import {ContentfulClient} from "./contentful";
+import { ContentfulClient } from "./contentful";
 import {
     MediaTransform,
     QueryOptions
 } from "./QueryOptions";
-import {QueryResult} from "./QueryResult";
+import { QueryResult } from "./QueryResult";
 
+
+// constants
+const DEFAULT_SELECT_ID = 'sys.id'
+const DEFAULT_SELECT_CONTENT_TYPE = 'sys.contentType'
 
 export class Contentfully {
 
@@ -27,19 +31,39 @@ export class Contentfully {
     }
 
     private async _query(path: string, query: any = {},
-                         options: QueryOptions = {}): Promise<QueryResult> {
+        options: QueryOptions = {}): Promise<QueryResult> {
+
+        // set default select values
+        let select: string = 'fields'
+
+        // if select query is passed
+        if (query.select) {
+            // clean select query 
+            select = _.chain(query.select)
+                // remove white space
+                .replace(/\s/g, '')
+                // remove default sys.id
+                .replace(DEFAULT_SELECT_ID, '')
+                // remove content type
+                .replace(DEFAULT_SELECT_CONTENT_TYPE, '')
+                .trim(',')
+                .value()
+        }
+
+        // prepend default selects
+        query.select = `${DEFAULT_SELECT_ID},${DEFAULT_SELECT_CONTENT_TYPE},${select}`
 
         // create query
         const json = await this.contentful.query(path,
             _.assign({},
-        {
+                {
                     include: 10,
                     limit: 1000
                 },
-                query,
-        {
-                    select: "fields,sys.id,sys.contentType"
-                }));
+                query
+            )
+        );
+
 
         // parse includes
         const links = await this._createLinks(json, options.mediaTransform);
@@ -62,7 +86,7 @@ export class Contentfully {
         const links: any = {};
 
         // link included assets
-        for(const asset of _.get(json, "includes.Asset") || []) {
+        for (const asset of _.get(json, "includes.Asset") || []) {
 
             // TODO: handle non-image assets (e.g. video)
 

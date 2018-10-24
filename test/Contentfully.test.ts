@@ -1,7 +1,7 @@
 import _ from "lodash";
 import "jest";
-import {mocked} from "ts-jest/utils";
-import {ContentfulClient} from "../src/contentful/ContentfulClient";
+import { mocked } from "ts-jest/utils";
+import { ContentfulClient } from "../src/contentful/ContentfulClient";
 import {
     Contentfully
 } from "../src";
@@ -139,7 +139,7 @@ describe("Content with linked entities and assets", () => {
         const expectedDefaultOptions = {
             include: 10,
             limit: 1000,
-            select: "fields,sys.id,sys.contentType"
+            select: "sys.id,sys.contentType,fields"
         };
 
         await contentfully.getModel(id);
@@ -150,4 +150,48 @@ describe("Content with linked entities and assets", () => {
         expect(mockClientQuery).toHaveBeenCalledWith(expectedPath, expectedDefaultOptions);
     });
 
+
+    it("Should query with correct select fields and remove whitespace", async () => {
+        // ensure mock has never been called
+        expect(MockContentfulClient).not.toHaveBeenCalled();
+
+        // create client
+        const contentfulClient = new ContentfulClient(contentfulOptions);
+        const contentfully = new Contentfully(contentfulClient);
+
+        const mockQuery = {
+            select: "selectedFields, another, hello"
+        };
+        const mockPath = "/entries";
+        const expectedMockArgs = {
+            include: 10,
+            limit: 1000,
+            select: `sys.id,sys.contentType,selectedFields,another,hello`
+        };
+
+        contentfully.getModels(mockQuery);
+        expect(contentfulClient.query).toHaveBeenCalledWith(mockPath, expectedMockArgs);
+    });
+
+    it("Should remove duplicate sys.id and content type in select query", async () => {
+        // ensure mock has never been called
+        expect(MockContentfulClient).not.toHaveBeenCalled();
+
+        // create client
+        const contentfulClient = new ContentfulClient(contentfulOptions);
+        const contentfully = new Contentfully(contentfulClient);
+
+        const mockQuery = {
+            select: "selectedFields, another, hello, sys.id, sys.contentType"
+        };
+        const mockPath = "/entries";
+        const expectedMockArgs = {
+            include: 10,
+            limit: 1000,
+            select: `sys.id,sys.contentType,selectedFields,another,hello`
+        };
+
+        contentfully.getModels(mockQuery);
+        expect(contentfulClient.query).toHaveBeenCalledWith(mockPath, expectedMockArgs);
+    });
 });
