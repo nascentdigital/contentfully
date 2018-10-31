@@ -39,7 +39,7 @@ You can get these by doing the following after logging into the
 
 ## Basic Usage
 
-Getting started is really easy.  First you'll need to create an configure a 
+Getting started is really easy.  First you'll need to create and configure a 
 `ContentfulClient` instance and pass it to a `Contentfully` instance: 
 
 ```javascript
@@ -63,7 +63,7 @@ call.
 ```javascript
 async function query() {
 
-    // get the 3nd page of my model objects
+    // get the 3rd page of my model objects
     const json = await contentfully.getModels({
         content_type: "myModel",
         skip: 20,
