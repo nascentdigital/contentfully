@@ -2,6 +2,7 @@ import _ from "lodash";
 import "jest";
 import { mocked } from "ts-jest/utils";
 import { ContentfulClient } from "../src/contentful/ContentfulClient";
+import { Media } from '../src/entities';
 import {
     Contentfully
 } from "../src";
@@ -193,5 +194,31 @@ describe("Content with linked entities and assets", () => {
 
         contentfully.getModels(mockQuery);
         expect(contentfulClient.query).toHaveBeenCalledWith(mockPath, expectedMockArgs);
+    });
+
+    it("Should transform media when option callback is provided", async () => {
+        // ensure mock has never been called
+        expect(MockContentfulClient).not.toHaveBeenCalled();
+
+        // create client
+        const contentfulClient = new ContentfulClient(contentfulOptions);
+        const contentfully = new Contentfully(contentfulClient);
+
+        // fetch models with media transform option
+        const result = await contentfully.getModels({}, {
+            mediaTransform: async (media: Media) => {
+                media.description = 'default description'
+                return media
+            }
+        });
+
+        // filter items with image property
+        const items = _.filter(result.items, (r) => !_.isUndefined(r.image));
+
+        // assert transform
+        expect(items.length).toBeGreaterThan(0)
+        _.forEach(items, item => {
+            expect(item.image.description).toEqual('default description');
+        })
     });
 });

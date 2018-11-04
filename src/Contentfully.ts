@@ -38,7 +38,7 @@ export class Contentfully {
 
         // if select query is passed
         if (query.select) {
-            // clean select query 
+            // clean select query
             select = _.chain(query.select)
                 // remove white space
                 .replace(/\s/g, '')
@@ -63,7 +63,6 @@ export class Contentfully {
                 query
             )
         );
-
 
         // parse includes
         const links = await this._createLinks(json, options.mediaTransform);
