@@ -1,7 +1,7 @@
 import _ from "lodash";
 import "jest";
 import { mocked } from "ts-jest/utils";
-import { ContentfulClient } from "../src/contentful/ContentfulClient";
+import { ContentfulClient } from "../src/contentful";
 import { Media } from '../src/entities';
 import {
     Contentfully
