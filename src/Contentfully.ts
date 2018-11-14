@@ -142,8 +142,8 @@ export class Contentfully {
         if (link._deferred) {
 
             // add link content type metadata 
-            const deferredSys = link._deferred.sys
-            link._type = deferredSys.contentType.sys.id
+            const deferredSys = link._deferred.sys;
+            link._type = deferredSys.contentType.sys.id;
 
             // update entry with parsed value
             _.assign(link, this._parseEntry(link._deferred, links));
