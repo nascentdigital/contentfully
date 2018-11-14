@@ -132,9 +132,18 @@ export class Contentfully {
 
     private _dereferenceLink(reference: any, links: any) {
 
+        const sys = reference.sys;
+        const modelId = sys.id;
         // get link (resolve if deferred)
-        let link = links[reference.sys.id];
+        let link = links[modelId];
+
+        // add link id metadata
+        link._id = modelId
         if (link._deferred) {
+
+            // add link content type metadata 
+            const deferredSys = link._deferred.sys
+            link._type = deferredSys.contentType.sys.id
 
             // update entry with parsed value
             _.assign(link, this._parseEntry(link._deferred, links));
