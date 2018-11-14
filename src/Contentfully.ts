@@ -138,7 +138,7 @@ export class Contentfully {
         let link = links[modelId];
 
         // add link id metadata
-        link._id = modelId
+        link._id = modelId;
         if (link._deferred) {
 
             // add link content type metadata 
