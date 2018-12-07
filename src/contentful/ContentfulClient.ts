@@ -59,7 +59,7 @@ export class ContentfulClient {
         });
 
         // fetch data (throw if there is an error)
-        const fetchClient = ContentfulClient.getFetchClient();
+        const fetchClient = this.getFetchClient();
         const response = await fetchClient(url);
         if (!response.ok) {
 
@@ -74,7 +74,11 @@ export class ContentfulClient {
         return await response.json();
     }
 
-    private static getFetchClient(): any {
+    private getFetchClient(): any {
+
+        if (this.options.fetch) {
+            return fetch;
+        }
         return "fetch" in global ? fetch :  nodeFetch;
     }
 
