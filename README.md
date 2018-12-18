@@ -39,7 +39,7 @@ You can get these by doing the following after logging into the
 
 ## Basic Usage
 
-Getting started is really easy.  First you'll need to create and configure a 
+Getting started is really easy. First you'll need to create and configure a 
 `ContentfulClient` instance.
  
  | Option        | Type    | Required? | Default            |
@@ -50,7 +50,7 @@ Getting started is really easy.  First you'll need to create and configure a
  | preview       | boolean | NO        | false              |
  | fetch         | any     | NO        | fetch / node-fetch |
  
- Once configured, pass theclient into a `Contentfully` instance:
+ Once configured, pass the client into a `Contentfully` instance:
 
 ```javascript
 import {ContentfulClient, Contentfully} from "contentfully";
