@@ -40,7 +40,17 @@ You can get these by doing the following after logging into the
 ## Basic Usage
 
 Getting started is really easy.  First you'll need to create and configure a 
-`ContentfulClient` instance and pass it to a `Contentfully` instance: 
+`ContentfulClient` instance.
+ 
+ | Option        | Type    | Required? | Default            |
+ |---------------|---------|-----------|--------------------|
+ | accessToken   | string  | YES       |                    |
+ | spaceId       | string  | YES       |                    |
+ | environmentId | string  | NO        | master             |
+ | preview       | boolean | NO        | false              |
+ | fetch         | any     | NO        | fetch / node-fetch |
+ 
+ Once configured, pass theclient into a `Contentfully` instance:
 
 ```javascript
 import {ContentfulClient, Contentfully} from "contentfully";
@@ -49,7 +59,7 @@ import {ContentfulClient, Contentfully} from "contentfully";
 const contentfulClient = new ContentfulClient({
     accessToken: "YOUR_API_KEY",
     spaceId:     "YOUR_SPACE_ID"
-);
+});
 
 // create a Contentfully instance
 const contentfully = new Contentfully(contentfulClient);
@@ -111,3 +121,7 @@ It should look something like this:
 }
 
 ```
+
+## IE Support
+
+By default, `Contentfully` uses the native fetch client in the browser, otherwise it will use `node-fetch`. Since IE does not have `fetch` native to it, use the `fetch` option with something like [`isomorphic-fetch`](https://www.npmjs.com/package/isomorphic-fetch) when instantiating `ContentfulClient`.   

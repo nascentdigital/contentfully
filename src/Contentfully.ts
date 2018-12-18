@@ -137,11 +137,16 @@ export class Contentfully {
         // get link (resolve if deferred)
         let link = links[modelId];
 
+        // bail if no link
+        if (!link) {
+            return
+        }
+
         // add link id metadata
         link._id = modelId;
         if (link._deferred) {
 
-            // add link content type metadata 
+            // add link content type metadata
             const deferredSys = link._deferred.sys;
             link._type = deferredSys.contentType.sys.id;
 
