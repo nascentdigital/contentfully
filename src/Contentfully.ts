@@ -165,7 +165,6 @@ export class Contentfully {
 
         // convert entries to models and return result
         return _.map(entries, entry => {
-
             // process entry if not processed
             const sys = entry.sys;
             const modelId = sys.id;
@@ -173,7 +172,7 @@ export class Contentfully {
             if (model._deferred) {
 
                 // update entry with parsed value
-                _.assign(model, this._parseEntry(model._deferred, links));
+                _.assign(model, (this._parseEntry(model._deferred, links)));
 
                 // prune deferral
                 delete model._deferred;
@@ -191,31 +190,31 @@ export class Contentfully {
     private _parseEntry(entry: any, links: any) {
 
         // transform entry to model and return result
-        return _.mapValues(entry.fields, value => {
-
-            // handle null values
-            if (value === null || value === undefined) {
-                return value;
-            }
-
+        _.forEach(entry.fields, (value, key) => {
             // parse array of values
             if (_.isArray(value)) {
-                return _.map(value, item => this._parseValue(item, links));
+                entry.fields[key] = _.compact(_.map(value, item => this._parseValue(item, links)));
             }
 
             // or parse value
             else {
-                return this._parseValue(value, links);
+                // handle null values otherwise pass back the values
+                if(this._parseValue(value, links) === undefined) {
+                    _.unset(entry.fields, key)
+                } else {
+                    entry.fields[key] = this._parseValue(value, links);
+                }
             }
         });
+
+        return entry.fields;
     }
 
     private _parseValue(value: any, links: any) {
 
         // handle values without a link
         const sys = value.sys;
-        if (sys === undefined
-            || sys.type !== "Link") {
+        if (sys === undefined || sys.type !== "Link") {
             return value;
         }
 
