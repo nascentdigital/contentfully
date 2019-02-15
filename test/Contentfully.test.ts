@@ -7,6 +7,7 @@ import {
     Contentfully
 } from "../src";
 import fullContent from "./data/linked.json";
+import draftedContent from "./data/draftedContent.json";
 
 
 // setup mocks
@@ -29,7 +30,6 @@ describe("Content with linked entities and assets", () => {
 
     // test setup
     beforeEach(() => {
-
         // clear all instances
         MockContentfulClient.mockClear();
         mockClientQuery.mockClear();
@@ -220,5 +220,33 @@ describe("Content with linked entities and assets", () => {
         _.forEach(items, item => {
             expect(item.image.description).toEqual('default description');
         })
+    });
+
+    // Test with draft mode content
+    const mockClientQuery2 = jest.fn()
+        .mockImplementation(async () => {
+            return _.cloneDeep(draftedContent)
+        });
+
+    it("Delivery API - Should skip fields that are empty/undefined", async () => {
+        // ensure mock has never been called
+        expect(MockContentfulClient).not.toHaveBeenCalled();
+        // create implementation
+        MockContentfulClient.mockImplementation(() => {
+            return {
+                query: mockClientQuery2
+            };
+        });
+
+        // create client
+        const contentfulClient = new ContentfulClient(contentfulOptions);
+        const contentfully = new Contentfully(contentfulClient);
+
+        // fetch models with media transform option
+        const result = await contentfully.getModels();
+
+        // Validate that unpublished fields have been removed
+        expect(Object.keys(result.items[0]).length).toBe(9); // 10 total, 1 unpublished
+        expect(result.items[0].blocks.length).toBe(3); // 5 total, 2 unpublished
     });
 });
