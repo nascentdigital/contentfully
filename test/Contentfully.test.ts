@@ -245,12 +245,8 @@ describe("Content with linked entities and assets", () => {
         // fetch models with media transform option
         const result = await contentfully.getModels();
 
-        // assert transform
-        expect(Object.keys(result.items[0]).length).toBe(9);
-        expect(result.items[0].blocks.length).toBe(3);
-
-        // Preview API
-        // expect(Object.keys(result.items[0]).length).toBe(10);
-        // expect(result.items[0].blocks.length).toBe(5);
+        // Validate that unpublished fields have been removed
+        expect(Object.keys(result.items[0]).length).toBe(9); // 10 total, 1 unpublished
+        expect(result.items[0].blocks.length).toBe(3); // 5 total, 2 unpublished
     });
 });
