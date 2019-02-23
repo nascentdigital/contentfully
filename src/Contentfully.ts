@@ -10,6 +10,7 @@ import { QueryResult } from "./QueryResult";
 // constants
 const DEFAULT_SELECT_ID = 'sys.id'
 const DEFAULT_SELECT_CONTENT_TYPE = 'sys.contentType'
+const DEFAULT_SELECT_UPDATED_AT = 'sys.updatedAt'
 
 export class Contentfully {
 
@@ -46,12 +47,15 @@ export class Contentfully {
                 .replace(DEFAULT_SELECT_ID, '')
                 // remove content type
                 .replace(DEFAULT_SELECT_CONTENT_TYPE, '')
+                // remove updated at
+                .replace(DEFAULT_SELECT_UPDATED_AT, '')
                 .trim(',')
                 .value()
         }
 
         // prepend default selects
-        query.select = `${DEFAULT_SELECT_ID},${DEFAULT_SELECT_CONTENT_TYPE},${select}`
+        query.select = `${DEFAULT_SELECT_ID},${DEFAULT_SELECT_CONTENT_TYPE},${DEFAULT_SELECT_UPDATED_AT},${select}`
+        // query.select = ``
 
         // create query
         const json = await this.contentful.query(path,
