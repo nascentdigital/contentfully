@@ -140,7 +140,7 @@ describe("Content with linked entities and assets", () => {
         const expectedDefaultOptions = {
             include: 10,
             limit: 1000,
-            select: "sys.id,sys.contentType,fields"
+            select: "sys.id,sys.contentType,sys.updatedAt,fields"
         };
 
         await contentfully.getModel(id);
@@ -167,7 +167,7 @@ describe("Content with linked entities and assets", () => {
         const expectedMockArgs = {
             include: 10,
             limit: 1000,
-            select: `sys.id,sys.contentType,selectedFields,another,hello`
+            select: `sys.id,sys.contentType,sys.updatedAt,selectedFields,another,hello`
         };
 
         contentfully.getModels(mockQuery);
@@ -183,13 +183,13 @@ describe("Content with linked entities and assets", () => {
         const contentfully = new Contentfully(contentfulClient);
 
         const mockQuery = {
-            select: "selectedFields, another, hello, sys.id, sys.contentType"
+            select: "selectedFields, another, hello, sys.id, sys.contentType, sys.updatedAt"
         };
         const mockPath = "/entries";
         const expectedMockArgs = {
             include: 10,
             limit: 1000,
-            select: `sys.id,sys.contentType,selectedFields,another,hello`
+            select: `sys.id,sys.contentType,sys.updatedAt,selectedFields,another,hello`
         };
 
         contentfully.getModels(mockQuery);
