@@ -185,6 +185,7 @@ export class Contentfully {
             // add model metadata
             model._id = modelId;
             model._type = sys.contentType.sys.id;
+            model._updatedAt = sys.updatedAt;
 
             // return model
             return model;
