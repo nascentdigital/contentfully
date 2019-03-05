@@ -186,6 +186,10 @@ export class Contentfully {
             model._id = modelId;
             model._type = sys.contentType.sys.id;
 
+            if (sys.updatedAt) {
+                model._updatedAt = sys.updatedAt;
+            }
+
             // return model
             return model;
         });
