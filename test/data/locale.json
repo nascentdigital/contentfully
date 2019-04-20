@@ -1,0 +1,5764 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 1,
+  "skip": 0,
+  "limit": 1000,
+  "items": [
+    {
+      "fields": {
+        "id": {
+          "en-CA": "babylonPage"
+        },
+        "slug": {
+          "en-CA": "/health/personal/babylon"
+        },
+        "seo": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "28d03wi6O4c2qamCqsYEmm"
+            }
+          }
+        },
+        "breadcrumbs": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5ddR8TLu8w44iAIYmMC6ku"
+            }
+          }
+        },
+        "nav": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "lym3icOh2g6OEAaEKkOsY"
+            }
+          }
+        },
+        "heroBanner": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6mQHGp8v4ImsoSwweuCOcQ"
+            }
+          }
+        },
+        "howItWorks": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6Hop4XcTviSAaMyeCWI6YU"
+            }
+          }
+        },
+        "doctorProfiles": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6EYYgkQuWcieeqK4w4g6wO"
+            }
+          }
+        },
+        "useCases": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2M0ltHaeNqyY2saEqYGG6Y"
+            }
+          }
+        },
+        "mediaBanner": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6A7MCmyFl6IkIeKAkoAYs8"
+            }
+          }
+        },
+        "appDemo": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4e7psB4bgkoIOoG8MKcMuS"
+            }
+          }
+        },
+        "symptomChecker": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4V91hxk9lKSKesa8MqI2Ao"
+            }
+          }
+        },
+        "healthRecordsBanner": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "DGrIhTy0nIkUcSsoQMIA"
+            }
+          }
+        },
+        "partnershipBanner": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1spSYfjXDqsQUgU8s2SQeC"
+            }
+          }
+        },
+        "faqs": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4ZxVi7P89GsCM2aSIssMay"
+            }
+          }
+        },
+        "downloadApps": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1ZT5GZMmY4G0moY2C0KO6W"
+            }
+          }
+        },
+        "socialMediaFooter": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4V79apclza8oMwkaUmMWmM"
+            }
+          }
+        },
+        "contactUs": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5XEQ0iexIQgwWacAAw6WUo"
+            }
+          }
+        }
+      },
+      "sys": {
+        "id": "14bx6Ph8nAW8qOoaKkgaKa",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "babylonPage"
+          }
+        },
+        "updatedAt": "2019-01-21T02:34:39.263Z"
+      }
+    }
+  ],
+  "includes": {
+    "Entry": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "1FGR9qskmcwEssM6wiuA2E",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "promoText"
+            }
+          },
+          "revision": 11,
+          "createdAt": "2018-10-12T14:29:18.440Z",
+          "updatedAt": "2019-01-24T17:37:45.635Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "babylonSymptomCheckerPromoText"
+          },
+          "title": {
+            "en-CA": "Check your symptoms 24/7. ",
+            "fr-CA": "Vérifiez vos symptômes en tout temps."
+          },
+          "description": {
+            "en-CA": "Created by experienced doctors and scientists using Artificial Intelligence, the Symptom Checker asks you questions about your symptoms and can suggest possible causes or courses of action.\n",
+            "fr-CA": "Conçu par une équipe de médecins et de spécialistes chevronnés utilisant l'intelligence artificielle, le vérificateur de symptômes vous pose des questions sur vos symptômes et peut vous suggérer des causes ou des traitements possibles."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "1P3Hl5MokNOGWc4QcC1lKJ",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "faq"
+            }
+          },
+          "revision": 5,
+          "createdAt": "2019-01-15T21:18:52.537Z",
+          "updatedAt": "2019-03-19T17:51:31.735Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "question": {
+            "en-CA": "When can I see a doctor? ",
+            "en-CA-BC": "When can I see a doctor? "
+          },
+          "answer": {
+            "en-CA": "Our doctors are available for consultations during the following times (BC only):\n\n* Monday-Friday: 8am-8pm (PST)\n* Saturday: 8am-6pm (PST)\n* Sunday: 8am-4pm (PST)\n",
+            "en-CA-BC": "Our doctors are available for consultations during the following times (BC only):\n\n* Monday-Friday: 8am-8pm (PST)\n* Saturday: 8am-6pm (PST)\n* Sunday: 8am-4pm (PST)\n"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "1WV9CyWwvqm6yAkuioAIQQ",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "faq"
+            }
+          },
+          "revision": 9,
+          "createdAt": "2018-10-22T16:16:44.119Z",
+          "updatedAt": "2019-01-22T22:56:31.543Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "question": {
+            "en-CA": "Is Babylon by TELUS Health secure?",
+            "fr-CA": "Le service Babylon par TELUS Santé est-il sécuritaire? "
+          },
+          "answer": {
+            "en-CA": "We take data security and privacy extremely seriously. All of Babylon by TELUS Health’s clinical procedures meet or exceed industry and legal standards. We retain patient records in accordance with national best practice guidelines and all patient data is securely transmitted using industry-recognized encryption methods.",
+            "fr-CA": "TELUS attache une très grande importance à la sécurité et à la protection de la vie privée. Toutes les procédures cliniques du service Babylon par TELUS Santé respectent ou dépassent les normes légales ou sectorielles. La conservation des dossiers des patients se fait selon les meilleures pratiques en vigueur au pays, et toutes les données des patients sont transmises de façon sécurisée au moyen de méthodes de chiffrement reconnues."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "1ZT5GZMmY4G0moY2C0KO6W",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "download"
+            }
+          },
+          "revision": 4,
+          "createdAt": "2018-10-12T14:47:40.826Z",
+          "updatedAt": "2019-01-21T13:17:39.423Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "phoneFront": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1gmD9vCm6AwWgK4cu6woG4"
+              }
+            }
+          },
+          "phoneBack": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5FXNLwv9XGS8eGysWWOU0k"
+              }
+            }
+          },
+          "title": {
+            "en-CA": "Download the app now.",
+            "fr-CA": "Téléchargez l’application dès maintenant."
+          },
+          "description": {
+            "en-CA": "Download the app now from the App Store or Google Play Store for access on your mobile phone.",
+            "fr-CA": "Téléchargez l’application dès maintenant à partir de la boutique Google Play ou App Store sur votre appareil mobile."
+          },
+          "downloadLinks": {
+            "en-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4pWWKdp61aii8CekUq2wcG"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3yRNxDRYgE6YeAESus82mo"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "1eCV9vmm2mkwI2mAsu8iIu",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-26T20:13:10.955Z",
+          "updatedAt": "2019-01-21T03:37:43.206Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Contact Us",
+            "fr-CA": "Nous joindre"
+          },
+          "url": {
+            "en-CA": "#contactUs"
+          },
+          "id": {
+            "en-CA": "contactUsLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "1gmD9vCm6AwWgK4cu6woG4",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "phoneWithMedia"
+            }
+          },
+          "revision": 1,
+          "createdAt": "2018-10-12T14:47:46.706Z",
+          "updatedAt": "2018-10-12T14:50:08.315Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "phone": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3Sw1c8gbfGGuwUW0EGwCOW"
+              }
+            }
+          },
+          "id": {
+            "en-CA": "babylonOnboardingPhone"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "1spSYfjXDqsQUgU8s2SQeC",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "banner"
+            }
+          },
+          "revision": 6,
+          "createdAt": "2018-10-12T14:43:05.928Z",
+          "updatedAt": "2018-12-16T17:01:59.544Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "aboutUs"
+          },
+          "content": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5ktuODhrOM6oqyksw4OcWQ"
+              }
+            }
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6RDy95JmMgI6o8GIiMKY86"
+              }
+            }
+          },
+          "logo": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2DJrD7PS0AGMqOgkMEQsA6"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "25ztjMLiWAYg062EgWcSIY",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "faq"
+            }
+          },
+          "revision": 11,
+          "createdAt": "2019-01-11T22:40:24.568Z",
+          "updatedAt": "2019-01-23T00:42:27.488Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "question": {
+            "en-CA": "How do we deliver quality care? ",
+            "en-CA-BC": "How do we deliver quality care? ",
+            "fr-CA": "Comment parvenons-nous à offrir des soins de qualité? "
+          },
+          "answer": {
+            "en-CA": "Babylon by TELUS Health is designed to address a range of healthcare needs, tailored to the circumstances of each individual patient.\n \n* For patients who are fortunate enough to have access to a family doctor, we will assess and treat concerns as appropriate, helping patients avoid trips to emergency departments, particularly during evenings and weekends. For attached-patients with chronic / long term conditions, we will provide care for any urgent needs related to these conditions, where appropriate, but we encourage the connection between the patient and their family doctor. \n \n* For patients who do not currently have access to a family doctor, we will assess and treat these issues as appropriate and fill gaps for patients who lack access to primary care and who might otherwise seek care in emergency departments. For unattached-patients with chronic/long-term conditions, we will provide comprehensive care for long term conditions, while acknowledging the limitations of video-based assessments for some of these conditions.  Where appropriate and feasible, Babylon will assist patients in connecting with local healthcare resources. \n",
+            "en-CA-BC": "Babylon by TELUS Health is designed to address a range of healthcare needs, tailored to the circumstances of each individual patient.\n \n* For patients who are fortunate enough to have access to a family doctor, we will assess and treat concerns as appropriate, helping patients avoid trips to emergency departments, particularly during evenings and weekends. For attached-patients with chronic / long term conditions, we will provide care for any urgent needs related to these conditions, where appropriate, but we encourage the connection between the patient and their family doctor. \n \n* For patients who do not currently have access to a family doctor, we will assess and treat these issues as appropriate and fill gaps for patients who lack access to primary care and who might otherwise seek care in emergency departments. For unattached-patients with chronic/long-term conditions, we will provide care for long term conditions, while acknowledging the limitations of video-based assessments for some of these conditions.  Where appropriate and feasible, Babylon will assist patients in connecting with local healthcare resources. ",
+            "fr-CA": "Babylon par TELUS Santé vise à combler divers besoins en matière de santé en tenant compte de la situation de chaque patient.\n\\\n* Pour les patients qui ont un médecin de famille : nous évaluons les symptômes et offrons un traitement approprié pour éviter une consultation à l’urgence, notamment les soirs et week-ends. Pour les patients atteints d’une maladie chronique (condition permanente) qui sont suivis par un médecin : nous offrons des services pour répondre aux besoins urgents connexes, si possible, tout en privilégiant la relation entre le patient et son médecin de famille.\n\\\n\\\nPour les patients qui n’ont pas accès à un médecin de famille : nous évaluons les symptômes et prodiguons les soins appropriés afin de pallier le manque d’accès aux soins de première ligne pour ces patients qui, autrement, iraient à l’urgence pour obtenir une consultation médicale. Pour les patients atteints d’une maladie chronique (condition permanente) qui ne sont pas suivis par un médecin : nous offrons des soins de santé complets à ces patients, mais reconnaissons les limites des évaluations par vidéo dans certains cas. Babylon pourra rediriger les patients vers des ressources en santé de leur région lorsque cela sera possible."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "27NwpIT8wgIM0SsesSw86y",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 14,
+          "createdAt": "2018-10-24T20:26:30.816Z",
+          "updatedAt": "2019-03-15T19:08:14.598Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Babylon by TELUS Health",
+            "fr-CA": "Babylon par TELUS Santé"
+          },
+          "url": {
+            "en-CA": "/babylon"
+          },
+          "id": {
+            "en-CA": "babylonBreadcrumbLink"
+          },
+          "whiteList": {
+            "en-CA": "babylon"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "28d03wi6O4c2qamCqsYEmm",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "seo"
+            }
+          },
+          "revision": 14,
+          "createdAt": "2018-10-24T17:26:03.198Z",
+          "updatedAt": "2019-01-18T04:22:18.786Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "babylonSeo"
+          },
+          "title": {
+            "en-CA": "Babylon by TELUS Health | TELUS"
+          },
+          "description": {
+            "en-CA": "Introducing Babylon by TELUS Health, a healthcare mobile app that allows you to check symptoms, consult with doctors* and easily access your clinical records."
+          },
+          "ogImage": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2LjxB9EZLGuQGgmcOkGeui"
+              }
+            }
+          },
+          "keywords": {
+            "en-CA": [
+              "online doctor",
+              "canada",
+              "telehealth",
+              "telemedicine",
+              "ask a doctor",
+              "on demand",
+              "babylon"
+            ]
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "2M0ltHaeNqyY2saEqYGG6Y",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "focusedPanels"
+            }
+          },
+          "revision": 6,
+          "createdAt": "2018-10-22T20:45:07.717Z",
+          "updatedAt": "2019-01-22T22:44:39.831Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "useCases"
+          },
+          "panels": {
+            "en-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2sm5CaQDpOQuUwmQEAKioI"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3OEioFCsK4SqWec4wO88Gg"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4RNBU7qRHqG4w8Y0CMAcSU"
+                }
+              }
+            ]
+          },
+          "title": {
+            "en-CA": "See how we can help. ",
+            "fr-CA": "Nous pouvons vous aider."
+          },
+          "description": {
+            "en-CA": "Babylon by TELUS Health is a convenient way to see a doctor for many non-emergency conditions. ",
+            "fr-CA": "Babylon par TELUS Santé est un moyen pratique de consulter un médecin pour des problèmes de santé non urgents."
+          },
+          "cta": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5vASiryVMW6ymYmAA6YeKw"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "2YJMbSXQ6AwowkCCaOk0C6",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "panelsPanel"
+            }
+          },
+          "revision": 13,
+          "createdAt": "2018-10-12T14:10:39.732Z",
+          "updatedAt": "2019-01-22T22:43:43.892Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4j5KDv8aSQ4SYcYM6CO4wa"
+              }
+            }
+          },
+          "title": {
+            "en-CA": "Get a prescription or referral",
+            "fr-CA": "Obtenez une ordonnance ou une recommandation"
+          },
+          "description": {
+            "en-CA": "Get prescriptions and referrals for diagnostic tests or specialists when needed. ",
+            "fr-CA": "Obtenez une ordonnance ou une recommandation pour un test de diagnostic ou une consultation avec un spécialiste, au besoin."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "2dpqhRMNcoCsamaY0soiai",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 8,
+          "createdAt": "2018-10-12T14:46:54.395Z",
+          "updatedAt": "2019-01-21T13:17:15.847Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "See all FAQs",
+            "fr-CA": "Voir toutes les questions fréquentes"
+          },
+          "url": {
+            "en-CA": "/health/personal/babylon/support"
+          },
+          "type": {
+            "en-CA": "Link"
+          },
+          "id": {
+            "en-CA": "seeAllFaqsLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "2idvav8h6QUq2swCQ4gSEs",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "panelsPanel"
+            }
+          },
+          "revision": 16,
+          "createdAt": "2018-10-12T14:06:38.271Z",
+          "updatedAt": "2019-01-24T06:13:23.091Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4yEgIcqBX2AeqayOSgYqO4"
+              }
+            }
+          },
+          "title": {
+            "en-CA": "Check your symptoms",
+            "fr-CA": "Vérifiez vos symptômes"
+          },
+          "description": {
+            "en-CA": "Use the Symptom Checker to get instant health information. ",
+            "fr-CA": "Obtenez instantanément des conseils de santé à l’aide du vérificateur de symptômes."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "2koN41pE0QQgaoaSGImoIo",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "phoneWithMedia"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-12T13:35:54.331Z",
+          "updatedAt": "2018-11-09T22:09:35.120Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "phone": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4DVfcJxUkMCKSwaSEyqOiU"
+              }
+            }
+          },
+          "content": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "74iIYUBCU00A8MsAsGEYYO"
+              }
+            }
+          },
+          "id": {
+            "en-CA": "consultPreviewInPhone"
+          },
+          "playButton": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7dxLn2tZ2o2AKyCE6aosEG"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "2sm5CaQDpOQuUwmQEAKioI",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "panelsPanel"
+            }
+          },
+          "revision": 8,
+          "createdAt": "2018-10-22T20:47:34.007Z",
+          "updatedAt": "2019-01-23T00:20:43.546Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4yv6flEp2EOocYusisuOCo"
+              }
+            }
+          },
+          "title": {
+            "en-CA": "Don’t have  family doctor?",
+            "fr-CA": "Vous n’avez pas de médecin?"
+          },
+          "description": {
+            "en-CA": "Speak to one of our qualified doctors when you need to. ",
+            "fr-CA": "Parlez à l’un de nos médecins de famille qualifiés lorsque vous en avez besoin."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "2yzrR9ENeAWkGEQ4mwGKSQ",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-12T15:01:08.273Z",
+          "updatedAt": "2018-10-30T17:34:35.656Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "url": {
+            "en-CA": "https://www.youtube.com/user/TELUSHealth"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1I7PMSTHeowAoGcwgiMya8"
+              }
+            }
+          },
+          "type": {
+            "en-CA": "Image"
+          },
+          "id": {
+            "en-CA": "youtubeImageLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "31UNSYkEkMk04goC2UYyGi",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "faq"
+            }
+          },
+          "revision": 10,
+          "createdAt": "2018-10-22T16:16:20.201Z",
+          "updatedAt": "2019-01-24T08:08:23.361Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "question": {
+            "en-CA": "How do prescriptions, diagnostics tests, and referrals work?",
+            "fr-CA": "Comment fonctionnent les ordonnances?"
+          },
+          "answer": {
+            "en-CA": "* Prescriptions: After your Babylon by TELUS Health doctor generates your prescription, it is handled by our Clinical Support team. Your prescription will be sent to a pharmacy of your choice, where it should be received within one hour. You will need to provide proof of identification at the pharmacy to be able to collect your prescription.\n\n* Diagnostic Tests: After your consultation, our Clinical Support team will ask you for your preferred lab/imaging center or will recommend one nearby. Our Clinical Support team will then provide guidance on next steps.\n \n* Referrals: After your consultation, a referral letter will be sent to a specialist. Once your referral is accepted, a member of our Clinical Support team or the specialist office will call you to schedule an appointment. \n",
+            "fr-CA": "Après qu’un médecin Babylon par TELUS Santé a généré une ordonnance dans le rendez-vous, celle-ci est traitée par notre équipe du soutien clinique. Votre ordonnance sera envoyée à la pharmacie de votre choix qui la recevra dans un délai d’environ une heure. À la pharmacie, vous devrez présenter une pièce d’identité pour récupérer votre ordonnance."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "385SWimSCImEUAkoaC4gee",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 4,
+          "createdAt": "2018-10-10T21:42:46.613Z",
+          "updatedAt": "2019-01-21T03:37:01.519Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Symptom Checker",
+            "fr-CA": "Vérificateur de symptômes"
+          },
+          "url": {
+            "en-CA": "#symptomChecker"
+          },
+          "type": {
+            "en-CA": "Link"
+          },
+          "id": {
+            "en-CA": "symptomCheckerLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3KW8tjgGBaGgYm4AUUu2mo",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-12T13:24:03.351Z",
+          "updatedAt": "2019-01-22T22:48:05.687Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "See how we select our doctors"
+          },
+          "url": {
+            "en-CA": "#doctorProfiles"
+          },
+          "type": {
+            "en-CA": "Link"
+          },
+          "id": {
+            "en-CA": "selectDoctorsLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3OEioFCsK4SqWec4wO88Gg",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "panelsPanel"
+            }
+          },
+          "revision": 6,
+          "createdAt": "2018-10-22T20:45:57.223Z",
+          "updatedAt": "2019-01-22T22:46:51.995Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "SbQJwdwSGGckqaWwwU6ky"
+              }
+            }
+          },
+          "title": {
+            "en-CA": "Need a doctor after-hours?",
+            "fr-CA": "Vous avez besoin d’une consultation hors des heures normales?"
+          },
+          "description": {
+            "en-CA": "Say goodbye to long waits at the ER for non-emergency care in the evenings and weekends. ",
+            "fr-CA": "N’allez plus attendre à l’urgence le soir ou le week-end lorsque vous n’avez pas besoin de soins immédiats."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3RVpBuNvHOoUmSce2Semcm",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "profilesProfile"
+            }
+          },
+          "revision": 6,
+          "createdAt": "2018-10-12T14:19:51.735Z",
+          "updatedAt": "2019-01-15T04:26:57.329Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "drsaraholson"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7lNSmdheFfRimEuKoO12pT"
+              }
+            }
+          },
+          "title": {
+            "en-CA": "Dr. Sarah Olson",
+            "en-CA-BC": "Dr. Sarah Olson"
+          },
+          "description": {
+            "en-CA": "Courtenay, BC",
+            "en-CA-BC": "Courtenay, BC"
+          },
+          "subtitle": {
+            "en-CA": "15 years experience",
+            "en-CA-BC": "15 years experience"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3SXEybkadWIIOyiySM0CyE",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-10T21:46:03.769Z",
+          "updatedAt": "2018-10-26T01:28:05.058Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Download"
+          },
+          "url": {
+            "en-CA": "#downloadApp"
+          },
+          "type": {
+            "en-CA": "Button"
+          },
+          "id": {
+            "en-CA": "downloadAppButtonLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3Wb0AetNl5zaA9z7mi01s5",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "mediaBannerLogo"
+            }
+          },
+          "revision": 1,
+          "createdAt": "2019-01-18T01:32:20.702Z",
+          "updatedAt": "2019-01-18T01:32:44.317Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "ref": {
+            "en-CA": "media logo - techvibes"
+          },
+          "link": {
+            "en-CA": "https://techvibes.com/2018/09/11/telus-and-babylon-partner-to-bring-virtual-healthcare-to-canadians"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "a4W8zbbBUQkqqyyQiIq4I"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3XAh72JDyEMoW2CgYA64Sg",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-22T19:00:23.322Z",
+          "updatedAt": "2019-01-21T03:36:33.545Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Our Doctors",
+            "fr-CA": "Nos médecins"
+          },
+          "url": {
+            "en-CA": "#doctorProfiles"
+          },
+          "type": {
+            "en-CA": "Link"
+          },
+          "id": {
+            "en-CA": "ourDoctorsLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3dnWmUs9viEYCsEcoAea2a",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "promoText"
+            }
+          },
+          "revision": 9,
+          "createdAt": "2018-10-22T21:15:59.705Z",
+          "updatedAt": "2019-01-24T17:39:14.748Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "promoTextJoinUs"
+          },
+          "title": {
+            "en-CA": "Join Us",
+            "fr-CA": "Carrières"
+          },
+          "description": {
+            "en-CA": "Interested in joining Babylon by TELUS Health as a Physician?",
+            "fr-CA": "Devenez un médecin de Babylon par TELUS Santé\n"
+          },
+          "cta": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6xBOGw5W8gSO2KYqQQUUAK"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3ffqH9S4PPCj8keEbjC5Rq",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "mediaBannerLogo"
+            }
+          },
+          "revision": 1,
+          "createdAt": "2019-01-18T01:30:53.516Z",
+          "updatedAt": "2019-01-18T01:31:17.010Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "ref": {
+            "en-CA": "media logo - reuters"
+          },
+          "link": {
+            "en-CA": "https://www.reuters.com/article/us-canada-healthcare-ai/telus-health-picks-babylon-to-bring-virtual-healthcare-to-canada-idUSKCN1LN0PM"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4T4FwQLJ2wQkSco6uU6Ogk"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3iuiRgVZxS4ys0ACUiYC4e",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "panelsPanel"
+            }
+          },
+          "revision": 12,
+          "createdAt": "2018-10-12T14:09:45.502Z",
+          "updatedAt": "2019-01-22T22:43:23.565Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "jdrIyLZ2LKuqwYGWEQSCC"
+              }
+            }
+          },
+          "title": {
+            "en-CA": "See a doctor virtually",
+            "fr-CA": "Consultez un médecin en ligne "
+          },
+          "description": {
+            "en-CA": "Schedule an appointment and consult with one of our licensed in-province doctors.",
+            "fr-CA": "Prenez un rendez-vous pour consulter un de nos médecins autorisés dans votre province."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3poeL9C1Zcn2IBFb5qDeHa",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "mediaBannerLogo"
+            }
+          },
+          "revision": 1,
+          "createdAt": "2019-01-18T01:30:03.979Z",
+          "updatedAt": "2019-01-18T01:30:24.474Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "ref": {
+            "en-CA": "media logo - global news"
+          },
+          "link": {
+            "en-CA": "https://globalnews.ca/news/4435512/telus-app-virtual-doctor/"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "EqU5ydyKRM4AiiSgySQg8"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3wLkws5vuUwAyQQIikyKCy",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 4,
+          "createdAt": "2018-10-22T19:01:14.112Z",
+          "updatedAt": "2019-01-21T03:36:47.035Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Doctor Consults",
+            "fr-CA": "Consultation avec un médecin"
+          },
+          "url": {
+            "en-CA": "#virtualConsult"
+          },
+          "type": {
+            "en-CA": "Link"
+          },
+          "id": {
+            "en-CA": "virtualConsultLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "3yRNxDRYgE6YeAESus82mo",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 7,
+          "createdAt": "2018-10-11T00:13:28.717Z",
+          "updatedAt": "2019-02-12T19:54:25.621Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "url": {
+            "en-CA": "//go.onelink.me/Fk5k/babylonwebandroid"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3oSKXjoCp2Ouq02IkO2I4O"
+              }
+            }
+          },
+          "type": {
+            "en-CA": "Image"
+          },
+          "id": {
+            "en-CA": "playStoreImageLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "425arxUDWEWsiaSGE6E0WQ",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "promoText"
+            }
+          },
+          "revision": 19,
+          "createdAt": "2018-10-23T19:11:51.339Z",
+          "updatedAt": "2019-01-25T23:03:11.394Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "babylonHeroContent"
+          },
+          "title": {
+            "en-CA": "Healthcare in your hands.",
+            "en-CA-BC": "Healthcare in your hands.",
+            "fr-CA": "La santé au bout des doigts"
+          },
+          "subtitle": {
+            "en-CA": "*Doctor consultations coming soon to residents outside of BC.",
+            "en-CA-BC": "*Doctor consultations for BC residents are covered under the Medical Services Plan (MSP).",
+            "fr-CA": "*Les consultations avec un médecin seront bientôt offertes aux résidents à l’extérieur de la Colombie-Britannique.",
+            "fr-CA-BC": "*Les consultations avec un médecin pour les résidents de la Colombie-Britannique sont couvertes par le Medical Services Plan (MSP)."
+          },
+          "description": {
+            "en-CA": "Introducing Babylon by TELUS Health, a mobile app that allows you to check symptoms, see a doctor* and easily access your clinical records all through your phone.",
+            "en-CA-BC": "Introducing Babylon by TELUS Health, a mobile app that allows you to check symptoms, see a doctor* and easily access your clinical records all through your phone.",
+            "fr-CA": "Voici Babylon par TELUS Santé, une application mobile qui vous permet de vérifier vos symptômes, de consulter des médecins* et d’accéder facilement à votre dossier clinique de consultation. "
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "4BjSsd52e4EcEm0GWoU0OG",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "promoText"
+            }
+          },
+          "revision": 10,
+          "createdAt": "2018-10-12T14:14:56.232Z",
+          "updatedAt": "2019-01-22T22:44:14.188Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "babylonDoctorPromoText"
+          },
+          "title": {
+            "en-CA": "Meet some of our experienced doctors. ",
+            "fr-CA": "Quelques membres de notre équipe de médecins chevronnés."
+          },
+          "description": {
+            "en-CA": "Our friendly team of doctors are fully licensed in the provinces they provide care. They are specially trained to provide care virtually and operate to high clinical standards. ",
+            "en-CA-BC": "Our friendly team of doctors are fully licensed in the provinces they provide care. They are specially trained to provide care virtually and operate to high clinical standards. ",
+            "fr-CA": "Nos médecins ont tous les permis nécessaires pour exercer dans leur province respective. Ils ont été spécialement formés pour offrir des soins virtuels qui satisfont aux normes cliniques les plus élevées."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "4CEGwVzPraQiCMSm8qAasS",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "faq"
+            }
+          },
+          "revision": 10,
+          "createdAt": "2019-01-11T21:52:15.429Z",
+          "updatedAt": "2019-01-25T23:06:35.467Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "question": {
+            "en-CA": "What are the minimum requirements?",
+            "en-CA-BC": "What are the minimum requirements?",
+            "fr-CA": "Quelles sont les exigences minimales?"
+          },
+          "answer": {
+            "en-CA": "Babylon by TELUS Health is available on iPhones (iOS 11 and above) and Android (version 4.2 and above) smartphones. \\\n\\\nYou will need to be connected to the internet. Where possible we recommend using WiFi. ",
+            "en-CA-BC": "Babylon by TELUS Health is available on iPhones (iOS 11 and above) and Android (version 4.2 and above) smartphones.\\\n\\\nYou will need to be connected to the internet. Where possible we recommend using WiFi. \n",
+            "fr-CA": "L’application Babylon par TELUS Santé est compatible avec les téléphones intelligents Apple (iOS 11 ou supérieur) et Android (version 4.2 ou supérieure).\\\n \\\nPour utiliser l’application, vous devez aussi avoir une connexion Internet. Nous recommandons l’utilisation d’un réseau Wi-Fi (au lieu d’un réseau 3G ou 4G), car la connexion est généralement plus fiable."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "4LaNRBKHJuyma6aOQosCMY",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "phoneWithMedia"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-12T14:31:59.526Z",
+          "updatedAt": "2018-11-09T22:02:59.328Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "phone": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6AKnqg6kmI2yiAmaWKIe8c"
+              }
+            }
+          },
+          "content": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "51OPBnIKyAk8GagKcEGsaM"
+              }
+            }
+          },
+          "id": {
+            "en-CA": "symptom checker with phone"
+          },
+          "playButton": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7dxLn2tZ2o2AKyCE6aosEG"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "4MVHlhTUmsnSehYEtwVbMu",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "mediaBannerLogo"
+            }
+          },
+          "revision": 2,
+          "createdAt": "2019-01-17T20:56:50.271Z",
+          "updatedAt": "2019-01-18T01:30:37.814Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "ref": {
+            "en-CA": "media logo - vancouver sun"
+          },
+          "link": {
+            "en-CA": "https://vancouversun.com/news/national/telus-to-offer-app-for-24-7-tele-conference-visits-to-doctors"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6y6ovK7Kb6yCuwMimc0eae"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "4RNBU7qRHqG4w8Y0CMAcSU",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "panelsPanel"
+            }
+          },
+          "revision": 4,
+          "createdAt": "2018-10-22T20:48:49.920Z",
+          "updatedAt": "2019-01-21T04:01:20.993Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3FTO2ff3PiqqSs6Qu288GS"
+              }
+            }
+          },
+          "title": {
+            "en-CA": "Can’t take time off work?",
+            "fr-CA": "Vous ne pouvez pas vous absenter du travail?"
+          },
+          "description": {
+            "en-CA": "Consult with a doctor when and where it’s convenient for you.",
+            "fr-CA": "Consultez un médecin au moment qui vous convient."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "4V79apclza8oMwkaUmMWmM",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "socialMedia"
+            }
+          },
+          "revision": 2,
+          "createdAt": "2018-10-12T14:52:52.233Z",
+          "updatedAt": "2018-10-15T20:39:40.294Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "links": {
+            "en-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5G7lzCjqykeEC8Qw4IiM4g"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5Cqw2MxR28w2GSmcU6Kq6O"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2yzrR9ENeAWkGEQ4mwGKSQ"
+                }
+              }
+            ]
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6b6AOZPZEQs24WYYKKcOuS"
+              }
+            }
+          },
+          "id": {
+            "en-CA": "socialMedia"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "4V91hxk9lKSKesa8MqI2Ao",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "chatDemo"
+            }
+          },
+          "revision": 5,
+          "createdAt": "2018-10-12T14:29:12.774Z",
+          "updatedAt": "2018-10-23T22:43:34.583Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "symptomChecker"
+          },
+          "messages": {
+            "en-CA": [
+              "How can I help you?",
+              "How can I help you?",
+              "No problem. let me ask you some questions"
+            ]
+          },
+          "content": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1FGR9qskmcwEssM6wiuA2E"
+              }
+            }
+          },
+          "phone": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4LaNRBKHJuyma6aOQosCMY"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "4ZxVi7P89GsCM2aSIssMay",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "faqs"
+            }
+          },
+          "revision": 10,
+          "createdAt": "2018-10-12T14:44:44.358Z",
+          "updatedAt": "2019-01-24T17:47:22.252Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "faqs"
+          },
+          "title": {
+            "en-CA": "Your questions answered...",
+            "fr-CA": "Réponses à vos questions"
+          },
+          "link": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2dpqhRMNcoCsamaY0soiai"
+              }
+            }
+          },
+          "items": {
+            "en-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5UMLuPxxAcmw6s40Sc2CwM"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4CEGwVzPraQiCMSm8qAasS"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "54UCVUiOsoKWWQKsCsUK2K"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "6g8qO5A4NimqSsK6cCoGcm"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "gAnsouMSSOck6ck2aYKem"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "1P3Hl5MokNOGWc4QcC1lKJ"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "31UNSYkEkMk04goC2UYyGi"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "25ztjMLiWAYg062EgWcSIY"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "1WV9CyWwvqm6yAkuioAIQQ"
+                }
+              }
+            ],
+            "fr-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5UMLuPxxAcmw6s40Sc2CwM"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4CEGwVzPraQiCMSm8qAasS"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "54UCVUiOsoKWWQKsCsUK2K"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "6g8qO5A4NimqSsK6cCoGcm"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "31UNSYkEkMk04goC2UYyGi"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "25ztjMLiWAYg062EgWcSIY"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "1WV9CyWwvqm6yAkuioAIQQ"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "4e7psB4bgkoIOoG8MKcMuS",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "appDemo"
+            }
+          },
+          "revision": 2,
+          "createdAt": "2018-10-12T13:22:27.941Z",
+          "updatedAt": "2018-10-22T20:21:26.520Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "virtualConsult"
+          },
+          "content": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "59gXq5bFI4ciE8ECUUoggs"
+              }
+            }
+          },
+          "phoneFront": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2koN41pE0QQgaoaSGImoIo"
+              }
+            }
+          },
+          "phoneBack": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5CUaxg4vE4COCQCSaSYEeM"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "4pWWKdp61aii8CekUq2wcG",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 5,
+          "createdAt": "2018-10-11T00:12:24.913Z",
+          "updatedAt": "2019-02-12T19:53:23.807Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "url": {
+            "en-CA": "//go.onelink.me/Njra/babylonwebios"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "SyPrpGoJeCiQaAcU8Uiiw"
+              }
+            }
+          },
+          "type": {
+            "en-CA": "Image"
+          },
+          "id": {
+            "en-CA": "appStoreImageLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "54UCVUiOsoKWWQKsCsUK2K",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "faq"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2019-01-11T22:38:45.367Z",
+          "updatedAt": "2019-01-23T00:36:37.681Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "question": {
+            "en-CA": "Who is Babylon by TELUS Health for? ",
+            "en-CA-BC": "Who is Babylon by TELUS Health for? ",
+            "fr-CA": "À qui l’application Babylon par TELUS Santé est-elle destinée? "
+          },
+          "answer": {
+            "en-CA": "Babylon by TELUS Health aims to serve Canadians currently without a family doctor or those who seek medical care after-hours. If you have a family doctor, we recommend you continue seeing them.",
+            "en-CA-BC": "Babylon by TELUS Health aims to serve Canadians currently without a family doctor or those who seek medical care after-hours. If you have a family doctor, we recommend you continue seeing them.",
+            "fr-CA": "Babylon par TELUS Santé a été conçue pour aider les Canadiens qui n’ont pas de médecin de famille ou qui désirent consulter un médecin hors des heures d’ouverture. Il est préférable de continuer de consulter votre médecin de famille si vous en avez un."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "56YENfkdZeOq2wIwmySgcs",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 4,
+          "createdAt": "2018-10-22T21:19:55.188Z",
+          "updatedAt": "2019-01-21T13:19:29.773Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Learn more",
+            "fr-CA": "En savoir plus"
+          },
+          "url": {
+            "en-CA": "https://www.babylonhealth.com/ca/telus/privacy-policy"
+          },
+          "type": {
+            "en-CA": "Link"
+          },
+          "id": {
+            "en-CA": "privacyPolicyLearnMoreLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "59gXq5bFI4ciE8ECUUoggs",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "promoText"
+            }
+          },
+          "revision": 8,
+          "createdAt": "2018-10-12T13:22:37.602Z",
+          "updatedAt": "2019-01-24T17:07:53.483Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "babylonAppDemoPromoText"
+          },
+          "title": {
+            "en-CA": "Care from the comfort of your home. ",
+            "fr-CA": "Soins dans le confort de votre maison."
+          },
+          "description": {
+            "en-CA": "Book an appointment in seconds, consult with a doctor by video and choose your preferred pharmacy, all from the convenience of this app.",
+            "fr-CA": "Prenez un rendez-vous en quelques secondes, consultez un médecin par vidéo et choisissez votre pharmacie, le tout à partir de l’application."
+          },
+          "cta": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3KW8tjgGBaGgYm4AUUu2mo"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "5CUaxg4vE4COCQCSaSYEeM",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "phoneWithMedia"
+            }
+          },
+          "revision": 2,
+          "createdAt": "2018-10-12T13:39:51.414Z",
+          "updatedAt": "2018-10-12T13:41:02.347Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "phone": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4DVfcJxUkMCKSwaSEyqOiU"
+              }
+            }
+          },
+          "content": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7mqEsOMd5CquoSES82iIwE"
+              }
+            }
+          },
+          "id": {
+            "en-CA": "appointmentDetailsInPhone"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "5Cqw2MxR28w2GSmcU6Kq6O",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-12T15:00:27.904Z",
+          "updatedAt": "2018-10-30T17:34:24.561Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "url": {
+            "en-CA": "https://twitter.com/telushealth"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "wna9IT5w40E4AcosQeUUM"
+              }
+            }
+          },
+          "type": {
+            "en-CA": "Image"
+          },
+          "id": {
+            "en-CA": "twitterImageLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "5FXNLwv9XGS8eGysWWOU0k",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "phoneWithMedia"
+            }
+          },
+          "revision": 1,
+          "createdAt": "2018-10-12T14:50:18.091Z",
+          "updatedAt": "2018-10-12T14:51:20.524Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "phone": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6nnq4O5Zbqy88geCiCm4cq"
+              }
+            }
+          },
+          "id": {
+            "en-CA": "babylonSplashScreenPhone"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "5G7lzCjqykeEC8Qw4IiM4g",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 4,
+          "createdAt": "2018-10-12T14:54:17.627Z",
+          "updatedAt": "2018-10-30T17:34:47.499Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "url": {
+            "en-CA": "https://www.linkedin.com/company/telus-health"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2B94rNwjbOIaauEw6AQsIo"
+              }
+            }
+          },
+          "type": {
+            "en-CA": "Image"
+          },
+          "id": {
+            "en-CA": "linkedInImageLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "5QOHKBgdcQ2Qu2sAsKECAi",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-24T20:26:02.042Z",
+          "updatedAt": "2019-01-21T03:41:24.126Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Health",
+            "fr-CA": "Santé"
+          },
+          "url": {
+            "en-CA": "//telus.com/health"
+          },
+          "id": {
+            "en-CA": "healthBasePathLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "5UMLuPxxAcmw6s40Sc2CwM",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "faq"
+            }
+          },
+          "revision": 14,
+          "createdAt": "2018-10-12T14:45:07.387Z",
+          "updatedAt": "2019-02-21T23:58:33.117Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "question": {
+            "en-CA": "Is the Babylon by TELUS Health service free?",
+            "fr-CA": "Le service Babylon par TELUS Santé est-il gratuit?"
+          },
+          "answer": {
+            "en-CA": "You can download the Babylon by TELUS Health app and start using the Symptom Checker at no charge.\\\n\\\nDoctor consultations for BC users are covered by MSP. If you live in BC and are not covered by MSP, consultations cost $34.18 per appointment. Data charges may apply for service outside Wi-Fi coverage.\n\n",
+            "fr-CA": "Vous pouvez télécharger l’application Babylon par TELUS Santé et utiliser le vérificateur de symptômes sans frais.\\\n \\\nLes consultations avec un médecin pour les utilisateurs de la Colombie-Britannique sont couvertes par le Medical Services Plan (MSP). Si vous n’êtes pas couvert par le MSP, le coût d’une consultation est de 34,18 $ par rendez-vous."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "5XEQ0iexIQgwWacAAw6WUo",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "multiPromoTexts"
+            }
+          },
+          "revision": 6,
+          "createdAt": "2018-10-22T21:15:53.890Z",
+          "updatedAt": "2019-01-21T13:18:27.821Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "contactUs"
+          },
+          "promoTextList": {
+            "en-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3dnWmUs9viEYCsEcoAea2a"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "6nlcGG3w6QuauKK2M8MWEm"
+                }
+              }
+            ]
+          },
+          "title": {
+            "en-CA": "Want to learn more?",
+            "fr-CA": "Vous voulez en savoir plus?"
+          },
+          "subtitle": {
+            "en-CA": "Contact us",
+            "fr-CA": "Nous joindre"
+          },
+          "description": {
+            "en-CA": "Call or email when it’s convenient for you.  \n[1-855-577-8838](tel:1-855-577-8838)  \n[support@BabylonbyTELUSHealth.com](mailto:support@BabylonbyTELUSHealth.com)\n\n",
+            "fr-CA": "Appelez-nous ou écrivez-nous au moment qui vous convient.\n[1-855-577-8838](tel:1-855-577-8838)  \n[support@BabylonbyTELUSHealth.com](mailto:support@BabylonbyTELUSHealth.com)"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "5ddR8TLu8w44iAIYmMC6ku",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "breadcrumbs"
+            }
+          },
+          "revision": 2,
+          "createdAt": "2018-10-24T20:25:52.606Z",
+          "updatedAt": "2018-12-16T17:00:17.663Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "babylonBreadcrumbs"
+          },
+          "basePath": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5QOHKBgdcQ2Qu2sAsKECAi"
+              }
+            }
+          },
+          "paths": {
+            "en-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "27NwpIT8wgIM0SsesSw86y"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "5ktuODhrOM6oqyksw4OcWQ",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "promoText"
+            }
+          },
+          "revision": 7,
+          "createdAt": "2018-10-12T14:43:09.782Z",
+          "updatedAt": "2019-01-25T23:04:32.033Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "babylonPartnershipPromoText"
+          },
+          "title": {
+            "en-CA": "TELUS Health is committed to leveraging the power of technology to drive better health outcomes for all Canadians.",
+            "fr-CA": "TELUS Santé entend miser sur la puissance de la technologie pour améliorer la santé des Canadiens."
+          },
+          "description": {
+            "en-CA": "We have partnered with Babylon - a global leader in Artificial Intelligence and digital health. Together, we created Babylon by TELUS Health which aims to deliver more options for Canadians to access healthcare.",
+            "fr-CA": "Nous avons décidé de nous associer à Babylon, un chef de file mondial en intelligence artificielle et en santé numérique, au terme d’un long processus pour trouver le meilleur partenaire en soins virtuels. Ensemble, nous avons créé Babylon par TELUS Santé dans le but d’offrir aux Canadiens davantage de choix pour accéder aux soins de santé."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "5oIKbJpi24KIOkECWg20uk",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-10T21:43:28.170Z",
+          "updatedAt": "2019-01-21T03:37:31.072Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "FAQs",
+            "fr-CA": "FAQ"
+          },
+          "url": {
+            "en-CA": "#faqs"
+          },
+          "type": {
+            "en-CA": "Link"
+          },
+          "id": {
+            "en-CA": "faqsLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "5vASiryVMW6ymYmAA6YeKw",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-22T20:50:23.416Z",
+          "updatedAt": "2019-01-22T22:46:23.003Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Explore some of the conditions we can treat",
+            "fr-CA": "Voir une partie de ce que nous pouvons traiter"
+          },
+          "url": {
+            "en-CA": "#faqs"
+          },
+          "type": {
+            "en-CA": "Link"
+          },
+          "id": {
+            "en-CA": "exploreConditions"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "6A7MCmyFl6IkIeKAkoAYs8",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "mediaBanner"
+            }
+          },
+          "revision": 8,
+          "createdAt": "2018-10-25T13:20:13.488Z",
+          "updatedAt": "2019-03-08T22:25:28.705Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "babylonMediaBanner"
+          },
+          "title": {
+            "en-CA": "Featured in",
+            "fr-CA": "Vu dans"
+          },
+          "logo": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2LjxB9EZLGuQGgmcOkGeui"
+              }
+            }
+          },
+          "imageLinks": {
+            "en-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4MVHlhTUmsnSehYEtwVbMu"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3poeL9C1Zcn2IBFb5qDeHa"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3ffqH9S4PPCj8keEbjC5Rq"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "7nxrLDyRsngSWQP9gqnwt7"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3Wb0AetNl5zaA9z7mi01s5"
+                }
+              }
+            ]
+          },
+          "link": {
+            "en-CA": "https://www.telushealth.co/news/new-app-telus-health-babylon-enables-canadians-visit-doctor-smartphone/"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "6EYYgkQuWcieeqK4w4g6wO",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "profiles"
+            }
+          },
+          "revision": 2,
+          "createdAt": "2018-10-12T14:14:51.808Z",
+          "updatedAt": "2018-10-22T20:20:25.753Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "doctorProfiles"
+          },
+          "content": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4BjSsd52e4EcEm0GWoU0OG"
+              }
+            }
+          },
+          "background": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4KWwCGfjq8gUMiuQ2sW2o"
+              }
+            }
+          },
+          "items": {
+            "en-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "7aGEEy21a0SUouaCmMk48Q"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3RVpBuNvHOoUmSce2Semcm"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "zlpsGCPwsKiSOIGge8GES"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "6F4T8XylckGgEwcwao4eYs",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-26T01:26:36.400Z",
+          "updatedAt": "2019-02-12T19:54:41.028Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Download"
+          },
+          "url": {
+            "en-CA": "//go.onelink.me/Fk5k/babylonwebandroid"
+          },
+          "type": {
+            "en-CA": "Button"
+          },
+          "id": {
+            "en-CA": "playStoreButtonLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "6Hop4XcTviSAaMyeCWI6YU",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "focusedPanels"
+            }
+          },
+          "revision": 12,
+          "createdAt": "2018-10-12T14:05:55.748Z",
+          "updatedAt": "2019-01-23T01:17:02.943Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "howItWorks"
+          },
+          "panels": {
+            "en-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2idvav8h6QUq2swCQ4gSEs"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3iuiRgVZxS4ys0ACUiYC4e"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2YJMbSXQ6AwowkCCaOk0C6"
+                }
+              }
+            ]
+          },
+          "title": {
+            "en-CA": "It's easy to get started.",
+            "fr-CA": "Utilisation simple comme 1, 2, 3"
+          },
+          "description": {
+            "en-CA": "Simply download the app, create an account and follow these steps. \n",
+            "fr-CA": "Il vous suffit de télécharger l’application, de créer un compte et de suivre ces quelques étapes faciles."
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6F1Md9NqdGa6wmC6wkcya8"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "6MeAIp3NqoMEeioWiEeOiw",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-26T01:25:37.728Z",
+          "updatedAt": "2019-02-12T19:53:45.017Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Download"
+          },
+          "url": {
+            "en-CA": "//go.onelink.me/Njra/babylonwebios"
+          },
+          "type": {
+            "en-CA": "Button"
+          },
+          "id": {
+            "en-CA": "appStoreButtonLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "6g8qO5A4NimqSsK6cCoGcm",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "faq"
+            }
+          },
+          "revision": 6,
+          "createdAt": "2018-10-22T16:12:05.834Z",
+          "updatedAt": "2019-01-22T22:54:22.280Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "question": {
+            "en-CA": "Who are our doctors?",
+            "fr-CA": "Qui sont nos médecins?"
+          },
+          "answer": {
+            "en-CA": "We take pride in the care our doctors provide, and all of our doctors are subject to a rigorous assessment process to help ensure they provide a high-quality, caring service. All of our doctors are experienced clinical professionals, qualified to practice Family Medicine in the relevant province of Canada, and registered with all relevant professional bodies, such as the College of Family Physicians of Canada.",
+            "fr-CA": "Nous sommes fiers des soins offerts par nos médecins. Tous nos médecins sont soumis à une évaluation rigoureuse pour que nous puissions garantir un service de qualité supérieure. Ce sont tous des professionnels cliniques expérimentés et autorisés à pratiquer la médecine familiale dans les provinces concernées. Ils sont inscrits auprès des ordres professionnels compétents, comme le Collège des médecins de famille du Canada."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "6mQHGp8v4ImsoSwweuCOcQ",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "banner"
+            }
+          },
+          "revision": 1,
+          "createdAt": "2018-10-23T19:10:48.816Z",
+          "updatedAt": "2018-10-23T19:13:16.064Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "babylonHeroBanner"
+          },
+          "content": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "425arxUDWEWsiaSGE6E0WQ"
+              }
+            }
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4N3B6pXBaMeYQwU4gyco2W"
+              }
+            }
+          },
+          "logo": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1NogrRoCWomi6Ksecqm6KS"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "6nlcGG3w6QuauKK2M8MWEm",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "promoText"
+            }
+          },
+          "revision": 5,
+          "createdAt": "2018-10-22T21:19:29.220Z",
+          "updatedAt": "2019-01-24T17:40:05.670Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "promoTextPrivacyPolicy"
+          },
+          "title": {
+            "en-CA": "Privacy Policy",
+            "fr-CA": "Politique de Confidentialité "
+          },
+          "description": {
+            "en-CA": "We take your data privacy seriously.",
+            "fr-CA": "TELUS attache une très grande importance à la sécurité et à la protection de la vie privée. \n"
+          },
+          "cta": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "56YENfkdZeOq2wIwmySgcs"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "6xBOGw5W8gSO2KYqQQUUAK",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 5,
+          "createdAt": "2018-10-22T21:17:12.203Z",
+          "updatedAt": "2019-01-21T13:18:58.619Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "Learn more",
+            "fr-CA": "En savoir plus"
+          },
+          "url": {
+            "en-CA": "https://www.babylonhealth.com/canadadoctors"
+          },
+          "type": {
+            "en-CA": "Link"
+          },
+          "id": {
+            "en-CA": "joinUsLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "7DtmnYUzXUKgygyyomKaQ2",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 6,
+          "createdAt": "2018-10-10T21:42:30.022Z",
+          "updatedAt": "2019-01-21T03:36:14.638Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "How It Works",
+            "fr-CA": "Fonctionnement"
+          },
+          "url": {
+            "en-CA": "#howItWorks"
+          },
+          "type": {
+            "en-CA": "Link"
+          },
+          "id": {
+            "en-CA": "howItWorksLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "7aGEEy21a0SUouaCmMk48Q",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "profilesProfile"
+            }
+          },
+          "revision": 10,
+          "createdAt": "2018-10-12T14:19:23.705Z",
+          "updatedAt": "2019-01-11T22:11:01.998Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "drdanielwong"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "26qjVQVo9mWUk2u4IS2oWm"
+              }
+            }
+          },
+          "title": {
+            "en-CA": "Dr. Daniel Wong"
+          },
+          "description": {
+            "en-CA": "Vancouver, BC"
+          },
+          "subtitle": {
+            "en-CA": "25 years experience"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "7nxrLDyRsngSWQP9gqnwt7",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "mediaBannerLogo"
+            }
+          },
+          "revision": 2,
+          "createdAt": "2019-01-18T01:31:22.375Z",
+          "updatedAt": "2019-03-08T22:26:03.825Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "ref": {
+            "en-CA": "media logo - mobile syrup"
+          },
+          "link": {
+            "en-CA": "https://mobilesyrup.com/2019/03/05/telus-health-babylon-app/"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5XBRxPCQAEkWOaqckU0ciU"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "DGrIhTy0nIkUcSsoQMIA",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "banner"
+            }
+          },
+          "revision": 5,
+          "createdAt": "2018-10-12T14:34:42.781Z",
+          "updatedAt": "2018-12-16T17:01:45.035Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "healthRecords"
+          },
+          "content": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "t9NlVUG7OSuyugCOOuAqC"
+              }
+            }
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5ufU7sethKqsOsswMQiSG4"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "FAcCBoLsCOS0UC8cIqwEU",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "link"
+            }
+          },
+          "revision": 4,
+          "createdAt": "2018-10-10T21:43:05.008Z",
+          "updatedAt": "2019-01-21T03:37:14.351Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "text": {
+            "en-CA": "About Us",
+            "fr-CA": "À propos"
+          },
+          "url": {
+            "en-CA": "#aboutUs"
+          },
+          "type": {
+            "en-CA": "Link"
+          },
+          "id": {
+            "en-CA": "aboutUsLink"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "gAnsouMSSOck6ck2aYKem",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "faq"
+            }
+          },
+          "revision": 30,
+          "createdAt": "2018-10-22T16:08:18.306Z",
+          "updatedAt": "2019-01-23T01:24:49.722Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "question": {
+            "en-CA": "What can our doctors treat?",
+            "fr-CA": "Qu’est-ce que nos médecins peuvent traiter?"
+          },
+          "answer": {
+            "en-CA": "Like any doctor you’ve seen in the past, our doctors can help treat a wide variety of health conditions. After seeing a doctor, you will be given a treatment plan. This might include referral for a face to face appointment, or to a hospital for tests, or to see a specialist.\\\n\\\nWe recommend seeing a doctor in-person if you require a physical examination or for issues concerning restricted medication. For medical emergencies, please call 911.\n",
+            "fr-CA": "Tout comme d’autres médecins que vous avez déjà consultés, nos médecins peuvent traiter de nombreux problèmes de santé.\\\n\\\nLes problèmes de santé les plus courants sont les suivants :\n- Rhume et grippe\n- Infection pulmonaire\n- Infection urinaire\n- Diarrhée\n- Nausée\n- Constipation\n- Douleur articulaire\\\n\\\nLes consultations en personne sont recommandées pour les urgences, les examens physiques et les problèmes qui exigent l’usage de médicaments restreints. "
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "lym3icOh2g6OEAaEKkOsY",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "inPageNav"
+            }
+          },
+          "revision": 6,
+          "createdAt": "2018-10-10T21:41:31.273Z",
+          "updatedAt": "2018-10-26T20:15:23.468Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "itemsLeft": {
+            "en-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "7DtmnYUzXUKgygyyomKaQ2"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3XAh72JDyEMoW2CgYA64Sg"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3wLkws5vuUwAyQQIikyKCy"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "385SWimSCImEUAkoaC4gee"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "FAcCBoLsCOS0UC8cIqwEU"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "5oIKbJpi24KIOkECWg20uk"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "1eCV9vmm2mkwI2mAsu8iIu"
+                }
+              }
+            ]
+          },
+          "itemsRight": {
+            "en-CA": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4pWWKdp61aii8CekUq2wcG"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3yRNxDRYgE6YeAESus82mo"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "3SXEybkadWIIOyiySM0CyE"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "6MeAIp3NqoMEeioWiEeOiw"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "6F4T8XylckGgEwcwao4eYs"
+                }
+              }
+            ]
+          },
+          "id": {
+            "en-CA": "babylonNav"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "t9NlVUG7OSuyugCOOuAqC",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "promoText"
+            }
+          },
+          "revision": 15,
+          "createdAt": "2018-10-12T14:34:48.027Z",
+          "updatedAt": "2019-01-24T06:16:15.793Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "healthRecordsBannerPromoText"
+          },
+          "title": {
+            "en-CA": "Access your health information",
+            "fr-CA": "Accédez à vos renseignements de santé."
+          },
+          "description": {
+            "en-CA": "Easily access your doctor consultation notes and prescription history within the app.",
+            "fr-CA": "Consultez facilement les notes du médecin et l’historique d’ordonnances enregistrées dans l’application."
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Entry",
+          "id": "zlpsGCPwsKiSOIGge8GES",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "profilesProfile"
+            }
+          },
+          "revision": 3,
+          "createdAt": "2018-10-12T14:20:26.578Z",
+          "updatedAt": "2019-01-11T22:13:22.269Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "id": {
+            "en-CA": "drbogdandascalu"
+          },
+          "image": {
+            "en-CA": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "46niUia9R6smYIQWQOKsuc"
+              }
+            }
+          },
+          "title": {
+            "en-CA": "Dr. Bogdan Dascalu"
+          },
+          "description": {
+            "en-CA": "Coquitlam, BC"
+          },
+          "subtitle": {
+            "en-CA": "10 years experience"
+          }
+        }
+      }
+    ],
+    "Asset": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "1I7PMSTHeowAoGcwgiMya8",
+          "revision": 2,
+          "createdAt": "2018-10-12T15:01:13.383Z",
+          "updatedAt": "2018-10-28T17:11:03.835Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "youtube logo"
+          },
+          "description": {
+            "en-CA": "YouTube button"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/1I7PMSTHeowAoGcwgiMya8/b5d97570851a7f9ec3175b71be00b14d/youtube-logo.svg",
+              "details": {
+                "size": 1616,
+                "image": {
+                  "width": 35,
+                  "height": 24
+                }
+              },
+              "fileName": "youtube-logo.svg",
+              "contentType": "image/svg+xml"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "1NogrRoCWomi6Ksecqm6KS",
+          "revision": 6,
+          "createdAt": "2018-10-11T00:06:05.042Z",
+          "updatedAt": "2019-03-13T23:37:13.355Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "logo",
+            "fr-CA": "TELUSHealth Babylon Hor logo PUR RGB FR"
+          },
+          "description": {
+            "en-CA": "Babylon by TELUS Health logo"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/1NogrRoCWomi6Ksecqm6KS/0a863bb2d152c76713626ec4fc1ee9d9/THB_logo_hor_pur_RGB.png",
+              "details": {
+                "size": 18062,
+                "image": {
+                  "width": 500,
+                  "height": 116
+                }
+              },
+              "fileName": "THB_logo_hor_pur_RGB.png",
+              "contentType": "image/png"
+            },
+            "fr-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/1NogrRoCWomi6Ksecqm6KS/7f2d5a9f18006849ccf66e38ae468832/TELUSHealth_Babylon_Hor_logo_PUR_RGB_FR.png",
+              "details": {
+                "size": 15265,
+                "image": {
+                  "width": 597,
+                  "height": 157
+                }
+              },
+              "fileName": "TELUSHealth Babylon Hor_logo_PUR_RGB_FR.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "26qjVQVo9mWUk2u4IS2oWm",
+          "revision": 3,
+          "createdAt": "2018-10-12T14:18:26.556Z",
+          "updatedAt": "2019-01-15T04:25:47.114Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "image - dr daniel wong",
+            "fr-CA": "Headshot of Dr. Ali"
+          },
+          "description": {
+            "en-CA": "Photo of doctor daniel wong"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/26qjVQVo9mWUk2u4IS2oWm/49b2b395fab67aefe03c87ed26866fb0/daniel-wong.jpg",
+              "details": {
+                "size": 16186,
+                "image": {
+                  "width": 300,
+                  "height": 300
+                }
+              },
+              "fileName": "daniel-wong.jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "2B94rNwjbOIaauEw6AQsIo",
+          "revision": 2,
+          "createdAt": "2018-10-12T14:59:44.688Z",
+          "updatedAt": "2018-10-28T17:11:26.534Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "linkedin logo"
+          },
+          "description": {
+            "en-CA": "LinkedIn button"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/2B94rNwjbOIaauEw6AQsIo/dd5a1163991e56797a6b4fe53b466621/linkedin-logo.svg",
+              "details": {
+                "size": 1629,
+                "image": {
+                  "width": 28,
+                  "height": 28
+                }
+              },
+              "fileName": "linkedin-logo.svg",
+              "contentType": "image/svg+xml"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "2DJrD7PS0AGMqOgkMEQsA6",
+          "revision": 5,
+          "createdAt": "2018-10-12T14:12:40.495Z",
+          "updatedAt": "2019-03-04T21:53:39.735Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "logo inverted",
+            "fr-CA": "TELUSHealth Babylon Hor logo WT RGB FR"
+          },
+          "description": {
+            "en-CA": "Babylon by TELUS Health logo"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/2DJrD7PS0AGMqOgkMEQsA6/40fe4491545b41bd38e27cd45b0896b7/babylon-logo-white.png",
+              "details": {
+                "size": 20114,
+                "image": {
+                  "width": 1271,
+                  "height": 299
+                }
+              },
+              "fileName": "babylon-logo-white.png",
+              "contentType": "image/png"
+            },
+            "fr-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/2DJrD7PS0AGMqOgkMEQsA6/0302cde3022825c7805c3336f50b4555/TELUSHealth_Babylon_Hor_logo_WT_RGB_FR.png",
+              "details": {
+                "size": 13724,
+                "image": {
+                  "width": 602,
+                  "height": 158
+                }
+              },
+              "fileName": "TELUSHealth Babylon Hor_logo_WT_RGB_FR.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "2LjxB9EZLGuQGgmcOkGeui",
+          "revision": 3,
+          "createdAt": "2018-10-25T13:26:51.583Z",
+          "updatedAt": "2019-03-04T21:52:25.426Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "logo vertical"
+          },
+          "description": {
+            "en-CA": "Babylon by TELUS Health logo"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/2LjxB9EZLGuQGgmcOkGeui/bcd20bbd7700c1d773d4313fbaebaef7/babylon-logo-vertical.png",
+              "details": {
+                "size": 11545,
+                "image": {
+                  "width": 262,
+                  "height": 200
+                }
+              },
+              "fileName": "babylon-logo-vertical.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "3FTO2ff3PiqqSs6Qu288GS",
+          "revision": 3,
+          "createdAt": "2018-11-16T20:05:19.263Z",
+          "updatedAt": "2019-01-16T16:16:08.708Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "image - Can't take time off work"
+          },
+          "description": {
+            "en-CA": "Older man sitting at a desk looking at his phone"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/3FTO2ff3PiqqSs6Qu288GS/88ebed3d887b527ee0c768c24fe68c7c/time-off-work.jpg",
+              "details": {
+                "size": 25564,
+                "image": {
+                  "width": 568,
+                  "height": 416
+                }
+              },
+              "fileName": "time-off-work.jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "3Sw1c8gbfGGuwUW0EGwCOW",
+          "revision": 5,
+          "createdAt": "2018-10-12T14:48:53.190Z",
+          "updatedAt": "2019-03-04T21:54:00.645Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "babylon onboarding"
+          },
+          "description": {
+            "en-CA": "Preview of the babylon loading screen on an android phone"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/3Sw1c8gbfGGuwUW0EGwCOW/0a29d26fc1f613182999ced6d0a6867b/Intro_screen_pixel.png",
+              "details": {
+                "size": 67806,
+                "image": {
+                  "width": 556,
+                  "height": 1088
+                }
+              },
+              "fileName": "Intro_screen_pixel.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "3oSKXjoCp2Ouq02IkO2I4O",
+          "revision": 2,
+          "createdAt": "2018-10-11T00:13:54.606Z",
+          "updatedAt": "2018-10-28T17:13:19.374Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "play store"
+          },
+          "description": {
+            "en-CA": "Android download button"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/3oSKXjoCp2Ouq02IkO2I4O/44d3d1dedb846c364ee7969252ec191e/google-play.png",
+              "details": {
+                "size": 8410,
+                "image": {
+                  "width": 272,
+                  "height": 80
+                }
+              },
+              "fileName": "google-play.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "46niUia9R6smYIQWQOKsuc",
+          "revision": 4,
+          "createdAt": "2018-10-12T14:18:26.531Z",
+          "updatedAt": "2019-01-15T04:29:43.023Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "image - Bogdan Dascalu"
+          },
+          "description": {
+            "en-CA": "Photo of Doctor Bogdan Dascalu"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/46niUia9R6smYIQWQOKsuc/5942976be0d3dcf663f8fd544673346e/bogdan-dascalu.jpg",
+              "details": {
+                "size": 29154,
+                "image": {
+                  "width": 300,
+                  "height": 300
+                }
+              },
+              "fileName": "bogdan-dascalu.jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "4DVfcJxUkMCKSwaSEyqOiU",
+          "revision": 1,
+          "createdAt": "2018-10-12T13:31:38.191Z",
+          "updatedAt": "2018-10-12T13:32:28.219Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "iphone black empty"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/4DVfcJxUkMCKSwaSEyqOiU/d65527b7761e874335fb8b2eeac13220/iphone-black.png",
+              "details": {
+                "size": 147252,
+                "image": {
+                  "width": 654,
+                  "height": 1364
+                }
+              },
+              "fileName": "iphone-black.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "4KWwCGfjq8gUMiuQ2sW2o",
+          "revision": 2,
+          "createdAt": "2018-10-12T14:17:36.077Z",
+          "updatedAt": "2019-01-15T05:16:40.352Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "background leaves"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/4KWwCGfjq8gUMiuQ2sW2o/46a5ae811b7d08a1fa157b1711cb8f96/bg-leaves__1_.png",
+              "details": {
+                "size": 149983,
+                "image": {
+                  "width": 2236,
+                  "height": 1028
+                }
+              },
+              "fileName": "bg-leaves (1).png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "4N3B6pXBaMeYQwU4gyco2W",
+          "revision": 3,
+          "createdAt": "2018-10-11T00:09:34.921Z",
+          "updatedAt": "2019-01-22T22:34:40.116Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "hero"
+          },
+          "description": {
+            "en-CA": "Smiling woman sitting on her couch looking at her phone."
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/4N3B6pXBaMeYQwU4gyco2W/4f11a470e4f7d73248f41a8809125150/hero2__1_.png",
+              "details": {
+                "size": 275332,
+                "image": {
+                  "width": 2000,
+                  "height": 900
+                }
+              },
+              "fileName": "hero2 (1).png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "4T4FwQLJ2wQkSco6uU6Ogk",
+          "revision": 2,
+          "createdAt": "2018-10-25T13:24:53.537Z",
+          "updatedAt": "2018-10-28T17:52:13.616Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "reuters"
+          },
+          "description": {
+            "en-CA": "reuters logo"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/4T4FwQLJ2wQkSco6uU6Ogk/6b370af720dd21280d71372101ca5981/reuters.png",
+              "details": {
+                "size": 15052,
+                "image": {
+                  "width": 170,
+                  "height": 176
+                }
+              },
+              "fileName": "reuters.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "4j5KDv8aSQ4SYcYM6CO4wa",
+          "revision": 4,
+          "createdAt": "2019-01-09T17:54:30.864Z",
+          "updatedAt": "2019-02-20T19:06:15.220Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "How it works 3rd image - fill prescription"
+          },
+          "description": {
+            "en-CA": "Step 3: Screenshot of a map to find a pharmacy closest to you"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/4j5KDv8aSQ4SYcYM6CO4wa/f5027cfd6b49edeca762bc5d283847eb/find_pharmacy__1_.png",
+              "details": {
+                "size": 77265,
+                "image": {
+                  "width": 446,
+                  "height": 870
+                }
+              },
+              "fileName": "find_pharmacy (1).png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "4yEgIcqBX2AeqayOSgYqO4",
+          "revision": 6,
+          "createdAt": "2019-01-09T17:50:43.094Z",
+          "updatedAt": "2019-03-04T21:51:42.617Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "How it works 1st image"
+          },
+          "description": {
+            "en-CA": "Step 1: Picture of a phone screen showing the first page of the Babylon app"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/4yEgIcqBX2AeqayOSgYqO4/65f44c04b225e2efabb94c28e5bf8d82/iPhone-8_symptoms.png",
+              "details": {
+                "size": 33412,
+                "image": {
+                  "width": 446,
+                  "height": 870
+                }
+              },
+              "fileName": "iPhone-8_symptoms.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "4yv6flEp2EOocYusisuOCo",
+          "revision": 2,
+          "createdAt": "2018-11-16T20:02:06.440Z",
+          "updatedAt": "2019-01-16T16:29:48.892Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "image - Millennial without family doctor"
+          },
+          "description": {
+            "en-CA": "Woman sitting on her living room floor looking at her phone"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/4yv6flEp2EOocYusisuOCo/3598823654fa76fc2962f1437d5fae21/No_family_doctor__1_.jpg",
+              "details": {
+                "size": 122234,
+                "image": {
+                  "width": 1136,
+                  "height": 1184
+                }
+              },
+              "fileName": "No_family_doctor (1).jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "51OPBnIKyAk8GagKcEGsaM",
+          "revision": 5,
+          "createdAt": "2018-10-12T14:31:35.720Z",
+          "updatedAt": "2019-01-15T04:53:44.204Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "symptom checker"
+          },
+          "description": {
+            "en-CA": "Screenshot of a chat with Babylon symptom checker"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/51OPBnIKyAk8GagKcEGsaM/b4742bf712446ccfdb611b4783acbbc5/Symptom_Checker_-_Checkbase_screen__1_.PNG",
+              "details": {
+                "size": 73117,
+                "image": {
+                  "width": 640,
+                  "height": 1136
+                }
+              },
+              "fileName": "Symptom_Checker_-_Checkbase_screen (1).PNG",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "5XBRxPCQAEkWOaqckU0ciU",
+          "revision": 3,
+          "createdAt": "2018-10-25T13:22:07.448Z",
+          "updatedAt": "2018-10-28T17:52:51.532Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "mobile syrup"
+          },
+          "description": {
+            "en-CA": "mobile syrup logo"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/5XBRxPCQAEkWOaqckU0ciU/efcad406ac208e877ca8fb62b3aaf4df/mobile_syrup.png",
+              "details": {
+                "size": 9632,
+                "image": {
+                  "width": 400,
+                  "height": 70
+                }
+              },
+              "fileName": "mobile syrup.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "5ufU7sethKqsOsswMQiSG4",
+          "revision": 2,
+          "createdAt": "2018-11-16T20:15:00.355Z",
+          "updatedAt": "2019-01-15T05:14:37.312Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "Your information when you need it"
+          },
+          "description": {
+            "en-CA": "A girl walking down the street looking at her phone"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/5ufU7sethKqsOsswMQiSG4/00b84688e9f4d6f31fc532122c5ac005/Your_health_info_when_you_need_it2__1_.jpg",
+              "details": {
+                "size": 28246,
+                "image": {
+                  "width": 600,
+                  "height": 400
+                }
+              },
+              "fileName": "Your_health_info_when_you_need_it2 (1).jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "6AKnqg6kmI2yiAmaWKIe8c",
+          "revision": 2,
+          "createdAt": "2018-10-12T14:30:52.720Z",
+          "updatedAt": "2019-01-15T05:18:20.314Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "iphone in hand"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/6AKnqg6kmI2yiAmaWKIe8c/23f232eb50d7374ecd64bd9862743fe4/iphone_copy__1_.png",
+              "details": {
+                "size": 58165,
+                "image": {
+                  "width": 514,
+                  "height": 620
+                }
+              },
+              "fileName": "iphone copy (1).png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "6F1Md9NqdGa6wmC6wkcya8",
+          "revision": 1,
+          "createdAt": "2018-10-25T00:40:52.404Z",
+          "updatedAt": "2018-10-25T00:45:24.815Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "wave title"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/6F1Md9NqdGa6wmC6wkcya8/1a02ae771e672f9c78031807868e084f/wave_title_section.png",
+              "details": {
+                "size": 85857,
+                "image": {
+                  "width": 1400,
+                  "height": 156
+                }
+              },
+              "fileName": "wave_title_section.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "6RDy95JmMgI6o8GIiMKY86",
+          "revision": 2,
+          "createdAt": "2018-11-16T20:10:50.054Z",
+          "updatedAt": "2019-01-15T05:12:25.003Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "aboutusbanner2"
+          },
+          "description": {
+            "en-CA": "A man giving a glass of water to an elderly woman"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/6RDy95JmMgI6o8GIiMKY86/d374317cdf1a59a19bfa4eda53210313/TELUS_Health_is_committed2__1_.jpg",
+              "details": {
+                "size": 101968,
+                "image": {
+                  "width": 1440,
+                  "height": 930
+                }
+              },
+              "fileName": "TELUS_Health_is_committed2 (1).jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "6b6AOZPZEQs24WYYKKcOuS",
+          "revision": 4,
+          "createdAt": "2018-10-12T15:01:38.881Z",
+          "updatedAt": "2019-01-15T05:20:59.218Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "flower"
+          },
+          "description": {
+            "en-CA": "Purple flower"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/6b6AOZPZEQs24WYYKKcOuS/f545118546db074c9e7c01452593d550/flower__1_.png",
+              "details": {
+                "size": 68349,
+                "image": {
+                  "width": 590,
+                  "height": 622
+                }
+              },
+              "fileName": "flower (1).png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "6nnq4O5Zbqy88geCiCm4cq",
+          "revision": 4,
+          "createdAt": "2018-10-12T14:50:24.210Z",
+          "updatedAt": "2019-01-16T16:18:55.824Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "splash screen"
+          },
+          "description": {
+            "en-CA": "Preview of the main screen of the babylon app, a smiling woman on her phone"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/6nnq4O5Zbqy88geCiCm4cq/4d32377ef7ea9358839a04a283a11cc0/iPhone_8__1_.png",
+              "details": {
+                "size": 95221,
+                "image": {
+                  "width": 458,
+                  "height": 948
+                }
+              },
+              "fileName": "iPhone 8 (1).png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "6y6ovK7Kb6yCuwMimc0eae",
+          "revision": 4,
+          "createdAt": "2018-10-25T13:21:33.692Z",
+          "updatedAt": "2018-10-28T17:52:40.177Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "vancouver sun"
+          },
+          "description": {
+            "en-CA": "vancouver sun logo"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/6y6ovK7Kb6yCuwMimc0eae/39ae8f39f21b2c0b6a92794f60338535/vancouver_sun.png",
+              "details": {
+                "size": 9842,
+                "image": {
+                  "width": 260,
+                  "height": 122
+                }
+              },
+              "fileName": "vancouver sun.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "74iIYUBCU00A8MsAsGEYYO",
+          "revision": 4,
+          "createdAt": "2018-10-12T13:31:38.159Z",
+          "updatedAt": "2019-03-04T21:52:48.989Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "consult preview"
+          },
+          "description": {
+            "en-CA": "Virtual consult with doctor"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/74iIYUBCU00A8MsAsGEYYO/913923046dbef74bb78149bcc145e785/dr-clara-preview.png",
+              "details": {
+                "size": 157785,
+                "image": {
+                  "width": 450,
+                  "height": 800
+                }
+              },
+              "fileName": "dr-clara-preview.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "7dxLn2tZ2o2AKyCE6aosEG",
+          "revision": 1,
+          "createdAt": "2018-11-09T21:08:28.505Z",
+          "updatedAt": "2018-11-09T21:08:43.347Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "play button"
+          },
+          "description": {
+            "en-CA": "play button"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/7dxLn2tZ2o2AKyCE6aosEG/6b9006edf33756185361cc5a66442156/play_button.svg",
+              "details": {
+                "size": 1518,
+                "image": {
+                  "width": 56,
+                  "height": 48
+                }
+              },
+              "fileName": "play button.svg",
+              "contentType": "image/svg+xml"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "7lNSmdheFfRimEuKoO12pT",
+          "revision": 1,
+          "createdAt": "2019-01-15T04:26:21.917Z",
+          "updatedAt": "2019-01-15T04:26:52.929Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "image - doctor sarah olson"
+          },
+          "description": {
+            "en-CA": "Photo of Dr. Sarah Olson"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/7lNSmdheFfRimEuKoO12pT/f267ab0bc790c4d9656f7cda31b52dd8/sarah-olson.jpg",
+              "details": {
+                "size": 33070,
+                "image": {
+                  "width": 300,
+                  "height": 300
+                }
+              },
+              "fileName": "sarah-olson.jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "7mqEsOMd5CquoSES82iIwE",
+          "revision": 4,
+          "createdAt": "2018-10-12T13:31:38.203Z",
+          "updatedAt": "2019-03-04T21:53:07.757Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "appointment details"
+          },
+          "description": {
+            "en-CA": "Virtual care appointment details on a mobile phone."
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/7mqEsOMd5CquoSES82iIwE/98c03357662abe79e68165b837acffd4/Book_an_appointment_screen.png",
+              "details": {
+                "size": 46430,
+                "image": {
+                  "width": 640,
+                  "height": 1138
+                }
+              },
+              "fileName": "Book an appointment screen.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "EqU5ydyKRM4AiiSgySQg8",
+          "revision": 2,
+          "createdAt": "2018-10-25T13:23:28.826Z",
+          "updatedAt": "2018-10-28T17:52:26.132Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "global news"
+          },
+          "description": {
+            "en-CA": "global news logo"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/EqU5ydyKRM4AiiSgySQg8/823daa913a74674196ec21b2cdb5ba0a/global_news.png",
+              "details": {
+                "size": 8588,
+                "image": {
+                  "width": 260,
+                  "height": 144
+                }
+              },
+              "fileName": "global news.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "SbQJwdwSGGckqaWwwU6ky",
+          "revision": 3,
+          "createdAt": "2018-11-16T20:12:47.263Z",
+          "updatedAt": "2019-01-16T16:20:15.798Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "image - need after hours"
+          },
+          "description": {
+            "en-CA": "Mother attending to her sick child"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/SbQJwdwSGGckqaWwwU6ky/625f59f5c2ad27e498bb57334c9bb77b/rural__2_.jpg",
+              "details": {
+                "size": 58739,
+                "image": {
+                  "width": 568,
+                  "height": 272
+                }
+              },
+              "fileName": "rural (2).jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "SyPrpGoJeCiQaAcU8Uiiw",
+          "revision": 2,
+          "createdAt": "2018-10-11T00:12:53.095Z",
+          "updatedAt": "2018-10-28T17:13:36.684Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "app store"
+          },
+          "description": {
+            "en-CA": "iOS download button"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/SyPrpGoJeCiQaAcU8Uiiw/71da1367af0c2c412c84b946d7e69a08/app-store.png",
+              "details": {
+                "size": 7654,
+                "image": {
+                  "width": 240,
+                  "height": 80
+                }
+              },
+              "fileName": "app-store.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "a4W8zbbBUQkqqyyQiIq4I",
+          "revision": 3,
+          "createdAt": "2018-10-25T13:25:20.689Z",
+          "updatedAt": "2018-10-28T17:52:00.323Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "tech vibes"
+          },
+          "description": {
+            "en-CA": "tech vibes logo"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/a4W8zbbBUQkqqyyQiIq4I/7d08b360ed91803eeedb6687509e1e16/techvibes.png",
+              "details": {
+                "size": 8327,
+                "image": {
+                  "width": 344,
+                  "height": 60
+                }
+              },
+              "fileName": "techvibes.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "jdrIyLZ2LKuqwYGWEQSCC",
+          "revision": 6,
+          "createdAt": "2019-01-09T17:52:19.899Z",
+          "updatedAt": "2019-03-04T21:51:57.634Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "How it works 2nd image - Virtual consult"
+          },
+          "description": {
+            "en-CA": "Step 2: A picture of a virtual consultation between a doctor and user"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/jdrIyLZ2LKuqwYGWEQSCC/0cad2b27de06c2f6d477ccce3383f2d1/iPhone-8_conference__1_.png",
+              "details": {
+                "size": 128236,
+                "image": {
+                  "width": 446,
+                  "height": 870
+                }
+              },
+              "fileName": "iPhone-8_conference (1).png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1izjqx4qtt8c"
+            }
+          },
+          "type": "Asset",
+          "id": "wna9IT5w40E4AcosQeUUM",
+          "revision": 4,
+          "createdAt": "2018-10-12T15:00:35.474Z",
+          "updatedAt": "2019-01-24T14:35:48.257Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-CA": "twitter logo",
+            "en-CA-BC": "doctor"
+          },
+          "description": {
+            "en-CA": "Twitter button"
+          },
+          "file": {
+            "en-CA": {
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/wna9IT5w40E4AcosQeUUM/affb1b0c2b1aad4be389b92567115fa4/twitter-logo.svg",
+              "details": {
+                "size": 2299,
+                "image": {
+                  "width": 34,
+                  "height": 28
+                }
+              },
+              "fileName": "twitter-logo.svg",
+              "contentType": "image/svg+xml"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

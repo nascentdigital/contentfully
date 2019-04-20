@@ -8,6 +8,7 @@ import {
 } from "../src";
 import fullContent from "./data/linked.json";
 import draftedContent from "./data/draftedContent.json";
+import localeContent from "./data/locale.json";
 
 
 // setup mocks
@@ -242,11 +243,63 @@ describe("Content with linked entities and assets", () => {
         const contentfulClient = new ContentfulClient(contentfulOptions);
         const contentfully = new Contentfully(contentfulClient);
 
-        // fetch models with media transform option
         const result = await contentfully.getModels();
 
         // Validate that unpublished fields have been removed
         expect(Object.keys(result.items[0]).length).toBe(9); // 10 total, 1 unpublished
         expect(result.items[0].blocks.length).toBe(3); // 5 total, 2 unpublished
+    });
+});
+
+describe("Linked entities and assets with wildcard locale", () => {
+    // create mock for client
+    const contentfulOptions = {
+        accessToken: "abc123",
+        spaceId: "xyz123",
+        environmentId: "testing"
+    };
+    const mockClientQuery = jest.fn()
+        .mockImplementation(async () => {
+            return _.cloneDeep(localeContent)
+        });
+
+    // test setup
+    beforeEach(() => {
+        // clear all instances
+        MockContentfulClient.mockClear();
+        mockClientQuery.mockClear();
+
+        // create implementation
+        MockContentfulClient.mockImplementation(() => {
+            return {
+                query: mockClientQuery
+            };
+        });
+    });
+
+    it("Should parse without errors", async () => {
+
+        // ensure mock has never been called
+        expect(MockContentfulClient).not.toHaveBeenCalled();
+
+        // create client
+        const contentfulClient = new ContentfulClient(contentfulOptions);
+        const contentfully = new Contentfully(contentfulClient);
+        const result = await contentfully.getModels({
+            locale: '*'
+        });
+        console.dir(result, { depth: null });
+        // assert invocations
+        expect(MockContentfulClient).toHaveBeenCalledTimes(1);
+        expect(mockClientQuery).toHaveBeenCalledTimes(1);
+
+        // assert content
+        // expect(result).toMatchObject({
+        //     total: 14,
+        //     skip: 0,
+        //     limit: 100
+        // });
+        expect(result.items).toBeInstanceOf(Array);
+        // expect(result.items.length).toEqual(14);
     });
 });

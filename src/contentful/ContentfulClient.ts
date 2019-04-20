@@ -10,7 +10,6 @@ import {
     ServerError
 } from "../errors";
 
-
 export class ContentfulClient {
 
     private static readonly PREVIEW_URL = "https://preview.contentful.com";

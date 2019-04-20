@@ -31,7 +31,7 @@
     "@types/jest": "^23.3.4",
     "@types/lodash": "^4.14.116",
     "@types/node-fetch": "^2.1.2",
-    "jest": "^23.6.0",
+    "jest": "^24.0.0",
     "ts-jest": "^23.10.4",
     "typescript": "^3.0.3"
   }
