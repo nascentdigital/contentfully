@@ -182,17 +182,17 @@ Which would return models mapped by locale:
               _id: "m12mkd123fdr4", 
               "en-CA": {
                 url: "foo.png",
+                title: "title",
                 dimensions: {
-                  title: "title",
                   width: 1,
                   height: 1
                 },
                 size: 44335
               },
               "fr-CA": {
+                url: "bar.jpg",
+                title: "french title",
                 dimensions: {
-                  url: "bar.jpg",
-                  title: "french title",
                   width: 2,
                   height: 2
                 },
