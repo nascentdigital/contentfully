@@ -288,18 +288,68 @@ describe("Linked entities and assets with wildcard locale", () => {
         const result = await contentfully.getModels({
             locale: '*'
         });
-        console.dir(result, { depth: null });
+
         // assert invocations
         expect(MockContentfulClient).toHaveBeenCalledTimes(1);
         expect(mockClientQuery).toHaveBeenCalledTimes(1);
 
         // assert content
-        // expect(result).toMatchObject({
-        //     total: 14,
-        //     skip: 0,
-        //     limit: 100
-        // });
+        expect(result).toMatchObject({
+            total: 1,
+            skip: 0,
+            limit: 1000
+        });
         expect(result.items).toBeInstanceOf(Array);
-        // expect(result.items.length).toEqual(14);
+        expect(result.items.length).toEqual(1);
+
+        const nav = _.get(result, 'items[0].nav.en-CA');
+        const navLeftItems = _.get(nav, 'itemsLeft.en-CA');
+
+        expect(nav).toBeDefined();
+        expect(navLeftItems).toBeInstanceOf(Array);
+        expect(navLeftItems).toEqual(expect.arrayContaining([
+            expect.objectContaining({
+                _id: "7DtmnYUzXUKgygyyomKaQ2",
+                _type: "link",
+                url: {
+                    "en-CA": "#howItWorks"
+                },
+                type: {
+                    "en-CA": "Link"
+                },
+                id: {
+                    "en-CA": "howItWorksLink"
+                },
+                text: {
+                    "en-CA": "How It Works",
+                    "fr-CA": "Fonctionnement"
+                }
+            })
+        ]));
+
+        const heroBanner = (_.get(result, 'items[0].heroBanner.en-CA'));
+        const heroBannerContent = _.get(heroBanner, 'content.en-CA.title');
+        const heroBannerLogo = _.get(heroBanner, 'logo');
+
+        expect(heroBanner).toBeDefined();
+        expect(heroBannerContent).toHaveProperty('en-CA')
+        expect(heroBannerContent).toHaveProperty('en-CA-BC');
+        expect(heroBannerContent).toHaveProperty('fr-CA');
+
+        expect(heroBannerLogo).toHaveProperty('en-CA');
+        expect(heroBannerLogo['en-CA']).toHaveProperty('size');
+        expect(heroBannerLogo['en-CA']).toHaveProperty('contentType');
+        expect(heroBannerLogo['en-CA'].dimensions).toMatchObject({
+            width: 500,
+            height: 116
+        });
+        expect(heroBannerLogo).toHaveProperty('fr-CA');
+        expect(heroBannerLogo['fr-CA']).toHaveProperty('size');
+        expect(heroBannerLogo['fr-CA']).toHaveProperty('contentType');
+        expect(heroBannerLogo['fr-CA'].dimensions).toMatchObject({
+            width: 597,
+            height: 157
+        });
+
     });
 });

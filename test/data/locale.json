@@ -9,10 +9,10 @@
     {
       "fields": {
         "id": {
-          "en-CA": "babylonPage"
+          "en-CA": "BPage"
         },
         "slug": {
-          "en-CA": "/health/personal/babylon"
+          "en-CA": "/health/personal/B"
         },
         "seo": {
           "en-CA": {
@@ -165,7 +165,7 @@
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "babylonPage"
+            "id": "BPage"
           }
         },
         "updatedAt": "2019-01-21T02:34:39.263Z"
@@ -205,7 +205,7 @@
         },
         "fields": {
           "id": {
-            "en-CA": "babylonSymptomCheckerPromoText"
+            "en-CA": "BSymptomCheckerPromoText"
           },
           "title": {
             "en-CA": "Check your symptoms 24/7. ",
@@ -288,12 +288,12 @@
         },
         "fields": {
           "question": {
-            "en-CA": "Is Babylon by TELUS Health secure?",
-            "fr-CA": "Le service Babylon par TELUS Santé est-il sécuritaire? "
+            "en-CA": "Is B by T Health secure?",
+            "fr-CA": "Le service B par T Santé est-il sécuritaire? "
           },
           "answer": {
-            "en-CA": "We take data security and privacy extremely seriously. All of Babylon by TELUS Health’s clinical procedures meet or exceed industry and legal standards. We retain patient records in accordance with national best practice guidelines and all patient data is securely transmitted using industry-recognized encryption methods.",
-            "fr-CA": "TELUS attache une très grande importance à la sécurité et à la protection de la vie privée. Toutes les procédures cliniques du service Babylon par TELUS Santé respectent ou dépassent les normes légales ou sectorielles. La conservation des dossiers des patients se fait selon les meilleures pratiques en vigueur au pays, et toutes les données des patients sont transmises de façon sécurisée au moyen de méthodes de chiffrement reconnues."
+            "en-CA": "We take data security and privacy extremely seriously. All of B by T Health’s clinical procedures meet or exceed industry and legal standards. We retain patient records in accordance with national best practice guidelines and all patient data is securely transmitted using industry-recognized encryption methods.",
+            "fr-CA": "T attache une très grande importance à la sécurité et à la protection de la vie privée. Toutes les procédures cliniques du service B par T Santé respectent ou dépassent les normes légales ou sectorielles. La conservation des dossiers des patients se fait selon les meilleures pratiques en vigueur au pays, et toutes les données des patients sont transmises de façon sécurisée au moyen de méthodes de chiffrement reconnues."
           }
         }
       },
@@ -455,7 +455,7 @@
             }
           },
           "id": {
-            "en-CA": "babylonOnboardingPhone"
+            "en-CA": "BOnboardingPhone"
           }
         }
       },
@@ -557,9 +557,9 @@
             "fr-CA": "Comment parvenons-nous à offrir des soins de qualité? "
           },
           "answer": {
-            "en-CA": "Babylon by TELUS Health is designed to address a range of healthcare needs, tailored to the circumstances of each individual patient.\n \n* For patients who are fortunate enough to have access to a family doctor, we will assess and treat concerns as appropriate, helping patients avoid trips to emergency departments, particularly during evenings and weekends. For attached-patients with chronic / long term conditions, we will provide care for any urgent needs related to these conditions, where appropriate, but we encourage the connection between the patient and their family doctor. \n \n* For patients who do not currently have access to a family doctor, we will assess and treat these issues as appropriate and fill gaps for patients who lack access to primary care and who might otherwise seek care in emergency departments. For unattached-patients with chronic/long-term conditions, we will provide comprehensive care for long term conditions, while acknowledging the limitations of video-based assessments for some of these conditions.  Where appropriate and feasible, Babylon will assist patients in connecting with local healthcare resources. \n",
-            "en-CA-BC": "Babylon by TELUS Health is designed to address a range of healthcare needs, tailored to the circumstances of each individual patient.\n \n* For patients who are fortunate enough to have access to a family doctor, we will assess and treat concerns as appropriate, helping patients avoid trips to emergency departments, particularly during evenings and weekends. For attached-patients with chronic / long term conditions, we will provide care for any urgent needs related to these conditions, where appropriate, but we encourage the connection between the patient and their family doctor. \n \n* For patients who do not currently have access to a family doctor, we will assess and treat these issues as appropriate and fill gaps for patients who lack access to primary care and who might otherwise seek care in emergency departments. For unattached-patients with chronic/long-term conditions, we will provide care for long term conditions, while acknowledging the limitations of video-based assessments for some of these conditions.  Where appropriate and feasible, Babylon will assist patients in connecting with local healthcare resources. ",
-            "fr-CA": "Babylon par TELUS Santé vise à combler divers besoins en matière de santé en tenant compte de la situation de chaque patient.\n\\\n* Pour les patients qui ont un médecin de famille : nous évaluons les symptômes et offrons un traitement approprié pour éviter une consultation à l’urgence, notamment les soirs et week-ends. Pour les patients atteints d’une maladie chronique (condition permanente) qui sont suivis par un médecin : nous offrons des services pour répondre aux besoins urgents connexes, si possible, tout en privilégiant la relation entre le patient et son médecin de famille.\n\\\n\\\nPour les patients qui n’ont pas accès à un médecin de famille : nous évaluons les symptômes et prodiguons les soins appropriés afin de pallier le manque d’accès aux soins de première ligne pour ces patients qui, autrement, iraient à l’urgence pour obtenir une consultation médicale. Pour les patients atteints d’une maladie chronique (condition permanente) qui ne sont pas suivis par un médecin : nous offrons des soins de santé complets à ces patients, mais reconnaissons les limites des évaluations par vidéo dans certains cas. Babylon pourra rediriger les patients vers des ressources en santé de leur région lorsque cela sera possible."
+            "en-CA": "B by T Health is designed to address a range of healthcare needs, tailored to the circumstances of each individual patient.\n \n* For patients who are fortunate enough to have access to a family doctor, we will assess and treat concerns as appropriate, helping patients avoid trips to emergency departments, particularly during evenings and weekends. For attached-patients with chronic / long term conditions, we will provide care for any urgent needs related to these conditions, where appropriate, but we encourage the connection between the patient and their family doctor. \n \n* For patients who do not currently have access to a family doctor, we will assess and treat these issues as appropriate and fill gaps for patients who lack access to primary care and who might otherwise seek care in emergency departments. For unattached-patients with chronic/long-term conditions, we will provide comprehensive care for long term conditions, while acknowledging the limitations of video-based assessments for some of these conditions.  Where appropriate and feasible, B will assist patients in connecting with local healthcare resources. \n",
+            "en-CA-BC": "B by T Health is designed to address a range of healthcare needs, tailored to the circumstances of each individual patient.\n \n* For patients who are fortunate enough to have access to a family doctor, we will assess and treat concerns as appropriate, helping patients avoid trips to emergency departments, particularly during evenings and weekends. For attached-patients with chronic / long term conditions, we will provide care for any urgent needs related to these conditions, where appropriate, but we encourage the connection between the patient and their family doctor. \n \n* For patients who do not currently have access to a family doctor, we will assess and treat these issues as appropriate and fill gaps for patients who lack access to primary care and who might otherwise seek care in emergency departments. For unattached-patients with chronic/long-term conditions, we will provide care for long term conditions, while acknowledging the limitations of video-based assessments for some of these conditions.  Where appropriate and feasible, B will assist patients in connecting with local healthcare resources. ",
+            "fr-CA": "B par T Santé vise à combler divers besoins en matière de santé en tenant compte de la situation de chaque patient.\n\\\n* Pour les patients qui ont un médecin de famille : nous évaluons les symptômes et offrons un traitement approprié pour éviter une consultation à l’urgence, notamment les soirs et week-ends. Pour les patients atteints d’une maladie chronique (condition permanente) qui sont suivis par un médecin : nous offrons des services pour répondre aux besoins urgents connexes, si possible, tout en privilégiant la relation entre le patient et son médecin de famille.\n\\\n\\\nPour les patients qui n’ont pas accès à un médecin de famille : nous évaluons les symptômes et prodiguons les soins appropriés afin de pallier le manque d’accès aux soins de première ligne pour ces patients qui, autrement, iraient à l’urgence pour obtenir une consultation médicale. Pour les patients atteints d’une maladie chronique (condition permanente) qui ne sont pas suivis par un médecin : nous offrons des soins de santé complets à ces patients, mais reconnaissons les limites des évaluations par vidéo dans certains cas. B pourra rediriger les patients vers des ressources en santé de leur région lorsque cela sera possible."
           }
         }
       },
@@ -594,17 +594,17 @@
         },
         "fields": {
           "text": {
-            "en-CA": "Babylon by TELUS Health",
-            "fr-CA": "Babylon par TELUS Santé"
+            "en-CA": "B by T Health",
+            "fr-CA": "B par T Santé"
           },
           "url": {
-            "en-CA": "/babylon"
+            "en-CA": "/B"
           },
           "id": {
-            "en-CA": "babylonBreadcrumbLink"
+            "en-CA": "BBreadcrumbLink"
           },
           "whiteList": {
-            "en-CA": "babylon"
+            "en-CA": "B"
           }
         }
       },
@@ -639,13 +639,13 @@
         },
         "fields": {
           "id": {
-            "en-CA": "babylonSeo"
+            "en-CA": "BSeo"
           },
           "title": {
-            "en-CA": "Babylon by TELUS Health | TELUS"
+            "en-CA": "B by T Health | T"
           },
           "description": {
-            "en-CA": "Introducing Babylon by TELUS Health, a healthcare mobile app that allows you to check symptoms, consult with doctors* and easily access your clinical records."
+            "en-CA": "Introducing B by T Health, a healthcare mobile app that allows you to check symptoms, consult with doctors* and easily access your clinical records."
           },
           "ogImage": {
             "en-CA": {
@@ -664,7 +664,7 @@
               "telemedicine",
               "ask a doctor",
               "on demand",
-              "babylon"
+              "B"
             ]
           }
         }
@@ -732,8 +732,8 @@
             "fr-CA": "Nous pouvons vous aider."
           },
           "description": {
-            "en-CA": "Babylon by TELUS Health is a convenient way to see a doctor for many non-emergency conditions. ",
-            "fr-CA": "Babylon par TELUS Santé est un moyen pratique de consulter un médecin pour des problèmes de santé non urgents."
+            "en-CA": "B by T Health is a convenient way to see a doctor for many non-emergency conditions. ",
+            "fr-CA": "B par T Santé est un moyen pratique de consulter un médecin pour des problèmes de santé non urgents."
           },
           "cta": {
             "en-CA": {
@@ -830,7 +830,7 @@
             "fr-CA": "Voir toutes les questions fréquentes"
           },
           "url": {
-            "en-CA": "/health/personal/babylon/support"
+            "en-CA": "/health/personal/B/support"
           },
           "type": {
             "en-CA": "Link"
@@ -1031,7 +1031,7 @@
         },
         "fields": {
           "url": {
-            "en-CA": "https://www.youtube.com/user/TELUSHealth"
+            "en-CA": "https://www.youtube.com/user/THealth"
           },
           "image": {
             "en-CA": {
@@ -1085,8 +1085,8 @@
             "fr-CA": "Comment fonctionnent les ordonnances?"
           },
           "answer": {
-            "en-CA": "* Prescriptions: After your Babylon by TELUS Health doctor generates your prescription, it is handled by our Clinical Support team. Your prescription will be sent to a pharmacy of your choice, where it should be received within one hour. You will need to provide proof of identification at the pharmacy to be able to collect your prescription.\n\n* Diagnostic Tests: After your consultation, our Clinical Support team will ask you for your preferred lab/imaging center or will recommend one nearby. Our Clinical Support team will then provide guidance on next steps.\n \n* Referrals: After your consultation, a referral letter will be sent to a specialist. Once your referral is accepted, a member of our Clinical Support team or the specialist office will call you to schedule an appointment. \n",
-            "fr-CA": "Après qu’un médecin Babylon par TELUS Santé a généré une ordonnance dans le rendez-vous, celle-ci est traitée par notre équipe du soutien clinique. Votre ordonnance sera envoyée à la pharmacie de votre choix qui la recevra dans un délai d’environ une heure. À la pharmacie, vous devrez présenter une pièce d’identité pour récupérer votre ordonnance."
+            "en-CA": "* Prescriptions: After your B by T Health doctor generates your prescription, it is handled by our Clinical Support team. Your prescription will be sent to a pharmacy of your choice, where it should be received within one hour. You will need to provide proof of identification at the pharmacy to be able to collect your prescription.\n\n* Diagnostic Tests: After your consultation, our Clinical Support team will ask you for your preferred lab/imaging center or will recommend one nearby. Our Clinical Support team will then provide guidance on next steps.\n \n* Referrals: After your consultation, a referral letter will be sent to a specialist. Once your referral is accepted, a member of our Clinical Support team or the specialist office will call you to schedule an appointment. \n",
+            "fr-CA": "Après qu’un médecin B par T Santé a généré une ordonnance dans le rendez-vous, celle-ci est traitée par notre équipe du soutien clinique. Votre ordonnance sera envoyée à la pharmacie de votre choix qui la recevra dans un délai d’environ une heure. À la pharmacie, vous devrez présenter une pièce d’identité pour récupérer votre ordonnance."
           }
         }
       },
@@ -1362,7 +1362,7 @@
             "en-CA": "media logo - techvibes"
           },
           "link": {
-            "en-CA": "https://techvibes.com/2018/09/11/telus-and-babylon-partner-to-bring-virtual-healthcare-to-canadians"
+            "en-CA": "https://techvibes.com/2018/09/11/T-and-B-partner-to-bring-virtual-healthcare-to-canadians"
           },
           "image": {
             "en-CA": {
@@ -1458,8 +1458,8 @@
             "fr-CA": "Carrières"
           },
           "description": {
-            "en-CA": "Interested in joining Babylon by TELUS Health as a Physician?",
-            "fr-CA": "Devenez un médecin de Babylon par TELUS Santé\n"
+            "en-CA": "Interested in joining B by T Health as a Physician?",
+            "fr-CA": "Devenez un médecin de B par T Santé\n"
           },
           "cta": {
             "en-CA": {
@@ -1506,7 +1506,7 @@
             "en-CA": "media logo - reuters"
           },
           "link": {
-            "en-CA": "https://www.reuters.com/article/us-canada-healthcare-ai/telus-health-picks-babylon-to-bring-virtual-healthcare-to-canada-idUSKCN1LN0PM"
+            "en-CA": "https://www.reuters.com/article/us-canada-healthcare-ai/T-health-picks-B-to-bring-virtual-healthcare-to-canada-idUSKCN1LN0PM"
           },
           "image": {
             "en-CA": {
@@ -1602,7 +1602,7 @@
             "en-CA": "media logo - global news"
           },
           "link": {
-            "en-CA": "https://globalnews.ca/news/4435512/telus-app-virtual-doctor/"
+            "en-CA": "https://globalnews.ca/news/4435512/T-app-virtual-doctor/"
           },
           "image": {
             "en-CA": {
@@ -1691,7 +1691,7 @@
         },
         "fields": {
           "url": {
-            "en-CA": "//go.onelink.me/Fk5k/babylonwebandroid"
+            "en-CA": "//go.onelink.me/Fk5k/Bwebandroid"
           },
           "image": {
             "en-CA": {
@@ -1741,7 +1741,7 @@
         },
         "fields": {
           "id": {
-            "en-CA": "babylonHeroContent"
+            "en-CA": "BHeroContent"
           },
           "title": {
             "en-CA": "Healthcare in your hands.",
@@ -1755,9 +1755,9 @@
             "fr-CA-BC": "*Les consultations avec un médecin pour les résidents de la Colombie-Britannique sont couvertes par le Medical Services Plan (MSP)."
           },
           "description": {
-            "en-CA": "Introducing Babylon by TELUS Health, a mobile app that allows you to check symptoms, see a doctor* and easily access your clinical records all through your phone.",
-            "en-CA-BC": "Introducing Babylon by TELUS Health, a mobile app that allows you to check symptoms, see a doctor* and easily access your clinical records all through your phone.",
-            "fr-CA": "Voici Babylon par TELUS Santé, une application mobile qui vous permet de vérifier vos symptômes, de consulter des médecins* et d’accéder facilement à votre dossier clinique de consultation. "
+            "en-CA": "Introducing B by T Health, a mobile app that allows you to check symptoms, see a doctor* and easily access your clinical records all through your phone.",
+            "en-CA-BC": "Introducing B by T Health, a mobile app that allows you to check symptoms, see a doctor* and easily access your clinical records all through your phone.",
+            "fr-CA": "Voici B par T Santé, une application mobile qui vous permet de vérifier vos symptômes, de consulter des médecins* et d’accéder facilement à votre dossier clinique de consultation. "
           }
         }
       },
@@ -1792,7 +1792,7 @@
         },
         "fields": {
           "id": {
-            "en-CA": "babylonDoctorPromoText"
+            "en-CA": "BDoctorPromoText"
           },
           "title": {
             "en-CA": "Meet some of our experienced doctors. ",
@@ -1841,9 +1841,9 @@
             "fr-CA": "Quelles sont les exigences minimales?"
           },
           "answer": {
-            "en-CA": "Babylon by TELUS Health is available on iPhones (iOS 11 and above) and Android (version 4.2 and above) smartphones. \\\n\\\nYou will need to be connected to the internet. Where possible we recommend using WiFi. ",
-            "en-CA-BC": "Babylon by TELUS Health is available on iPhones (iOS 11 and above) and Android (version 4.2 and above) smartphones.\\\n\\\nYou will need to be connected to the internet. Where possible we recommend using WiFi. \n",
-            "fr-CA": "L’application Babylon par TELUS Santé est compatible avec les téléphones intelligents Apple (iOS 11 ou supérieur) et Android (version 4.2 ou supérieure).\\\n \\\nPour utiliser l’application, vous devez aussi avoir une connexion Internet. Nous recommandons l’utilisation d’un réseau Wi-Fi (au lieu d’un réseau 3G ou 4G), car la connexion est généralement plus fiable."
+            "en-CA": "B by T Health is available on iPhones (iOS 11 and above) and Android (version 4.2 and above) smartphones. \\\n\\\nYou will need to be connected to the internet. Where possible we recommend using WiFi. ",
+            "en-CA-BC": "B by T Health is available on iPhones (iOS 11 and above) and Android (version 4.2 and above) smartphones.\\\n\\\nYou will need to be connected to the internet. Where possible we recommend using WiFi. \n",
+            "fr-CA": "L’application B par T Santé est compatible avec les téléphones intelligents Apple (iOS 11 ou supérieur) et Android (version 4.2 ou supérieure).\\\n \\\nPour utiliser l’application, vous devez aussi avoir une connexion Internet. Nous recommandons l’utilisation d’un réseau Wi-Fi (au lieu d’un réseau 3G ou 4G), car la connexion est généralement plus fiable."
           }
         }
       },
@@ -1943,7 +1943,7 @@
             "en-CA": "media logo - vancouver sun"
           },
           "link": {
-            "en-CA": "https://vancouversun.com/news/national/telus-to-offer-app-for-24-7-tele-conference-visits-to-doctors"
+            "en-CA": "https://vancouversun.com/news/national/T-to-offer-app-for-24-7-tele-conference-visits-to-doctors"
           },
           "image": {
             "en-CA": {
@@ -2393,7 +2393,7 @@
         },
         "fields": {
           "url": {
-            "en-CA": "//go.onelink.me/Njra/babylonwebios"
+            "en-CA": "//go.onelink.me/Njra/Bwebios"
           },
           "image": {
             "en-CA": {
@@ -2443,14 +2443,14 @@
         },
         "fields": {
           "question": {
-            "en-CA": "Who is Babylon by TELUS Health for? ",
-            "en-CA-BC": "Who is Babylon by TELUS Health for? ",
-            "fr-CA": "À qui l’application Babylon par TELUS Santé est-elle destinée? "
+            "en-CA": "Who is B by T Health for? ",
+            "en-CA-BC": "Who is B by T Health for? ",
+            "fr-CA": "À qui l’application B par T Santé est-elle destinée? "
           },
           "answer": {
-            "en-CA": "Babylon by TELUS Health aims to serve Canadians currently without a family doctor or those who seek medical care after-hours. If you have a family doctor, we recommend you continue seeing them.",
-            "en-CA-BC": "Babylon by TELUS Health aims to serve Canadians currently without a family doctor or those who seek medical care after-hours. If you have a family doctor, we recommend you continue seeing them.",
-            "fr-CA": "Babylon par TELUS Santé a été conçue pour aider les Canadiens qui n’ont pas de médecin de famille ou qui désirent consulter un médecin hors des heures d’ouverture. Il est préférable de continuer de consulter votre médecin de famille si vous en avez un."
+            "en-CA": "B by T Health aims to serve Canadians currently without a family doctor or those who seek medical care after-hours. If you have a family doctor, we recommend you continue seeing them.",
+            "en-CA-BC": "B by T Health aims to serve Canadians currently without a family doctor or those who seek medical care after-hours. If you have a family doctor, we recommend you continue seeing them.",
+            "fr-CA": "B par T Santé a été conçue pour aider les Canadiens qui n’ont pas de médecin de famille ou qui désirent consulter un médecin hors des heures d’ouverture. Il est préférable de continuer de consulter votre médecin de famille si vous en avez un."
           }
         }
       },
@@ -2489,7 +2489,7 @@
             "fr-CA": "En savoir plus"
           },
           "url": {
-            "en-CA": "https://www.babylonhealth.com/ca/telus/privacy-policy"
+            "en-CA": "https://www.Bhealth.com/ca/T/privacy-policy"
           },
           "type": {
             "en-CA": "Link"
@@ -2530,7 +2530,7 @@
         },
         "fields": {
           "id": {
-            "en-CA": "babylonAppDemoPromoText"
+            "en-CA": "BAppDemoPromoText"
           },
           "title": {
             "en-CA": "Care from the comfort of your home. ",
@@ -2635,7 +2635,7 @@
         },
         "fields": {
           "url": {
-            "en-CA": "https://twitter.com/telushealth"
+            "en-CA": "https://twitter.com/Thealth"
           },
           "image": {
             "en-CA": {
@@ -2694,7 +2694,7 @@
             }
           },
           "id": {
-            "en-CA": "babylonSplashScreenPhone"
+            "en-CA": "BSplashScreenPhone"
           }
         }
       },
@@ -2729,7 +2729,7 @@
         },
         "fields": {
           "url": {
-            "en-CA": "https://www.linkedin.com/company/telus-health"
+            "en-CA": "https://www.linkedin.com/company/T-health"
           },
           "image": {
             "en-CA": {
@@ -2783,7 +2783,7 @@
             "fr-CA": "Santé"
           },
           "url": {
-            "en-CA": "//telus.com/health"
+            "en-CA": "//T.com/health"
           },
           "id": {
             "en-CA": "healthBasePathLink"
@@ -2821,12 +2821,12 @@
         },
         "fields": {
           "question": {
-            "en-CA": "Is the Babylon by TELUS Health service free?",
-            "fr-CA": "Le service Babylon par TELUS Santé est-il gratuit?"
+            "en-CA": "Is the B by T Health service free?",
+            "fr-CA": "Le service B par T Santé est-il gratuit?"
           },
           "answer": {
-            "en-CA": "You can download the Babylon by TELUS Health app and start using the Symptom Checker at no charge.\\\n\\\nDoctor consultations for BC users are covered by MSP. If you live in BC and are not covered by MSP, consultations cost $34.18 per appointment. Data charges may apply for service outside Wi-Fi coverage.\n\n",
-            "fr-CA": "Vous pouvez télécharger l’application Babylon par TELUS Santé et utiliser le vérificateur de symptômes sans frais.\\\n \\\nLes consultations avec un médecin pour les utilisateurs de la Colombie-Britannique sont couvertes par le Medical Services Plan (MSP). Si vous n’êtes pas couvert par le MSP, le coût d’une consultation est de 34,18 $ par rendez-vous."
+            "en-CA": "You can download the B by T Health app and start using the Symptom Checker at no charge.\\\n\\\nDoctor consultations for BC users are covered by MSP. If you live in BC and are not covered by MSP, consultations cost $34.18 per appointment. Data charges may apply for service outside Wi-Fi coverage.\n\n",
+            "fr-CA": "Vous pouvez télécharger l’application B par T Santé et utiliser le vérificateur de symptômes sans frais.\\\n \\\nLes consultations avec un médecin pour les utilisateurs de la Colombie-Britannique sont couvertes par le Medical Services Plan (MSP). Si vous n’êtes pas couvert par le MSP, le coût d’une consultation est de 34,18 $ par rendez-vous."
           }
         }
       },
@@ -2890,8 +2890,8 @@
             "fr-CA": "Nous joindre"
           },
           "description": {
-            "en-CA": "Call or email when it’s convenient for you.  \n[1-855-577-8838](tel:1-855-577-8838)  \n[support@BabylonbyTELUSHealth.com](mailto:support@BabylonbyTELUSHealth.com)\n\n",
-            "fr-CA": "Appelez-nous ou écrivez-nous au moment qui vous convient.\n[1-855-577-8838](tel:1-855-577-8838)  \n[support@BabylonbyTELUSHealth.com](mailto:support@BabylonbyTELUSHealth.com)"
+            "en-CA": "Call or email when it’s convenient for you.  \n[1-855-577-8838](tel:1-855-577-8838)  \n[support@BbyTHealth.com](mailto:support@BbyTHealth.com)\n\n",
+            "fr-CA": "Appelez-nous ou écrivez-nous au moment qui vous convient.\n[1-855-577-8838](tel:1-855-577-8838)  \n[support@BbyTHealth.com](mailto:support@BbyTHealth.com)"
           }
         }
       },
@@ -2926,7 +2926,7 @@
         },
         "fields": {
           "id": {
-            "en-CA": "babylonBreadcrumbs"
+            "en-CA": "BBreadcrumbs"
           },
           "basePath": {
             "en-CA": {
@@ -2981,15 +2981,15 @@
         },
         "fields": {
           "id": {
-            "en-CA": "babylonPartnershipPromoText"
+            "en-CA": "BPartnershipPromoText"
           },
           "title": {
-            "en-CA": "TELUS Health is committed to leveraging the power of technology to drive better health outcomes for all Canadians.",
-            "fr-CA": "TELUS Santé entend miser sur la puissance de la technologie pour améliorer la santé des Canadiens."
+            "en-CA": "T Health is committed to leveraging the power of technology to drive better health outcomes for all Canadians.",
+            "fr-CA": "T Santé entend miser sur la puissance de la technologie pour améliorer la santé des Canadiens."
           },
           "description": {
-            "en-CA": "We have partnered with Babylon - a global leader in Artificial Intelligence and digital health. Together, we created Babylon by TELUS Health which aims to deliver more options for Canadians to access healthcare.",
-            "fr-CA": "Nous avons décidé de nous associer à Babylon, un chef de file mondial en intelligence artificielle et en santé numérique, au terme d’un long processus pour trouver le meilleur partenaire en soins virtuels. Ensemble, nous avons créé Babylon par TELUS Santé dans le but d’offrir aux Canadiens davantage de choix pour accéder aux soins de santé."
+            "en-CA": "We have partnered with B - a global leader in Artificial Intelligence and digital health. Together, we created B by T Health which aims to deliver more options for Canadians to access healthcare.",
+            "fr-CA": "Nous avons décidé de nous associer à B, un chef de file mondial en intelligence artificielle et en santé numérique, au terme d’un long processus pour trouver le meilleur partenaire en soins virtuels. Ensemble, nous avons créé B par T Santé dans le but d’offrir aux Canadiens davantage de choix pour accéder aux soins de santé."
           }
         }
       },
@@ -3114,7 +3114,7 @@
         },
         "fields": {
           "id": {
-            "en-CA": "babylonMediaBanner"
+            "en-CA": "BMediaBanner"
           },
           "title": {
             "en-CA": "Featured in",
@@ -3169,7 +3169,7 @@
             ]
           },
           "link": {
-            "en-CA": "https://www.telushealth.co/news/new-app-telus-health-babylon-enables-canadians-visit-doctor-smartphone/"
+            "en-CA": "https://www.Thealth.co/news/new-app-T-health-B-enables-canadians-visit-doctor-smartphone/"
           }
         }
       },
@@ -3285,7 +3285,7 @@
             "en-CA": "Download"
           },
           "url": {
-            "en-CA": "//go.onelink.me/Fk5k/babylonwebandroid"
+            "en-CA": "//go.onelink.me/Fk5k/Bwebandroid"
           },
           "type": {
             "en-CA": "Button"
@@ -3406,7 +3406,7 @@
             "en-CA": "Download"
           },
           "url": {
-            "en-CA": "//go.onelink.me/Njra/babylonwebios"
+            "en-CA": "//go.onelink.me/Njra/Bwebios"
           },
           "type": {
             "en-CA": "Button"
@@ -3487,7 +3487,7 @@
         },
         "fields": {
           "id": {
-            "en-CA": "babylonHeroBanner"
+            "en-CA": "BHeroBanner"
           },
           "content": {
             "en-CA": {
@@ -3557,7 +3557,7 @@
           },
           "description": {
             "en-CA": "We take your data privacy seriously.",
-            "fr-CA": "TELUS attache une très grande importance à la sécurité et à la protection de la vie privée. \n"
+            "fr-CA": "T attache une très grande importance à la sécurité et à la protection de la vie privée. \n"
           },
           "cta": {
             "en-CA": {
@@ -3605,7 +3605,7 @@
             "fr-CA": "En savoir plus"
           },
           "url": {
-            "en-CA": "https://www.babylonhealth.com/canadadoctors"
+            "en-CA": "https://www.Bhealth.com/canadadoctors"
           },
           "type": {
             "en-CA": "Link"
@@ -3747,7 +3747,7 @@
             "en-CA": "media logo - mobile syrup"
           },
           "link": {
-            "en-CA": "https://mobilesyrup.com/2019/03/05/telus-health-babylon-app/"
+            "en-CA": "https://mobilesyrup.com/2019/03/05/T-health-B-app/"
           },
           "image": {
             "en-CA": {
@@ -4021,7 +4021,7 @@
             ]
           },
           "id": {
-            "en-CA": "babylonNav"
+            "en-CA": "BNav"
           }
         }
       },
@@ -4193,10 +4193,10 @@
         "fields": {
           "title": {
             "en-CA": "logo",
-            "fr-CA": "TELUSHealth Babylon Hor logo PUR RGB FR"
+            "fr-CA": "THealth B Hor logo PUR RGB FR"
           },
           "description": {
-            "en-CA": "Babylon by TELUS Health logo"
+            "en-CA": "B by T Health logo"
           },
           "file": {
             "en-CA": {
@@ -4212,7 +4212,7 @@
               "contentType": "image/png"
             },
             "fr-CA": {
-              "url": "//images.ctfassets.net/1izjqx4qtt8c/1NogrRoCWomi6Ksecqm6KS/7f2d5a9f18006849ccf66e38ae468832/TELUSHealth_Babylon_Hor_logo_PUR_RGB_FR.png",
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/1NogrRoCWomi6Ksecqm6KS/7f2d5a9f18006849ccf66e38ae468832/THealth_B_Hor_logo_PUR_RGB_FR.png",
               "details": {
                 "size": 15265,
                 "image": {
@@ -4220,7 +4220,7 @@
                   "height": 157
                 }
               },
-              "fileName": "TELUSHealth Babylon Hor_logo_PUR_RGB_FR.png",
+              "fileName": "THealth B Hor_logo_PUR_RGB_FR.png",
               "contentType": "image/png"
             }
           }
@@ -4342,14 +4342,14 @@
         "fields": {
           "title": {
             "en-CA": "logo inverted",
-            "fr-CA": "TELUSHealth Babylon Hor logo WT RGB FR"
+            "fr-CA": "THealth B Hor logo WT RGB FR"
           },
           "description": {
-            "en-CA": "Babylon by TELUS Health logo"
+            "en-CA": "B by T Health logo"
           },
           "file": {
             "en-CA": {
-              "url": "//images.ctfassets.net/1izjqx4qtt8c/2DJrD7PS0AGMqOgkMEQsA6/40fe4491545b41bd38e27cd45b0896b7/babylon-logo-white.png",
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/2DJrD7PS0AGMqOgkMEQsA6/40fe4491545b41bd38e27cd45b0896b7/B-logo-white.png",
               "details": {
                 "size": 20114,
                 "image": {
@@ -4357,11 +4357,11 @@
                   "height": 299
                 }
               },
-              "fileName": "babylon-logo-white.png",
+              "fileName": "B-logo-white.png",
               "contentType": "image/png"
             },
             "fr-CA": {
-              "url": "//images.ctfassets.net/1izjqx4qtt8c/2DJrD7PS0AGMqOgkMEQsA6/0302cde3022825c7805c3336f50b4555/TELUSHealth_Babylon_Hor_logo_WT_RGB_FR.png",
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/2DJrD7PS0AGMqOgkMEQsA6/0302cde3022825c7805c3336f50b4555/THealth_B_Hor_logo_WT_RGB_FR.png",
               "details": {
                 "size": 13724,
                 "image": {
@@ -4369,7 +4369,7 @@
                   "height": 158
                 }
               },
-              "fileName": "TELUSHealth Babylon Hor_logo_WT_RGB_FR.png",
+              "fileName": "THealth B Hor_logo_WT_RGB_FR.png",
               "contentType": "image/png"
             }
           }
@@ -4402,11 +4402,11 @@
             "en-CA": "logo vertical"
           },
           "description": {
-            "en-CA": "Babylon by TELUS Health logo"
+            "en-CA": "B by T Health logo"
           },
           "file": {
             "en-CA": {
-              "url": "//images.ctfassets.net/1izjqx4qtt8c/2LjxB9EZLGuQGgmcOkGeui/bcd20bbd7700c1d773d4313fbaebaef7/babylon-logo-vertical.png",
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/2LjxB9EZLGuQGgmcOkGeui/bcd20bbd7700c1d773d4313fbaebaef7/B-logo-vertical.png",
               "details": {
                 "size": 11545,
                 "image": {
@@ -4414,7 +4414,7 @@
                   "height": 200
                 }
               },
-              "fileName": "babylon-logo-vertical.png",
+              "fileName": "B-logo-vertical.png",
               "contentType": "image/png"
             }
           }
@@ -4489,10 +4489,10 @@
         },
         "fields": {
           "title": {
-            "en-CA": "babylon onboarding"
+            "en-CA": "B onboarding"
           },
           "description": {
-            "en-CA": "Preview of the babylon loading screen on an android phone"
+            "en-CA": "Preview of the B loading screen on an android phone"
           },
           "file": {
             "en-CA": {
@@ -4846,7 +4846,7 @@
             "en-CA": "How it works 1st image"
           },
           "description": {
-            "en-CA": "Step 1: Picture of a phone screen showing the first page of the Babylon app"
+            "en-CA": "Step 1: Picture of a phone screen showing the first page of the B app"
           },
           "file": {
             "en-CA": {
@@ -4936,7 +4936,7 @@
             "en-CA": "symptom checker"
           },
           "description": {
-            "en-CA": "Screenshot of a chat with Babylon symptom checker"
+            "en-CA": "Screenshot of a chat with B symptom checker"
           },
           "file": {
             "en-CA": {
@@ -5159,7 +5159,7 @@
           },
           "file": {
             "en-CA": {
-              "url": "//images.ctfassets.net/1izjqx4qtt8c/6RDy95JmMgI6o8GIiMKY86/d374317cdf1a59a19bfa4eda53210313/TELUS_Health_is_committed2__1_.jpg",
+              "url": "//images.ctfassets.net/1izjqx4qtt8c/6RDy95JmMgI6o8GIiMKY86/d374317cdf1a59a19bfa4eda53210313/T_Health_is_committed2__1_.jpg",
               "details": {
                 "size": 101968,
                 "image": {
@@ -5167,7 +5167,7 @@
                   "height": 930
                 }
               },
-              "fileName": "TELUS_Health_is_committed2 (1).jpg",
+              "fileName": "T_Health_is_committed2 (1).jpg",
               "contentType": "image/jpeg"
             }
           }
@@ -5245,7 +5245,7 @@
             "en-CA": "splash screen"
           },
           "description": {
-            "en-CA": "Preview of the main screen of the babylon app, a smiling woman on her phone"
+            "en-CA": "Preview of the main screen of the B app, a smiling woman on her phone"
           },
           "file": {
             "en-CA": {

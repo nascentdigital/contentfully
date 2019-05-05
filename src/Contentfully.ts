@@ -68,8 +68,8 @@ export class Contentfully {
             )
         );
 
+        // assign multilocale query
         const locale = _.get(query, 'locale');
-        // TODO: ensure the wildcard is only way to query for multiple locales
         const multiLocale = locale && locale === '*';
 
         // parse includes
@@ -87,7 +87,7 @@ export class Contentfully {
         };
     }
 
-    private _parseEntryByLocale(entry: any) {
+    private _parseAssetByLocale(entry: any) {
         // initialize locale map of entries
         const locales: any = {};
 
@@ -120,17 +120,22 @@ export class Contentfully {
         for (const asset of _.get(json, "includes.Asset") || []) {
 
             // TODO: handle non-image assets (e.g. video)
-
             let media: any = {};
             const sys = asset.sys;
 
             if (multiLocale) {
-                const locales = this._parseEntryByLocale(asset);
-
+                // map asset to locale
+                const locales = this._parseAssetByLocale(asset);
                 _.forEach(locales, async (entry, locale) => {
                     try {
                         if (entry.fields.file) {
-                            media[locale] = await this._toMedia(sys, entry.fields, mediaTransform);
+                            // transform asset to media
+                            const transformed = await this._toMedia(sys, entry.fields, mediaTransform);
+
+                            // prune id
+                            delete transformed._id;
+
+                            media[locale] = transformed;
                         }
                     } catch (e) {
                         console.error('[_createLinks] error with creating media', e);
@@ -218,14 +223,16 @@ export class Contentfully {
         const fields: any = {};
         // transform entry to model and return result
         _.forEach(entry.fields, (value, key) => {
-            // parse array of values
+            // parse values if multilocale query
             if (multiLocale) {
+                // parse value (mapped by locale)
                 const parsedLocale = this._parseValueByLocale(value, links);
 
                 // handle null values otherwise pass back the values
                 if(!_.isEmpty(parsedLocale)) {
                     fields[key] = parsedLocale;
                 }
+            // parse array of values
             } else if (_.isArray(value)) {
                 fields[key] = _.compact(_.map(value, item => this._parseValue(item, links)));
             }
@@ -244,15 +251,21 @@ export class Contentfully {
 
     private _parseValueByLocale(value: any, links: any) {
         let values: any = {};
+        // pull all locales
         const locales = _.keys(value);
         _.forEach(locales, locale => {
+            // parse array of value
             if (_.isArray(value[locale])) {
                 values[locale] =  _.compact(_.map(value[locale], item => this._parseValue(item, links, locale)));
-            } else {
+            }
+            // or parse value
+            else {
                 const sys = value[locale].sys;
                 if (sys === undefined || sys.type !== "Link") {
                     values[locale] = value[locale];
-                } else if (sys.linkType === 'Asset') {
+                }
+                // assign asset to values (already mapped by locale)
+                else if (sys.linkType === 'Asset') {
                     values = this._dereferenceLink(value, links, locale);
                 } else {
                     values[locale] = this._dereferenceLink(value, links, locale);

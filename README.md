@@ -122,6 +122,88 @@ It should look something like this:
 
 ```
 
+### Localization with the wildcard locale parameter
+Just as with the Content Delivery API, you can query entries to retrieve all localized versions of an entry by using the 'wildcard' `locale=*` parameter.
+
+
+```javascript
+async function query() {
+
+    const json = await contentfully.getModels({
+        content_type: "myModel",
+        skip: 20,
+        limit: 10,
+        locale: '*'
+    });
+
+    // print the result
+    console.log(json);
+};
+
+query();
+```
+
+Which would return models mapped by locale:
+```javascript
+{
+    total: 10,
+    skip: 20,
+    limit: 10,
+    items: [
+        {
+            _id: "5nZHNlP6zCESgGuMGKG2Q8",
+            _type: "myModel",
+            field1: {
+              "en-CA": "Hello",
+              "fr-CA": "Bonjour"
+            },
+            field2: {
+              "fr-CA": "Comment vas-tu"
+            },
+            field3: {
+              "en-CA": "foo"
+            },
+            field3: {
+              "en-CA": true,
+              "fr-CA": false
+            },
+            field5: {
+                _id: "m972ick1jqhi",
+                _type: "myModelDependency",
+                field1: "foo",
+                field2: "bar",
+                field3: true
+            },
+            field6: {
+              "en-CA": [1, 4, 10, 20],
+              "fr-CA": [2, 8, 20, 40]
+            },
+            image: {
+              _id: "m12mkd123fdr4", 
+              "en-CA": {
+                url: "foo.png",
+                dimensions: {
+                  title: "title",
+                  width: 1,
+                  height: 1
+                },
+                size: 44335
+              },
+              "fr-CA": {
+                dimensions: {
+                  url: "bar.jpg",
+                  title: "french title",
+                  width: 2,
+                  height: 2
+                },
+                size: 123124
+              }
+            }
+        },
+        ...
+    ]
+}
+```
 ## IE Support
 
 By default, `Contentfully` uses the native fetch client in the browser, otherwise it will use `node-fetch`. Since IE does not have `fetch` native to it, use the `fetch` option with something like [`isomorphic-fetch`](https://www.npmjs.com/package/isomorphic-fetch) when instantiating `ContentfulClient`.   
