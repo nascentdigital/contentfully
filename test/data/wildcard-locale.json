@@ -1,0 +1,2192 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 41,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "bdF5wrD0TmEEmWKs2YMaC",
+        "type": "Entry",
+        "createdAt": "2018-11-28T15:53:38.502Z",
+        "updatedAt": "2018-11-28T15:53:38.502Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6EbrB8m4b6iCSkQyISou2m"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "papn_overlay_body_2"
+        },
+        "value": {
+          "en-CA": "Avoid service disconnection and pay your bill now.",
+          "fr-CA": "Évitez le débranchement de votre service en payant votre facture maintenant."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "2WiQUmqRb7aaw8w34QyWm",
+        "type": "Entry",
+        "createdAt": "2019-01-16T17:49:54.781Z",
+        "updatedAt": "2019-01-28T23:01:00.158Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 9,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_easy_roam_not_included"
+        },
+        "value": {
+          "en-CA": "Usage on cruise ships or in-flight will be charged at $0.60 per text, $7.00 per minute and data usage will be blocked.\\n\\n411 and 511 calls are subject to the standard roaming pay-per-use rate.\\n\\nNorth American toll-free numbers (1-800, 844, 855, 877, and 888) from outside North America are subject to the standard roaming pay-per-use rate.\\n\\nPhone calls to numbers outside Canada and the country you are calling from are subject to the standard roaming pay-per-use rate for the country you are calling from.\\n\\nCalls to Sanger, California (559-726-XXXX) Carroll, Iowa (712-775-XXXX) Lake Park, Iowa (712-432-XXXX) Oglala, South Dakota (605-562-XXXX) Redfield, South Dakota (605-475-XXXX) are subject to the standard roaming pay-per-use rate.\\n\\nUsage that exceeds what's included in your monthly rate plan will be subject to the same rates you would pay as if you are in Canada\\n\\nPrices do not include taxes.",
+          "fr-CA": "L’utilisation sur les navires de croisière et à bord des avions est facturée aux tarifs payables à l’usage de 0,60 $ le texto et de 7 $ la minute pour les appels. La transmission de données est bloquée.\\n\\nLes appels au 411 et au 511 sont facturés selon le tarif standard d’itinérance payable à l’usage.\\n\\nLes appels aux numéros sans frais en Amérique du Nord (c.-à-d. 1-800, 844, 855, 877 et 888) faits en dehors de l’Amérique du Nord sont facturés selon le tarif standard d’itinérance payable à l’usage.\\n\\nLes appels à des numéros à l’extérieur du Canada ou du pays d’où vous appelez sont facturés selon le tarif standard d’itinérance payable à l’usage du pays d’où vous appelez.\\n\\nDe plus, les appels à destination de Sanger en Californie (559-726-XXXX), de Carroll en Iowa (712-775-XXXX), de Lake Park en Iowa (712-432-XXXX), de Oglala au Dakota du Sud (605-562-XXXX) et de Redfield au Dakota du Sud (605-475-XXXX) sont facturés au tarif standard d’itinérance payable à l’usage. - L’utilisation excédentaire est facturée au même tarif qu’elle l’est au Canada.\\n\\nLes prix ne comprennent pas les taxes."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "46bW7h2CNfaj6fB6iDB5FI",
+        "type": "Entry",
+        "createdAt": "2019-01-16T17:24:48.300Z",
+        "updatedAt": "2019-01-31T20:33:45.066Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_easy_roam_features"
+        },
+        "value": {
+          "en-CA": "Easy Roam® lets you use your monthly rate plan while travelling in the US and 150+ destinations – now and on all future trips.",
+          "fr-CA": "Grâce à l’option Voyagez connectéᴹᴰ, utilisez votre forfait mensuel pendant vos déplacements aux États-Unis et dans plus de 150 destinations dans le monde – pour tous vos voyages à partir de maintenant."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "4kLmLaRyCLIMstEgo0qSdP",
+        "type": "Entry",
+        "createdAt": "2019-03-06T20:20:11.313Z",
+        "updatedAt": "2019-03-06T20:20:11.313Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5bBGN4SeJGPmGDPr4uQ4xz"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "norton_antivirus_price"
+        },
+        "value": {
+          "en-CA": "4",
+          "fr-CA": "4"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "jVdUrFAG08OEeEcOuU08o",
+        "type": "Entry",
+        "createdAt": "2018-11-28T15:55:47.653Z",
+        "updatedAt": "2018-11-28T15:55:47.653Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6EbrB8m4b6iCSkQyISou2m"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "papn_overlay_header_web_cta_1"
+        },
+        "value": {
+          "en-CA": "Can't pay now?",
+          "fr-CA": "Vous ne pouvez pas payer maintenant?"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "FuT3XIrlEOqkms4QE4ime",
+        "type": "Entry",
+        "createdAt": "2018-11-28T16:03:29.655Z",
+        "updatedAt": "2018-11-28T16:03:29.655Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6EbrB8m4b6iCSkQyISou2m"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "papn_overlay_header"
+        },
+        "value": {
+          "en-CA": "We don't want to see you go!",
+          "fr-CA": "Nous ne voulons pas vous perdre!"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "zhlGMBD4iKnLcxnTBterS",
+        "type": "Entry",
+        "createdAt": "2019-01-28T20:56:37.163Z",
+        "updatedAt": "2019-01-28T20:56:37.163Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_pass_duration"
+        },
+        "value": {
+          "en-CA": "per 30 days",
+          "fr-CA": "pour 30 jours"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "6ui2DY7PyC08HgcJlxGOyd",
+        "type": "Entry",
+        "createdAt": "2019-01-16T18:38:15.005Z",
+        "updatedAt": "2019-01-16T18:38:15.005Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_get_travel_coverage"
+        },
+        "value": {
+          "en-CA": "Get travel coverage",
+          "fr-CA": "Obtenir une couverture en itinérance"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "44EdtR87uEO8cwss4Ks6Ie",
+        "type": "Entry",
+        "createdAt": "2018-11-28T16:58:09.643Z",
+        "updatedAt": "2019-02-25T15:53:20.289Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3YzufflIKsQYuCMSUsA2wS"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "ebill_preferences_banner_title"
+        },
+        "value": {
+          "en-CA": "Enable e.Bill notifications and make online payments to avoid late fees.",
+          "fr-CA": "Interruption de Postes Canada"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "2ejoRjWWPUFkjckpABcEjd",
+        "type": "Entry",
+        "createdAt": "2019-01-16T18:39:35.415Z",
+        "updatedAt": "2019-01-16T18:39:35.415Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_no_travel_coverage"
+        },
+        "value": {
+          "en-CA": "You currently have no travel coverage. Any usage will be subject to pay-per-use rates.",
+          "fr-CA": "Vous n’avez aucune couverture à l’étranger en ce moment. Toute utilisation sera facturée à l’usage selon les tarifs d’itinérance."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "5omCc3yAz6yo6UiYYKgSA6",
+        "type": "Entry",
+        "createdAt": "2018-11-28T16:56:26.266Z",
+        "updatedAt": "2018-11-28T17:29:07.532Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3YzufflIKsQYuCMSUsA2wS"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "ebill_preferences_banner_description"
+        },
+        "value": {
+          "en-CA": "Enable e.Bill notifications and make online payments to avoid late fees.",
+          "fr-CA": "Activez les avis pour la facture électronique et faites vos paiements en ligne pour éviter les frais de paiement tardif."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "2GzcFv9Un1dM6B4lFl2gXk",
+        "type": "Entry",
+        "createdAt": "2019-01-16T21:28:43.732Z",
+        "updatedAt": "2019-01-28T23:02:11.385Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_choose_days_roaming"
+        },
+        "value": {
+          "en-CA": "You can choose the days you use Easy Roam by controlling your usage and turning off data roaming in your device’s settings.",
+          "fr-CA": "Sachez que l’activation de Voyagez connecté n’apparaîtra pas immédiatement au compte."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "5pAmjUyVRVSvxbcelEk13P",
+        "type": "Entry",
+        "createdAt": "2019-04-02T15:57:54.227Z",
+        "updatedAt": "2019-04-02T21:07:29.691Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "easy_roam_summary_us"
+        },
+        "value": {
+          "en-CA": "Your coverage: \nUS - $7/day",
+          "fr-CA": "Couverture en itinérance: \nUS - 7$ par jour"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "1GvHr9CV8Jq5dUdTHDSdSy",
+        "type": "Entry",
+        "createdAt": "2019-01-16T16:38:27.186Z",
+        "updatedAt": "2019-01-16T16:38:27.186Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_current_travel_coverage"
+        },
+        "value": {
+          "en-CA": "Current Travel Coverage",
+          "fr-CA": "Couverture actuelle en itinérance"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "4T9dNJyEv0UIAjl27N1wpe",
+        "type": "Entry",
+        "createdAt": "2019-01-29T16:42:48.988Z",
+        "updatedAt": "2019-04-02T20:58:28.576Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_easy_roam_good_to_know_SERI10"
+        },
+        "value": {
+          "en-CA": "Easy Roam will only activate if you use data, send a text, make or answer a call. Once activated it will be valid for 24 hours. If you don’t want to use Easy Roam on the next day, avoid any of those actions and turn data roaming off to ensure you won’t be charged.\\n\\nThe $7 per day US fee will be capped at $120 while the $10 per day international fee will be capped at $180 per bill cycle. If you reach this cap in your bill cycle, you can continue to use Easy Roam at no extra cost.\\n\\nVisit telus.com/travel for full terms and conditions",
+          "fr-CA": "L’option Voyagez connecté ne s’active que lorsque vous utilisez des données, que vous envoyez un texto ou que vous faites ou prenez un appel. Une fois activée, elle le reste pendant 24 heures. Si vous ne voulez pas utiliser Voyagez connecté la journée suivante, ne faites pas ces actions et désactivez les données en itinérance pour éviter que des frais vous soient facturés.\\n\\nLes frais de 7 $ par jour pour l’utilisation aux États-Unis sont plafonnés à 120 $, tandis que les frais de 10 $ par jour pour l’utilisation à l’étranger sont plafonnés à 180 $ par cycle de facturation. Si vous atteignez cette limite durant le cycle de facturation, vous pouvez continuer à utiliser Voyagez connecté sans frais supplémentaires.\\n\\nVisitez telus.com/voyage pour connaître les modalités"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "1enDVCCoEeW5K52oSCNsw0",
+        "type": "Entry",
+        "createdAt": "2019-04-02T15:59:38.318Z",
+        "updatedAt": "2019-04-02T21:07:44.224Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "easy_roam_summary_int"
+        },
+        "value": {
+          "en-CA": "Your coverage: \nInternational - $%s/day",
+          "fr-CA": "Couverture en itinérance: \nInternational - %s$ par jour"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "7KLYhWtpH0GEdfwevbkGzS",
+        "type": "Entry",
+        "createdAt": "2019-01-16T17:11:35.369Z",
+        "updatedAt": "2019-01-16T20:12:23.607Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_easy_roam_description"
+        },
+        "value": {
+          "en-CA": "Easy Roam lets you access your monthly plan while roaming. It’s free when you’re not roaming.",
+          "fr-CA": "L’option Voyagez connecté vous permet d’utiliser votre forfait mensuel en itinérance. L’option est gratuite lorsque vous n’êtes pas en itinérance."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "4fAXQs8176KCh57h9rHZWn",
+        "type": "Entry",
+        "createdAt": "2019-01-16T17:30:22.382Z",
+        "updatedAt": "2019-01-17T16:01:27.287Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_easy_roam_description_setup"
+        },
+        "value": {
+          "en-CA": "Fee only applies when you make or answer a call, send a text or use data. Valid for 24 hours. If you don’t want to use Easy Roam on certain days, avoid those actions and ensure data roaming is turned off.",
+          "fr-CA": "Les frais s\\’appliquent uniquement lorsque vous faites ou recevez un appel, envoyez un texto ou utilisez des données. Valable pendant 24 heures. Si vous ne voulez pas utiliser Voyagez connecté certaines journées, ne faites pas ces actions et désactivez les données en itinérance."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "6zrKC0e6eAmIW2AuUEOysy",
+        "type": "Entry",
+        "createdAt": "2018-11-28T19:38:18.910Z",
+        "updatedAt": "2018-12-12T19:52:00.257Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7MzrMj6hWMWu40cAcgyEma"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "piktv_success_warning"
+        },
+        "value": {
+          "en-CA": "Channels and Packages may take up to 24 hours to show up",
+          "fr-CA": "Les chaînes et les thématiques peuvent prendre jusqu’à 24 heures avant de s’afficher"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "eFoWf2QcqAGUGSms6mk0k",
+        "type": "Entry",
+        "createdAt": "2018-11-28T15:55:08.104Z",
+        "updatedAt": "2018-11-28T15:55:08.104Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6EbrB8m4b6iCSkQyISou2m"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "papn_overlay_body_web_cta_2"
+        },
+        "value": {
+          "en-CA": "Notify us of a recent payment.",
+          "fr-CA": "Nous aviser d’un paiement."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "6xopdgo6ZBWpL42Ua0tvbB",
+        "type": "Entry",
+        "createdAt": "2019-01-17T20:09:05.611Z",
+        "updatedAt": "2019-04-02T15:54:35.214Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 11,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "easy_roam_summary"
+        },
+        "value": {
+          "en-CA": "Your coverage:\\n•$%1$s per day in 150+ international destinations\\n•$7 per day in the US.",
+          "fr-CA": "Couverture en itinérance :\\n\\n•%1$s $ par jour dans plus de 150 destinations dans le monde\\n\\n•7 $ par jour aux États-Unis."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "7GJsmEkKYjbU9Y1RqpvPwe",
+        "type": "Entry",
+        "createdAt": "2019-01-16T17:47:33.215Z",
+        "updatedAt": "2019-01-18T20:03:02.400Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_easy_roam_not_included_title"
+        },
+        "value": {
+          "en-CA": "What's not included",
+          "fr-CA": "Non inclus"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "1uZNI8bBdM5VvytZD52t3W",
+        "type": "Entry",
+        "createdAt": "2019-01-16T17:01:23.918Z",
+        "updatedAt": "2019-01-16T17:01:23.918Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_youre_covered_easy_roam"
+        },
+        "value": {
+          "en-CA": "You’re covered with Easy Roam",
+          "fr-CA": "Couvert avec Voyagez connecté"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "5WHW5PzeVfnuHjc9PayTdC",
+        "type": "Entry",
+        "createdAt": "2019-01-16T17:51:46.880Z",
+        "updatedAt": "2019-01-16T17:51:46.880Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_easy_roam_good_to_know_title"
+        },
+        "value": {
+          "en-CA": "Good to know",
+          "fr-CA": "Bon à savoir"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "7HlNiKJs8Qdis2vBAt79lw",
+        "type": "Entry",
+        "createdAt": "2019-01-16T17:54:41.854Z",
+        "updatedAt": "2019-04-02T21:00:33.294Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_easy_roam_good_to_know_SERI12"
+        },
+        "value": {
+          "en-CA": "Easy Roam will only activate if you use data, send a text, make or answer a call. Once activated it will be valid for 24 hours. If you don’t want to use Easy Roam on the next day, avoid any of those actions and turn data roaming off to ensure you won’t be charged.\\n\\nThe $7 per day US fee will be capped at $120 while the $12 per day international fee will be capped at $180 per bill cycle. If you reach this cap in your bill cycle, you can continue to use Easy Roam at no extra cost.\\n\\nVisit telus.com/travel for full terms and conditions",
+          "fr-CA": "L’option Voyagez connecté ne s’active que lorsque vous utilisez des données, que vous envoyez un texto ou que vous faites ou prenez un appel. Une fois activée, elle le reste pendant 24 heures. Si vous ne voulez pas utiliser Voyagez connecté la journée suivante, ne faites pas ces actions et désactivez les données en itinérance pour éviter que des frais vous soient facturés.\\n\\nLes frais de 7 $ par jour pour l’utilisation aux États-Unis sont plafonnés à 120 $, tandis que les frais de 12 $ par jour pour l’utilisation à l’étranger sont plafonnés à 180 $ par cycle de facturation. Si vous atteignez cette limite durant le cycle de facturation, vous pouvez continuer à utiliser Voyagez connecté sans frais supplémentaires.\\n\\nVisitez telus.com/voyage pour connaître les modalités"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "2K0QRROJwsymkckgGGq04I",
+        "type": "Entry",
+        "createdAt": "2018-11-28T16:05:21.215Z",
+        "updatedAt": "2018-11-28T20:18:19.570Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4C6voF8Uo8c8A6wWO8QqkQ"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "login_error_failed_auth_heading"
+        },
+        "value": {
+          "en-CA": "Sorry for the inconvenience",
+          "fr-CA": "Nous nous excusons pour le gêne occasioné"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "4Konv1IKPuW68gYoOQ4QwW",
+        "type": "Entry",
+        "createdAt": "2018-11-28T16:02:28.966Z",
+        "updatedAt": "2018-11-28T16:02:28.966Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6EbrB8m4b6iCSkQyISou2m"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "papn_button_cta"
+        },
+        "value": {
+          "en-CA": "Make a Payment",
+          "fr-CA": "Faire un paiement"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "1tAWxdIqjuK1Ekqtld26qE",
+        "type": "Entry",
+        "createdAt": "2019-01-16T16:41:53.267Z",
+        "updatedAt": "2019-01-16T16:42:14.348Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_coverage"
+        },
+        "value": {
+          "en-CA": "Travel Coverage",
+          "fr-CA": "Couverture en itinérance"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "1NDaxUkQU8iYgmom4QawEq",
+        "type": "Entry",
+        "createdAt": "2018-11-28T15:56:46.374Z",
+        "updatedAt": "2018-11-28T15:56:46.374Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6EbrB8m4b6iCSkQyISou2m"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "papn_overlay_header_web_cta_2"
+        },
+        "value": {
+          "en-CA": "Already paid?",
+          "fr-CA": "Vous avez déjà payé?"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "2DJBs2QeLuKkqGomsmSaqG",
+        "type": "Entry",
+        "createdAt": "2018-11-28T15:54:28.079Z",
+        "updatedAt": "2018-11-28T15:54:28.079Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6EbrB8m4b6iCSkQyISou2m"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "papn_overlay_body_web_cta_1"
+        },
+        "value": {
+          "en-CA": "Set up a payment arrangement.",
+          "fr-CA": "Configurer un arrangement de paiement."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "6uzCJ8AFKOrX32TR0j99Te",
+        "type": "Entry",
+        "createdAt": "2019-01-16T16:44:50.323Z",
+        "updatedAt": "2019-01-16T19:26:51.820Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_get_easy_roam"
+        },
+        "value": {
+          "en-CA": "Get Easy Roam",
+          "fr-CA": "Abonnez-vous à Voyagez connecté"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "BfBwUguQn8i8mpKkT2hMj",
+        "type": "Entry",
+        "createdAt": "2019-03-06T20:13:37.038Z",
+        "updatedAt": "2019-03-06T20:13:37.038Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5bBGN4SeJGPmGDPr4uQ4xz"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "norton_antivirus_name"
+        },
+        "value": {
+          "en-CA": "Norton Security Online – Premium",
+          "fr-CA": "Norton Security Online"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "5u3bmoX0V6jrjz81oyaeyV",
+        "type": "Entry",
+        "createdAt": "2019-01-16T17:02:22.023Z",
+        "updatedAt": "2019-01-16T17:02:22.023Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_options_other_destinations"
+        },
+        "value": {
+          "en-CA": "Options for other destinations",
+          "fr-CA": "Options pour d’autres destinations"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "7dtFle1I9aeQwus0Sgy2GW",
+        "type": "Entry",
+        "createdAt": "2018-11-28T16:05:45.271Z",
+        "updatedAt": "2018-12-12T21:12:09.818Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4C6voF8Uo8c8A6wWO8QqkQ"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "login_error_failed_auth_body"
+        },
+        "value": {
+          "en-CA": "We've made updates to the My TELUS app that require you to re-login.",
+          "fr-CA": "Vous devez vous reconnecter, car nous avons mis à jour l’appli Mon TELUS."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "2IowjfFUQEmSAqAcGkooYk",
+        "type": "Entry",
+        "createdAt": "2018-11-28T16:03:02.181Z",
+        "updatedAt": "2018-11-28T16:03:02.181Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6EbrB8m4b6iCSkQyISou2m"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "papn_overlay_body_1"
+        },
+        "value": {
+          "en-CA": "There is an overdue balance of %1$s on your account.",
+          "fr-CA": "Votre compte affiche un solde en souffrance de %1$s."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "4HJXuPAT6HiCajevk8r6hs",
+        "type": "Entry",
+        "createdAt": "2019-01-16T18:10:11.407Z",
+        "updatedAt": "2019-01-28T23:02:59.607Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 9,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_easy_roam_enabled_msg"
+        },
+        "value": {
+          "en-CA": "Easy Roam is now enabled. Please check your email for confirmation. You're ready to access the minutes, texts and data in your monthly rate plan during your next trip. Make sure data roaming is turned on in your device’s settings. Easy Roam will only activate if you make or answer a call, send a text or use data while travelling.\\n\\nKeep in mind, it may take some time to reflect that Easy Roam has been enabled.",
+          "fr-CA": "Voyagez connecté est maintenant activée. Un courriel de confirmation vous sera envoyé. Vous êtes prêt à utiliser les minutes, les textos et les données de votre forfait mensuel durant votre prochain voyage. N’oubliez pas d’activer les données en itinérance dans les paramètres de votre téléphone.\\n\\nL’option Voyagez connecté ne s’active que si vous faites un appel, répondez à un appel, envoyez un texto ou utilisez des données en voyage."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "4FkIgAOvbquiQwoU8Eo6CG",
+        "type": "Entry",
+        "createdAt": "2018-11-28T16:01:35.251Z",
+        "updatedAt": "2018-11-28T16:01:35.251Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6EbrB8m4b6iCSkQyISou2m"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "papn_warning_global_notif_message"
+        },
+        "value": {
+          "en-CA": "Did you forget to pay your bill? You have a balance overdue.",
+          "fr-CA": "Avez-vous oublié de payer votre facture? Vous avez un solde en souffrance."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "65jNzx2kIjxZAhXRGa7ZjS",
+        "type": "Entry",
+        "createdAt": "2019-03-06T20:16:42.415Z",
+        "updatedAt": "2019-03-25T19:04:03.851Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5bBGN4SeJGPmGDPr4uQ4xz"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "norton_antivirus_description"
+        },
+        "value": {
+          "en-CA": "Help shield your family’s devices against cybercriminals while you surf, bank, socialize and shop online.  Stay protected on up to 10 devices with Norton Security Online Premium for $4 per month – get your first month FREE! \\n\\nNote: You need to have a TELUS High Speed Internet account to download  ",
+          "fr-CA": "Aidez à protéger les appareils de toute la famille contre les cybercriminels lorsque vous naviguez, accédez à vos données bancaires, socialisez et magasinez en ligne. Protégez jusqu'à 10 appareils avec Norton Security Online pour 4$ par mois - obtenez votre premier mois SANS FRAIS.\\n\\nRemarque : Vous devez avoir un compte Internet TELUS pour télécharger l'application"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "6xTsT8PCsV0MSQxtR51NHz",
+        "type": "Entry",
+        "createdAt": "2019-01-16T17:42:37.983Z",
+        "updatedAt": "2019-01-16T17:42:37.983Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_easy_roam_included_title"
+        },
+        "value": {
+          "en-CA": "What's included",
+          "fr-CA": "Inclus"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "9SBLnoSo47aK9W8fuVgXZ",
+        "type": "Entry",
+        "createdAt": "2019-01-16T17:45:44.580Z",
+        "updatedAt": "2019-01-28T23:00:02.219Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_easy_roam_included"
+        },
+        "value": {
+          "en-CA": "All data usage from your monthly rate plan, including shared data.\\n\\nAll calls to phone numbers in Canada and within the country you are calling from.\\n\\nAll incoming and outgoing texts to any phone number in the world.\\n\\nIncoming texts will not activate Easy Roam, so you can receive texts without being charged the Easy Roam fee.",
+          "fr-CA": "L’utilisation des données de votre forfait mensuel, y compris les données partagées.\\n\\nTous les appels à des numéros de téléphone du Canada ou du pays d’où vous appelez.\\n\\nTous les textos entrants et sortants à destination ou en provenance de n’importe quel numéro de téléphone dans le monde.\\n\\nLes textos entrants n’activent pas l’option Voyagez connecté. Vous pouvez donc recevoir des textos sans que les frais pour l’option Voyagez connecté vous soient facturés."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "njnrn94t6seg"
+          }
+        },
+        "id": "ON0YM1jgW1av3zwnAl03e",
+        "type": "Entry",
+        "createdAt": "2019-01-16T16:40:10.900Z",
+        "updatedAt": "2019-01-16T16:40:10.900Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "appContent"
+          }
+        }
+      },
+      "fields": {
+        "category": {
+          "en-CA": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tj9SB1kqJx0GbMW3PdbDK"
+            }
+          }
+        },
+        "key": {
+          "en-CA": "travel_avoid_easy_roam"
+        },
+        "value": {
+          "en-CA": "If you don’t want to use Easy Roam on certain days, avoid those actions and ensure data roaming is turned off",
+          "fr-CA": "Si vous ne voulez pas utiliser Voyagez connecté certaines journées, ne faites pas ces actions et désactivez les données en itinérance."
+        }
+      }
+    }
+  ],
+  "includes": {
+    "Entry": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "njnrn94t6seg"
+            }
+          },
+          "id": "3YzufflIKsQYuCMSUsA2wS",
+          "type": "Entry",
+          "createdAt": "2018-11-28T16:55:20.502Z",
+          "updatedAt": "2018-11-28T16:55:20.502Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "contentCategory"
+            }
+          }
+        },
+        "fields": {
+          "name": {
+            "en-CA": "ebill"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "njnrn94t6seg"
+            }
+          },
+          "id": "4C6voF8Uo8c8A6wWO8QqkQ",
+          "type": "Entry",
+          "createdAt": "2018-11-28T15:45:00.384Z",
+          "updatedAt": "2018-11-28T15:45:00.384Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "contentCategory"
+            }
+          }
+        },
+        "fields": {
+          "name": {
+            "en-CA": "login"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "njnrn94t6seg"
+            }
+          },
+          "id": "5bBGN4SeJGPmGDPr4uQ4xz",
+          "type": "Entry",
+          "createdAt": "2019-03-06T20:13:15.351Z",
+          "updatedAt": "2019-03-06T20:13:15.351Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "contentCategory"
+            }
+          }
+        },
+        "fields": {
+          "name": {
+            "en-CA": "addons"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "njnrn94t6seg"
+            }
+          },
+          "id": "6EbrB8m4b6iCSkQyISou2m",
+          "type": "Entry",
+          "createdAt": "2018-11-28T15:41:50.029Z",
+          "updatedAt": "2018-11-28T15:41:50.029Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "contentCategory"
+            }
+          }
+        },
+        "fields": {
+          "name": {
+            "en-CA": "papn"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "njnrn94t6seg"
+            }
+          },
+          "id": "7MzrMj6hWMWu40cAcgyEma",
+          "type": "Entry",
+          "createdAt": "2018-11-28T19:33:48.152Z",
+          "updatedAt": "2018-11-28T19:33:48.152Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "contentCategory"
+            }
+          }
+        },
+        "fields": {
+          "name": {
+            "en-CA": "piktv"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "njnrn94t6seg"
+            }
+          },
+          "id": "7tj9SB1kqJx0GbMW3PdbDK",
+          "type": "Entry",
+          "createdAt": "2019-01-16T16:38:04.028Z",
+          "updatedAt": "2019-01-16T16:38:04.028Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "contentCategory"
+            }
+          }
+        },
+        "fields": {
+          "name": {
+            "en-CA": "travel"
+          }
+        }
+      }
+    ]
+  }
+}

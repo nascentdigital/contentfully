@@ -76,12 +76,8 @@ export class Contentfully {
         const links = await this._createLinks(json, multiLocale, options.mediaTransform);
 
         // get transformed items (should be flattened)
-        let items;
-        if (multiLocale) {
-            items = this._parseEntriesByLocale(json.items, links);
-        } else {
-            items = this._parseEntries(json.items, links);
-        }
+        const items = this._parseEntries(json.items, links, multiLocale);
+
         // return result
         return {
             items,
@@ -91,78 +87,7 @@ export class Contentfully {
         };
     }
 
-    /*
-    items: {
-        'en-CA': []
-    }
-    */
-    private _parseEntriesByLocale(entries: any, links: any) {
-        const locales: any = {};
-
-        _.forEach(entries, (entry) => {
-
-            const sys = entry.sys;
-            const modelId = sys.id;
-            const model = links[modelId];
-
-            if (model._deferred) {
-
-                // push to item list by locale
-                _.forEach(model._deferred, (entry, locale) => {
-                    // update entry with parsed value
-                    const parsed = this._parseEntry(entry, links, locale);
-
-                    // add model metadata
-                    parsed._id = modelId;
-                    parsed._type = sys.contentType.sys.id;
-
-                    if (sys.updatedAt) {
-                        parsed._updatedAt = sys.updatedAt;
-                    }
-
-                    if (!locales[locale]) {
-                        locales[locale] = [];
-                    }
-
-                    locales[locale].push(parsed);
-                });
-
-                // prune deferral
-                delete model._deferred;
-            }
-
-
-        });
-
-        return locales;
-
-        /*
-        * if (model._deferred) {
-
-                // update entry with parsed value
-                _.assign(model, (this._parseEntry(model._deferred, links)));
-
-                // prune deferral
-                delete model._deferred;
-            }
-
-            // add model metadata
-            model._id = modelId;
-            model._type = sys.contentType.sys.id;
-
-            if (sys.updatedAt) {
-                model._updatedAt = sys.updatedAt;
-            }
-
-            // return model
-            return model;
-            */
-    }
-
-    private _addModelMeta() {
-
-    }
-    private _parseEntryByLocale(entry: any, links: any = {}) {
+    private _parseEntryByLocale(entry: any) {
         // initialize locale map of entries
         const locales: any = {};
 
@@ -202,11 +127,17 @@ export class Contentfully {
             if (multiLocale) {
                 const locales = this._parseEntryByLocale(asset);
 
-                _.forEach(locales, (entry, locale) => {
-                    media[locale] = this._toMedia(sys, entry.fields, mediaTransform);
+                _.forEach(locales, async (entry, locale) => {
+                    try {
+                        if (entry.fields.file) {
+                            media[locale] = await this._toMedia(sys, entry.fields, mediaTransform);
+                        }
+                    } catch (e) {
+                        console.error('[_createLinks] error with creating media', e);
+                    }
                 });
             } else {
-                media = this._toMedia(sys, asset.fields, mediaTransform);
+                media = await this._toMedia(sys, asset.fields, mediaTransform);
             }
 
             // map media
@@ -216,14 +147,14 @@ export class Contentfully {
         // link included entries
         for (const entry of _.get(json, "includes.Entry") || []) {
             links[entry.sys.id] = {
-                _deferred: multiLocale ? this._parseEntryByLocale(entry) : entry
+                _deferred: entry
             };
         }
 
         // link payload entries
         for (const entry of _.get(json, "items") || []) {
             links[entry.sys.id] = {
-                _deferred: multiLocale ? this._parseEntryByLocale(entry) : entry
+                _deferred: entry
             };
         }
 
@@ -253,7 +184,7 @@ export class Contentfully {
         return media;
     }
 
-    private _parseEntries(entries: any, links: any) {
+    private _parseEntries(entries: any, links: any, multiLocale: boolean) {
 
         // convert entries to models and return result
         return _.map(entries, entry => {
@@ -264,7 +195,7 @@ export class Contentfully {
             if (model._deferred) {
 
                 // update entry with parsed value
-                _.assign(model, (this._parseEntry(model._deferred, links)));
+                _.assign(model, (this._parseEntry(model._deferred, links, multiLocale)));
 
                 // prune deferral
                 delete model._deferred;
@@ -283,29 +214,53 @@ export class Contentfully {
         });
     }
 
-    private _parseEntry(entry: any, links: any, locale?: string) {
-
+    private _parseEntry(entry: any, links: any, multiLocale: boolean) {
+        const fields: any = {};
         // transform entry to model and return result
         _.forEach(entry.fields, (value, key) => {
             // parse array of values
-            if (_.isArray(value)) {
-                entry.fields[key] = _.compact(_.map(value, item => this._parseValue(item, links, locale)));
-            }
-
-            // or parse value
-            else {
-                const parsed = this._parseValue(value, links, locale);
+            if (multiLocale) {
+                const parsedLocale = this._parseValueByLocale(value, links);
 
                 // handle null values otherwise pass back the values
-                if(parsed === undefined) {
-                    _.unset(entry.fields, key)
-                } else {
-                    entry.fields[key] = parsed;
+                if(!_.isEmpty(parsedLocale)) {
+                    fields[key] = parsedLocale;
+                }
+            } else if (_.isArray(value)) {
+                fields[key] = _.compact(_.map(value, item => this._parseValue(item, links)));
+            }
+            // or parse value
+            else {
+                const parsed = this._parseValue(value, links);
+                // handle null values otherwise pass back the values
+                if(!_.isEmpty(parsed)) {
+                    fields[key] = parsed;
                 }
             }
         });
 
-        return entry.fields;
+        return fields;
+    }
+
+    private _parseValueByLocale(value: any, links: any) {
+        let values: any = {};
+        const locales = _.keys(value);
+        _.forEach(locales, locale => {
+            if (_.isArray(value[locale])) {
+                values[locale] =  _.compact(_.map(value[locale], item => this._parseValue(item, links, locale)));
+            } else {
+                const sys = value[locale].sys;
+                if (sys === undefined || sys.type !== "Link") {
+                    values[locale] = value[locale];
+                } else if (sys.linkType === 'Asset') {
+                    values = this._dereferenceLink(value, links, locale);
+                } else {
+                    values[locale] = this._dereferenceLink(value, links, locale);
+                }
+            }
+        })
+
+        return values;
     }
 
     private _parseValue(value: any, links: any, locale?: string) {
@@ -321,9 +276,9 @@ export class Contentfully {
     }
 
     private _dereferenceLink(reference: any, links: any, locale?: string) {
-
-        const sys = reference.sys;
+        const sys = locale && reference[locale] ? reference[locale].sys : reference.sys;
         const modelId = sys.id;
+
         // get link (resolve if deferred)
         let link = links[modelId];
 
@@ -334,23 +289,20 @@ export class Contentfully {
 
         // add link id metadata
         link._id = modelId;
-        if (!_.isEmpty(link._deferred)) {
+        if (link._deferred) {
 
-            const deferred = locale ? link._deferred[locale] : link._deferred;
+            const deferred = link._deferred;
 
             // add link content type metadata
             const deferredSys = deferred.sys;
             link._type = deferredSys.contentType.sys.id;
 
+            const parsed = this._parseEntry(deferred, links, !_.isUndefined(locale));
             // update entry with parsed value
-            _.assign(link, this._parseEntry(deferred, links, locale));
+            _.assign(link, parsed);
 
-            // prune deferral
-            if (locale) {
-                delete link._deferred[locale];
-            } else {
-                delete link._deferred;
-            }
+            // // prune deferral
+            delete link._deferred;
         }
 
         // return link
