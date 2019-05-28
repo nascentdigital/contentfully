@@ -1,11 +1,17 @@
-import _ from "lodash";
+import assign from "lodash/assign";
+import compact from "lodash/compact";
+import pick from "lodash/pick";
+import get from "lodash/get";
+import forEach from "lodash/forEach";
+import isArray from "lodash/isArray";
+import unset from "lodash/unset";
+import map from "lodash/map";
 import { ContentfulClient } from "./contentful";
 import {
     MediaTransform,
     QueryOptions
 } from "./QueryOptions";
 import { QueryResult } from "./QueryResult";
-
 
 // constants
 const DEFAULT_SELECT_ID = 'sys.id'
@@ -40,17 +46,17 @@ export class Contentfully {
         // if select query is passed
         if (query.select) {
             // clean select query
-            select = _.chain(query.select)
+            select = compact(map(query.select.split(','), queryString => {
                 // remove white space
-                .replace(/\s/g, '')
+                return queryString.replace(/\s/g, '')
                 // remove default sys.id
                 .replace(DEFAULT_SELECT_ID, '')
                 // remove content type
                 .replace(DEFAULT_SELECT_CONTENT_TYPE, '')
                 // remove updated at
                 .replace(DEFAULT_SELECT_UPDATED_AT, '')
-                .trim(',')
-                .value()
+                .trim(',');
+            })).join(',');
         }
 
         // prepend default selects
@@ -59,7 +65,7 @@ export class Contentfully {
 
         // create query
         const json = await this.contentful.query(path,
-            _.assign({},
+            assign({},
                 {
                     include: 10,
                     limit: 1000
@@ -89,7 +95,7 @@ export class Contentfully {
         const links: any = {};
 
         // link included assets
-        for (const asset of _.get(json, "includes.Asset") || []) {
+        for (const asset of get(json, "includes.Asset") || []) {
 
             // TODO: handle non-image assets (e.g. video)
 
@@ -102,7 +108,7 @@ export class Contentfully {
                 url: file.url,
                 description: description,
                 contentType: file.contentType,
-                dimensions: _.pick(file.details.image, ["width", "height"]),
+                dimensions: pick(file.details.image, ["width", "height"]),
                 size: file.details.size,
                 version: sys.revision
             };
@@ -117,14 +123,14 @@ export class Contentfully {
         }
 
         // link included entries
-        for (const entry of _.get(json, "includes.Entry") || []) {
+        for (const entry of get(json, "includes.Entry") || []) {
             links[entry.sys.id] = {
                 _deferred: entry
             };
         }
 
         // link payload entries
-        for (const entry of _.get(json, "items") || []) {
+        for (const entry of get(json, "items") || []) {
             links[entry.sys.id] = {
                 _deferred: entry
             };
@@ -155,7 +161,7 @@ export class Contentfully {
             link._type = deferredSys.contentType.sys.id;
 
             // update entry with parsed value
-            _.assign(link, this._parseEntry(link._deferred, links));
+            assign(link, this._parseEntry(link._deferred, links));
 
             // prune deferral
             delete link._deferred;
@@ -168,7 +174,7 @@ export class Contentfully {
     private _parseEntries(entries: any, links: any) {
 
         // convert entries to models and return result
-        return _.map(entries, entry => {
+        return map(entries, entry => {
             // process entry if not processed
             const sys = entry.sys;
             const modelId = sys.id;
@@ -176,7 +182,7 @@ export class Contentfully {
             if (model._deferred) {
 
                 // update entry with parsed value
-                _.assign(model, (this._parseEntry(model._deferred, links)));
+                assign(model, (this._parseEntry(model._deferred, links)));
 
                 // prune deferral
                 delete model._deferred;
@@ -198,17 +204,17 @@ export class Contentfully {
     private _parseEntry(entry: any, links: any) {
 
         // transform entry to model and return result
-        _.forEach(entry.fields, (value, key) => {
+        forEach(entry.fields, (value, key) => {
             // parse array of values
-            if (_.isArray(value)) {
-                entry.fields[key] = _.compact(_.map(value, item => this._parseValue(item, links)));
+            if (isArray(value)) {
+                entry.fields[key] = compact(map(value, item => this._parseValue(item, links)));
             }
 
             // or parse value
             else {
                 // handle null values otherwise pass back the values
                 if(this._parseValue(value, links) === undefined) {
-                    _.unset(entry.fields, key)
+                    unset(entry.fields, key)
                 } else {
                     entry.fields[key] = this._parseValue(value, links);
                 }
