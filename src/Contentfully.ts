@@ -385,10 +385,12 @@ export class Contentfully {
                     for (let [key, valueObj] of Object.entries(item)) {
                         // find the locale value or fallback to default or use the value of the prop
                         let value = valueObj as any;
-                        if (value == undefined) { continue; }
-                        if (value[locale]) {
+                        if (isEmpty(value)) { 
+                            continue;
+                        }
+                        if (value[locale] != undefined) {
                             value = value[locale];
-                        } else if (value[defaultLocale]) {
+                        } else if (value[defaultLocale] != undefined) {
                             value = value[defaultLocale];
                         }
                         // handle primitives
