@@ -400,6 +400,11 @@ export class Contentfully {
                         }
                         // handle Objects
                         if (Array.isArray(value) === false) {
+                            if(isEmpty(value["_id"])) {
+                                // this isn't a contentful object, it's likely some sort of nested raw json
+                                context[key] = value;
+                                continue;
+                            }
                             const itemContext = {};
                             context[key] = itemContext;
                             queue.push({
@@ -420,8 +425,15 @@ export class Contentfully {
                                 itemContext[index] = value[index];
                                 continue;
                             }
+                            
+                            // explicitly handle nested arrays
+                            // they must have come from outsite of a content model
+                            // so leave them raw
+                            if(Array.isArray(value[index])) {
+                                itemContext[index] = value[index];
+                                continue;
+                            }
                             // handle objects
-                            // TODO explicitly handle nested arrays?
                             itemContext[index] = {};
                             queue.push({
                                 context: itemContext[index],
