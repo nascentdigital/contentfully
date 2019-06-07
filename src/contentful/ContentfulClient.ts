@@ -41,6 +41,10 @@ export class ContentfulClient {
         return this.query("/entries");
     }
 
+    public getLocales(): Promise<any> {
+        return this.query("/locales");
+    }
+    
     public async query(path: string, parameters = {}) {
 
         // create request url
