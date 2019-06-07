@@ -20,6 +20,13 @@ const DEFAULT_SELECT_ID = 'sys.id'
 const DEFAULT_SELECT_CONTENT_TYPE = 'sys.contentType'
 const DEFAULT_SELECT_UPDATED_AT = 'sys.updatedAt'
 
+interface Locale {
+    name: string
+    code: string
+    default: boolean | undefined
+    fallbackCode: string | undefined | null
+}
+
 export class Contentfully {
 
     public readonly contentful: ContentfulClient;
@@ -336,7 +343,32 @@ export class Contentfully {
         return link;
     }
 
-    private _flattenLocales(localesResult: { items: [{name: string, code: string, default: boolean | undefined, fallbackCode: any}]}, items: any) {
+    private _getLocaleValue(
+        defaultLocale: Locale | undefined,  
+        localeCodes: {[ code: string]: Locale}, 
+        locale: Locale, value: any) {
+
+        let currentLocale: Locale | undefined = locale;
+        while (currentLocale != undefined) {
+            if (value[currentLocale.code] !== undefined) {
+                return value[currentLocale.code];
+            }
+            if (currentLocale.fallbackCode === null) {
+                return value;
+            }
+            if (currentLocale == defaultLocale) {
+                return value;
+            }
+            if (currentLocale.fallbackCode === undefined) {
+                currentLocale = defaultLocale;
+            } else {
+                currentLocale = localeCodes[currentLocale.fallbackCode];
+            }
+        }
+        return value;
+    }
+
+    private _flattenLocales(localesResult: { items: Locale[]}, items: any) {
 
         // this does not handle circular references well
         // TODO handle fallback codes
@@ -351,8 +383,8 @@ export class Contentfully {
         // get needed values from locales result
         const locales = localesResult.items;
         const localeCodes = locales.map((locale) => locale.code);
+        const localeCodeMap = locales.reduce((acc: any, locale) => { acc[locale.code] = locale; return acc; }, {})
         const defaultLocaleObj = locales.find(locale => locale.default !== undefined && locale.default);
-        const defaultLocale = defaultLocaleObj ? defaultLocaleObj.code : "en-US";
 
         // create the object that will hold all the items for each locale
         const localeItems = {} as any;
@@ -388,11 +420,7 @@ export class Contentfully {
                         if (isEmpty(value)) { 
                             continue;
                         }
-                        if (value[locale] != undefined) {
-                            value = value[locale];
-                        } else if (value[defaultLocale] != undefined) {
-                            value = value[defaultLocale];
-                        }
+                        value = this._getLocaleValue(defaultLocaleObj, localeCodeMap, localeCodeMap[locale], value)
                         // handle primitives
                         if (typeof value !== "object") {
                             context[key] = value;

@@ -125,9 +125,7 @@ It should look something like this:
 ### Localization with the wildcard locale parameter
 Just as with the Content Delivery API, you can query entries to retrieve all localized versions of an entry by using the 'wildcard' `locale=*` parameter.   
   
-**However** the response is different from Contentful API.  The locales will be lifted to top level objects so each locale can be used holistically.  Please refer to the example response below.  The default locale from the space will be used to for values not defined in any locale.  Flattening can be disabled for a query by passing the Query Option `flatten=false`
-
-**TODO** fallback locales are currently not implemented for lifted responses.  If you need fallback locales you can disable flattening by passing the Query Option `flatten=false`
+**However** the response is different from Contentful API.  The locales will be lifted to top level objects so each locale can be used holistically.  Please refer to the example response below.  The default locale from the space will be used to for values not defined in any locale.  Fallback locales are implemented for lifted responses following Contentful's "Considerations on fallback locales" documentation.  Flattening can be disabled for a query by passing the _Query Option_ `flatten=false`
 
 
 ```javascript
