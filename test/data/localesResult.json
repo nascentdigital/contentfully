@@ -1,0 +1,42 @@
+{
+  "sys": {
+  "type": "Array"
+  },
+  "total": 1,
+  "skip": 0,
+  "limit": 1000,
+  "items": [
+  {
+  "name": "english",
+  "code": "en-CA",
+  "default": true,
+  "fallbackCode": null,
+  "sys": {
+  "id": "0zrqPSqIwKcQ1g4ddfsYei",
+  "type": "Locale",
+  "version": 1
+  }
+  },
+  {
+  "name": "english-westcoast",
+  "code": "en-CA-BC",
+  "default": true,
+  "sys": {
+  "id": "0zrqPSqIwKcQ1g4ddfsYee",
+  "type": "Locale",
+  "version": 2
+  }
+  },
+  {
+  "name": "french",
+  "code": "fr-CA",
+  "default": true,
+  "fallbackCode": "en-CA",
+  "sys": {
+  "id": "0zrqPSqIwKcQ1g4ddfsYez",
+  "type": "Locale",
+  "version": 3
+  }
+  }
+  ]
+  }

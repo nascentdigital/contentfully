@@ -1,4 +1,6 @@
-import _ from "lodash";
+import assign from "lodash/assign";
+import get from "lodash/get";
+import keys from "lodash/keys";
 import nodeFetch from "node-fetch";
 import {ContentfulClientOptions} from "./ContentfulClientOptions";
 import {
@@ -39,6 +41,10 @@ export class ContentfulClient {
         return this.query("/entries");
     }
 
+    public getLocales(): Promise<any> {
+        return this.query("/locales");
+    }
+    
     public async query(path: string, parameters = {}) {
 
         // create request url
@@ -51,9 +57,9 @@ export class ContentfulClient {
         }
 
         // add query string
-        const query: any = _.assign({access_token: this.options.accessToken},
+        const query: any = assign({access_token: this.options.accessToken},
             parameters);
-        _.keys(query).forEach((key, index) => {
+        keys(query).forEach((key, index) => {
             url += index > 0 ? "&" : "?";
             url += key + "=" + encodeURIComponent(query[key]);
         });
@@ -89,7 +95,7 @@ export class ContentfulClient {
 
             // throw if entity type isn't an error
             const errorObject = JSON.parse(errorData);
-            if (_.get(errorObject, "sys.type", "") !== "Error") {
+            if (get(errorObject, "sys.type", "") !== "Error") {
                 return new ServerError("Unexpected server error.");
             }
 
