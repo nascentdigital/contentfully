@@ -95,13 +95,13 @@ export class Contentfully {
 
             // capture media file
             const sys = asset.sys;
-												const file = asset.fields.file;
-												const title = asset.fields.title;
+            const file = asset.fields.file;
+            const title = asset.fields.title;
             const description = asset.fields.description;
             let media = {
                 _id: sys.id,
-																url: file.url,
-																title: title,
+                url: file.url,
+                title: title,
                 description: description,
                 contentType: file.contentType,
                 dimensions: _.pick(file.details.image, ["width", "height"]),
