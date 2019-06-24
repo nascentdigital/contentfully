@@ -192,9 +192,11 @@ export class Contentfully {
         // capture media file
         const file = fields.file;
         const description = fields.description;
+        const title = fields.title;
         let media = {
             _id: sys.id,
             url: file.url,
+            title: title,
             description: description,
             contentType: file.contentType,
             dimensions: pick(file.details.image, ["width", "height"]),
