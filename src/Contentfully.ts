@@ -39,7 +39,13 @@ export class Contentfully {
     }
 
     public getModel(id: string): Promise<any> {
-        return this._query(`/entries/${id}`);
+        return this._query(`/entries/${id}`)
+        .then((result: any) => {
+            if (!isUndefined(result)) {
+                result["_id"] = id;
+            }
+            return result;
+        });
     }
 
     public getModels(query: any = {}, options: QueryOptions = {}): Promise<QueryResult> {
@@ -87,10 +93,14 @@ export class Contentfully {
         const locale = get(query, 'locale');
         const multiLocale = locale && locale === '*';
 
+        // get transformed items
+        if (isUndefined(json.items)) {
+            return this._parseEntry(json, [], multiLocale)
+        }
+
         // parse includes
         const links = await this._createLinks(json, multiLocale, options.mediaTransform);
 
-        // get transformed items
         let items = this._parseEntries(json.items, links, multiLocale);
 
         // split locales to top level objects
@@ -252,7 +262,7 @@ export class Contentfully {
                 const parsedLocale = this._parseValueByLocale(value, links);
 
                 // handle null values otherwise pass back the values
-                if(!isEmpty(parsedLocale)) {
+                if(!isUndefined(parsedLocale)) {
                     fields[key] = parsedLocale;
                 }
             // parse array of values
@@ -263,7 +273,7 @@ export class Contentfully {
             else {
                 const parsed = this._parseValue(value, links);
                 // handle null values otherwise pass back the values
-                if(!isEmpty(parsed)) {
+                if(!isUndefined(parsed)) {
                     fields[key] = parsed;
                 }
             }
@@ -419,7 +429,7 @@ export class Contentfully {
                     for (let [key, valueObj] of Object.entries(item)) {
                         // find the locale value or fallback to default or use the value of the prop
                         let value = valueObj as any;
-                        if (isEmpty(value)) { 
+                        if (isUndefined(value) || isEmpty(value)) { 
                             continue;
                         }
                         value = this._getLocaleValue(defaultLocaleObj, localeCodeMap, localeCodeMap[locale], value)
@@ -430,7 +440,7 @@ export class Contentfully {
                         }
                         // handle Objects
                         if (Array.isArray(value) === false) {
-                            if(isEmpty(value["_id"])) {
+                            if(isUndefined(value) || isEmpty(value["_id"])) {
                                 // this isn't a contentful object, it's likely some sort of nested raw json
                                 context[key] = value;
                                 continue;

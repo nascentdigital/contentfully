@@ -3475,6 +3475,9 @@
           "id": {
             "en-CA": "BHeroBanner"
           },
+          "awesomeness": {
+            "en-CA": 9001
+          },
           "content": {
             "en-CA": {
               "sys": {

@@ -93,6 +93,9 @@ describe("Content with linked entities and assets", () => {
                 ])
             }),
         ]))
+        // console.log(JSON.stringify(result, null, 2))
+        const heroAwesomeness = _.get(result, 'items[0].awesomeness')
+        expect(heroAwesomeness).toBe(9001)
     });
 
     it("Should not clone linked top-level entries", async () => {
@@ -335,9 +338,12 @@ describe("Linked entities and assets with wildcard locale", () => {
         ]));
 
         const heroBanner = (_.get(result, 'items[0].heroBanner.en-CA'));
+        const heroAwesomeness = (_.get(result, 'items[0].heroBanner.en-CA.awesomeness'));
         const heroBannerContent = _.get(heroBanner, 'content.en-CA.title');
         const heroBannerLogo = _.get(heroBanner, 'logo');
 
+        expect(heroAwesomeness).toHaveProperty('en-CA');
+        expect(heroAwesomeness['en-CA']).toEqual(9001)
         expect(heroBanner).toBeDefined();
         expect(heroBannerContent).toHaveProperty('en-CA')
         expect(heroBannerContent).toHaveProperty('en-CA-BC');
@@ -429,6 +435,7 @@ describe("Linked entities and assets with wildcard locale", () => {
         ]));
 
         const heroBannerEN_CA = (_.get(result, 'items.en-CA[0].heroBanner'));
+        const heroAwesomenessEN_CA = (_.get(result, 'items.en-CA[0].heroBanner.awesomeness'));
         const heroBannerContentEN_CA = _.get(heroBannerEN_CA, 'content.title');
         const heroBannerLogoEN_CA = _.get(heroBannerEN_CA, 'logo');
 
@@ -442,6 +449,11 @@ describe("Linked entities and assets with wildcard locale", () => {
         expect(heroBannerEN_CA).toBeDefined();
         expect(heroBannerFR_CA).toBeDefined();
         expect(heroBannerEN_CA_BC).toBeDefined();
+
+
+        
+        expect(heroAwesomenessEN_CA).toBeDefined();
+        expect(heroAwesomenessEN_CA).toEqual(9001)
 
         expect(heroBannerLogoEN_CA).toBeDefined();
         expect(heroBannerLogoEN_CA).toHaveProperty('size');
