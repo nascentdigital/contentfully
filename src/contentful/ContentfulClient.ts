@@ -27,9 +27,12 @@ export class ContentfulClient {
         // initialize instance variables
         this.options = options;
 
-        const serverUrl = options.preview
+        let serverUrl = options.preview
             ? ContentfulClient.PREVIEW_URL
             : ContentfulClient.PRODUCTION_URL;
+        if (options.host) {
+            serverUrl = options.host
+        }
         this._spaceUri = `${serverUrl}/spaces/${options.spaceId}/environments/${options.environmentId || "master"}`;
     }
 
@@ -66,7 +69,10 @@ export class ContentfulClient {
 
         // fetch data (throw if there is an error)
         const fetchClient = this.getFetchClient();
-        const response = await fetchClient(url);
+        const response = await fetchClient(url,
+            {
+                headers: this.options.headers
+            });
         if (!response.ok) {
 
             // capture error
