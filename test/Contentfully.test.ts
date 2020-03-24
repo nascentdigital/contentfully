@@ -37,11 +37,11 @@ describe("Content with linked entities and assets", () => {
         mockClientQuery.mockClear();
 
         // create implementation
-        MockContentfulClient.mockImplementation(() => {
+        MockContentfulClient.mockImplementation((() => {
             return {
                 query: mockClientQuery
             };
-        });
+        }) as any);
     });
 
     // data constants
@@ -237,11 +237,11 @@ describe("Content with linked entities and assets", () => {
         // ensure mock has never been called
         expect(MockContentfulClient).not.toHaveBeenCalled();
         // create implementation
-        MockContentfulClient.mockImplementation(() => {
+        MockContentfulClient.mockImplementation((() => {
             return {
                 query: mockClientQuery2
             };
-        });
+        }) as any);
 
         // create client
         const contentfulClient = new ContentfulClient(contentfulOptions);
@@ -279,12 +279,12 @@ describe("Linked entities and assets with wildcard locale", () => {
         mockClientLocales.mockClear();
 
         // create implementation
-        MockContentfulClient.mockImplementation(() => {
+        MockContentfulClient.mockImplementation((() => {
             return {
                 query: mockClientQuery,
                 getLocales: mockClientLocales
             };
-        });
+        }) as any);
     });
 
     it("Should parse unflattened locales without errors", async () => {
@@ -451,7 +451,7 @@ describe("Linked entities and assets with wildcard locale", () => {
         expect(heroBannerEN_CA_BC).toBeDefined();
 
 
-        
+
         expect(heroAwesomenessEN_CA).toBeDefined();
         expect(heroAwesomenessEN_CA).toEqual(9001)
 
