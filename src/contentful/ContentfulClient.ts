@@ -47,7 +47,7 @@ export class ContentfulClient {
     public getLocales(): Promise<any> {
         return this.query("/locales");
     }
-    
+
     public async query(path: string, parameters = {}) {
 
         // create request url
@@ -89,7 +89,7 @@ export class ContentfulClient {
     private getFetchClient(): any {
 
         if (this.options.fetch) {
-            return fetch;
+            return this.options.fetch;
         }
         return "fetch" in global ? fetch :  nodeFetch;
     }
