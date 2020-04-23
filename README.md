@@ -49,6 +49,8 @@ Getting started is really easy. First you'll need to create and configure a
  | environmentId | string  | NO        | master             |
  | preview       | boolean | NO        | false              |
  | fetch         | any     | NO        | fetch / node-fetch |
+ | host          | string  | NO        | Delivery API: https://cdn.contentful.com / Preview API: https://preview.contentful.com |
+ | headers       | object  | NO        | object / string    |
  
  Once configured, pass the client into a `Contentfully` instance:
 
