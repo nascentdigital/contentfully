@@ -368,32 +368,31 @@ export class Contentfully {
     }
 
     private _dereferenceLink(reference: any, links: any, locale?: string) {
-        const sys = locale && reference[locale] ? reference[locale].sys : reference.sys;
+
+        // resolve entry sys and id
+        const sys = locale && reference[locale]
+            ? reference[locale].sys
+            : reference.sys;
         const modelId = sys.id;
 
-        // get link (resolve if deferred)
+        // get link (or bail if it isn't mapped)
         let link = links[modelId];
-
-        // bail if no link
         if (!link) {
             return
         }
 
-        // add link id metadata
+        // resolve link if not processed
         link._id = modelId;
         if (link._deferred) {
 
-            const deferred = link._deferred;
-
             // add link content type metadata
-            const deferredSys = deferred.sys;
-            link._type = deferredSys.contentType.sys.id;
-
+            const deferred = link._deferred;
             const parsed = this._parseEntry(deferred, links, !isUndefined(locale));
+
             // update entry with parsed value
             assign(link, parsed);
 
-            // // prune deferral
+            // prune deferral
             delete link._deferred;
         }
 
