@@ -6,36 +6,54 @@ import get from "lodash/get";
 import keys from "lodash/keys";
 import forEach from "lodash/forEach";
 import isArray from "lodash/isArray";
-import isUndefined from "lodash/isUndefined";
 import isEmpty from "lodash/isEmpty";
+import isString from "lodash/isString";
+import isUndefined from "lodash/isUndefined";
 import map from "lodash/map";
-import { ContentfulClient } from "./contentful";
+import {ContentfulClient} from "./contentful";
 import {
     MediaTransform,
     QueryOptions
 } from "./QueryOptions";
-import { QueryResult } from "./QueryResult";
+import {QueryResult} from "./QueryResult";
 
 
 // constants
-const DEFAULT_OPTIONS: ContentfullyOptions = {
+export const DEFAULT_OPTIONS: Readonly<ContentfullyOptions> = {
     legacySupport: true
 };
-const DEFAULT_SELECT_ID = "sys.id"
-const DEFAULT_SELECT_CONTENT_TYPE = "sys.contentType"
-const DEFAULT_SELECT_UPDATED_AT = "sys.updatedAt"
+export const DEFAULT_QUERY: Readonly<any> = {
+    include: 10,
+    limit: 1000
+};
+export const QUERY_SELECT_ID = "sys.id";
+export const QUERY_SELECT_TYPE = "sys.contentType";
+export const QUERY_SELECT_REVISION = "sys.revision";
+export const QUERY_SELECT_CREATED_AT = "sys.createdAt";
+export const QUERY_SELECT_UPDATED_AT = "sys.updatedAt";
+export const QUERY_SELECT_FIELDS = "fields";
+export const REQUIRED_QUERY_SELECT: ReadonlyArray<string> = [
+    QUERY_SELECT_ID,
+    QUERY_SELECT_TYPE,
+    QUERY_SELECT_REVISION,
+    QUERY_SELECT_CREATED_AT,
+    QUERY_SELECT_UPDATED_AT
+];
 
 
 // types
 export type ContentfullyOptions = {
     legacySupport: boolean;
 };
+
+
 interface Locale {
     name: string;
     code: string;
     default: boolean | undefined;
     fallbackCode: string | undefined | null;
 }
+
 
 export class Contentfully {
 
@@ -52,53 +70,24 @@ export class Contentfully {
 
     public getModel(id: string): Promise<any> {
         return this._query(`/entries/${id}`)
-        .then((result: any) => {
-            if (!isUndefined(result)) {
-                result["_id"] = id;
-            }
-            return result;
-        });
+            .then((result: any) => {
+                if (!isUndefined(result)) {
+                    result["_id"] = id;
+                }
+                return result;
+            });
     }
 
     public getModels(query: any = {}, options: QueryOptions = {}): Promise<QueryResult> {
         return this._query("/entries", query, options);
     }
 
-    private async _query(path: string, query: any = {},
-        options: QueryOptions = {}): Promise<QueryResult> {
-
-        // set default select values
-        let select: string = "fields"
-
-        // if select query is passed
-        if (query.select) {
-            // clean select query
-            select = compact(map(query.select.split(","), queryString => {
-                // remove white space
-                return queryString.replace(/\s/g, '')
-                // remove default sys.id
-                .replace(DEFAULT_SELECT_ID, '')
-                // remove content type
-                .replace(DEFAULT_SELECT_CONTENT_TYPE, '')
-                // remove updated at
-                .replace(DEFAULT_SELECT_UPDATED_AT, '')
-                .trim(",");
-            })).join(",");
-        }
-
-        // prepend default selects
-        query.select = `${DEFAULT_SELECT_ID},${DEFAULT_SELECT_CONTENT_TYPE},${DEFAULT_SELECT_UPDATED_AT},${select}`
+    private async _query(path: string,
+                         query: Readonly<any> = {},
+                         options: Readonly<QueryOptions> = {}): Promise<QueryResult> {
 
         // create query
-        const json = await this.contentful.query(path,
-            assign({},
-                {
-                    include: 10,
-                    limit: 1000
-                },
-                query
-            )
-        );
+        const json = await this.contentful.query(path, Contentfully.createQuery(query));
 
         // assign multi-locale query
         const locale = get(query, "locale");
@@ -180,11 +169,13 @@ export class Contentfully {
 
                             media[locale] = transformed;
                         }
-                    } catch (e) {
+                    }
+                    catch (e) {
                         console.error("[_createLinks] error with creating media", e);
                     }
                 });
-            } else {
+            }
+            else {
                 media = await this._toMedia(sys, asset.fields, mediaTransform);
             }
 
@@ -277,7 +268,7 @@ export class Contentfully {
 
                 // FIXME: is just dropping this value ok?  what about a fallback?
                 // bind if value is localized (otherwise drop field)
-                if(!isUndefined(parsedLocale)) {
+                if (!isUndefined(parsedLocale)) {
                     model[key] = parsedLocale;
                 }
             }
@@ -294,7 +285,7 @@ export class Contentfully {
                 const parsed = this._parseValue(value, links);
 
                 // bind if value could be parsed, drop field otherwise
-                if(!isUndefined(parsed)) {
+                if (!isUndefined(parsed)) {
                     model[key] = parsed;
                 }
             }
@@ -335,7 +326,7 @@ export class Contentfully {
         forEach(locales, locale => {
             // parse array of value
             if (isArray(value[locale])) {
-                values[locale] =  compact(map(value[locale], item => this._parseValue(item, links, locale)));
+                values[locale] = compact(map(value[locale], item => this._parseValue(item, links, locale)));
             }
             // or parse value
             else {
@@ -346,7 +337,8 @@ export class Contentfully {
                 // assign asset to values (already mapped by locale)
                 else if (sys.linkType === "Asset") {
                     values = this._dereferenceLink(value, links, locale);
-                } else {
+                }
+                else {
                     values[locale] = this._dereferenceLink(value, links, locale);
                 }
             }
@@ -402,7 +394,7 @@ export class Contentfully {
 
     private _getLocaleValue(
         defaultLocale: Locale | undefined,
-        localeCodes: {[ code: string]: Locale},
+        localeCodes: { [code: string]: Locale },
         locale: Locale, value: any) {
 
         let currentLocale: Locale | undefined = locale;
@@ -418,14 +410,15 @@ export class Contentfully {
             }
             if (currentLocale.fallbackCode === undefined) {
                 currentLocale = defaultLocale;
-            } else {
+            }
+            else {
                 currentLocale = localeCodes[currentLocale.fallbackCode];
             }
         }
         return value;
     }
 
-    private _flattenLocales(localesResult: { items: Locale[]}, items: any) {
+    private _flattenLocales(localesResult: { items: Locale[] }, items: any) {
 
         // this does not handle circular references well
         // TODO handle fallback codes
@@ -437,10 +430,14 @@ export class Contentfully {
             depth: number
         }
 
+
         // get needed values from locales result
         const locales = localesResult.items;
         const localeCodes = locales.map((locale) => locale.code);
-        const localeCodeMap = locales.reduce((acc: any, locale) => { acc[locale.code] = locale; return acc; }, {})
+        const localeCodeMap = locales.reduce((acc: any, locale) => {
+            acc[locale.code] = locale;
+            return acc;
+        }, {})
         const defaultLocaleObj = locales.find(locale => locale.default !== undefined && locale.default);
 
         // create the object that will hold all the items for each locale
@@ -467,8 +464,10 @@ export class Contentfully {
                 while (queue.length > 0) {
                     // pull and destruct the current node and exit early is undefined
                     const current = queue.shift();
-                    if (current == undefined) { break; }
-                    const { context, item, depth } = current;
+                    if (current == undefined) {
+                        break;
+                    }
+                    const {context, item, depth} = current;
 
                     // itterate each key and value on the node item
                     for (let [key, valueObj] of Object.entries(item)) {
@@ -485,7 +484,7 @@ export class Contentfully {
                         }
                         // handle Objects
                         if (Array.isArray(value) === false) {
-                            if(isUndefined(value) || isEmpty(value["_id"])) {
+                            if (isUndefined(value) || isEmpty(value["_id"])) {
                                 // this isn't a contentful object, it's likely some sort of nested raw json
                                 context[key] = value;
                                 continue;
@@ -514,7 +513,7 @@ export class Contentfully {
                             // explicitly handle nested arrays
                             // they must have come from outsite of a content model
                             // so leave them raw
-                            if(Array.isArray(value[index])) {
+                            if (Array.isArray(value[index])) {
                                 itemContext[index] = value[index];
                                 continue;
                             }
@@ -531,5 +530,44 @@ export class Contentfully {
             }
         }
         return localeItems;
+    }
+
+    private static createQuery(query: Readonly<any>): any {
+
+        // create default select (if required)
+        let select: string[];
+        if (!query.select) {
+            select = [...REQUIRED_QUERY_SELECT, QUERY_SELECT_FIELDS];
+        }
+
+        // or merge user select into required query
+        else {
+
+            // use user array if provided
+            if (isArray(query.select)) {
+                select = query.select as string[];
+            }
+
+            // or convert user string to array
+            else if (isString(query.select)) {
+                select = query.select.split(",");
+            }
+
+            // TODO: this should throw in the next major release
+            // otherwise ignore + fallback
+            else {
+                console.warn("[Contentfully] invalid query.select value: ", query.select);
+                select = [...REQUIRED_QUERY_SELECT, QUERY_SELECT_FIELDS];
+            }
+
+            // normalize + merge using a set
+            select = Array.from(new Set([
+                ...select.map(value => value.trim()),
+                ...REQUIRED_QUERY_SELECT
+            ]));
+        }
+
+        // create normalized clone of user query
+        return assign({}, DEFAULT_QUERY, query, {select});
     }
 }

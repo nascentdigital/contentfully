@@ -1,15 +1,34 @@
 // imports
 import "jest";
-import fetch from "node-fetch";
+import fetch, {RequestInfo} from "node-fetch";
 import {mocked} from "ts-jest/utils";
 import {
     ContentfulClient,
-    Contentfully
+    Contentfully,
+    QUERY_SELECT_CREATED_AT,
+    QUERY_SELECT_ID,
+    QUERY_SELECT_REVISION,
+    QUERY_SELECT_TYPE,
+    QUERY_SELECT_UPDATED_AT
 } from "../../src";
 
 
-// json
+// json imports
 import blogJson from "./data/blog.json";
+
+
+// types
+export type RequestValidator = (url: RequestInfo) => void;
+
+
+// constants
+const DEFAULT_QUERY_SELECT = [
+    QUERY_SELECT_ID,
+    QUERY_SELECT_TYPE,
+    QUERY_SELECT_REVISION,
+    QUERY_SELECT_CREATED_AT,
+    QUERY_SELECT_UPDATED_AT
+];
 
 
 // mocks + containers
@@ -17,8 +36,15 @@ jest.mock("node-fetch", () => {
     return jest.fn();
 });
 
-function bindFetch(json: any) {
-    mocked(fetch).mockImplementation(async (): Promise<any> => {
+function bindFetch(json: any, validator?: RequestValidator) {
+    mocked(fetch).mockImplementation(async (url: RequestInfo): Promise<any> => {
+
+        // invoke validator (if provided)
+        if (validator) {
+            validator(url);
+        }
+
+        // mock response
         return {
             ok: true,
             async json() {
@@ -66,6 +92,32 @@ function expectUpdatedAt(json: any, entryId: string, value: string) {
     const entry = findEntry(json, entryId);
     expect(entry.sys.updatedAt).toBe(value);
 }
+function expectRequestSelect(url: RequestInfo, ...parameters: string[]) {
+
+    // fail if url isn't a string
+    if (!url) {
+        fail("Missing url");
+        return;
+    }
+
+    // fail if url isn't a string
+    else if (typeof url !== "string") {
+        fail(`Expected url to be a string, found ${typeof url}`);
+        return;
+    }
+
+    // parse URL
+    const urlQuery = new URL(url).searchParams;
+
+    // fail if there is no select in query
+    const select = urlQuery.get("select");
+    expect(urlQuery.has("select")).toBeTruthy();
+    expect(select).not.toBeNull();
+
+    // fail if expected parameters aren't in select
+    const selectParameters = (select || "").split(",");
+    expect(selectParameters).toEqual(expect.arrayContaining(parameters));
+}
 
 
 // lifecycle
@@ -87,6 +139,20 @@ beforeEach(() => {
 
 // suite
 describe("Contentfully metadata", () => {
+
+    describe("query.select", () => {
+
+        test("should default correct selection", async () => {
+
+            // prepare mock
+            bindFetch(blogJson, url => expectRequestSelect(url, ...DEFAULT_QUERY_SELECT));
+
+            // execute query
+            const contentfully = new Contentfully(contenfulClient);
+            const result = await contentfully.getModels({});
+
+        });
+    });
 
     describe("linked entities [blog.json]", () => {
 
