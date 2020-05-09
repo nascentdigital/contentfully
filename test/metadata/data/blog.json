@@ -1,0 +1,836 @@
+{
+    "sys": {
+        "type": "Array"
+    },
+    "total": 1,
+    "skip": 0,
+    "limit": 1,
+    "items": [
+        {
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "oae75tj4gg8d"
+                    }
+                },
+                "type": "Entry",
+                "id": "12LiLki7xnn0txvAekkpXl",
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "blog"
+                    }
+                },
+                "revision": 1,
+                "createdAt": "2020-05-07T14:32:45.625Z",
+                "updatedAt": "2020-05-08T17:52:35.473Z",
+                "environment": {
+                    "sys": {
+                        "id": "dev",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "locale": "en-CA"
+            },
+            "fields": {
+                "identifier": "Default",
+                "articles": [
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "2Ehu94m5TjAO6b0ZPzi2HQ"
+                        }
+                    },
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "2khtemITDq4NIU4pH3u69n"
+                        }
+                    },
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "rybYzjJXaJRmumiiSY8GO"
+                        }
+                    },
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "2J9yS5T0UZiVdMb0gGSIux"
+                        }
+                    },
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "Q51oTBCg0LttWiwqPmeoy"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "includes": {
+        "Entry": [
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "2Ehu94m5TjAO6b0ZPzi2HQ",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "article"
+                        }
+                    },
+                    "revision": 5,
+                    "createdAt": "2020-05-07T10:44:14.094Z",
+                    "updatedAt": "2020-05-07T14:26:31.873Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "A story of a thriving startup, a burnt out owner, and the 6 books that saved them both ",
+                    "caption": "Why is it so difficult to start a new business? Why do so many fail? Check out what we have learned over the course of 10 years.",
+                    "slug": "6-startup-survival-books",
+                    "hero": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "2PdB2RKuAdUbEC5XN8LTMI"
+                        }
+                    },
+                    "text": "Lorem ipsum dolores sat.",
+                    "authors": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "4pVKLzwSppZA7rVy4kjRJV"
+                            }
+                        }
+                    ],
+                    "tags": [
+                        "leadership",
+                        "startup",
+                        "management",
+                        "culture",
+                        "organizational design",
+                        "entrepreneur"
+                    ]
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "2J9yS5T0UZiVdMb0gGSIux",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "article"
+                        }
+                    },
+                    "revision": 0,
+                    "createdAt": "2020-05-08T17:15:01.786Z",
+                    "updatedAt": "2020-05-08T17:38:53.001Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Three things that make a great conversational user interface",
+                    "caption": "Three principles that are necessary in a CUI for the conversation to feel natural and delightful. These lay the groundwork for conversations and building a relationship with your customers.",
+                    "slug": "three-things-that-make-a-great-conversational-user-interface",
+                    "hero": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "1hKIkS3R5mYWVjLcx7NLhL"
+                        }
+                    },
+                    "text": "Lorem ipsum dolores sat.",
+                    "authors": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "6qqOjyFcjrQm272GVAeiSY"
+                            }
+                        }
+                    ],
+                    "tags": [
+                        "UX",
+                        "Voice Assistant",
+                        "Conversational UI",
+                        "UI",
+                        "Smart Speaker"
+                    ]
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "2khtemITDq4NIU4pH3u69n",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "article"
+                        }
+                    },
+                    "revision": 0,
+                    "createdAt": "2020-05-07T19:03:08.082Z",
+                    "updatedAt": "2020-05-07T19:19:20.014Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Typescript: Javascript’s special sauce",
+                    "caption": "Here’s why you should start using Typescript as a Javascript developer, and why it won’t be as hard as you think.",
+                    "slug": "typescript-javascripts-special-sauce",
+                    "hero": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "64eEGBRX24CD2Egrc8TfcV"
+                        }
+                    },
+                    "text": "Lorem ipsum dolores sat.",
+                    "authors": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "4Aqn9KPs76EMMqQA8XVc2A"
+                            }
+                        }
+                    ],
+                    "tags": [
+                        "Typescript",
+                        "Web Development",
+                        "React",
+                        "React Native",
+                        "Javascript"
+                    ]
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "4Aqn9KPs76EMMqQA8XVc2A",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "person"
+                        }
+                    },
+                    "revision": 1,
+                    "createdAt": "2019-10-01T01:44:07.538Z",
+                    "updatedAt": "2019-10-01T01:45:00.335Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "firstName": "Andrew",
+                    "lastName": "Braini",
+                    "title": "Architect",
+                    "organization": "Nascent",
+                    "relationship": "employee",
+                    "picture": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "6FckG1WRvr5ms0HUmyyOgP"
+                        }
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "4pVKLzwSppZA7rVy4kjRJV",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "person"
+                        }
+                    },
+                    "revision": 1,
+                    "createdAt": "2020-05-07T10:44:39.346Z",
+                    "updatedAt": "2020-05-07T10:48:32.620Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "firstName": "Simeon",
+                    "lastName": "de Dios",
+                    "title": "CTO, Partner",
+                    "relationship": "employee",
+                    "picture": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "4cSo78t7GMjsEc5XJrTueP"
+                        }
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "6qqOjyFcjrQm272GVAeiSY",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "person"
+                        }
+                    },
+                    "revision": 1,
+                    "createdAt": "2019-10-01T01:40:07.528Z",
+                    "updatedAt": "2019-10-01T01:41:54.429Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "firstName": "Sam",
+                    "title": "Product Strategist",
+                    "organization": "Nascent",
+                    "relationship": "employee",
+                    "picture": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "4MBAr00CmImvT2PpG0Oc6i"
+                        }
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "Q51oTBCg0LttWiwqPmeoy",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "article"
+                        }
+                    },
+                    "revision": 0,
+                    "createdAt": "2020-05-08T17:37:43.064Z",
+                    "updatedAt": "2020-05-08T17:51:45.400Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Four ways to make your conversational user interface feel more natural",
+                    "caption": "Give your CUI the ability to have conversations that are actually dynamic and helpful.",
+                    "slug": "four-ways-to-make-your-conversational-user-interface-feel-more-natural",
+                    "hero": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "7LVDoJyImoFLvVlKmp30fV"
+                        }
+                    },
+                    "text": "Lorem ipsum dolores sat.",
+                    "authors": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "6qqOjyFcjrQm272GVAeiSY"
+                            }
+                        }
+                    ],
+                    "tags": [
+                        "Conversational UI",
+                        "CUI",
+                        "Voice Assistant",
+                        "Chatbots",
+                        "UX Design"
+                    ]
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "rybYzjJXaJRmumiiSY8GO",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "article"
+                        }
+                    },
+                    "revision": 0,
+                    "createdAt": "2020-05-08T14:48:04.513Z",
+                    "updatedAt": "2020-05-08T17:14:54.328Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "How conversational user interfaces can improve your digital product experiences",
+                    "caption": "You’ve probably spoken to a chatbot or a smart speaker and have been less than impressed. Well, I’m here to tell you that tech like this (if done right) can improve your digital experiences.",
+                    "slug": "how-conversational-user-interfaces-can-improve-your-digital-product",
+                    "hero": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "20PluwqKIL07ZYnURe5FQd"
+                        }
+                    },
+                    "text": "Lorem ipsum dolores sat.",
+                    "authors": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "6qqOjyFcjrQm272GVAeiSY"
+                            }
+                        }
+                    ],
+                    "tags": [
+                        "UX",
+                        "Voice Technology",
+                        "Smart Speaker",
+                        "Interaction Design",
+                        "Chatbots"
+                    ]
+                }
+            }
+        ],
+        "Asset": [
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "1hKIkS3R5mYWVjLcx7NLhL",
+                    "revision": 0,
+                    "createdAt": "2020-05-08T17:38:52.132Z",
+                    "updatedAt": "2020-05-08T17:40:31.681Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "article.CUI-article2-header",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/1hKIkS3R5mYWVjLcx7NLhL/6e0d8f8fe08298537372260987309372/voice_article_2_-_header.jpeg",
+                        "details": {
+                            "size": 317107,
+                            "image": {
+                                "width": 2000,
+                                "height": 1143
+                            }
+                        },
+                        "fileName": "voice article 2 - header.jpeg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "20PluwqKIL07ZYnURe5FQd",
+                    "revision": 0,
+                    "createdAt": "2020-05-08T14:50:22.079Z",
+                    "updatedAt": "2020-05-08T14:51:40.745Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "article.google-home-mini",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/20PluwqKIL07ZYnURe5FQd/0d9ff3f4f1fd857c58bbc2a4d1056d60/google_home_cropped.jpg",
+                        "details": {
+                            "size": 1780830,
+                            "image": {
+                                "width": 3000,
+                                "height": 1500
+                            }
+                        },
+                        "fileName": "google home cropped.jpg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "2PdB2RKuAdUbEC5XN8LTMI",
+                    "revision": 1,
+                    "createdAt": "2020-05-07T10:59:44.991Z",
+                    "updatedAt": "2020-05-07T11:00:55.390Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "article.hero-pushing.rock",
+                    "description": "A business man pushing a boulder up a mountain.",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/2PdB2RKuAdUbEC5XN8LTMI/2d1e5b4db141258b3b41df729e2b2c44/article.hero-pushing.rock.jpeg",
+                        "details": {
+                            "size": 317446,
+                            "image": {
+                                "width": 1600,
+                                "height": 909
+                            }
+                        },
+                        "fileName": "article.hero-pushing.rock.jpeg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "4MBAr00CmImvT2PpG0Oc6i",
+                    "revision": 2,
+                    "createdAt": "2019-10-01T01:40:38.710Z",
+                    "updatedAt": "2019-10-01T01:41:51.031Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Headshot: Sam",
+                    "description": "A headshot of Sam.",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/4MBAr00CmImvT2PpG0Oc6i/0052a080885be23ad88e8c427268d7b3/Sam.png",
+                        "details": {
+                            "size": 12746,
+                            "image": {
+                                "width": 144,
+                                "height": 144
+                            }
+                        },
+                        "fileName": "Sam.png",
+                        "contentType": "image/png"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "4cSo78t7GMjsEc5XJrTueP",
+                    "revision": 1,
+                    "createdAt": "2020-05-07T10:45:15.084Z",
+                    "updatedAt": "2020-05-07T10:48:26.696Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Headshot: Simeon",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/4cSo78t7GMjsEc5XJrTueP/b8af054910ecb1669955c470e5fde773/Sim.png",
+                        "details": {
+                            "size": 38746,
+                            "image": {
+                                "width": 144,
+                                "height": 144
+                            }
+                        },
+                        "fileName": "Sim.png",
+                        "contentType": "image/png"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "64eEGBRX24CD2Egrc8TfcV",
+                    "revision": 0,
+                    "createdAt": "2020-05-07T19:08:13.379Z",
+                    "updatedAt": "2020-05-07T19:08:52.285Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "article.typescript-javascript",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/64eEGBRX24CD2Egrc8TfcV/7613b99e3d1f0d1a44089b7cc15029ed/Typescript__Javascript_s_Special_Sauce_header_image.jpg",
+                        "details": {
+                            "size": 172499,
+                            "image": {
+                                "width": 1500,
+                                "height": 750
+                            }
+                        },
+                        "fileName": "Typescript_ Javascript's Special Sauce header image.jpg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "6FckG1WRvr5ms0HUmyyOgP",
+                    "revision": 1,
+                    "createdAt": "2019-10-01T01:44:28.992Z",
+                    "updatedAt": "2019-10-01T01:44:54.423Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Headshot: Andrew",
+                    "description": "A headshot of Andrew.",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/6FckG1WRvr5ms0HUmyyOgP/eaefba361ce49113457c98ed692095b2/Braini.png",
+                        "details": {
+                            "size": 37562,
+                            "image": {
+                                "width": 144,
+                                "height": 144
+                            }
+                        },
+                        "fileName": "Braini.png",
+                        "contentType": "image/png"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "7LVDoJyImoFLvVlKmp30fV",
+                    "revision": 0,
+                    "createdAt": "2020-05-08T17:51:44.094Z",
+                    "updatedAt": "2020-05-08T17:52:13.012Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "article.man-talking-to-google-home",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/7LVDoJyImoFLvVlKmp30fV/e1dfd2dd0b8a9ca5188d1f88f9595831/voice_article_3_-_header.png",
+                        "details": {
+                            "size": 459717,
+                            "image": {
+                                "width": 1000,
+                                "height": 507
+                            }
+                        },
+                        "fileName": "voice article 3 - header.png",
+                        "contentType": "image/png"
+                    }
+                }
+            }
+        ]
+    }
+}

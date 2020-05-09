@@ -44,7 +44,7 @@ export class ContentfulClient {
     public getLocales(): Promise<any> {
         return this.query("/locales");
     }
-    
+
     public async query(path: string, parameters = {}) {
 
         // create request url
@@ -82,10 +82,20 @@ export class ContentfulClient {
 
     private getFetchClient(): any {
 
+        // return supplied fetch client
         if (this.options.fetch) {
+            return this.options.fetch;
+        }
+
+        // or browser
+        else if ("fetch" in global) {
             return fetch;
         }
-        return "fetch" in global ? fetch :  nodeFetch;
+
+        // or node-fetch
+        else {
+            return nodeFetch;
+        }
     }
 
     private parseError(errorData: string): Error {

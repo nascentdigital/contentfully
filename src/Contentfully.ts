@@ -76,7 +76,6 @@ export class Contentfully {
 
         // prepend default selects
         query.select = `${DEFAULT_SELECT_ID},${DEFAULT_SELECT_CONTENT_TYPE},${DEFAULT_SELECT_UPDATED_AT},${select}`
-        // query.select = ``
 
         // create query
         const json = await this.contentful.query(path,
@@ -89,7 +88,7 @@ export class Contentfully {
             )
         );
 
-        // assign multilocale query
+        // assign multi-locale query
         const locale = get(query, 'locale');
         const multiLocale = locale && locale === '*';
 
@@ -101,6 +100,7 @@ export class Contentfully {
         // parse includes
         const links = await this._createLinks(json, multiLocale, options.mediaTransform);
 
+        // parse core entries
         let items = this._parseEntries(json.items, links, multiLocale);
 
         // split locales to top level objects
@@ -226,10 +226,12 @@ export class Contentfully {
 
         // convert entries to models and return result
         return map(entries, entry => {
-            // process entry if not processed
+
+            // fetch model (avoids duplicate clones)
             const sys = entry.sys;
-            const modelId = sys.id;
-            const model = links[modelId];
+            const model = links[sys.id];
+
+            // process entry if not yet transformed
             if (model._deferred) {
 
                 // update entry with parsed value
@@ -239,47 +241,61 @@ export class Contentfully {
                 delete model._deferred;
             }
 
-            // add model metadata
-            model._id = modelId;
-            model._type = sys.contentType.sys.id;
-
-            if (sys.updatedAt) {
-                model._updatedAt = sys.updatedAt;
-            }
-
             // return model
             return model;
         });
     }
 
     private _parseEntry(entry: any, links: any, multiLocale: boolean) {
-        const fields: any = {};
-        // transform entry to model and return result
+
+        // create model
+        const model: any = {};
+
+        // bind metadata to model
+        const sys = entry.sys;
+        model._id = sys.id;
+        model._type = sys.contentType.sys.id;
+
+        if (sys.updatedAt) {
+            model._updatedAt = sys.updatedAt;
+        }
+
+        // transform entry fields to model
         forEach(entry.fields, (value, key) => {
-            // parse values if multilocale query
+
+            // parse values if multi-locale query
             if (multiLocale) {
+
                 // parse value (mapped by locale)
                 const parsedLocale = this._parseValueByLocale(value, links);
 
-                // handle null values otherwise pass back the values
+                // FIXME: is just dropping this value ok?  what about a fallback?
+                // bind if value is localized (otherwise drop field)
                 if(!isUndefined(parsedLocale)) {
-                    fields[key] = parsedLocale;
+                    model[key] = parsedLocale;
                 }
-            // parse array of values
-            } else if (isArray(value)) {
-                fields[key] = compact(map(value, item => this._parseValue(item, links)));
             }
+
+            // parse array of values
+            else if (isArray(value)) {
+                model[key] = compact(map(value, item => this._parseValue(item, links)));
+            }
+
             // or parse value
             else {
+
+                // parse value
                 const parsed = this._parseValue(value, links);
-                // handle null values otherwise pass back the values
+
+                // bind if value could be parsed, drop field otherwise
                 if(!isUndefined(parsed)) {
-                    fields[key] = parsed;
+                    model[key] = parsed;
                 }
             }
         });
 
-        return fields;
+        // return parsed model
+        return model;
     }
 
     private _parseValueByLocale(value: any, links: any) {
@@ -356,8 +372,8 @@ export class Contentfully {
     }
 
     private _getLocaleValue(
-        defaultLocale: Locale | undefined,  
-        localeCodes: {[ code: string]: Locale}, 
+        defaultLocale: Locale | undefined,
+        localeCodes: {[ code: string]: Locale},
         locale: Locale, value: any) {
 
         let currentLocale: Locale | undefined = locale;
@@ -429,7 +445,7 @@ export class Contentfully {
                     for (let [key, valueObj] of Object.entries(item)) {
                         // find the locale value or fallback to default or use the value of the prop
                         let value = valueObj as any;
-                        if (isUndefined(value) || isEmpty(value)) { 
+                        if (isUndefined(value) || isEmpty(value)) {
                             continue;
                         }
                         value = this._getLocaleValue(defaultLocaleObj, localeCodeMap, localeCodeMap[locale], value)
@@ -465,7 +481,7 @@ export class Contentfully {
                                 itemContext[index] = value[index];
                                 continue;
                             }
-                            
+
                             // explicitly handle nested arrays
                             // they must have come from outsite of a content model
                             // so leave them raw
