@@ -20,7 +20,7 @@ import {QueryResult} from "./QueryResult";
 
 // constants
 export const DEFAULT_OPTIONS: Readonly<ContentfullyOptions> = {
-    legacySupport: true
+    experimental: false
 };
 export const DEFAULT_QUERY: Readonly<any> = {
     include: 10,
@@ -43,7 +43,7 @@ export const REQUIRED_QUERY_SELECT: ReadonlyArray<string> = [
 
 // types
 export type ContentfullyOptions = {
-    legacySupport: boolean;
+    experimental: boolean;
 };
 
 
@@ -58,10 +58,10 @@ interface Locale {
 export class Contentfully {
 
     public readonly contentful: ContentfulClient;
-    public readonly options: ContentfullyOptions;
+    public readonly options: Readonly<Partial<ContentfullyOptions>>;
 
 
-    public constructor(contentful: ContentfulClient, options: ContentfullyOptions = DEFAULT_OPTIONS) {
+    public constructor(contentful: ContentfulClient, options: Readonly<Partial<ContentfullyOptions>> = DEFAULT_OPTIONS) {
 
         // initialize instance variables
         this.contentful = contentful;
@@ -301,21 +301,21 @@ export class Contentfully {
         const sys = entry.sys;
         model._id = sys.id;
 
-        // use legacy processing (if specified)
-        if (this.options.legacySupport) {
-            model._type = sys.contentType.sys.id;
-            model._revision = sys.revision;
-            model._createdAt = sys.createdAt;
-            model._updatedAt = sys.updatedAt;
-        }
-
-        // or use modern binding
-        else {
+        // use experimental metadata format
+        if (this.options.experimental) {
             const metadata: any = model._metadata = {};
             metadata.type = sys.contentType.sys.id;
             metadata.revision = sys.revision;
             metadata.createdAt = sys.createdAt;
             metadata.updatedAt = sys.updatedAt;
+        }
+
+        // or use legacy format
+        else {
+            model._type = sys.contentType.sys.id;
+            model._revision = sys.revision;
+            model._createdAt = sys.createdAt;
+            model._updatedAt = sys.updatedAt;
         }
     }
 
@@ -374,7 +374,6 @@ export class Contentfully {
         }
 
         // resolve link if not processed
-        link._id = modelId;
         if (link._deferred) {
 
             // add link content type metadata

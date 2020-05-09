@@ -5,11 +5,7 @@ import {mocked} from "ts-jest/utils";
 import {
     ContentfulClient,
     Contentfully,
-    QUERY_SELECT_CREATED_AT,
-    QUERY_SELECT_ID,
-    QUERY_SELECT_REVISION,
-    QUERY_SELECT_TYPE,
-    QUERY_SELECT_UPDATED_AT
+    REQUIRED_QUERY_SELECT
 } from "../../src";
 
 
@@ -19,16 +15,6 @@ import blogJson from "./data/blog.json";
 
 // types
 export type RequestValidator = (url: RequestInfo) => void;
-
-
-// constants
-const DEFAULT_QUERY_SELECT = [
-    QUERY_SELECT_ID,
-    QUERY_SELECT_TYPE,
-    QUERY_SELECT_REVISION,
-    QUERY_SELECT_CREATED_AT,
-    QUERY_SELECT_UPDATED_AT
-];
 
 
 // mocks + containers
@@ -145,7 +131,7 @@ describe("Contentfully metadata", () => {
         test("should default correct selection", async () => {
 
             // prepare mock
-            bindFetch(blogJson, url => expectRequestSelect(url, ...DEFAULT_QUERY_SELECT));
+            bindFetch(blogJson, url => expectRequestSelect(url, ...REQUIRED_QUERY_SELECT));
 
             // execute query
             const contentfully = new Contentfully(contenfulClient);
@@ -191,7 +177,7 @@ describe("Contentfully metadata", () => {
 
             // verify legacy support is being used
             const blog = result.items[0];
-            expect(contentfully.options.legacySupport).toBeTruthy();
+            expect(contentfully.options.experimental).toBeFalsy();
             expect(blog._id).toBeDefined();
             expect(typeof blog._id).toBe("string");
 
@@ -215,7 +201,7 @@ describe("Contentfully metadata", () => {
 
             // verify legacy support is being used
             const blog = result.items[0];
-            expect(contentfully.options.legacySupport).toBeTruthy();
+            expect(contentfully.options.experimental).toBeFalsy();
             expect(blog._metadata).toBeUndefined();
 
             // verify blog metadata
@@ -309,7 +295,7 @@ describe("Contentfully metadata", () => {
 
             // execute query
             const contentfully = new Contentfully(contenfulClient, {
-                legacySupport: false
+                experimental: true
             });
             const result = await contentfully.getModels({});
 
@@ -318,7 +304,7 @@ describe("Contentfully metadata", () => {
 
             // verify legacy support is being used
             const blog = result.items[0];
-            expect(contentfully.options.legacySupport).toBeFalsy();
+            expect(contentfully.options.experimental).toBeTruthy();
             expect(blog._id).toBeDefined();
             expect(blog._metadata).toBeDefined();
             expect(blog._type).toBeUndefined();
@@ -345,7 +331,7 @@ describe("Contentfully metadata", () => {
 
             // execute query
             const contentfully = new Contentfully(contenfulClient, {
-                legacySupport: false
+                experimental: true
             });
             const result = await contentfully.getModels({});
 
@@ -371,7 +357,7 @@ describe("Contentfully metadata", () => {
 
             // execute query
             const contentfully = new Contentfully(contenfulClient, {
-                legacySupport: false
+                experimental: true
             });
             const result = await contentfully.getModels({});
 
@@ -396,7 +382,7 @@ describe("Contentfully metadata", () => {
 
             // execute query
             const contentfully = new Contentfully(contenfulClient, {
-                legacySupport: false
+                experimental: true
             });
             const result = await contentfully.getModels({});
 
