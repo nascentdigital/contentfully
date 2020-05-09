@@ -1,3 +1,4 @@
+// imports
 import assign from "lodash/assign";
 import compact from "lodash/compact";
 import pick from "lodash/pick";
@@ -15,27 +16,38 @@ import {
 } from "./QueryOptions";
 import { QueryResult } from "./QueryResult";
 
-// constants
-const DEFAULT_SELECT_ID = 'sys.id'
-const DEFAULT_SELECT_CONTENT_TYPE = 'sys.contentType'
-const DEFAULT_SELECT_UPDATED_AT = 'sys.updatedAt'
 
+// constants
+const DEFAULT_OPTIONS: ContentfullyOptions = {
+    legacySupport: true
+};
+const DEFAULT_SELECT_ID = "sys.id"
+const DEFAULT_SELECT_CONTENT_TYPE = "sys.contentType"
+const DEFAULT_SELECT_UPDATED_AT = "sys.updatedAt"
+
+
+// types
+export type ContentfullyOptions = {
+    legacySupport: boolean;
+};
 interface Locale {
-    name: string
-    code: string
-    default: boolean | undefined
-    fallbackCode: string | undefined | null
+    name: string;
+    code: string;
+    default: boolean | undefined;
+    fallbackCode: string | undefined | null;
 }
 
 export class Contentfully {
 
     public readonly contentful: ContentfulClient;
+    public readonly options: ContentfullyOptions;
 
 
-    public constructor(contentful: ContentfulClient) {
+    public constructor(contentful: ContentfulClient, options: ContentfullyOptions = DEFAULT_OPTIONS) {
 
         // initialize instance variables
         this.contentful = contentful;
+        this.options = options;
     }
 
     public getModel(id: string): Promise<any> {
@@ -56,12 +68,12 @@ export class Contentfully {
         options: QueryOptions = {}): Promise<QueryResult> {
 
         // set default select values
-        let select: string = 'fields'
+        let select: string = "fields"
 
         // if select query is passed
         if (query.select) {
             // clean select query
-            select = compact(map(query.select.split(','), queryString => {
+            select = compact(map(query.select.split(","), queryString => {
                 // remove white space
                 return queryString.replace(/\s/g, '')
                 // remove default sys.id
@@ -70,8 +82,8 @@ export class Contentfully {
                 .replace(DEFAULT_SELECT_CONTENT_TYPE, '')
                 // remove updated at
                 .replace(DEFAULT_SELECT_UPDATED_AT, '')
-                .trim(',');
-            })).join(',');
+                .trim(",");
+            })).join(",");
         }
 
         // prepend default selects
@@ -89,8 +101,8 @@ export class Contentfully {
         );
 
         // assign multi-locale query
-        const locale = get(query, 'locale');
-        const multiLocale = locale && locale === '*';
+        const locale = get(query, "locale");
+        const multiLocale = locale && locale === "*";
 
         // get transformed items
         if (isUndefined(json.items)) {
@@ -169,7 +181,7 @@ export class Contentfully {
                             media[locale] = transformed;
                         }
                     } catch (e) {
-                        console.error('[_createLinks] error with creating media', e);
+                        console.error("[_createLinks] error with creating media", e);
                     }
                 });
             } else {
@@ -252,13 +264,7 @@ export class Contentfully {
         const model: any = {};
 
         // bind metadata to model
-        const sys = entry.sys;
-        model._id = sys.id;
-        model._type = sys.contentType.sys.id;
-
-        if (sys.updatedAt) {
-            model._updatedAt = sys.updatedAt;
-        }
+        this._bindMetadata(entry, model);
 
         // transform entry fields to model
         forEach(entry.fields, (value, key) => {
@@ -298,6 +304,30 @@ export class Contentfully {
         return model;
     }
 
+    private _bindMetadata(entry: any, model: any) {
+
+        // bind metadata to model
+        const sys = entry.sys;
+        model._id = sys.id;
+
+        // use legacy processing (if specified)
+        if (this.options.legacySupport) {
+            model._type = sys.contentType.sys.id;
+            model._revision = sys.revision;
+            model._createdAt = sys.createdAt;
+            model._updatedAt = sys.updatedAt;
+        }
+
+        // or use modern binding
+        else {
+            const metadata: any = model._metadata = {};
+            metadata.type = sys.contentType.sys.id;
+            metadata.revision = sys.revision;
+            metadata.createdAt = sys.createdAt;
+            metadata.updatedAt = sys.updatedAt;
+        }
+    }
+
     private _parseValueByLocale(value: any, links: any) {
         let values: any = {};
         // pull all locales
@@ -314,7 +344,7 @@ export class Contentfully {
                     values[locale] = value[locale];
                 }
                 // assign asset to values (already mapped by locale)
-                else if (sys.linkType === 'Asset') {
+                else if (sys.linkType === "Asset") {
                     values = this._dereferenceLink(value, links, locale);
                 } else {
                     values[locale] = this._dereferenceLink(value, links, locale);

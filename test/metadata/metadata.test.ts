@@ -57,9 +57,9 @@ beforeEach(() => {
 // suite
 describe("Contentfully metadata", () => {
 
-    describe("data sources", () => {
+    describe("linked entities [blog.json]", () => {
 
-        test("should have valid 'blog.json'", async () => {
+        test("should load", async () => {
 
             // prepare mock
             bindFetch(blogJson);
@@ -79,12 +79,9 @@ describe("Contentfully metadata", () => {
             expect(blog.articles).toBeDefined();
             expect(blog.articles).toHaveLength(5);
         });
-    });
-
-    describe("updatedAt (legacy)", () => {
 
         // issue #28 (https://github.com/nascentdigital/contentfully/issues/28)
-        test("should be bound to linked entities", async () => {
+        test("should bind updatedAt (legacy)", async () => {
 
             // prepare mock
             bindFetch(blogJson);
@@ -104,11 +101,8 @@ describe("Contentfully metadata", () => {
                 expectMetadataDate(article._updatedAt);
             }
         });
-    });
 
-    describe("createdAt", () => {
-
-        test("should be bound to linked entities", async () => {
+        test("should createdAt (legacy)", async () => {
 
             // prepare mock
             bindFetch(blogJson);
