@@ -1,0 +1,78 @@
+// imports
+import "jest";
+import fetch, {RequestInfo} from "node-fetch";
+import {mocked} from "ts-jest/utils";
+import {TestData} from "./TestData";
+import {
+    ContentfulClient,
+    Contentfully,
+    ContentfullyOptions
+} from "../../src";
+
+
+// types
+export type RequestValidator = (url: RequestInfo) => void;
+
+
+// mocks
+jest.mock("node-fetch", () => {
+    return jest.fn();
+});
+
+
+// exports
+export class ContentfullyMock {
+
+    private static _contenfulClient?: ContentfulClient;
+
+
+    public static get contentfulClient() { return this._contenfulClient; }
+
+
+    public static initialize(spaceId: string = "", accessToken: string = "") {
+
+        // bind lifecycle
+        beforeEach(() => {
+
+            // clear mocks
+            mocked(fetch).mockClear();
+
+            // prepare contentful client
+            this._contenfulClient = new ContentfulClient({
+                spaceId,
+                accessToken,
+                fetch: fetch
+            });
+        });
+    }
+
+    public static create(testData: TestData,
+                         contentfullyOptions: Readonly<Partial<ContentfullyOptions>> = {},
+                         requestValidator?: RequestValidator): Contentfully {
+
+        // fail if not initialized
+        if (!this._contenfulClient) {
+            throw new Error("ContentfullyMock.initialize() must be called before ContenfullyMock.create()");
+        }
+
+        // bind data to mock client
+        mocked(fetch).mockImplementation(async (url: RequestInfo): Promise<any> => {
+
+            // invoke validator (if provided)
+            if (requestValidator) {
+                requestValidator(url);
+            }
+
+            // mock response
+            return {
+                ok: true,
+                async json() {
+                    return testData.data;
+                }
+            };
+        });
+
+        // return mocked client
+        return new Contentfully(this._contenfulClient, contentfullyOptions);
+    }
+}

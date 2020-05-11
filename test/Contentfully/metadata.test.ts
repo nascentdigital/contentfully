@@ -1,44 +1,13 @@
 // imports
 import "jest";
-import fetch, {RequestInfo} from "node-fetch";
-import {mocked} from "ts-jest/utils";
+import {RequestInfo} from "node-fetch";
 import {
-    ContentfulClient,
-    Contentfully,
+    ContentfullyMock,
+    TestData
+} from "../util";
+import {
     REQUIRED_QUERY_SELECT
 } from "../../src";
-
-
-// json imports
-import blogJson from "./data/blog.json";
-
-
-// types
-export type RequestValidator = (url: RequestInfo) => void;
-
-
-// mocks + containers
-jest.mock("node-fetch", () => {
-    return jest.fn();
-});
-
-function bindFetch(json: any, validator?: RequestValidator) {
-    mocked(fetch).mockImplementation(async (url: RequestInfo): Promise<any> => {
-
-        // invoke validator (if provided)
-        if (validator) {
-            validator(url);
-        }
-
-        // mock response
-        return {
-            ok: true,
-            async json() {
-                return json;
-            }
-        };
-    });
-}
 
 
 // helpers
@@ -106,53 +75,46 @@ function expectRequestSelect(url: RequestInfo, ...parameters: string[]) {
 }
 
 
-// lifecycle
-let contenfulClient: ContentfulClient;
-
-beforeEach(() => {
-
-    // clear mocks
-    mocked(fetch).mockClear();
-
-    // prepare contentful client
-    contenfulClient = new ContentfulClient({
-        spaceId: "my_space",
-        accessToken: "my_access_token",
-        fetch: fetch
-    });
-});
-
-
 // suite
 describe("Contentfully metadata", () => {
+
+    // initialize mock
+    ContentfullyMock.initialize();
+
+    // define data
+    const testData: TestData = TestData.for({
+        resultFormat: "collection",
+        resultCount: "one",
+        resultDepth: "deep",
+        sharedRefs: true
+    });
 
     describe("query.select", () => {
 
         test("should default correct selection", async () => {
 
             // prepare mock
-            bindFetch(blogJson, url => expectRequestSelect(url, ...REQUIRED_QUERY_SELECT));
+            const contentfully = ContentfullyMock.create(testData,
+                {},
+                url => expectRequestSelect(url, ...REQUIRED_QUERY_SELECT));
 
             // execute query
-            const contentfully = new Contentfully(contenfulClient);
             const result = await contentfully.getModels({});
 
         });
     });
 
-    describe("linked entities [blog.json]", () => {
+    describe(`linked entities [${testData.key}]`, () => {
 
         test("should load", async () => {
 
             // prepare mock
-            bindFetch(blogJson);
+            const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const contentfully = new Contentfully(contenfulClient);
             const result = await contentfully.getModels({});
 
             // verify blog was returned
-            expect(mocked(fetch).mock.calls.length).toBe(1);
             expect(result).toBeDefined();
             expect(result.items).toBeDefined();
             expect(result.items).toHaveLength(1);
@@ -166,14 +128,10 @@ describe("Contentfully metadata", () => {
         test("should have id", async () => {
 
             // prepare mock
-            bindFetch(blogJson);
+            const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const contentfully = new Contentfully(contenfulClient);
             const result = await contentfully.getModels({});
-
-            // verify blog was returned
-            expect(mocked(fetch).mock.calls.length).toBe(1);
 
             // verify legacy support is being used
             const blog = result.items[0];
@@ -190,14 +148,10 @@ describe("Contentfully metadata", () => {
         test("should have type (legacy)", async () => {
 
             // prepare mock
-            bindFetch(blogJson);
+            const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const contentfully = new Contentfully(contenfulClient);
             const result = await contentfully.getModels({});
-
-            // verify blog was returned
-            expect(mocked(fetch).mock.calls.length).toBe(1);
 
             // verify legacy support is being used
             const blog = result.items[0];
@@ -219,48 +173,40 @@ describe("Contentfully metadata", () => {
         test("should have revision (legacy)", async () => {
 
             // prepare mock
-            bindFetch(blogJson);
+            const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const contentfully = new Contentfully(contenfulClient);
             const result = await contentfully.getModels({});
-
-            // verify blog was returned
-            expect(mocked(fetch).mock.calls.length).toBe(1);
 
             // verify blog metadata
             const blog = result.items[0];
             expect(typeof blog._revision).toBe("number");
             expect(blog._revision).toBeDefined();
-            expectRevision(blogJson, blog._id, blog._revision);
+            expectRevision(testData.data, blog._id, blog._revision);
 
             for (const article of blog.articles) {
                 expect(article._revision).toBeDefined();
                 expect(typeof article._revision).toBe("number");
-                expectRevision(blogJson, article._id, article._revision);
+                expectRevision(testData.data, article._id, article._revision);
             }
         });
 
         test("should have createdAt (legacy)", async () => {
 
             // prepare mock
-            bindFetch(blogJson);
+            const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const contentfully = new Contentfully(contenfulClient);
             const result = await contentfully.getModels({});
-
-            // verify blog was returned
-            expect(mocked(fetch).mock.calls.length).toBe(1);
 
             // verify blog metadata
             const blog = result.items[0];
             expectMetadataDate(blog._createdAt);
-            expectCreatedAt(blogJson, blog._id, blog._createdAt);
+            expectCreatedAt(testData.data, blog._id, blog._createdAt);
 
             for (const article of blog.articles) {
                 expectMetadataDate(article._createdAt);
-                expectCreatedAt(blogJson, article._id, article._createdAt);
+                expectCreatedAt(testData.data, article._id, article._createdAt);
             }
         });
 
@@ -268,39 +214,30 @@ describe("Contentfully metadata", () => {
         test("should have updatedAt (legacy)", async () => {
 
             // prepare mock
-            bindFetch(blogJson);
+            const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const contentfully = new Contentfully(contenfulClient);
             const result = await contentfully.getModels({});
-
-            // verify blog was returned
-            expect(mocked(fetch).mock.calls.length).toBe(1);
 
             // verify metadata
             const blog = result.items[0];
             expectMetadataDate(blog._updatedAt);
-            expectUpdatedAt(blogJson, blog._id, blog._updatedAt);
+            expectUpdatedAt(testData.data, blog._id, blog._updatedAt);
 
             for (const article of blog.articles) {
                 expectMetadataDate(article._updatedAt);
-                expectUpdatedAt(blogJson, article._id, article._updatedAt);
+                expectUpdatedAt(testData.data, article._id, article._updatedAt);
             }
         });
 
         test("should have type", async () => {
 
             // prepare mock
-            bindFetch(blogJson);
+            const contentfully = ContentfullyMock.create(testData,
+                {experimental: true});
 
             // execute query
-            const contentfully = new Contentfully(contenfulClient, {
-                experimental: true
-            });
             const result = await contentfully.getModels({});
-
-            // verify blog was returned
-            expect(mocked(fetch).mock.calls.length).toBe(1);
 
             // verify legacy support is being used
             const blog = result.items[0];
@@ -327,76 +264,61 @@ describe("Contentfully metadata", () => {
         test("should have revision", async () => {
 
             // prepare mock
-            bindFetch(blogJson);
+            const contentfully = ContentfullyMock.create(testData,
+                {experimental: true});
 
             // execute query
-            const contentfully = new Contentfully(contenfulClient, {
-                experimental: true
-            });
             const result = await contentfully.getModels({});
-
-            // verify blog was returned
-            expect(mocked(fetch).mock.calls.length).toBe(1);
 
             // verify blog metadata
             const blog = result.items[0];
             expect(typeof blog._metadata.revision).toBe("number");
-            expectRevision(blogJson, blog._id, blog._metadata.revision);
+            expectRevision(testData.data, blog._id, blog._metadata.revision);
 
             for (const article of blog.articles) {
                 expect(article._revision).toBeUndefined();
                 expect(typeof article._metadata.revision).toBe("number");
-                expectRevision(blogJson, article._id, article._metadata.revision);
+                expectRevision(testData.data, article._id, article._metadata.revision);
             }
         });
 
         test("should have createdAt", async () => {
 
             // prepare mock
-            bindFetch(blogJson);
+            const contentfully = ContentfullyMock.create(testData,
+                {experimental: true});
 
             // execute query
-            const contentfully = new Contentfully(contenfulClient, {
-                experimental: true
-            });
             const result = await contentfully.getModels({});
-
-            // verify blog was returned
-            expect(mocked(fetch).mock.calls.length).toBe(1);
 
             // verify metadata
             const blog = result.items[0];
             expectMetadataDate(blog._metadata.createdAt);
-            expectCreatedAt(blogJson, blog._id, blog._metadata.createdAt);
+            expectCreatedAt(testData.data, blog._id, blog._metadata.createdAt);
 
             for (const article of blog.articles) {
                 expectMetadataDate(article._metadata.createdAt);
-                expectCreatedAt(blogJson, article._id, article._metadata.createdAt);
+                expectCreatedAt(testData.data, article._id, article._metadata.createdAt);
             }
         });
 
         test("should have updatedAt", async () => {
 
             // prepare mock
-            bindFetch(blogJson);
+            const contentfully = ContentfullyMock.create(testData,
+                {experimental: true});
 
             // execute query
-            const contentfully = new Contentfully(contenfulClient, {
-                experimental: true
-            });
             const result = await contentfully.getModels({});
-
-            // verify blog was returned
-            expect(mocked(fetch).mock.calls.length).toBe(1);
 
             // verify metadata
             const blog = result.items[0];
             expectMetadataDate(blog._metadata.updatedAt);
-            expectUpdatedAt(blogJson, blog._id, blog._metadata.updatedAt);
+            expectUpdatedAt(testData.data, blog._id, blog._metadata.updatedAt);
 
             for (const article of blog.articles) {
                 expectMetadataDate(article._metadata.updatedAt);
-                expectUpdatedAt(blogJson, article._id, article._metadata.updatedAt);
+                expectUpdatedAt(testData.data, article._id, article._metadata.updatedAt);
             }
         });
     });

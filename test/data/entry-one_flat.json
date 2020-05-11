@@ -1,0 +1,44 @@
+{
+    "sys": {
+        "space": {
+            "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "oae75tj4gg8d"
+            }
+        },
+        "type": "Entry",
+        "id": "6qqOjyFcjrQm272GVAeiSY",
+        "contentType": {
+            "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "person"
+            }
+        },
+        "revision": 1,
+        "createdAt": "2019-10-01T01:40:07.528Z",
+        "updatedAt": "2019-10-01T01:41:54.429Z",
+        "environment": {
+            "sys": {
+                "id": "dev",
+                "type": "Link",
+                "linkType": "Environment"
+            }
+        },
+        "locale": "en-CA"
+    },
+    "fields": {
+        "firstName": "Sam",
+        "title": "Product Strategist",
+        "organization": "Nascent",
+        "relationship": "employee",
+        "picture": {
+            "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4MBAr00CmImvT2PpG0Oc6i"
+            }
+        }
+    }
+}
