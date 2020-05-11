@@ -47,24 +47,10 @@ function expectUpdatedAt(json: any, entryId: string, value: string) {
     const entry = findEntry(json, entryId);
     expect(entry.sys.updatedAt).toBe(value);
 }
-function expectRequestSelect(url: RequestInfo, ...parameters: string[]) {
-
-    // fail if url isn't a string
-    if (!url) {
-        fail("Missing url");
-        return;
-    }
-
-    // fail if url isn't a string
-    else if (typeof url !== "string") {
-        fail(`Expected url to be a string, found ${typeof url}`);
-        return;
-    }
-
-    // parse URL
-    const urlQuery = new URL(url).searchParams;
+function expectRequestSelect(url: URL, ...parameters: string[]) {
 
     // fail if there is no select in query
+    const urlQuery = url.searchParams;
     const select = urlQuery.get("select");
     expect(urlQuery.has("select")).toBeTruthy();
     expect(select).not.toBeNull();

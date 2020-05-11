@@ -11,7 +11,7 @@ import {
 
 
 // types
-export type RequestValidator = (url: RequestInfo) => void;
+export type RequestValidator = (url: URL) => void;
 
 
 // mocks
@@ -60,7 +60,21 @@ export class ContentfullyMock {
 
             // invoke validator (if provided)
             if (requestValidator) {
-                requestValidator(url);
+
+                // fail if url isn't a string
+                if (!url) {
+                    fail("Missing url");
+                    throw new Error("Missing url");
+                }
+
+                // fail if url isn't a string
+                else if (typeof url !== "string") {
+                    fail(`Expected url to be a string, found ${typeof url}`);
+                    throw new Error("Expected url to be a string");
+                }
+
+                // invoke validator
+                requestValidator(new URL(url));
             }
 
             // mock response
