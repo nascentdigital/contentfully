@@ -28,6 +28,7 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
+    "@jest/test-sequencer": "^26.0.1",
     "@types/jest": "^25.2.1",
     "@types/lodash": "^4.14.134",
     "@types/node-fetch": "^2.3.5",

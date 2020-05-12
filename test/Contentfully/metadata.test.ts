@@ -1,6 +1,5 @@
 // imports
 import "jest";
-import {RequestInfo} from "node-fetch";
 import {
     ContentfullyMock,
     TestData
