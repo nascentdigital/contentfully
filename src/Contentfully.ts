@@ -349,6 +349,14 @@ export class Contentfully {
 
     private _parseValue(value: any, links: any, locale?: string) {
 
+        // resolve rich text identifier
+        const { nodeType } = value;
+
+        // handle rich text value
+        if (nodeType && nodeType === 'document') {
+            return this._parseRichTextValue(value, links, locale);
+        }
+
         // handle values without a link
         const sys = value.sys;
         if (sys === undefined || sys.type !== "Link") {
@@ -357,6 +365,48 @@ export class Contentfully {
 
         // dereference link
         return this._dereferenceLink(value, links, locale);
+    }
+
+    private _parseRichTextValue(value: any, links: any, locale?: string) {
+        // resolve content list
+        const { content } = value;
+
+        // skip parsing if no content
+        if (!content || !content.length) {
+            return value;
+        }
+
+        return content.map((item: any) => {
+            let contentList = item.content;
+
+            // handle inline embedded entries
+            if (contentList && contentList.length > 0) {
+                contentList = contentList.map((contentItem: any) => {
+                    if (contentItem.data && contentItem.data.target && contentItem.data.target.sys) {
+                        return {
+                            ...contentItem,
+                            data: this._dereferenceLink(contentItem.data.target, links, locale)
+                        };
+                    }
+
+                    return contentItem;
+                });
+            }
+
+            // handle block embedded entries or assets
+            if (item.data && item.data.target && item.data.target.sys) {
+                return {
+                    ...item,
+                    data: this._dereferenceLink(item.data.target, links, locale),
+                    content: contentList
+                };
+            }
+
+            return {
+                ...item,
+                content: contentList
+            };
+        })
     }
 
     private _dereferenceLink(reference: any, links: any, locale?: string) {
