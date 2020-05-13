@@ -21,7 +21,8 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "dev": "tsc -w"
   },
   "dependencies": {
     "lodash": "^4.17.15",
