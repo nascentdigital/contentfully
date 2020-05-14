@@ -372,41 +372,37 @@ export class Contentfully {
         const { content } = value;
 
         // skip parsing if no content
-        if (!content || !content.length) {
+        if (!isArray(content) || !content.length) {
             return value;
         }
 
-        return content.map((item: any) => {
-            let contentList = item.content;
+        const parseContent = (items: Array<any>) => {
+            return items.map((item: any) => {
+                let contentList = item.content;
 
-            // handle inline embedded entries
-            if (contentList && contentList.length > 0) {
-                contentList = contentList.map((contentItem: any) => {
-                    if (contentItem.data && contentItem.data.target && contentItem.data.target.sys) {
-                        return {
-                            ...contentItem,
-                            data: this._dereferenceLink(contentItem.data.target, links, locale)
-                        };
-                    }
+                // handle inline embedded entries
+                if (contentList && contentList.length > 0) {
+                    // parse recursively for deep entries
+                    contentList = parseContent(contentList)
+                }
 
-                    return contentItem;
-                });
-            }
+                // handle block embedded entries or assets
+                if (item.data && item.data.target && item.data.target.sys) {
+                    return {
+                        ...item,
+                        data: this._dereferenceLink(item.data.target, links, locale),
+                        content: contentList
+                    };
+                }
 
-            // handle block embedded entries or assets
-            if (item.data && item.data.target && item.data.target.sys) {
                 return {
                     ...item,
-                    data: this._dereferenceLink(item.data.target, links, locale),
                     content: contentList
                 };
-            }
+            })
+        }
 
-            return {
-                ...item,
-                content: contentList
-            };
-        })
+        return parseContent(content)
     }
 
     private _dereferenceLink(reference: any, links: any, locale?: string) {
