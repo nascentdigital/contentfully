@@ -1,6 +1,7 @@
 // imports
 import EntryOneFlatJson from "../data/entry-one_flat.json";
 import EntriesOneDeepJson from "../data/entries-one_deep.json";
+import EntriesOneDeepRichTextJson from "../data/entries-rich_text.json";
 
 
 // constants
@@ -8,6 +9,7 @@ const TEST_DATA: Readonly<Record<string, any>> = {
     "single-flat": EntryOneFlatJson,
     "collection-one_deep": EntriesOneDeepJson,
     "collection-one_deep_shared": EntriesOneDeepJson,
+    "collection-one_deep_rich_text": EntriesOneDeepRichTextJson
 };
 
 
@@ -64,6 +66,13 @@ export type TestDataOptions = {
      * Ensures test data has recursive relationships when <code>true</code>.
      */
     recursive?: boolean;
+
+    /**
+     * Ensures test data contains rich text elements with all possible configurations.
+     * 
+     * Configurations: "embedded-entry-block" | "embedded-asset-block" | "embedded-entry-inline";
+     */
+    richText?: boolean;
 }
 
 
@@ -74,7 +83,8 @@ export const TEST_DATA_DEFAULTS: Readonly<TestDataOptions> = {
     resultDepth: "deep",
     sharedRefs: true,
     siblingRefs: false,
-    recursive: false
+    recursive: false,
+    richText: false
 };
 
 
@@ -203,6 +213,11 @@ export class TestData {
                 else {
                     key += "_recursive";
                 }
+            }
+
+            // handle rich text
+            if (options.richText) {
+                key += "_rich_text";
             }
 
             // throw if there were any invalid options

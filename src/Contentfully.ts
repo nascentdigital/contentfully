@@ -383,7 +383,7 @@ export class Contentfully {
                 // handle inline embedded entries
                 if (contentList && contentList.length > 0) {
                     // parse recursively for deep entries
-                    contentList = parseContent(contentList)
+                    contentList = parseContent(contentList);
                 }
 
                 // handle block embedded entries or assets

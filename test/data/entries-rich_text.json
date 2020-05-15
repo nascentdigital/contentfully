@@ -1,0 +1,287 @@
+{
+    "sys": {
+      "type": "Array"
+    },
+    "total": 1,
+    "skip": 0,
+    "limit": 1000,
+    "items": [
+      {
+        "fields": {
+          "id": "contentfully_test",
+          "richText": {
+            "data": {},
+            "content": [
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "embeddedEntryBlockId",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "embedded-entry-inline",
+                    "content": [],
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "shallowEmbeddedInlineEntryId",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {},
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "",
+                            "marks": [],
+                            "data": {}
+                          },
+                          {
+                            "nodeType": "embedded-entry-inline",
+                            "content": [],
+                            "data": {
+                              "target": {
+                                "sys": {
+                                  "id": "deeplyEmbeddedInlineEntryId",
+                                  "type": "Link",
+                                  "linkType": "Entry"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "",
+                            "marks": [],
+                            "data": {}
+                          }
+                        ],
+                        "data": {}
+                      }
+                    ]
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "embeddedAssetBlockId",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [],
+                "nodeType": "embedded-asset-block"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "sys": {
+          "id": "2bFdPoqOsgTDXjHgIvAYPz",
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "test"
+            }
+          },
+          "createdAt": "2020-05-11T15:56:05.588Z",
+          "updatedAt": "2020-05-14T21:38:58.758Z"
+        }
+      }
+    ],
+    "includes": {
+      "Entry": [
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "i0pjw08nr0kv"
+              }
+            },
+            "type": "Entry",
+            "id": "shallowEmbeddedInlineEntryId",
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "cHealthArticleAuthor"
+              }
+            },
+            "revision": 0,
+            "createdAt": "2020-05-14T16:34:57.834Z",
+            "updatedAt": "2020-05-14T16:35:11.951Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "locale": "en-CA-BC"
+          },
+          "fields": {
+            "id": "Diane-McIntosh",
+            "name": "By Dr. Diane McIntosh BSc Pharmacy, MD, FRCPC ",
+            "credentials": "Psychiatrist; General Manager, Copeman Healthcare; Chief Neuroscience Officer, TELUS"
+          }
+        },
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "i0pjw08nr0kv"
+              }
+            },
+            "type": "Entry",
+            "id": "deeplyEmbeddedInlineEntryId",
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "cHealthArticleAuthor"
+              }
+            },
+            "revision": 0,
+            "createdAt": "2020-05-14T16:35:48.646Z",
+            "updatedAt": "2020-05-14T16:35:58.659Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "locale": "en-CA-BC"
+          },
+          "fields": {
+            "id": "Kendall-Blenkarn",
+            "name": "By Kendall Blenkarn"
+          }
+        },
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "i0pjw08nr0kv"
+              }
+            },
+            "type": "Entry",
+            "id": "embeddedEntryBlockId",
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "cHealthArticleAuthor"
+              }
+            },
+            "revision": 0,
+            "createdAt": "2020-05-14T16:41:10.464Z",
+            "updatedAt": "2020-05-14T16:41:24.828Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "locale": "en-CA-BC"
+          },
+          "fields": {
+            "id": "Jaleh-Shahin",
+            "name": "By Dr. Jaleh Shahin",
+            "credentials": "Psychologist, Copeman Healthcare | Supported by TELUS Health"
+          }
+        }
+      ],
+      "Asset": [
+        {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "i0pjw08nr0kv"
+              }
+            },
+            "type": "Asset",
+            "id": "embeddedAssetBlockId",
+            "revision": 2,
+            "createdAt": "2020-04-30T18:47:55.765Z",
+            "updatedAt": "2020-05-01T15:57:48.082Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "locale": "en-CA-BC"
+          },
+          "fields": {
+            "title": "LivingWell Features Card 2",
+            "description": "A close up image of the LivingWell companion home device.",
+            "file": {
+              "url": "//images.ctfassets.net/i0pjw08nr0kv/6rkxTJbOp88U4S6JNQwhQN/934e57fc1d9fd57e010cbbcebeedd8a2/Home-specs-feature-battery.png",
+              "details": {
+                "size": 59855,
+                "image": {
+                  "width": 368,
+                  "height": 279
+                }
+              },
+              "fileName": "Home-specs-feature-battery.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      ]
+    }
+  }
+  
