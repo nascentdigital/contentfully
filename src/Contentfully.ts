@@ -350,7 +350,7 @@ export class Contentfully {
     private _parseValue(value: any, links: any, locale?: string) {
 
         // resolve rich text identifier
-        const { nodeType } = value;
+        const { nodeType }: { nodeType?: string } = value;
 
         // handle rich text value
         if (nodeType && nodeType === 'document') {
