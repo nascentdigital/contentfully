@@ -306,8 +306,8 @@ export class Contentfully {
             const metadata: any = model._metadata = {};
             metadata.type = sys.contentType.sys.id;
             metadata.revision = sys.revision;
-            metadata.createdAt = sys.createdAt;
-            metadata.updatedAt = sys.updatedAt;
+            metadata.createdAt = sys.createdAt ? new Date(sys.createdAt) : undefined;
+            metadata.updatedAt = sys.updatedAt ? new Date(sys.updatedAt) : undefined;
         }
 
         // or use legacy format

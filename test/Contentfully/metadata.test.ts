@@ -29,22 +29,38 @@ function findEntry(json: any, entryId: string) {
     // throw if not found
     fail(`Unable to find entry in JSON data matching '${entryId}'`);
 }
-function expectMetadataDate(value: any) {
+function expectMetadataDate(value: any, experimental: boolean = false) {
     expect(value).toBeDefined();
-    expect(typeof value).toBe("string");
-    expect(Date.parse(value)).not.toBeNaN();
+
+    if (experimental) {
+        expect(value).toBeInstanceOf(Date);
+    }
+    else {
+        expect(typeof value).toBe("string");
+        expect(Date.parse(value)).not.toBeNaN();
+    }
 }
 function expectRevision(json: any, entryId: string, value: number) {
     const entry = findEntry(json, entryId);
     expect(entry.sys.revision).toBe(value);
 }
-function expectCreatedAt(json: any, entryId: string, value: string) {
+function expectCreatedAt(json: any, entryId: string, value: string | Date) {
     const entry = findEntry(json, entryId);
-    expect(entry.sys.createdAt).toBe(value);
+    if (value instanceof Date) {
+        expect(new Date(entry.sys.createdAt).getTime()).toBe(value.getTime());
+    }
+    else {
+        expect(entry.sys.createdAt).toBe(value);
+    }
 }
-function expectUpdatedAt(json: any, entryId: string, value: string) {
+function expectUpdatedAt(json: any, entryId: string, value: string | Date) {
     const entry = findEntry(json, entryId);
-    expect(entry.sys.updatedAt).toBe(value);
+    if (value instanceof Date) {
+        expect(new Date(entry.sys.updatedAt).getTime()).toBe(value.getTime());
+    }
+    else {
+        expect(entry.sys.updatedAt).toBe(value);
+    }
 }
 function expectRequestSelect(url: URL, ...parameters: string[]) {
 
@@ -278,11 +294,11 @@ describe("Contentfully metadata", () => {
 
             // verify metadata
             const blog = result.items[0];
-            expectMetadataDate(blog._metadata.createdAt);
+            expectMetadataDate(blog._metadata.createdAt, true);
             expectCreatedAt(testData.data, blog._id, blog._metadata.createdAt);
 
             for (const article of blog.articles) {
-                expectMetadataDate(article._metadata.createdAt);
+                expectMetadataDate(article._metadata.createdAt, true);
                 expectCreatedAt(testData.data, article._id, article._metadata.createdAt);
             }
         });
@@ -298,11 +314,11 @@ describe("Contentfully metadata", () => {
 
             // verify metadata
             const blog = result.items[0];
-            expectMetadataDate(blog._metadata.updatedAt);
+            expectMetadataDate(blog._metadata.updatedAt, true);
             expectUpdatedAt(testData.data, blog._id, blog._metadata.updatedAt);
 
             for (const article of blog.articles) {
-                expectMetadataDate(article._metadata.updatedAt);
+                expectMetadataDate(article._metadata.updatedAt, true);
                 expectUpdatedAt(testData.data, article._id, article._metadata.updatedAt);
             }
         });
