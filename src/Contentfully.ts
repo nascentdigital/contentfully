@@ -46,6 +46,25 @@ export type ContentfullyOptions = {
     experimental: boolean;
 };
 
+interface RichTextRaw {
+    data: {
+        target: {
+            sys: {
+                id: string,
+                type: string,
+                linkType: string
+            }
+        }
+    },
+    nodeType: string,
+    content?: Array<RichTextRaw>
+};
+
+interface RichText extends RichTextRaw {
+    data: any,
+    content?: Array<RichText>
+};
+
 
 interface Locale {
     name: string;
@@ -169,13 +188,11 @@ export class Contentfully {
 
                             media[locale] = transformed;
                         }
-                    }
-                    catch (e) {
+                    } catch (e) {
                         console.error("[_createLinks] error with creating media", e);
                     }
                 });
-            }
-            else {
+            } else {
                 media = await this._toMedia(sys, asset.fields, mediaTransform);
             }
 
@@ -337,8 +354,7 @@ export class Contentfully {
                 // assign asset to values (already mapped by locale)
                 else if (sys.linkType === "Asset") {
                     values = this._dereferenceLink(value, links, locale);
-                }
-                else {
+                } else {
                     values[locale] = this._dereferenceLink(value, links, locale);
                 }
             }
@@ -349,6 +365,14 @@ export class Contentfully {
 
     private _parseValue(value: any, links: any, locale?: string) {
 
+        // resolve rich text identifier
+        const {nodeType}: { nodeType?: string } = value;
+
+        // handle rich text value
+        if (nodeType && nodeType === "document") {
+            return this._parseRichTextValue(value, links, locale);
+        }
+
         // handle values without a link
         const sys = value.sys;
         if (sys === undefined || sys.type !== "Link") {
@@ -357,6 +381,44 @@ export class Contentfully {
 
         // dereference link
         return this._dereferenceLink(value, links, locale);
+    }
+
+    private _parseRichTextValue(value: { content: Array<RichTextRaw> }, links: any, locale?: string) {
+        // resolve content list
+        const {content} = value;
+
+        // skip parsing if no content
+        if (!isArray(content) || !content.length) {
+            return value;
+        }
+
+        return this._parseRichTextContent(content, links, locale);
+    }
+
+    private _parseRichTextContent(items: Array<RichTextRaw>, links: any, locale?: string): Array<RichText> {
+        return items.map((item) => {
+            let contentList = item.content;
+
+            // handle inline embedded entries
+            if (contentList && contentList.length > 0) {
+                // parse recursively for deep entries
+                contentList = this._parseRichTextContent(contentList, links, locale);
+            }
+
+            // handle block embedded entries or assets
+            if (item.data && item.data.target && item.data.target.sys) {
+                return {
+                    ...item,
+                    data: this._dereferenceLink(item.data.target, links, locale),
+                    content: contentList
+                };
+            }
+
+            return {
+                ...item,
+                content: contentList
+            };
+        })
     }
 
     private _dereferenceLink(reference: any, links: any, locale?: string) {
@@ -409,8 +471,7 @@ export class Contentfully {
             }
             if (currentLocale.fallbackCode === undefined) {
                 currentLocale = defaultLocale;
-            }
-            else {
+            } else {
                 currentLocale = localeCodes[currentLocale.fallbackCode];
             }
         }

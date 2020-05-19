@@ -2,6 +2,7 @@
 import "jest";
 import {
     ContentfullyMock,
+    findEntry,
     TestData
 } from "../util";
 import {
@@ -10,25 +11,6 @@ import {
 
 
 // helpers
-function findEntry(json: any, entryId: string) {
-
-    // search items
-    for (const entry of json.items) {
-        if (entry.sys.id === entryId) {
-            return entry;
-        }
-    }
-
-    // search includes
-    for (const entry of json.includes.Entry) {
-        if (entry.sys.id === entryId) {
-            return entry;
-        }
-    }
-
-    // throw if not found
-    fail(`Unable to find entry in JSON data matching '${entryId}'`);
-}
 function expectMetadataDate(value: any, experimental: boolean = false) {
     expect(value).toBeDefined();
 
