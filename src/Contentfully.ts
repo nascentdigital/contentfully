@@ -61,7 +61,8 @@ interface RichTextRaw {
 };
 
 interface RichText extends RichTextRaw {
-    data: any
+    data: any,
+    content?: Array<RichText>
 };
 
 
