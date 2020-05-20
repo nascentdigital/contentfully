@@ -16,6 +16,10 @@ import {
     QueryOptions
 } from "./QueryOptions";
 import {QueryResult} from "./QueryResult";
+import {
+    RichText,
+    RichTextRaw
+} from "./entities/RichText"
 
 
 // constants
@@ -45,27 +49,6 @@ export const REQUIRED_QUERY_SELECT: ReadonlyArray<string> = [
 export type ContentfullyOptions = {
     experimental: boolean;
 };
-
-interface RichTextRaw {
-    data: {
-        target: {
-            sys: {
-                id: string,
-                type: string,
-                linkType: string
-            }
-        }
-    },
-    nodeType: string,
-    content?: Array<RichTextRaw>
-};
-
-interface RichText extends RichTextRaw {
-    data: any,
-    content?: Array<RichText>
-};
-
-
 interface Locale {
     name: string;
     code: string;
