@@ -392,7 +392,10 @@ export class Contentfully {
             return value;
         }
 
-        return this._parseRichTextContent(content, links, locale);
+        return {
+            ...value,
+            content: this._parseRichTextContent(content, links, locale)
+        }
     }
 
     private _parseRichTextContent(items: Array<RichTextRaw>, links: any, locale?: string): Array<RichText> {
