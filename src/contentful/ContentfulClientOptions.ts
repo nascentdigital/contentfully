@@ -7,4 +7,6 @@ export interface ContentfulClientOptions {
     readonly environmentId?: string;
     readonly preview?: boolean;
     readonly fetch?: any;
+    readonly host?: string;
+    readonly headers?: object|string;
 }

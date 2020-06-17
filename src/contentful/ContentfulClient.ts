@@ -15,8 +15,8 @@ import {
 
 export class ContentfulClient {
 
-    private static readonly PREVIEW_URL = "https://preview.contentful.com";
-    private static readonly PRODUCTION_URL = "https://cdn.contentful.com";
+    public static readonly PREVIEW_URL = "https://preview.contentful.com";
+    public static readonly PRODUCTION_URL = "https://cdn.contentful.com";
 
     public readonly options: ContentfulClientOptions;
     private readonly _spaceUri: string;
@@ -27,9 +27,16 @@ export class ContentfulClient {
         // initialize instance variables
         this.options = options;
 
-        const serverUrl = options.preview
-            ? ContentfulClient.PREVIEW_URL
-            : ContentfulClient.PRODUCTION_URL;
+        let serverUrl: string;
+
+        if (options.host) {
+            serverUrl = options.host;
+        } else {
+            serverUrl = options.preview
+                ? ContentfulClient.PREVIEW_URL
+                : ContentfulClient.PRODUCTION_URL;
+        }
+
         this._spaceUri = `${serverUrl}/spaces/${options.spaceId}/environments/${options.environmentId || "master"}`;
     }
 
@@ -66,7 +73,10 @@ export class ContentfulClient {
 
         // fetch data (throw if there is an error)
         const fetchClient = this.getFetchClient();
-        const response = await fetchClient(url);
+        const response = await fetchClient(url,
+            {
+                headers: this.options.headers
+            });
         if (!response.ok) {
 
             // capture error
