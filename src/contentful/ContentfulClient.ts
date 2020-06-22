@@ -15,8 +15,8 @@ import {
 
 export class ContentfulClient {
 
-    public static readonly PREVIEW_URL = "https://preview.contentful.com";
-    public static readonly PRODUCTION_URL = "https://cdn.contentful.com";
+    static readonly PREVIEW_URL = "https://preview.contentful.com";
+    static readonly PRODUCTION_URL = "https://cdn.contentful.com";
 
     public readonly options: ContentfulClientOptions;
     private readonly _spaceUri: string;

@@ -8,5 +8,5 @@ export interface ContentfulClientOptions {
     readonly preview?: boolean;
     readonly fetch?: any;
     readonly host?: string;
-    readonly headers?: object|string;
+    readonly headers?: Record<string, string>;
 }
