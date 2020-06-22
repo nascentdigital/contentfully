@@ -1,13 +1,10 @@
 import "jest";
-import {ContentfullyMock, TestData} from "../util";
 import {ContentfulClient} from "../../src/contentful";
 
 // suite
 describe("Contentfully client", () => {
 
     // initialize mock
-    ContentfullyMock.initialize();
-
     const mockFetch = jest.fn(() => {
         return {
             ok: true,
