@@ -17,10 +17,11 @@ describe("Contentfully client", () => {
         }
     });
 
+    const path = '/test-path'
+
     describe("query", () => {
 
         describe("has host option", () => {
-
             test("should call the host passed as an option", async () => {
                 const options = {
                     accessToken: "1234",
@@ -28,7 +29,6 @@ describe("Contentfully client", () => {
                     host: "mock.host.com",
                     fetch: mockFetch
                 };
-                const path = '/test'
                 const contentfulClient = new ContentfulClient(options)
                 await contentfulClient.query(path)
 
@@ -48,31 +48,47 @@ describe("Contentfully client", () => {
                     spaceId: "mockSpaceId",
                     fetch: mockFetch
                 };
-                const path = '/test'
                 const contentfulClient = new ContentfulClient(options)
                 await contentfulClient.query(path)
 
                 expect(mockFetch).toHaveBeenCalledWith(
-                    `${ContentfulClient.PRODUCTION_URL}/spaces/${options.spaceId}/environments/master${path}?access_token=${options.accessToken}`,
+                    `https://cdn.contentful.com/spaces/${options.spaceId}/environments/master${path}?access_token=${options.accessToken}`,
                     {
                         headers: undefined
                     }
                 )
             });
 
-            test("should call the preview url when preview option is passed", async () =>{
+            test("should call the preview url when preview option is passed as true", async () =>{
                 const options = {
                     accessToken: "1234",
                     spaceId: "mockSpaceId",
                     fetch: mockFetch,
                     preview: true
                 };
-                const path = '/test'
                 const contentfulClient = new ContentfulClient(options)
                 await contentfulClient.query(path)
 
                 expect(mockFetch).toHaveBeenCalledWith(
-                    `${ContentfulClient.PREVIEW_URL}/spaces/${options.spaceId}/environments/master${path}?access_token=${options.accessToken}`,
+                    `https://preview.contentful.com/spaces/${options.spaceId}/environments/master${path}?access_token=${options.accessToken}`,
+                    {
+                        headers: undefined
+                    }
+                )
+            });
+
+            test("should call the production url when preview option is passed as false", async () =>{
+                const options = {
+                    accessToken: "1234",
+                    spaceId: "mockSpaceId",
+                    fetch: mockFetch,
+                    preview: false
+                };
+                const contentfulClient = new ContentfulClient(options)
+                await contentfulClient.query(path)
+
+                expect(mockFetch).toHaveBeenCalledWith(
+                    `https://cdn.contentful.com/spaces/${options.spaceId}/environments/master${path}?access_token=${options.accessToken}`,
                     {
                         headers: undefined
                     }
@@ -91,12 +107,11 @@ describe("Contentfully client", () => {
                         header2: "two"
                     }
                 };
-                const path = '/test'
                 const contentfulClient = new ContentfulClient(options)
                 await contentfulClient.query(path)
 
                 expect(mockFetch).toHaveBeenCalledWith(
-                    `${ContentfulClient.PRODUCTION_URL}/spaces/${options.spaceId}/environments/master${path}?access_token=${options.accessToken}`,
+                    `https://cdn.contentful.com/spaces/${options.spaceId}/environments/master${path}?access_token=${options.accessToken}`,
                     {
                         headers: options.headers
                     }
@@ -111,12 +126,11 @@ describe("Contentfully client", () => {
                     spaceId: "mockSpaceId",
                     fetch: mockFetch
                 };
-                const path = '/test'
                 const contentfulClient = new ContentfulClient(options)
                 await contentfulClient.query(path)
 
                 expect(mockFetch).toHaveBeenCalledWith(
-                    `${ContentfulClient.PRODUCTION_URL}/spaces/${options.spaceId}/environments/master${path}?access_token=${options.accessToken}`,
+                    `https://cdn.contentful.com/spaces/${options.spaceId}/environments/master${path}?access_token=${options.accessToken}`,
                     {
                         headers: undefined
                     }
