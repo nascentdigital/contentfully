@@ -20,7 +20,6 @@ describe("Contentfully.getModels()", () => {
             resultCount: "one",
             resultDepth: "deep",
             sharedRefs: true,
-            siblingRefs: true,
             recursive: true
         });
 

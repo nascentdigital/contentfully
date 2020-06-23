@@ -13,8 +13,6 @@ const TEST_DATA: Readonly<Record<string, any>> = {
     "collection-one_deep_shared": EntriesOneDeepJson,
     "collection-one_deep_recursive": EntriesOneDeepRecursiveJson,
     "collection-one_deep_shared_recursive": EntriesOneDeepRecursiveJson,
-    "collection-one_deep_sibling_recursive": EntriesOneDeepRecursiveJson,
-    "collection-one_deep_shared_sibling_recursive": EntriesOneDeepRecursiveJson,
     "collection-one_deep_rich_text": EntriesOneDeepRichTextJson
 };
 
@@ -200,7 +198,7 @@ export class TestData {
                 // fail if apply when there are not multiple results
                 if (options.resultCount === "none"
                     || options.resultCount === "one") {
-                    console.log(`"sharedRefs" only applies when "resultCount" > 1`);
+                    console.log(`"siblingRefs" only applies when "resultCount" > 1`);
                     invalidOptions = true;
                 }
                 else {
