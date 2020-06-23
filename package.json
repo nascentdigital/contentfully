@@ -1,42 +1,50 @@
 {
-  "name": "contentfully",
-  "version": "1.7.0",
-  "description": "A simple but performant REST client for Contentful.",
-  "keywords": [
-    "contentful",
-    "javascript",
-    "react-native"
-  ],
-  "author": "Simeon de Dios <simeon@nascentdigital.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nascentdigital/contentfully.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nascentdigital/contentfully/issues"
-  },
-  "homepage": "https://github.com/nascentdigital/contentfully#readme",
-  "main": "dist/index.js",
-  "scripts": {
-    "prepare": "npm run build",
-    "build": "tsc",
-    "test": "jest",
-    "dev": "tsc -w"
-  },
-  "dependencies": {
-    "@nascentdigital/scribe": "^0.11.2",
-    "lodash": "^4.17.15",
-    "node-fetch": "^2.6.0"
-  },
-  "devDependencies": {
-    "@jest/test-sequencer": "^26.0.1",
-    "@types/jest": "^25.2.1",
-    "@types/lodash": "^4.14.134",
-    "@types/node-fetch": "^2.3.5",
-    "commander": "^5.1.0",
-    "jest": "^26.0.1",
-    "ts-jest": "^25.5.0",
-    "typescript": "^3.5.1"
-  }
+    "name": "contentfully",
+    "version": "1.7.0",
+    "description": "A simple but performant REST client for Contentful.",
+    "keywords": [
+        "contentful",
+        "javascript",
+        "react-native"
+    ],
+    "author": "Simeon de Dios <simeon@nascentdigital.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nascentdigital/contentfully.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nascentdigital/contentfully/issues"
+    },
+    "homepage": "https://github.com/nascentdigital/contentfully#readme",
+    "main": "dist/index.js",
+    "scripts": {
+        "prepare": "npm run build",
+        "build": "tsc",
+        "test": "jest",
+        "dev": "tsc -w"
+    },
+    "dependencies": {
+        "@nascentdigital/scribe": "^0.11.2",
+        "lodash": "^4.17.15",
+        "node-fetch": "^2.6.0"
+    },
+    "devDependencies": {
+        "@jest/test-sequencer": "^26.0.1",
+        "@types/jest": "^25.2.1",
+        "@types/lodash": "^4.14.134",
+        "@types/node-fetch": "^2.3.5",
+        "commander": "^5.1.0",
+        "jest": "^26.0.1",
+        "ts-jest": "^25.5.0",
+        "typescript": "^3.5.1"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie"
+    ]
 }
