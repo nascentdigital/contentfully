@@ -92,7 +92,7 @@ describe("Contentful client options", () => {
     });
 
     describe("with headers option", () => {
-        test("should call the same same headers", async () => {
+        test("should pass multiple headers", async () => {
             const options = {
                 accessToken: "1234",
                 spaceId: "mockSpaceId",
@@ -109,6 +109,63 @@ describe("Contentful client options", () => {
                 `https://cdn.contentful.com/spaces/${options.spaceId}/environments/master${path}?access_token=${options.accessToken}`,
                 {
                     headers: options.headers
+                }
+            )
+        })
+
+        test("should pass single headers", async () => {
+            const options = {
+                accessToken: "1234",
+                spaceId: "mockSpaceId",
+                fetch: mockFetch,
+                headers: {
+                    header1: "one"
+                }
+            };
+            const contentfulClient = new ContentfulClient(options)
+            await contentfulClient.query(path)
+
+            expect(mockFetch).toHaveBeenCalledWith(
+                `https://cdn.contentful.com/spaces/${options.spaceId}/environments/master${path}?access_token=${options.accessToken}`,
+                {
+                    headers: options.headers
+                }
+            )
+        })
+
+        test("should make multiple calls with different headers", async () => {
+            const firstOptions = {
+                accessToken: "1234",
+                spaceId: "mockSpaceId",
+                fetch: mockFetch,
+                headers: {
+                    header1: "one",
+                }
+            };
+            const firstClient = new ContentfulClient(firstOptions)
+            await firstClient.query(path)
+            expect(mockFetch).toHaveBeenCalledWith(
+                `https://cdn.contentful.com/spaces/${firstOptions.spaceId}/environments/master${path}?access_token=${firstOptions.accessToken}`,
+                {
+                    headers: firstOptions.headers
+                }
+            )
+
+            const secondOptions = {
+                accessToken: "1234",
+                spaceId: "mockSpaceId",
+                fetch: mockFetch,
+                headers: {
+                    header1: "two",
+                }
+            };
+            const secondClient = new ContentfulClient(secondOptions)
+            await secondClient.query(path)
+
+            expect(mockFetch).toHaveBeenCalledWith(
+                `https://cdn.contentful.com/spaces/${secondOptions.spaceId}/environments/master${path}?access_token=${secondOptions.accessToken}`,
+                {
+                    headers: secondOptions.headers
                 }
             )
         })
