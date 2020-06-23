@@ -1,8 +1,15 @@
 # Contentfully
+> A simple but fast API client for Contentful that lets developers focus on data instead of Contentful metadata and REST structure.
 
-A simple but fast API client for Contentful that lets developers focus on data
-instead of Contentful metadata and REST structure.  Core features include:
+[![NPM version](https://img.shields.io/npm/v/contentfully.svg)](https://www.npmjs.com/package/contentfully)
+[![downloads](https://img.shields.io/npm/dm/contentfully.svg)](http://npm-stat.com/charts.html?package=contentfully&from=2018-01-01)
+[![Node version](https://img.shields.io/node/v/contentfully.svg)](http://nodejs.org/download/)
+[![Build Status](https://travis-ci.com/nascentdigital/contentfully.svg?branch=master)](https://travis-ci.com/nascentdigital/contentfully.svg?branch=master)
+[![Code Coverage](https://img.shields.io/codecov/c/github/nascentdigital/contentfully.svg)](https://codecov.io/github/nascentdigital/contentfully)
+[![Known Vulnerabilities](https://snyk.io/test/github/nascentdigital/contentfully/badge.svg)](https://snyk.io/test/github/nascentdigital/contentfully)
 
+
+## Features
 - Transforms Contentful responses into simple / flat JavaScript objects.
 - Stripping of metadata, retaining the basics that you need (e.g. ID, contentType, and fields).
 - Recursive folding of linked entries and assets without cloning (i.e. an Entry
@@ -26,22 +33,22 @@ $ npm i -s contentfully
 ## Prerequisites
 
 You'll need the **Space ID** and **API key** for the space that you wish to access.
-You can get these by doing the following after logging into the 
+You can get these by doing the following after logging into the
 [Contentful Web App](https://be.contentful.com/login):
 
-1. Navigate to your *Organization / Space* (usually from the upper-left space 
+1. Navigate to your *Organization / Space* (usually from the upper-left space
    selector in the top toolbar).
 2. Select *Settings &rarr; General Settings* to find your `Space ID`.
 3. Select *Settings &rarr; API keys* to see your generated API keys (you will
    need to have the correct permissions on the space to do this).  Create a new
    `API key` if you need to.
-   
+
 
 ## Basic Usage
 
-Getting started is really easy. First you'll need to create and configure a 
+Getting started is really easy. First you'll need to create and configure a
 `ContentfulClient` instance.
- 
+
  | Option        | Type    | Required? | Default            |
  |---------------|---------|-----------|--------------------|
  | accessToken   | string  | YES       |                    |
@@ -49,7 +56,7 @@ Getting started is really easy. First you'll need to create and configure a
  | environmentId | string  | NO        | master             |
  | preview       | boolean | NO        | false              |
  | fetch         | any     | NO        | fetch / node-fetch |
- 
+
  Once configured, pass the client into a `Contentfully` instance:
 
 ```javascript
@@ -123,8 +130,8 @@ It should look something like this:
 ```
 
 ### Localization with the wildcard locale parameter
-Just as with the Content Delivery API, you can query entries to retrieve all localized versions of an entry by using the 'wildcard' `locale=*` parameter.   
-  
+Just as with the Content Delivery API, you can query entries to retrieve all localized versions of an entry by using the 'wildcard' `locale=*` parameter.
+
 **However** the response is different from Contentful API.  The locales will be lifted to top level objects so each locale can be used holistically.  Please refer to the example response below.  The default locale from the space will be used to for values not defined in any locale.  Fallback locales are implemented for lifted responses following Contentful's "Considerations on fallback locales" documentation.  Flattening can be disabled for a query by passing the _Query Option_ `flatten=false`
 
 
@@ -197,7 +204,7 @@ Which would return models mapped by locale:
           },
           field6: [2, 8, 20, 40],
           image: {
-            _id: "m12mkd123fdr4", 
+            _id: "m12mkd123fdr4",
             url: "bar.jpg",
             title: "french title",
             dimensions: {
@@ -213,4 +220,4 @@ Which would return models mapped by locale:
 ```
 ## IE Support
 
-By default, `Contentfully` uses the native fetch client in the browser, otherwise it will use `node-fetch`. Since IE does not have `fetch` native to it, use the `fetch` option with something like [`isomorphic-fetch`](https://www.npmjs.com/package/isomorphic-fetch) when instantiating `ContentfulClient`.   
+By default, `Contentfully` uses the native fetch client in the browser, otherwise it will use `node-fetch`. Since IE does not have `fetch` native to it, use the `fetch` option with something like [`isomorphic-fetch`](https://www.npmjs.com/package/isomorphic-fetch) when instantiating `ContentfulClient`.
