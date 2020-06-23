@@ -1,0 +1,883 @@
+{
+    "sys": {
+        "type": "Array"
+    },
+    "total": 1,
+    "skip": 0,
+    "limit": 1,
+    "items": [
+        {
+            "fields": {
+                "identifier": "Default",
+                "articles": [
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "2Ehu94m5TjAO6b0ZPzi2HQ"
+                        }
+                    },
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "2khtemITDq4NIU4pH3u69n"
+                        }
+                    },
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "rybYzjJXaJRmumiiSY8GO"
+                        }
+                    },
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "2J9yS5T0UZiVdMb0gGSIux"
+                        }
+                    },
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "Q51oTBCg0LttWiwqPmeoy"
+                        }
+                    }
+                ]
+            },
+            "sys": {
+                "id": "12LiLki7xnn0txvAekkpXl",
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "blog"
+                    }
+                },
+                "revision": 7,
+                "createdAt": "2020-05-12T22:15:27.296Z",
+                "updatedAt": "2020-05-14T18:31:25.863Z"
+            }
+        }
+    ],
+    "includes": {
+        "Entry": [
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "1aOCWH2mZ8jwxjEig50AgH",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "teamMember"
+                        }
+                    },
+                    "revision": 2,
+                    "createdAt": "2020-05-22T17:13:47.373Z",
+                    "updatedAt": "2020-05-22T17:24:36.752Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "nickname": "Sam",
+                    "firstName": "Sam",
+                    "lastName": "McLoughlin",
+                    "title": "Product Strategist",
+                    "role": "designer",
+                    "picture": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "4MBAr00CmImvT2PpG0Oc6i"
+                        }
+                    },
+                    "arrivedOn": "2017-01-03"
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "2Ehu94m5TjAO6b0ZPzi2HQ",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "article"
+                        }
+                    },
+                    "revision": 36,
+                    "createdAt": "2020-05-12T20:47:08.585Z",
+                    "updatedAt": "2020-06-18T15:38:14.168Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "A story of a thriving startup, a burnt out owner, and the 6 books that saved them both ",
+                    "caption": "Why is it so difficult to start a new business? Why do so many fail? Check out what we have learned over the course of 10 years.",
+                    "slug": "6-startup-survival-books",
+                    "hero": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "2PdB2RKuAdUbEC5XN8LTMI"
+                        }
+                    },
+                    "heroFocus": "center",
+                    "text": "Why is it so difficult to start a new business? Why do so many fail? There are probably a lot of answers to these questions, but I think the problem looks very similar once a business gets past its early incubation phase and starts to struggle as its success causes it to rapidly grow. This \"struggle to scale\" phase seems to hit most startups at the 3 to 5 year mark and are probably the most painful and stressful times to own a company.\n\nOur digital agency hit this inflection point right around the 4 year mark. Up to that point we had been experiencing consistent growth of our team and client base, with no indication of that upward trend slowing down. However, we started to notice some patterns of pain starting to arise as we scaled.\n\nFirst, as we grew from 35 to 40 people we hit some upper limit where my partner and I could not be in every single client meeting and team standup. That in itself shouldn't have been an issue because we had an extremely talented and motivated team. However we started to notice problems with culture, client satisfaction, and ultimately project delivery piling up over the course of a quarter. This created a terrible feedback loop where my partner and I flipped into firefighting mode - running around spending our time in problem areas helping teams get back on track, further neglecting other engagements.\n\nThis unhealthy cycle resulted in serious stress on us as partners, spilling over into our relationship and personal lives. There were a number of times when I considered walking away from the business, which was ironically quite successful from an external lens. It was only because of a great business partner and marriage that I managed to hang on long enough to see our team size shrink and things get to a comfortable normalcy. That helped me come to the realization that our stress only existed above a 35 person threshold. I didn't understand what exactly was going on, but I had a clear problem to tackle.\n\nI began what felt like a treasure hunt for the best set of business acumen building books out there that could help me understand what was happening to us. I ended up reading about 2 books per month over the course of 2 years until I found a set of authors and books that helped me gain a perspective on entrepreneurship that changed my life and the course of our business. At this point I have a set of 6 go-to books that I review on a regular basis and have formed the basis for my current business philosophy.\n\nI wanted to share this list with anyone who is either running a business or thinking about running one. I find that the learnings I've gleaned from these books provide value to all aspects of life. I haven't listed the the books in any particular order, however I will attempt to provide a bit of context to help readers identify what I think are the lessons each book uniquely provides.\n\n## The E-Myth Revisited \n// Michael E. Gerber\n      \n![Cover of book \"The E-Myth Revisited\" by Michael E. Gerber](https://images.ctfassets.net/oae75tj4gg8d/4IaFzpyOEmkYceVJRZEA0c/5bb622b9ec2557baac1b16598573dac4/article.asset-book.emyth.png?h=400) \n\nThis was the first book I read that not only resonated with me deeply, but also started to clearly explain why I was personally struggling with my business despite the success it was having. One of the central points he makes is the significant difference between working on your business versus working in your business.\n\nI love working with our product teams as we design and build digital products, so I tend to spend most of my working day in the trenches providing leadership and expertise for our teams. The problem with this approach is that I wasn't spending any time understanding those leadership activities and building up that capacity outside of myself. As a result I was spending time firefighting the side effects of a lack of leadership instead of teaching others how to lead.    \n      \nGerber does an excellent job of describing the general path that most people take as they start a new business and why it inevitably leads to stress and frustration. I was building a business that was great when I was present and terrible when I wasn't, and it was freaky to see how accurately he described my experience in his book.\n\n\n## Good to Great\n// Jim Collins\n\n![Cover of the book \"Good to Great\" by Jim Collins](https://images.ctfassets.net/oae75tj4gg8d/6D70UO63raDal5NK6JFphA/b582be6b696f0b02d42e70519021ecfe/article.asset-book.good_to_great.png?h=400) \n\nJim Collins is by far my favourite author on the subject of organizational design. When I first read this book I had already developed a set of guiding leadership and culture principles: be real with the people you work with and take care of them like they're family. That approach seems so intuitive and natural, but often runs contrary to mainstream business management philosophy.\n\n<div class=\"clear\"></div>\n\n\n> I was beginning to wonder if I was fundamentally wrong in my business approach until I read this book.\n\nAs we were facing our growth challenges there was a tremendous internal pressure to switch our people-first philosophy in lieu of a number of other popular models. It is easy to assume that your fundamental approach is off if the results aren't what you'd like to see. However, Collins has a concept called the Flywheel Effect that describes how great businesses have a pattern of sticking to core strategies that they know are right and being patient and persistent in nurturing them. This insight helped us push through the two years of turmoil that were required to refine and ultimately validate our approach to our people processes, structures, and culture.  \nGood to Great provides a set of timeless principles and qualities that have helped build winning organizations regardless of sector or industry. Many of the principles deal with leadership and culture, and they're backed by a number of clear examples.\n\n\n## Great by Choice\n// Jim Collins, Morten T. Hansen\n\n![Cover of book \"Great by Choice\" by Jim Collins](https://images.ctfassets.net/oae75tj4gg8d/4WdE0jOcUTB30huI9BiwWU/38c7a9c332637a53933d958ca4c2bf3f/article.asset-book.great_by_choice.png?h=400) \n\nSimilar to Good to Great, this book identifies what makes top organizations outshine their already successful counterparts. The main difference between this book and its predecessor is the context. Great by Choice examines what makes certain companies not only survive, but actually thrive, when business conditions are unfavourable and unpredictable.\n\nWe are in the business of building custom digital products from the ground up, often using emerging technologies. Many of our firefighting moments resulted from unpredictable events like flaws in the bleeding-edge technology we were using, stakeholders making major changes in requirements, or user experience issues when products went out into the wild.\n \nIn our early days we had always approached product development in small iterative slices, so that we could expose risks and opportunities as we worked. It gave our clients a chance to provide input as the product developed and offered the flexibility of responding to issues that only became apparent once you had something in your hands. However as we scaled, our teams brought in more traditional agile practices broke that model.\n\nCollins has a concept in this book called Fire Bullets, Then Cannonballs that helped us recognize this difference and correct it. We have since replaced the traditional agile process of backlog grooming and sprint planning with a process that better resembles our earlier days where we felt more like craftspeople than a manufacturing plant.\n\n\n## Leaders Eat Last\n// Simon Sinek\n    \n![Cover of book \"Leaders Eat Last\" by Simon Sinek](https://images.ctfassets.net/oae75tj4gg8d/2oHbFZG9UiHmk0g72aL0Rq/4f183e02374bc8941a9921bc868fdb98/article.asset-book.leaders_eat_last.png?h=400) \n    \nMost people have heard of Sinek's leadership book Start with Why, but few have heard of his other book Leaders Eat Last. This book does a great job of connecting team culture and behaviour to much deeper human emotional and biological systems that have evolved in us over the years.\n\nI've always believed that at its best a company is just a group of people that are working together towards a shared goal, no different than friends or family. My core management philosophy builds on that idea, trying to align our organizational processes, structures and values to match those found in families and friends - systems that have evolved since the dawn of humanity and proven their effectiveness over time.\n\nIt was increasingly difficult to use our mental models for friends and family as our organization scaled. There is a tendency and pressure to want to put structures, processes, and role definitions in place once you grow beyond 10 people. Structure isn't inherently bad, but if not done right it can suck the heart and soul out of your culture as things become hierarchical and robotic. We had started to fall into this trap and as a result people were starting to be treated like employees instead of family.\n\nThis book helped us understand what we were starting to lose from our early days - that sense of belonging and connection with each other as a unified team. The basic idea of leaders taking care of their people became a north star that helped us figure out how we should refactor our processes and roles to deal with the scale that you don't really find in families.\n\n\n## Radical Candor\n// Kim Scott\n\n![Cover of book \"Radical Candor\" by Kim Scott](https://images.ctfassets.net/oae75tj4gg8d/4ZPDQ2tgZMkISLlsPB3xMF/aa3414daa06a55b8353798f1bd65ed54/article.asset-book.radical_candor.png?h=400) \n    \nWe have always been a very candid and caring organization, so when I first came across Radical Candor I quickly shuffled it to the bottom of my reading list, thinking there weren't going to be too many new management tips to discover. Months later I recognized the hubris of that decision when I discovered the rich and applicable lessons that Kim Scott brings in this book - the most significant insight being the concept of superstars versus rockstars. Superstars are your people who embrace failure and are always pushing to learn and evolve. Rockstars are your high performers, the people that you can count on to hold the team together.\n\nOver the years I had noticed a pattern where a talented individual would join the organization, love what we do for a while, but then eventually struggle to deal with the dynamic demands of tackling one new problem after another as we continually push innovation and digital transformation. Their struggle had varied forms, ranging from adapting to a change in our design process to adopting a new technology stack. The end result was the same: they would struggle for months or years, grow demoralized, then eventually leave.\n\nMy mind was blown when I first read Kim's thoughts on how an individual's ability to do great work should be decoupled from their desire to learn and grow. This is partly because I'm an extremely growth-focused individual by nature, so it had been inconceivable to me that someone who loved what they do wouldn't be excited to learn and develop new skills. That blindspot had made it impossible for me to diagnose the problem that we were having until reading the concept of rockstars, which made me realize that there are times when people just need to be valued for the skills they already have.\n\n\n## The Power of Habit\n// Charles Duhigg\n    \n![Cover of book \"The Power of Habit\" by Charles Duhigg](https://images.ctfassets.net/oae75tj4gg8d/TDdF50xq6t3sXeKeMuab5/7fdacaa86590d2916d0d788fb90521ab/article.asset-book.power_of_habit.png?h=400) \n    \nThere have been many moments over the years, inside and outside of work, where I observe a very intelligent person consistently making poor decisions regardless of how many times it is pointed out. This can take the form of always interrupting others, never speaking up when they know they should, lacking attention to detail, shutting down when challenged, etc.\n\nIn most cases when you dig into why these self-defeating behaviours are being repeated, you begin to realize that there isn't a conscious decision around the shortcoming - it's just something that we do in response to a situation without thinking about it. The interesting thing is that some of the top performers consistently make winning decisions in like manner: they speak up without hesitation, they double-check their work, they always come prepared for meetings, etc.\n\nThe Power of Habit is Charles Duhigg's seminal exploration into the science of habits that explains why most of what we do isn't a conscious decision, but a much more primitive stimulus and response cycle. Our company hadn't taken time to understand the good habits that we had formed when we were smaller, so as we scaled we had teams forming their own habits organically which was causing quite a bit of chaos.\n\nWe started to take the time to understand ourselves and the habits associated with successful teams, and then establish those habits across our organization.\n\n---\n\n\nFast forward 5 years since I first ran into scalability issues and a lot has changed. We spend a lot more time as a leadership team talking about our processes, performance, and most importantly people. While I still experience the occasional moment of stress I am a lot quicker to identify the root cause and turn that into an interesting problem to tackle. We have been much more thoughtful about when and how we grow as a team, making sure that we never the lose the essence of our culture as we scale.",
+                    "authors": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "4O2mSlTrI3vUHfndD92fKD"
+                            }
+                        }
+                    ],
+                    "tags": [
+                        "leadership",
+                        "startup",
+                        "management",
+                        "culture",
+                        "organizational design",
+                        "entrepreneur"
+                    ],
+                    "postedOn": "2018-12-13T16:00-04:00"
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "2J9yS5T0UZiVdMb0gGSIux",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "article"
+                        }
+                    },
+                    "revision": 21,
+                    "createdAt": "2020-05-12T20:47:08.511Z",
+                    "updatedAt": "2020-06-23T15:22:14.380Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Three things that make a great conversational user interface",
+                    "caption": "Three principles that are necessary in a CUI for the conversation to feel natural and delightful. These lay the groundwork for conversations and building a relationship with your customers.",
+                    "slug": "three-things-that-make-a-great-conversational-user-interface",
+                    "hero": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "1hKIkS3R5mYWVjLcx7NLhL"
+                        }
+                    },
+                    "heroFocus": "right",
+                    "text": "We already know that conversational user interfaces (CUIs) are an __[important opportunity for businesses](https://nascentdigital.com/thoughts/how-conversational-user-interfaces-can-improve-your-digital-product),__ but we still have a ways to go to make interacting with a CUI a delightful experience. Today, most voice or chatbot interactions are very mechanical and their usefulness is limited to functional requests. With smart speakers and chatbots growing at the rate they are, it’s important that businesses consider these technologies as a primary digital touchpoint for their customers versus a quick add on to their existing digital experiences.\n\nSo, in a world where we are all asking our devices for support, how can brands create meaningful and differentiated experiences that deliver on their brand promise and personality?\n\n## Getting your CUI to sound more human\nI believe conversational user interfaces (like a good friend) can connect at a personal level and build truly deep relationships between people and brands. Voice and chat are unique digital touchpoints where the brand’s persona can really shine. With that in mind, it’s important to think of these interactions as human interactions. If the brand was a person I was meeting for the first time, what would my impression be? What would this person sound like? How would talking to them make me feel? Are they curious, helpful, insightful? Getting these details right can be the difference between a trusting relationship and one that is cut short.\n\nThe answer to creating a good CUI lies in understanding the challenges we need to overcome designing for voice and chat. When my team and I were working with RBC VoiceLabs, we developed some design principles that helped us tackle the challenges of a CUI.\n\n## The challenges of a conversational user interface\nWith web design, the interface is visual, providing graphic cues, imagery, and navigation. If done well, this reduces the cognitive load for the viewer by creating a fixed framework in which they can move about. In a conversation there is no interface, meaning the customer needs to create a mental model of navigation. This requires a much greater cognitive effort from the customer.\n\nThe fact that there is no interface makes CUI a challenging concept, but if we think of user interfaces historically, two come to mind for me: books and storytelling. In both instances, what makes a great story or storyteller, is the ability to present information in a way that allows you, the recipient, to build a mental image. Since there are no visuals, the images are created in your mind, and as new pieces of information are presented or revealed your understanding of the picture evolves. Because of this, the pacing of information can either hinder or aid a listeners ability to understand and create an accurate mental image.\n\n<figure>\n\n![The visual model of interaction shows a customer interpreting visual content directly](//images.ctfassets.net/oae75tj4gg8d/3dPV9pjtqo5RJSXhIy7weY/4dd951158fb8e4e4ea8212d4b5c043a9/voice_article_2_-_image1.png)\n\n</figure>\n\n<figure>\n \n![The mental model of interaction shows a customer having to abstract an image in their mind from hearing verbal content](//images.ctfassets.net/oae75tj4gg8d/A7haxyx61Fr94Iw4H9mPg/f2522f1fcf1063a3be9ef561e38af5cc/voice_article_2-image_2.png)\n\n</figure>\n\nCUIs are no different than a good story. I’d like to propose that we approach CUIs from the perspective of ‘what makes for an effective conversation’. Think of your CUI as a support agent, a brand ambassador, and an assistant all in one. Ask yourself, what are the attributes that make for effective, memorable, and even delightful conversation, and how would it sound coming from your brand? If you can figure this out, then you’ll be able to create a CUI that truly engages with your customers and guides them to what they’re looking for with ease.\n\n## Three things that make a great conversational user interface\nThe following three principles are necessary in a CUI for the conversation to feel natural and conversational. In my next article, I’ll talk more about experience principles that will aid in creating a delightful interaction, but it’s important to first get these core capabilities down pat. These lay the groundwork for starting a conversation and building a relationship with your customer.\n\n## 1) Navigating a CUI\nLike I mentioned above, CUIs have no physical interface for a user to interact with, making it difficult for someone to know what they can actually get out of the technology. Additionally, voice and chatbot technology is new and completely foreign to many people, so figuring out how to begin navigating the technology to find the right information is a pretty daunting task. A good CUI should take this into account when starting an interaction with someone so that they can get the most out of the conversation.\n\nWhen you design your conversational user interface, make sure you keep the customer relationship status in mind. With a strong customer profile, your CUI can pick up where the conversation left off, or strike up new conversations based on past interactions.\n\nThere can be multiple ways customers can interact with your CUI, including:\n\n1. First-time user experience (don’t know the customer)\n2. Welcome back messages (know the customer)\n3. Introduction/promotion of new products/services\n4. Introduction of products/services related to a line of questioning\n\nTo help illustrate the above, here are a few examples taken from our project with RBC VoiceLabs. The project was a CUI that would help welcome new immigrants to Canada by orienting them with RBC’s financial services and resources through a product called ‘Arrive’. If you’re interested in learning more about Arrive and the tools and resources they provide, you can check out their blog [here](https://arrivein.com/en/).\n\n#### Good Examples\n\n__First-time experience:__ *Hi, welcome to Arrive. I can guide you on questions around finding a job, a place to stay, budgeting and much more. How can I help?*\n\n__Welcome back experience:__ *Hi, welcome back Maria. Before we get started, I just want to let you know that we recently launched a new High-Interest Savings Account. Since you asked about investments last time we spoke, I thought you might be interested.*\n\n#### Poor Examples\n\n__First-time Experience:__ *Hi, welcome to Arrive. How can I help?*\n\n__Welcome back experience:__ *I can guide you on questions around finding a job, a place to stay, budgeting and much more. How can I help?*\n\n## 2) Personalizing a CUI\nHaving to repeat and explain yourself in every separate interaction you have can make you feel like you are not being heard. When was the last time you had a conversation with someone, and the next day they forgot all the details? It’s hard to build a relationship that way.\n\nIf we want to build relationships with our customers we need to show them that we are listening. In order to do this with a conversational user interface, we need to build and maintain a customer profile. The more we know about a customer the more in tune with them we can become.\n\nYou can then use this customer profile to better tune the way the CUI interacts with a customer. With a strong customer profile, your CUI can pick up where the conversation left off, or strike up new conversations based on past interactions.\n\n<figure>\n\n![The customer profile starts as loose puzzle pieces and each time they visit their profile becomes more whole](//images.ctfassets.net/oae75tj4gg8d/79QSbVyfwdrKgIjrRj3OuI/ec1187150b1bd65833ca5a0462fd86c6/voice_article_2_-_image_3.png)\n\n</figure>\n\n## 3) Teaching a CUI to really listen\nEver feel like you and the person you’re talking to are speaking two completely different languages? Aside from a literal language difference, we all have ranges in our vocabulary that can affect how we understand one another. Some of us are verbose in our language while others are short and concise. A lot can be communicated in the way something is said. Chances are if I respond to your questions in single word answers I may be in a rush, or preoccupied with other activities.\n\nIt’s important to meet people where they’re at emotionally to create reciprocity and likeness with the customer. CUI experiences can do this by matching the vocabulary, cadence, and details of a customer’s language.\n\n#### Good Examples\n\n__Client (verbose):__ *Hi, I think I need help finding a job and a place, but I don’t know where to start.*\n\n__RBC Voice:__ *Finding a job is a great place to start. I’m here to make that easy for you. What kind of job are you looking for?*\n\n---\n\n__Client (analytical):__ *I need a job and a place.*\n\n__RBC Voice:__ *What kind of job are you looking for?*\n\n#### Poor Examples\n\n__Client (verbose):__ *Hi, I think I need help finding a job and a place, but I don’t know where to start.*\n\n__RBC Voice:__ *What kind of job are you looking for?*\n\n---\n\n__Client (analytical):__ *I need a job and a place.*\n\n__RBC Voice:__ *Finding a job is a great place to start. I’m here to make that easy for you. What kind of job are you looking for?*\n\n## Up Next\nIn the next, and final article of this series, I’m going to highlight some additional design principles that build on top of the three essential ones I just covered. These principles will showcase the types of customer interactions that are possible with a CUI and are what will bring your CUI to life.",
+                    "authors": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "1aOCWH2mZ8jwxjEig50AgH"
+                            }
+                        }
+                    ],
+                    "tags": [
+                        "UX",
+                        "Voice Assistant",
+                        "Conversational UI",
+                        "UI",
+                        "Smart Speaker"
+                    ],
+                    "postedOn": "2019-10-29T10:00-04:00",
+                    "relatedArticles": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "rybYzjJXaJRmumiiSY8GO"
+                            }
+                        },
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "Q51oTBCg0LttWiwqPmeoy"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "2khtemITDq4NIU4pH3u69n",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "article"
+                        }
+                    },
+                    "revision": 13,
+                    "createdAt": "2020-05-12T20:47:09.280Z",
+                    "updatedAt": "2020-05-29T01:16:08.962Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Typescript: Javascript’s special sauce",
+                    "caption": "Here’s why you should start using Typescript as a Javascript developer, and why it won’t be as hard as you think.",
+                    "slug": "typescript-javascripts-special-sauce",
+                    "hero": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "64eEGBRX24CD2Egrc8TfcV"
+                        }
+                    },
+                    "heroFocus": "center",
+                    "text": "As a Javascript developer, you likely have heard of Typescript and how it is an improvement on Javascript and that you __need__ to start using it. But, if you haven’t had any direct experience using the language, you might be asking yourself the following questions:\n\n- What is the learning curve? \n- What are the improvements I can expect?\n- Can I integrate it into my existing Javascript projects?\n\nWell, I’m here to tell you it’s not as complicated as you might think! In this article I’ll talk about how you can start using Typescript and how it can improve the work you do.\n\nAt Nascent, we have created web and mobile applications using Node.js, web frontend frameworks, React Native, and a couple of support libraries. Throughout all of these projects I have been encouraging the Javascript developers I work with to check out Typescript for their projects to help make their lives easier. Today at Nascent our new projects always begin with Typescript, and across the industry Typescript has matured and has become widely adopted.\n\nEven though Typescript is now our first step in a project, it’s not to say that Javascript doesn’t still have its place. I use and view Javascript as a quick and dirty tool, and Typescript as the precise and professional final evolution of Javascript. Javascript is for: when I need to make a quick node script that isn’t going to be maintained, for prototypes and PoCs that are going to iterate and mutate rapidly with a lot of hacks and have an extremely short lifetime, and for tiny personal projects that have me as the single maintainer. Anything that is going to have multiple developers, a maintenance cycle, and be used in production is now written in Typescript.\n\nSince moving to using Typescript regularly at Nascent, we’ve found the following features to be the most beneficial, and may answer some of the questions you have about Typescript.\n\n## You already know a lot of Typescript\nTypescript is a *superset* of Javascript, so you already know 90% of Typescript if you know Javascript and have a good fundamental understanding of it and ES6/7 features such as classes, promises, and async/await. The *superset* part is the special sauce that that makes it a professional and precise tool!\n\n## Improving maintainability of code and improving ease of development\nStatic typing (hence *Type*script) is now its major draw for both production applications and library creators. Static typing’s benefits for production applications and libraries are immense and cannot be understated so I’ll say it one more time. Static typing and the compiler can warn you about errors before you even run your code and provides intelligent code completion. As the app gets more complex, the typing continues to document your code for you. New developers who come onto a project know what functions expect of them and what data belongs where. There have been multiple attempts to add typing to Javascript over the years and Typescript is an example of how to do it right.\n\n## Enhancements and extra tools for you to use\nAnother draw are the improvements to the OOP aspects of Javascript including member property definitions, real private declarations, interfaces, and support for generics. All of this leads to greater quality of life for the developer, with tight integration to multiple IDE’s and many frameworks providing Typescript starter kit options and libraries suppling typings.\n\n## It’s not all or nothing\nThe pathway to learning and integrating Typescript is very smooth thanks to Typescript’s strict syntactical matching of Javascript, Typescript’s any datatype, and the ability of the compiler to implicitly recognize untyped variables as the any type. You can begin using Typescript in an existing project by enabling implicit any. The way you write functions doesn’t change and your class definitions can stay the same, your code can even look like ES5 Javascript. You can introduce typing where it will improve maintainability and makes sense, without having to type everything in the project all at once. When you are ready, you can begin layering in Typescript’s benefits as you need them, where you need them, within old and new projects.\n\n## Powerful tools when you are ready\nIf Javascript is your first language and you have trepidations about new features, you aren’t forced to use them if you don’t need them. When you are ready to test the waters and learn their capabilities, the path is open for you. New features like [generics](https://www.typescriptlang.org/docs/handbook/generics.html) can be powerful for solving or simplifying problems.\n\n## Add that special sauce\nWe find a place for both Typescript and Javascript at Nascent. We use Typescript’s improved maintainability and extra tools in our production apps. The libraries we’ve created are written in Typescript to help usability and maintainability of the library. Teaching Typescript to Javascript developers happens in project with no decline to their effectiveness while learning. I will continue to recommend Javascript developers to check out Typescript and encourage production app teams using Javascript to add the special sauce of Typescript :)",
+                    "authors": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "7o1betfLZmvw9osTJvutPC"
+                            }
+                        }
+                    ],
+                    "tags": [
+                        "Typescript",
+                        "Web Development",
+                        "React",
+                        "React Native",
+                        "Javascript"
+                    ],
+                    "postedOn": "2019-08-21T10:00-04:00"
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "4O2mSlTrI3vUHfndD92fKD",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "teamMember"
+                        }
+                    },
+                    "revision": 4,
+                    "createdAt": "2020-05-22T17:12:31.759Z",
+                    "updatedAt": "2020-06-18T15:38:06.988Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "nickname": "Sim",
+                    "firstName": "Simeon",
+                    "lastName": "de Dios",
+                    "title": "CTO, Partner",
+                    "role": "executive",
+                    "picture": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "4cSo78t7GMjsEc5XJrTueP"
+                        }
+                    },
+                    "arrivedOn": "2010-01-01"
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "7o1betfLZmvw9osTJvutPC",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "teamMember"
+                        }
+                    },
+                    "revision": 4,
+                    "createdAt": "2020-05-22T17:14:45.050Z",
+                    "updatedAt": "2020-06-18T15:39:15.262Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "nickname": "Braini",
+                    "firstName": "Andrew",
+                    "lastName": "Braini",
+                    "title": "Architect",
+                    "role": "developer",
+                    "picture": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "6FckG1WRvr5ms0HUmyyOgP"
+                        }
+                    },
+                    "arrivedOn": "2012-01-02"
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "Q51oTBCg0LttWiwqPmeoy",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "article"
+                        }
+                    },
+                    "revision": 16,
+                    "createdAt": "2020-05-12T20:47:08.477Z",
+                    "updatedAt": "2020-06-23T15:21:00.189Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Four ways to make your conversational user interface feel more natural",
+                    "caption": "Give your CUI the ability to have conversations that are actually dynamic and helpful.",
+                    "slug": "four-ways-to-make-your-conversational-user-interface-feel-more-natural",
+                    "hero": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "1iCseW018y9wXqHW6hD5Po"
+                        }
+                    },
+                    "heroFocus": "center",
+                    "text": "If you’ve been following this series, you now know that there are core principles that are needed when designing a CUI to lay the groundwork for conversational interactions. But maybe you’re still skeptical of how voice technology or chatbots could sound like anything other than a robot. It definitely takes a lot of careful thought and planning to create a CUI that feels as natural as a human conversation, but it is achievable! The following design principles are what are going to give your CUI the ability to have conversations that are actually dynamic and helpful.\n\nTo better illustrate these design principles, I’ll be pulling examples from our project working with RBC VoiceLabs. The project was a CUI that would help welcome new immigrants to Canada by orienting them with RBC’s financial services and resources through a product called ‘Arrive’. If you’re interested in learning more about Arrive and the tools and resources they provide, you can check out their blog [here](https://arrivein.com/en/).\n\n## 1) CUIs should be clear communicators\nThink of the best listeners you know, and chances are they not only make you feel like you are being heard, but they also help clarify or provide reassurance as to what you are saying. If the people you have in mind are like the ones I know then they will often stop to ask you for more information or to confirm they are hearing you correctly.\n\nOur voice experiences should be great listeners, capable of playing back voice inputs frequently so that customers know they are being heard. They should also be clear communicators, describing any activities happening in the background which the customer may not be aware of (i.e. Looking up product information).\n\n#### Good Example\n__RBC Voice:__ *Did you want to quickly set up an Arrive account with this email so I can send you the resources we talked about?*\n\n__Client:__ *Sure, that would be great!*\n\n__RBC Voice:__ *Great, your account was created and I sent you a confirmation email.*\n\n__RBC Voice:__ *Just a moment, I’m looking up your profile.*\n\n#### Poor Example\n__RBC Voice:__ *Did you want to quickly set up an Arrive account with this email so I can send you the resources we talked about?*\n\n__Client:__ *Sure, that would be great!*\n\n__RBC Voice:__ *Great.*\n\n## 2) CUIs should know when to bring up the right information\nHas this ever happened to you: You enter a department store and want to ask an employee about a specific question, only to have them try to sell you on a number of things you were not interested in?\n\nVoice experiences should not feel like an advertisement or radio commercial. They should be able to promote new products, services, and voice capabilities at a time that is relevant to the customer's perceived intent or readiness for purchase.\n\n#### Good Example\n__RBC Voice:__ *Hi Maria, how are things going with finding a job and a place in Toronto?*\n\n__Client:__ *Good! I found a job as a graphic designer.*\n\n__RBC Voice:__ *Congratulations, that’s great news. Most employers require a Canadian bank account to submit paycheques. Did you want to set up a personal chequing account?*\n\n#### Poor Example\n\n__RBC Voice:__ *Hi Maria, welcome back. I wanted to let you know you are eligible for our high-interest savings account. Would you like me to tell you about it?*\n\n## 3) CUIs should be able to navigate changing topics of conversation\nGood conversations are rarely linear. They often take twists, turns, and digressions before returning to the original topic. We’ve probably all experienced the moments when someone says “wait, what we’re we talking about?”.\n\nVoice experiences should be capable of understanding when a customer is changing conversational direction and proactively anticipate any actions that will make it easier to segue back to the topic if still appropriate.\n\n#### Good Example\n__RBC Voice:__ *Most graphic design jobs are located in Toronto. Are you planning on moving there?*\n\n__Client:__ *Yah, I was thinking of moving there.*\n\n__RBC Voice:__ *I can get you started by sharing some resume templates and job search links for Toronto. Did you want to quickly set up an Arrive account with this email so I can send you these resources?*\n\n__Client:__ *Sure, that would be great!*\n\n__RBC Voice:__ *Great, your account was created and I sent you a confirmation email. Now let’s help you find a place to stay in Toronto.*\n\n#### Poor Example\n__RBC Voice:__ *Most graphic design jobs are located in Toronto. Are you planning on moving there?*\n\n__Client:__ *Yah, I was thinking of moving there.*\n\n__RBC Voice:__ *Great, let’s help you find a place to stay in Toronto. Tell me what you are considering when looking for a place?*\n\n## 4) CUIs should prevent awkward silences\nIt’s never fun when a conversation ends abruptly in awkward silence. A positive conversation usually concludes with an elegant closure or segue to a new topic to keep things active.\n\nVoice experiences should be flexible and provide multiple paths or options for customers. Ideally, there should be no dead ends unless the customer has deliberately ended the conversation.\n\n#### Good Example\n__RBC Voice:__ *The city centre has lots of options, what is your maximum monthly rental budget?*\n\n__Client:__ *Something less than around 512 Euros.*\n\n__RBC Voice:__ *I’m not seeing anything in that price range. However, there are many places at 550 Euros. Would you like to see properties in that price range, or try a different area?*\n\n#### Poor Example\n__RBC Voice:__ *The city centre has lots of options, what is your maximum monthly rental budget?*\n\n__Client:__ *Something less than around 512 Euros.*\n\n__RBC Voice:__ *Sorry, there are no properties in that price range.*\n\n## Closing\nI hope this series helps you better articulate the role CUIs can play as a digital touchpoint, highlights some core capabilities to consider, or provide some guidance for crafting effective voice and chat experiences. If you feel we have left anything out or missed the mark, please reach out! We hope this, like the voice experiences we are trying to build, can be the start of a meaningful conversation.",
+                    "authors": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "1aOCWH2mZ8jwxjEig50AgH"
+                            }
+                        }
+                    ],
+                    "tags": [
+                        "Conversational UI",
+                        "CUI",
+                        "Voice Assistant",
+                        "Chatbots",
+                        "UX Design"
+                    ],
+                    "postedOn": "2019-12-17T11:00-04:00",
+                    "relatedArticles": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "2J9yS5T0UZiVdMb0gGSIux"
+                            }
+                        },
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "rybYzjJXaJRmumiiSY8GO"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Entry",
+                    "id": "rybYzjJXaJRmumiiSY8GO",
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "article"
+                        }
+                    },
+                    "revision": 12,
+                    "createdAt": "2020-05-12T20:47:08.777Z",
+                    "updatedAt": "2020-06-23T15:21:52.577Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "How conversational user interfaces can improve your digital product experiences",
+                    "caption": "You’ve probably spoken to a chatbot or a smart speaker and have been less than impressed. Well, I’m here to tell you that tech like this (if done right) can improve your digital experiences.",
+                    "slug": "how-conversational-user-interfaces-can-improve-your-digital-product",
+                    "hero": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "20PluwqKIL07ZYnURe5FQd"
+                        }
+                    },
+                    "heroFocus": "center",
+                    "text": "## What is a conversational user interface?\nThe term conversational user interface (CUI) may be completely foreign to you, but if you’ve ever spoken to Google through a smart speaker, or Siri on your iPhone, or with a chatbot on a website, then you’re already familiar with CUI’s. A CUI is an interface that mimics a conversation that you would have with a real human, whether that be through voice or through typing into a chat window, and is how you interact with a platform.\n\nRecently we worked with RBC VoiceLabs to build voice interactions for some of their smaller lines of business. Through this project, we realized that conversational user interfaces present a whole new set of challenges for UX designers, but if done correctly, it presents an even larger opportunity to engage with customers.\n\n## Why is a conversational user interface important for your business?\nCUIs significantly reduce customer effort, leading to more customer interactions with your brand. Additionally, when your customers are interacting with your business more frequently, you’re able to develop richer customer profiles and provide a better, more personalized service.\n\n<figure>\n  \n![For customers CUIs reduce effort, leading to more frequent engagements, and developing deeper relationships. For businesses CUIs build stronger customer profiles leading to greater customer satisfaction, and more purchases and cross sell.](//images.ctfassets.net/oae75tj4gg8d/73CnyViRYJHlzsPnaiTKyN/f44794fee83befbaf5ea10af24362154/voice_article_1_-_image1.png)\n</figure>\n\nOur work with RBC showed us how important voice technology is and the huge opportunity all CUIs present for all businesses. In 2016, the global chatbot market was valued at [$190 million](https://www.grandviewresearch.com/industry-analysis/chatbot-market) and is projected to continue to grow into the future. Deloitte forecasts smart speakers will be worth $7 billion in 2019, making it the fastest-growing connected device category in history. Research also anticipates that, by [2020, 50%](https://www.comscore.com/Insights/Presentations-and-Whitepapers/2017/The-Future-of-Voice-From-Smartphones-to-Smart-Speakers-to-Smart-Homes) of all internet searches will be done through voice. In fact, over [72%](https://www.thinkwithgoogle.com/consumer-insights/voice-assistance-consumer-experience/) of smart speaker users say devices are part of their daily routines.\n\nWith customer expectations changing to demand fast, personalized around the clock service, voice and chatbots can be a valuable asset. But in order to create a conversational user interface that satisfies customers, a CUI can’t be an afterthought.\n\n## How do you fit conversational user interfaces into your digital ecosystem?\nCUIs are often thought about as something you tack onto an existing digital product (i.e, let’s add Siri Integration or let’s stick a chatbot onto our website) — however, CUIs are more than a feature, they’re a new channel that needs to be integrated into your digital ecosystem. Without the proper strategy and consideration, a CUI won’t be a value-add for your customers, but rather the opposite.\n\n<figure>\n\n![A diagram showing how voice and chat are new channels to be added alongside website and mobile. Voice and chat can be on multiple devices but have potentially no visual interface. These channels are how customers are connected with products and services. The diagram shows the channels below product and services which is below the brand promise.](//images.ctfassets.net/oae75tj4gg8d/1uX6wSLU5E8ZNpZH1j5Xkb/7fc10452d5eb385957556088ad7013c7/voice_article_1_-_image2.png)\n  \n</figure>\n\n## Why do most chatbots and voice interfaces miss the mark?\nWhen we started doing research on conversational user interfaces, we noticed that the majority of voice and chat interactions today are transactional (i.e., Google play this song, Siri what’s the weather?). While this is not inherently bad, it is very mechanical and impersonal — leaving little room for brand impression or relationship building.\n\nLike mobile design a few years back, and web before it, voice and chat are the new uncharted waters. Right now most CUIs don’t provide a delightful experience, because designers haven’t been brought into the mix yet. If you think back to early web days, screens were being built by developers without designers, and although these webpages worked, it was a pretty cold and mechanical process. That’s where we’re at today with conversational user interfaces, but I believe with the right design principles, CUIs will connect people with brands like never before.\n\nThroughout this series on CUIs, I’ll be exploring how you can harness the full potential of conversational user interfaces and create delightful customer experiences. In the next article, I’ll be going over the three essential elements all great CUIs have, including examples and solutions from our work with RBC VoiceLabs. Of course, we are just getting our feet wet in this new and exciting area of technology and we plan to make this an ongoing topic of discussion. If you think I missed anything in this article, I’d love to hear your thoughts!",
+                    "authors": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "1aOCWH2mZ8jwxjEig50AgH"
+                            }
+                        }
+                    ],
+                    "tags": [
+                        "UX",
+                        "Voice Technology",
+                        "Smart Speaker",
+                        "Interaction Design",
+                        "Chatbots"
+                    ],
+                    "postedOn": "2019-10-15T19:00-04:00",
+                    "relatedArticles": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "Q51oTBCg0LttWiwqPmeoy"
+                            }
+                        },
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "2J9yS5T0UZiVdMb0gGSIux"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "Asset": [
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "1hKIkS3R5mYWVjLcx7NLhL",
+                    "revision": 11,
+                    "createdAt": "2020-05-12T20:45:25.532Z",
+                    "updatedAt": "2020-06-10T15:57:54.093Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "article.CUI-article2-header",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/1hKIkS3R5mYWVjLcx7NLhL/92db9ba3d0cb450ecbb5b5396b5948d9/article.three-things.hero_2x.jpg",
+                        "details": {
+                            "size": 167470,
+                            "image": {
+                                "width": 2404,
+                                "height": 1200
+                            }
+                        },
+                        "fileName": "article.three-things.hero@2x.jpg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "1iCseW018y9wXqHW6hD5Po",
+                    "revision": 4,
+                    "createdAt": "2020-06-09T18:57:40.062Z",
+                    "updatedAt": "2020-06-10T15:48:01.780Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Article hero : Four ways to make your...",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/1iCseW018y9wXqHW6hD5Po/f3a0901cea7b6c293f38bb19030146aa/article.mantalkingtogooglehome.jpg",
+                        "details": {
+                            "size": 157686,
+                            "image": {
+                                "width": 2404,
+                                "height": 1200
+                            }
+                        },
+                        "fileName": "article.mantalkingtogooglehome.jpg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "20PluwqKIL07ZYnURe5FQd",
+                    "revision": 10,
+                    "createdAt": "2020-05-12T20:45:26.202Z",
+                    "updatedAt": "2020-05-14T18:29:49.928Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "article.google-home-mini",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/20PluwqKIL07ZYnURe5FQd/d0b63dd66c71edadde404e0aa541e9f8/google_home_cropped.jpg",
+                        "details": {
+                            "size": 1780830,
+                            "image": {
+                                "width": 3000,
+                                "height": 1500
+                            }
+                        },
+                        "fileName": "google home cropped.jpg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "2PdB2RKuAdUbEC5XN8LTMI",
+                    "revision": 10,
+                    "createdAt": "2020-05-12T20:45:26.726Z",
+                    "updatedAt": "2020-05-14T18:29:47.292Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "article.hero-pushing.rock",
+                    "description": "A business man pushing a boulder up a mountain.",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/2PdB2RKuAdUbEC5XN8LTMI/e48f2ddb90e0b4a498d624fa56a9d631/article.hero-pushing.rock.jpeg",
+                        "details": {
+                            "size": 317446,
+                            "image": {
+                                "width": 1600,
+                                "height": 909
+                            }
+                        },
+                        "fileName": "article.hero-pushing.rock.jpeg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "4MBAr00CmImvT2PpG0Oc6i",
+                    "revision": 13,
+                    "createdAt": "2019-10-24T15:27:37.934Z",
+                    "updatedAt": "2020-05-22T17:24:27.990Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Headshot: Sam",
+                    "description": "A headshot of Sam.",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/4MBAr00CmImvT2PpG0Oc6i/33665b75935eedd0df01018f91c620e0/Sam.png",
+                        "details": {
+                            "size": 12746,
+                            "image": {
+                                "width": 144,
+                                "height": 144
+                            }
+                        },
+                        "fileName": "Sam.png",
+                        "contentType": "image/png"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "4cSo78t7GMjsEc5XJrTueP",
+                    "revision": 10,
+                    "createdAt": "2020-05-12T20:45:27.417Z",
+                    "updatedAt": "2020-05-14T18:29:42.585Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Headshot: Simeon",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/4cSo78t7GMjsEc5XJrTueP/467ff429e51c2067d5ebc7012afcd965/Sim.png",
+                        "details": {
+                            "size": 38746,
+                            "image": {
+                                "width": 144,
+                                "height": 144
+                            }
+                        },
+                        "fileName": "Sim.png",
+                        "contentType": "image/png"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "64eEGBRX24CD2Egrc8TfcV",
+                    "revision": 10,
+                    "createdAt": "2020-05-12T20:45:26.536Z",
+                    "updatedAt": "2020-05-14T18:29:47.973Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "article.typescript-javascript",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/64eEGBRX24CD2Egrc8TfcV/b5278c5be2d71036bf23f1a53b525dd6/Typescript__Javascript_s_Special_Sauce_header_image.jpg",
+                        "details": {
+                            "size": 172499,
+                            "image": {
+                                "width": 1500,
+                                "height": 750
+                            }
+                        },
+                        "fileName": "Typescript_ Javascript's Special Sauce header image.jpg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            },
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "oae75tj4gg8d"
+                        }
+                    },
+                    "type": "Asset",
+                    "id": "6FckG1WRvr5ms0HUmyyOgP",
+                    "revision": 11,
+                    "createdAt": "2019-10-24T15:27:39.684Z",
+                    "updatedAt": "2020-05-14T18:30:00.076Z",
+                    "environment": {
+                        "sys": {
+                            "id": "dev",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "locale": "en-CA"
+                },
+                "fields": {
+                    "title": "Headshot: Andrew",
+                    "description": "A headshot of Andrew.",
+                    "file": {
+                        "url": "//images.ctfassets.net/oae75tj4gg8d/6FckG1WRvr5ms0HUmyyOgP/37e4d4e4f5c57b34fe5e50aba76116f0/Braini.png",
+                        "details": {
+                            "size": 37562,
+                            "image": {
+                                "width": 144,
+                                "height": 144
+                            }
+                        },
+                        "fileName": "Braini.png",
+                        "contentType": "image/png"
+                    }
+                }
+            }
+        ]
+    }
+}
