@@ -1,4 +1,5 @@
 // imports
+import {Scribe} from "@nascentdigital/scribe";
 import assign from "lodash/assign";
 import compact from "lodash/compact";
 import pick from "lodash/pick";
@@ -43,12 +44,15 @@ export const REQUIRED_QUERY_SELECT: ReadonlyArray<string> = [
     QUERY_SELECT_CREATED_AT,
     QUERY_SELECT_UPDATED_AT
 ];
+const log = Scribe.getLog("contentfully:Contentfully");
 
 
 // types
 export type ContentfullyOptions = {
     experimental: boolean;
 };
+
+
 interface Locale {
     name: string;
     code: string;
@@ -91,14 +95,19 @@ export class Contentfully {
         // create query
         const json = await this.contentful.query(path, Contentfully.createQuery(query));
 
+        log.debug("parsing Contentful data: ", json);
+
         // assign multi-locale query
         const locale = get(query, "locale");
         const multiLocale = locale && locale === "*";
 
-        // get transformed items
+        // parse single top-level entry
         if (isUndefined(json.items)) {
+            log.debug("parsing single top-level entry");
             return this._parseEntry(json, [], multiLocale)
         }
+
+        log.debug("parsing entry collection");
 
         // parse includes
         const links = await this._createLinks(json, multiLocale, options.mediaTransform);
@@ -151,14 +160,16 @@ export class Contentfully {
         const links: any = {};
 
         // link included assets
-        for (const asset of get(json, "includes.Asset") || []) {
+        const assets = get(json, "includes.Asset") || [];
+        log.debug(`parsing ${assets.length} assets`);
+        for (const asset of assets) {
 
             // TODO: handle non-image assets (e.g. video)
             let media: any = {};
             const sys = asset.sys;
 
+            // map asset to locale
             if (multiLocale) {
-                // map asset to locale
                 const locales = this._parseAssetByLocale(asset);
                 forEach(locales, async (entry, locale) => {
                     try {
@@ -171,11 +182,13 @@ export class Contentfully {
 
                             media[locale] = transformed;
                         }
-                    } catch (e) {
+                    }
+                    catch (e) {
                         console.error("[_createLinks] error with creating media", e);
                     }
                 });
-            } else {
+            }
+            else {
                 media = await this._toMedia(sys, asset.fields, mediaTransform);
             }
 
@@ -184,14 +197,18 @@ export class Contentfully {
         }
 
         // link included entries
-        for (const entry of get(json, "includes.Entry") || []) {
+        const linkedEntries = get(json, "includes.Entry") || [];
+        log.debug(`parsing ${linkedEntries.length} linked entries`);
+        for (const entry of linkedEntries) {
             links[entry.sys.id] = {
                 _deferred: entry
             };
         }
 
         // link payload entries
-        for (const entry of get(json, "items") || []) {
+        const mainEntries = get(json, "items") || [];
+        log.debug(`parsing ${mainEntries.length} main entries`);
+        for (const entry of mainEntries) {
             links[entry.sys.id] = {
                 _deferred: entry
             };
@@ -337,7 +354,8 @@ export class Contentfully {
                 // assign asset to values (already mapped by locale)
                 else if (sys.linkType === "Asset") {
                     values = this._dereferenceLink(value, links, locale);
-                } else {
+                }
+                else {
                     values[locale] = this._dereferenceLink(value, links, locale);
                 }
             }
@@ -457,7 +475,8 @@ export class Contentfully {
             }
             if (currentLocale.fallbackCode === undefined) {
                 currentLocale = defaultLocale;
-            } else {
+            }
+            else {
                 currentLocale = localeCodes[currentLocale.fallbackCode];
             }
         }
@@ -599,7 +618,7 @@ export class Contentfully {
                 select = query.select.split(",");
             }
 
-            // TODO: this should throw in the next major release
+                // TODO: this should throw in the next major release
             // otherwise ignore + fallback
             else {
                 console.warn("[Contentfully] invalid query.select value: ", query.select);
