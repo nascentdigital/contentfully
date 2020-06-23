@@ -29,8 +29,8 @@ export class ContentfulClient {
 
         let serverUrl: string;
 
-        if (options.host) {
-            serverUrl = options.host;
+        if (options.apiUrl) {
+            serverUrl = options.apiUrl.toJSON();
         } else {
             serverUrl = options.preview
                 ? ContentfulClient.PREVIEW_URL
@@ -73,10 +73,9 @@ export class ContentfulClient {
 
         // fetch data (throw if there is an error)
         const fetchClient = this.getFetchClient();
-        const response = await fetchClient(url,
-            {
-                headers: this.options.headers
-            });
+        const response = await fetchClient(url, {
+            headers: this.options.headers
+        });
         if (!response.ok) {
 
             // capture error
