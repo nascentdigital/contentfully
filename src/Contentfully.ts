@@ -104,7 +104,7 @@ export class Contentfully {
         // parse single top-level entry
         if (isUndefined(json.items)) {
             log.debug("parsing single top-level entry");
-            return this._parseEntry(json, [], multiLocale)
+            return this._parseEntry({}, json, [], multiLocale)
         }
 
         log.debug("parsing entry collection");
@@ -254,8 +254,16 @@ export class Contentfully {
             // process entry if not yet transformed
             if (model._deferred) {
 
+                // return model if in progress
+                if (model._model) {
+                    return model._model;
+                }
+
+                // create in progress model
+                model._model = {};
+
                 // update entry with parsed value
-                assign(model, (this._parseEntry(model._deferred, links, multiLocale)));
+                assign(model, this._parseEntry(model._model, model._deferred, links, multiLocale));
 
                 // prune deferral
                 delete model._deferred;
@@ -266,13 +274,12 @@ export class Contentfully {
         });
     }
 
-    private _parseEntry(entry: any, links: any, multiLocale: boolean) {
-
-        // create model
-        const model: any = {};
+    private _parseEntry(model: any, entry: any, links: any, multiLocale: boolean) {
 
         // bind metadata to model
         this._bindMetadata(entry, model);
+
+        log.debug("parsing entry: ", model._id);
 
         // transform entry fields to model
         forEach(entry.fields, (value, key) => {
@@ -436,18 +443,22 @@ export class Contentfully {
         // get link (or bail if it isn't mapped)
         let link = links[modelId];
         if (!link) {
-            return
+            return;
         }
 
         // resolve link if not processed
         if (link._deferred) {
 
-            // add link content type metadata
-            const deferred = link._deferred;
-            const parsed = this._parseEntry(deferred, links, !isUndefined(locale));
+            // return model if in progress
+            if (link._model) {
+                return link._model;
+            }
 
-            // update entry with parsed value
-            assign(link, parsed);
+            // create in progress model
+            link._model = {};
+
+            // parse and update link
+            const parsed = assign(link, this._parseEntry(link._model, link._deferred, links, !isUndefined(locale)));
 
             // prune deferral
             delete link._deferred;

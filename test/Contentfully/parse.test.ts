@@ -1,10 +1,13 @@
 // imports
 import "jest";
+import {Scribe} from "@nascentdigital/scribe";
 import {
     ContentfullyMock,
     TestData
 } from "../util";
 
+
+Scribe.setLogLevel("*", "debug");
 
 // suite
 describe("Contentfully.getModels()", () => {
@@ -33,7 +36,8 @@ describe("Contentfully.getModels()", () => {
 
             // validate
             expect(result).toBeDefined();
-            expect(result).toHaveLength(1);
+            expect(result.items).toBeDefined();
+            expect(result.items).toHaveLength(1);
         });
     });
 });
