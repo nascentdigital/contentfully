@@ -39,5 +39,21 @@ describe("Contentfully.getModels()", () => {
             expect(result.items).toBeDefined();
             expect(result.items).toHaveLength(1);
         });
+
+        test("should not leave any residue (e.g. _model or _deferred)", async () => {
+
+            // prepare mock
+            const contentfully = ContentfullyMock.create(testData);
+
+            // execute query
+            const result = await contentfully.getModels({});
+
+            // validate
+            const model = result.items[0];
+            expect(model).toBeDefined();
+            expect(model._id).toBeDefined();
+            expect(model._model).toBeUndefined();
+            expect(model._deferred).toBeUndefined();
+        });
     });
 });

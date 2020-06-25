@@ -266,6 +266,7 @@ export class Contentfully {
                 assign(model, this._parseEntry(model._model, model._deferred, links, multiLocale));
 
                 // prune deferral
+                delete model._model;
                 delete model._deferred;
             }
 
@@ -458,9 +459,10 @@ export class Contentfully {
             link._model = {};
 
             // parse and update link
-            const parsed = assign(link, this._parseEntry(link._model, link._deferred, links, !isUndefined(locale)));
+            assign(link, this._parseEntry(link._model, link._deferred, links, !isUndefined(locale)));
 
             // prune deferral
+            delete link._model;
             delete link._deferred;
         }
 
