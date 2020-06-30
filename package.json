@@ -1,6 +1,6 @@
 {
     "name": "contentfully",
-    "version": "1.8.0",
+    "version": "1.9.0",
     "description": "A simple but performant REST client for Contentful.",
     "keywords": [
         "contentful",

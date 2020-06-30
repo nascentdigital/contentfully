@@ -36,9 +36,16 @@ export class ContentfulClient {
         // initialize instance variables
         this.options = options;
 
-        const serverUrl = options.preview
-            ? ContentfulClient.PREVIEW_URL
-            : ContentfulClient.PRODUCTION_URL;
+        let serverUrl: string;
+
+        if (options.apiUrl) {
+            serverUrl = options.apiUrl.toJSON();
+        } else {
+            serverUrl = options.preview
+                ? ContentfulClient.PREVIEW_URL
+                : ContentfulClient.PRODUCTION_URL;
+        }
+
         this._spaceUri = `${serverUrl}/spaces/${options.spaceId}/environments/${options.environmentId || "master"}`;
 
         log.debug("setting Contentful endpoint to: ", this._spaceUri);
@@ -81,7 +88,9 @@ export class ContentfulClient {
 
         // fetch data (throw if there is an error)
         const fetchClient = this.getFetchClient();
-        const response = await fetchClient(url);
+        const response = await fetchClient(url, {
+            headers: this.options.headers
+        });
         if (!response.ok) {
 
             // capture error
