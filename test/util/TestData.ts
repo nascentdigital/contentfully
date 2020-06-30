@@ -1,14 +1,18 @@
 // imports
 import EntryOneFlatJson from "../data/entry-one_flat.json";
 import EntriesOneDeepJson from "../data/entries-one_deep.json";
+import EntriesOneDeepRecursiveJson from "../data/entries-one_deep_recursive.json";
 import EntriesOneDeepRichTextJson from "../data/entries-rich_text.json";
 
 
+// TODO: change this to be an array of tuples that use regex patters (scaled better)
 // constants
 const TEST_DATA: Readonly<Record<string, any>> = {
     "single-flat": EntryOneFlatJson,
     "collection-one_deep": EntriesOneDeepJson,
     "collection-one_deep_shared": EntriesOneDeepJson,
+    "collection-one_deep_recursive": EntriesOneDeepRecursiveJson,
+    "collection-one_deep_shared_recursive": EntriesOneDeepRecursiveJson,
     "collection-one_deep_rich_text": EntriesOneDeepRichTextJson
 };
 
@@ -69,7 +73,7 @@ export type TestDataOptions = {
 
     /**
      * Ensures test data contains rich text elements with all possible configurations.
-     * 
+     *
      * Configurations: "embedded-entry-block" | "embedded-asset-block" | "embedded-entry-inline";
      */
     richText?: boolean;
@@ -194,7 +198,7 @@ export class TestData {
                 // fail if apply when there are not multiple results
                 if (options.resultCount === "none"
                     || options.resultCount === "one") {
-                    console.log(`"sharedRefs" only applies when "resultCount" > 1`);
+                    console.log(`"siblingRefs" only applies when "resultCount" > 1`);
                     invalidOptions = true;
                 }
                 else {

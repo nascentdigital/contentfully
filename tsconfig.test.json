@@ -11,19 +11,21 @@
         "declaration": true,
         "declarationMap": true,
         "sourceMap": true,
-        "rootDir": "./src",
+        "rootDir": "./",
         "outDir": "./dist/",
         "strict": true,
-        "types": [],
+        "types": [
+            "jest"
+        ],
         "esModuleInterop": true,
         "resolveJsonModule": true,
         "skipLibCheck": true
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "./test/**/*"
     ],
     "exclude": [
-        "node_modules",
-        "./test/**/*"
+        "node_modules"
     ]
 }

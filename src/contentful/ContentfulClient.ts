@@ -1,3 +1,5 @@
+// imports
+import {Scribe} from "@nascentdigital/scribe";
 import assign from "lodash/assign";
 import get from "lodash/get";
 import keys from "lodash/keys";
@@ -13,6 +15,11 @@ import {
 } from "../errors";
 
 
+// constants
+const log = Scribe.getLog("contentfully:ContentfulClient");
+
+
+// class definition
 export class ContentfulClient {
 
     private static readonly PREVIEW_URL = "https://preview.contentful.com";
@@ -23,6 +30,8 @@ export class ContentfulClient {
 
 
     public constructor(options: ContentfulClientOptions) {
+
+        log.trace("constructing client with options: ", options);
 
         // initialize instance variables
         this.options = options;
@@ -38,6 +47,8 @@ export class ContentfulClient {
         }
 
         this._spaceUri = `${serverUrl}/spaces/${options.spaceId}/environments/${options.environmentId || "master"}`;
+
+        log.debug("setting Contentful endpoint to: ", this._spaceUri);
     }
 
     public getContentModels(): Promise<any> {
@@ -53,6 +64,8 @@ export class ContentfulClient {
     }
 
     public async query(path: string, parameters = {}) {
+
+        log.trace("executing query: ", path, parameters);
 
         // create request url
         let url = this._spaceUri;
@@ -70,6 +83,8 @@ export class ContentfulClient {
             url += index > 0 ? "&" : "?";
             url += key + "=" + encodeURIComponent(query[key]);
         });
+
+        log.debug("fetching content with query: ", query);
 
         // fetch data (throw if there is an error)
         const fetchClient = this.getFetchClient();
