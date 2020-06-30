@@ -14,7 +14,7 @@
         "rootDir": "./src",
         "outDir": "./dist/",
         "strict": true,
-        "types": [],
+        "types": ["jest"],
         "esModuleInterop": true,
         "resolveJsonModule": true,
         "skipLibCheck": true
