@@ -11,6 +11,7 @@ import {
     InvalidLocaleError,
     InvalidRequestError,
     NotFoundError,
+    RateLimitError,
     ServerError
 } from "../errors";
 
@@ -143,6 +144,9 @@ export class ContentfulClient {
 
                 case "NotFound":
                     return new NotFoundError(errorObject.message);
+
+                case "RateLimitExceeded":
+                    return new RateLimitError(errorObject.message);
 
                 default:
                     return new ServerError(errorObject.message);

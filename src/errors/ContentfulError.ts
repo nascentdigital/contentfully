@@ -13,5 +13,9 @@ export class ContentfulError<T extends ContentfulError<T>> extends Error {
 
         // capture stack
         Error.captureStackTrace(this, ErrorType);
+
+        // bind name based on constructor
+        const object = this as any;
+        this.name = object.constructor.name;
     }
 }
