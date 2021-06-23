@@ -1,3 +1,4 @@
-export {Asset} from "./Asset";
-export {ContentfulClient} from "./ContentfulClient";
-export {ContentfulClientOptions} from "./ContentfulClientOptions";
+export * from "./Asset";
+export * from "./ContentfulClient";
+export * from "./ContentfulClientOptions";
+export * from "./ExponentialBackoffHandler";

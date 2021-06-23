@@ -17,8 +17,9 @@
 - Supports custom transforms of assets URLs to allow caching or rewrites.
 - Supports full [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/search-parameters),
   including custom environments and preview servers.
-- Typescript 3 support.
+- Typescript 4 support.
 - React Native support.
+- **Customizable retries when Contentful rate-limit throttling occurs.**
 
 
 ## Installation
@@ -49,13 +50,14 @@ You can get these by doing the following after logging into the
 Getting started is really easy. First you'll need to create and configure a
 `ContentfulClient` instance.
 
- | Option        | Type    | Required? | Default            |
- |---------------|---------|-----------|--------------------|
- | accessToken   | string  | YES       |                    |
- | spaceId       | string  | YES       |                    |
- | environmentId | string  | NO        | master             |
- | preview       | boolean | NO        | false              |
- | fetch         | any     | NO        | fetch / node-fetch |
+ | Option             | Type    | Required? | Default            |
+ |--------------------|----------|-----------|--------------------|
+ | accessToken        | string   | YES       |                    |
+ | spaceId            | string   | YES       |                    |
+ | environmentId      | string   | NO        | master             |
+ | preview            | boolean  | NO        | false              |
+ | fetch              | Function | NO        | fetch / node-fetch |
+ | onRateLimitError   | Function | NO        | () => false        |
 
  Once configured, pass the client into a `Contentfully` instance:
 
@@ -64,8 +66,13 @@ import {ContentfulClient, Contentfully} from "contentfully";
 
 // create the contentful client (we can use this later)
 const contentfulClient = new ContentfulClient({
+
+    // credentials for the space
     accessToken: "YOUR_API_KEY",
-    spaceId:     "YOUR_SPACE_ID"
+    spaceId:     "YOUR_SPACE_ID",
+
+    // setup a handler to auto-retry when a rate-limit error occurs
+    onRateLimitError: ExponentialBackoffHandler.create()
 });
 
 // create a Contentfully instance
@@ -218,6 +225,30 @@ Which would return models mapped by locale:
     }
 }
 ```
+
+
+## Enabling `experimental` features
+
+There are a couple of early-access features that have been included in the `v1.x.x` builds which you can enable as follows:
+
+```javascript
+// create a Contentfully instance with experimental features enabled
+const contentfully = new Contentfully(contentfulClient, {
+    experimental: true
+});
+```
+
+This gets you access to:
+
+- Consolidates metadata (i.e. `type`, `revision`, `createdAt`, `updatedAt`) into a new `_metadata` property of each
+  entity, with dates translated to native Javascript `Date` objects.
+- *More to come...*
+
+
 ## IE Support
 
-By default, `Contentfully` uses the native fetch client in the browser, otherwise it will use `node-fetch`. Since IE does not have `fetch` native to it, use the `fetch` option with something like [`isomorphic-fetch`](https://www.npmjs.com/package/isomorphic-fetch) when instantiating `ContentfulClient`.
+> **TL;DR** - We don't support IE.
+
+By default, `Contentfully` uses the native fetch client in the browser, otherwise it will use `node-fetch`. Since IE does
+not have `fetch` native to it, use the `fetch` option with something like [`isomorphic-fetch`](https://www.npmjs.com/package/isomorphic-fetch)
+when instantiating `ContentfulClient`.

@@ -1,9 +1,10 @@
+import {Class} from "type-fest";
 
 
 export class ContentfulError<T extends ContentfulError<T>> extends Error {
 
     protected constructor(message: string,
-                          private ErrorType: new(message: string) => ContentfulError<T>) {
+                          private ErrorType: Class<Error>) {
 
         // call base
         super(message);

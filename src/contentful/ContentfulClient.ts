@@ -82,18 +82,66 @@ export class ContentfulClient {
 
         // fetch data (throw if there is an error)
         const fetchClient = this.getFetchClient();
-        const response = await fetchClient(url);
-        if (!response.ok) {
 
-            // capture error
-            const errorData = await response.text();
+        // process request
+        let attempt = 0;
+        do {
 
-            // parse error (always throws)
-            throw this.parseError(errorData);
-        }
+            // track the attempt
+            ++attempt;
 
-        // extract response
-        return await response.json();
+            // try to make request
+            try {
+
+                // send request and wait for response
+                const response = await fetchClient(url);
+
+                // handle any bad responses
+                if (!response.ok) {
+
+                    // capture error
+                    const errorData = await response.text();
+
+                    // parse error (always throws)
+                    throw this.parseError(errorData, response.headers);
+                }
+
+                // extract response
+                return await response.json();
+            }
+
+            // handle rate-limit error
+            catch (e) {
+
+                // try to recover if possible
+                if (e instanceof RateLimitError && this.options.onRateLimitError) {
+
+                    // invoke callback
+                    const reaction = await this.options.onRateLimitError(attempt, e.waitTime);
+
+                    // retry immediately if required
+                    if (reaction === true) {
+                        continue;
+                    }
+
+                    // or retry after a delay
+                    else if (typeof(reaction) === "number" && reaction > 0) {
+
+                        // wait for timeout before retrying
+                        await new Promise((resolve) => {
+                            setTimeout(() => resolve(true), reaction)
+                        });
+
+                        // retry
+                        continue;
+                    }
+                }
+
+                // rethrow if we haven't continued already
+                throw e;
+            }
+
+        } while (true);
     }
 
     private getFetchClient(): any {
@@ -114,7 +162,7 @@ export class ContentfulClient {
         }
     }
 
-    private parseError(errorData: string): Error {
+    private parseError(errorData: string, headers: Record<string, any>): Error {
 
         // parse error
         try {
@@ -145,8 +193,10 @@ export class ContentfulClient {
                 case "NotFound":
                     return new NotFoundError(errorObject.message);
 
-                case "RateLimitExceeded":
-                    return new RateLimitError(errorObject.message);
+                case "RateLimitExceeded": {
+                    const waitTime = parseInt(headers.get("X-Contentful-RateLimit-Reset") || 1, 10) * 1000;
+                    return new RateLimitError(errorObject.message, waitTime);
+                }
 
                 default:
                     return new ServerError(errorObject.message);
