@@ -27,45 +27,45 @@ export type RateLimitHandler = (attempt: number, waitTime: number) => RateLimitR
  */
 export interface ContentfulClientOptions {
 
-    /**
-     * The Delivery API access token for a specific contentful space.
-     */
-    readonly accessToken: string;
+  /**
+   * The Delivery API access token for a specific contentful space.
+   */
+  readonly accessToken: string;
 
-    /**
-     * The Contentful space identifier.
-     */
-    readonly spaceId: string;
+  /**
+   * The Contentful space identifier.
+   */
+  readonly spaceId: string;
 
-    /**
-     * The specific Contentful environment to access.
-     *
-     * @default "master"
-     */
-    readonly environmentId?: string;
+  /**
+   * The specific Contentful environment to access.
+   *
+   * @default "master"
+   */
+  readonly environmentId?: string;
 
-    /**
-     * Points to the Preview API instead of the Delivery API when `true`.
-     *
-     * @default false
-     */
-    readonly preview?: boolean;
+  /**
+   * Points to the Preview API instead of the Delivery API when `true`.
+   *
+   * @default false
+   */
+  readonly preview?: boolean;
 
-    /**
-     * Specifies which [fetch](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch)
-     * implementation to use for HTTP requests.  This function can be duck-typed via a custom mixin as long as the basic
-     * `fetch()` interface is provided.
-     *
-     * @default global.fetch
-     */
-    readonly fetch?: any;
+  /**
+   * Specifies which [fetch](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch)
+   * implementation to use for HTTP requests.  This function can be duck-typed via a custom mixin as long as the basic
+   * `fetch()` interface is provided.
+   *
+   * @default global.fetch
+   */
+  readonly fetch?: any;
 
-    /**
-     * A rate-limit error handler that can be used to retry requests that fail due to rate-limits being exceeded for
-     * a specific request.
-     *
-     * @default () => false
-     * @see RateLimitHandler
-     */
-    readonly onRateLimitError?: RateLimitHandler;
+  /**
+   * A rate-limit error handler that can be used to retry requests that fail due to rate-limits being exceeded for
+   * a specific request.
+   *
+   * @default () => false
+   * @see RateLimitHandler
+   */
+  readonly onRateLimitError?: RateLimitHandler;
 }
