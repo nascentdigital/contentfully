@@ -68,7 +68,7 @@ export class Contentfully {
   public readonly options: Readonly<Partial<ContentfullyOptions>>
 
 
-  public constructor(client: ContentfulClient, options: Readonly<Partial<ContentfullyOptions>> = DEFAULT_OPTIONS) {
+  public constructor(client: IContentfulClient, options: Readonly<Partial<ContentfullyOptions>> = DEFAULT_OPTIONS) {
 
     // initialize instance variables
     this.contentfulClient = client
