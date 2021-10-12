@@ -13,6 +13,7 @@ import isString from 'lodash/isString'
 import isUndefined from 'lodash/isUndefined'
 import map from 'lodash/map'
 import {ContentfulClient, IContentfulClient} from './contentful'
+import {ContentModel} from './entities'
 import {
   MediaTransform,
   QueryOptions
@@ -75,7 +76,10 @@ export class Contentfully {
     this.options = options
   }
 
-  public async getEntry<T extends KeyValueMap>(entryId: string, locale?: string): Promise<EntryProps<T>> {
+  public async getEntry<T extends KeyValueMap & ContentModel>(
+    entryId: string,
+    locale?: string
+  ): Promise<EntryProps<T>> {
 
     // determine if the query is multi-locale
     const multiLocale = locale !== undefined && locale === '*'
@@ -87,7 +91,10 @@ export class Contentfully {
     return this._parseEntry({}, entry, [], multiLocale)
   }
 
-  public async getEntries<T extends KeyValueMap>(query: EntryQueryOptions = {}, options: QueryOptions = {}): Promise<QueryResult<T>> {
+  public async getEntries<T extends KeyValueMap & ContentModel>(
+    query: EntryQueryOptions = {},
+    options: QueryOptions = {}
+  ): Promise<QueryResult<T>> {
 
     // create query
     const entries = await this.contentfulClient.getEntries<T>(Contentfully.createQuery(query))
@@ -122,14 +129,16 @@ export class Contentfully {
   }
 
   private _parseAssetByLocale(entry: any) {
+
     // initialize locale map of entries
     const locales: any = {}
 
     forEach(entry.fields, (field, key) => {
+
       // pull all locales from field
       const fieldLocales = keys(field)
-
       forEach(fieldLocales, locale => {
+
         // initialize locale (if undefined) with sys and fields
         if (!locales[locale]) {
           locales[locale] = {
@@ -137,6 +146,7 @@ export class Contentfully {
             fields: {}
           }
         }
+
         // set field
         locales[locale].fields[key] = field[locale]
       })
