@@ -1,6 +1,6 @@
 export interface ContentMetadata {
   type: string
   revision: number
-  createdAt: Date
-  updatedAt: Date
+  createdAt: number
+  updatedAt: number
 }

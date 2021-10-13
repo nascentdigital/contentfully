@@ -329,11 +329,12 @@ export class Contentfully {
 
     // use experimental metadata format
     if (this.options.experimental) {
-      const metadata: any = model._metadata = {}
-      metadata.type = sys.contentType.sys.id
-      metadata.revision = sys.revision
-      metadata.createdAt = sys.createdAt ? new Date(sys.createdAt) : undefined
-      metadata.updatedAt = sys.updatedAt ? new Date(sys.updatedAt) : undefined
+      model._metadata = {
+        type: sys.contentType.sys.id,
+        revision: sys.revision,
+        createdAt: sys.createdAt ? new Date(sys.createdAt).getTime() : 0,
+        updatedAt: sys.updatedAt ? new Date(sys.updatedAt).getTime() : 0
+      }
     }
 
     // or use legacy format
@@ -522,7 +523,7 @@ export class Contentfully {
     // create the object that will hold all the items for each locale
     const localeItems = {} as any
 
-    // itterate each locale
+    // iterate each locale
     for (let locale of localeCodes) {
 
       // the box that will hold the properties for this locale
@@ -548,7 +549,7 @@ export class Contentfully {
           }
           const {context, item, depth} = current
 
-          // itterate each key and value on the node item
+          // iterate each key and value on the node item
           for (let [key, valueObj] of Object.entries(item)) {
             // find the locale value or fallback to default or use the value of the prop
             let value = valueObj as any
