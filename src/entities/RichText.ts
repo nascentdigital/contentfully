@@ -1,13 +1,17 @@
-import {EntryFields, RichTextNodeType} from 'contentful'
+import {RichTextNodeType} from 'contentful'
 import {JsonObject} from 'type-fest'
 
 
-export type RichTextMarkType = 'bold' | 'underline' | 'code' | 'italic'
-
 export interface RichText {
-  nodeType: RichTextNodeType
+  nodeType: RichText.NodeType
   content?: RichText[]
   value?: string
-  marks?: RichTextMarkType[]
+  marks?: RichText.MarkType[]
   data?: JsonObject
+}
+
+export namespace RichText {
+
+  export type MarkType = 'bold' | 'underline' | 'code' | 'italic'
+  export type NodeType = RichTextNodeType
 }
