@@ -388,20 +388,17 @@ export class Contentfully {
     return this._dereferenceLink(value, links, locale)
   }
 
-  private _parseRichTextValue(value: EntryFields.RichText, links: any, locale?: string) {
+  private _parseRichTextValue(value: EntryFields.RichText, links: any, locale?: string): RichText[] | undefined {
 
     // resolve content list
     const {content} = value
 
     // skip parsing if no content
-    if (!isArray(content) || !content.length) {
-      return value
+    if (!content.length) {
+      return undefined
     }
 
-    return {
-      ...value,
-      content: this._parseRichTextContent(content, links, locale)
-    }
+    return this._parseRichTextContent(content, links, locale)
   }
 
   private _parseRichTextContent(items: RichTextContent[], links: any, locale?: string): RichText[] {
@@ -426,7 +423,7 @@ export class Contentfully {
       }
 
       // bind marks (if any)
-      if (marks.length > 0) {
+      if (marks?.length) {
         richText.marks = marks.map(mark => mark.type)
       }
 
