@@ -1,28 +1,22 @@
 // imports
 import {Scribe} from '@nascentdigital/scribe'
-import {KeyValueMap, EntryProps, QueryOptions as EntryQueryOptions} from 'contentful-management/types'
+import {EntryFields, RichTextContent} from 'contentful'
+import {EntryProps, KeyValueMap, QueryOptions as EntryQueryOptions} from 'contentful-management/types'
 import assign from 'lodash/assign'
 import compact from 'lodash/compact'
-import pick from 'lodash/pick'
-import get from 'lodash/get'
-import keys from 'lodash/keys'
 import forEach from 'lodash/forEach'
+import get from 'lodash/get'
 import isArray from 'lodash/isArray'
 import isEmpty from 'lodash/isEmpty'
 import isString from 'lodash/isString'
 import isUndefined from 'lodash/isUndefined'
+import keys from 'lodash/keys'
 import map from 'lodash/map'
-import {ContentfulClient, IContentfulClient} from './contentful'
-import {ContentModel} from './entities'
-import {
-  MediaTransform,
-  QueryOptions
-} from './QueryOptions'
+import pick from 'lodash/pick'
+import {IContentfulClient} from './contentful'
+import {ContentModel, RichText} from './entities'
+import {MediaTransform, QueryOptions} from './QueryOptions'
 import {QueryResult} from './QueryResult'
-import {
-  RichText,
-  RichTextRaw
-} from './entities/RichText'
 
 
 // constants
@@ -394,7 +388,8 @@ export class Contentfully {
     return this._dereferenceLink(value, links, locale)
   }
 
-  private _parseRichTextValue(value: { content: Array<RichTextRaw> }, links: any, locale?: string) {
+  private _parseRichTextValue(value: EntryFields.RichText, links: any, locale?: string) {
+
     // resolve content list
     const {content} = value
 
@@ -409,29 +404,44 @@ export class Contentfully {
     }
   }
 
-  private _parseRichTextContent(items: Array<RichTextRaw>, links: any, locale?: string): Array<RichText> {
-    return items.map((item) => {
-      let contentList = item.content
+  private _parseRichTextContent(items: RichTextContent[], links: any, locale?: string): RichText[] {
 
-      // handle inline embedded entries
-      if (contentList && contentList.length > 0) {
-        // parse recursively for deep entries
-        contentList = this._parseRichTextContent(contentList, links, locale)
+    // convert content items, recursively linking children
+    return items.map(({
+      nodeType,
+      content,
+      data,
+      value,
+      marks
+    }) => {
+
+      // create baseline rich text
+      const richText: RichText = {
+        nodeType
       }
 
-      // handle block embedded entries or assets
-      if (item.data && item.data.target && item.data.target.sys) {
-        return {
-          ...item,
-          data: this._dereferenceLink(item.data.target, links, locale),
-          content: contentList
-        }
+      // bind value (if any)
+      if (value !== undefined) {
+        richText.value = value
       }
 
-      return {
-        ...item,
-        content: contentList
+      // bind marks (if any)
+      if (marks.length > 0) {
+        richText.marks = marks.map(mark => mark.type)
       }
+
+      // bind entity/assets (if any)
+      if (data?.target?.sys.linkType) {
+        richText.data = this._dereferenceLink(data.target, links, locale)
+      }
+
+      // recursively bind content (if any)
+      if (content?.length) {
+        richText.content = this._parseRichTextContent(content, links, locale)
+      }
+
+      // return rich text
+      return richText
     })
   }
 

@@ -1,20 +1,13 @@
-// expected raw rich text field
-export interface RichTextRaw {
-  data: {
-      target: {
-          sys: {
-              id: string,
-              type: string,
-              linkType: string
-          }
-      }
-  },
-  nodeType: string,
-  content?: Array<RichTextRaw>
-};
+import {EntryFields, RichTextNodeType} from 'contentful'
+import {JsonObject} from 'type-fest'
 
-// transformed richtext
-export interface RichText extends RichTextRaw {
-  data: any,
-  content?: Array<RichText>
-};
+
+export type RichTextMarkType = 'bold' | 'underline' | 'code' | 'italic'
+
+export interface RichText {
+  nodeType: RichTextNodeType
+  content?: RichText[]
+  value?: string
+  marks?: RichTextMarkType[]
+  data?: JsonObject
+}
