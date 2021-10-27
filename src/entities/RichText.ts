@@ -13,5 +13,5 @@ export interface RichText {
 export namespace RichText {
 
   export type MarkType = 'bold' | 'underline' | 'code' | 'italic'
-  export type NodeType = RichTextNodeType
+  export type NodeType = RichTextNodeType | 'embedded-asset-block'
 }
