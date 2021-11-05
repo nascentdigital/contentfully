@@ -427,8 +427,13 @@ export class Contentfully {
         richText.marks = marks.map(mark => mark.type)
       }
 
+      // bind basic URL
+      if (data?.uri) {
+        richText.data = { uri: data.uri }
+      }
+
       // bind entity/assets (if any)
-      if (data?.target?.sys.linkType) {
+      else if (data?.target?.sys.linkType) {
         richText.data = this._dereferenceLink(data.target, links, locale)
       }
 
