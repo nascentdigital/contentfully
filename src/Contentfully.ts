@@ -4,7 +4,6 @@ import {EntryFields, RichTextContent} from 'contentful'
 import {EntryProps, KeyValueMap, QueryOptions as EntryQueryOptions} from 'contentful-management/types'
 import assign from 'lodash/assign'
 import compact from 'lodash/compact'
-import forEach from 'lodash/forEach'
 import get from 'lodash/get'
 import isArray from 'lodash/isArray'
 import isEmpty from 'lodash/isEmpty'
@@ -126,13 +125,11 @@ export class Contentfully {
 
     // initialize locale map of entries
     const locales: any = {}
-
-    forEach(entry.fields, (field, key) => {
+    for (const [key, field] of Object.entries<any>(entry.fields)) {
 
       // pull all locales from field
       const fieldLocales = keys(field)
-      forEach(fieldLocales, locale => {
-
+      for (const locale of fieldLocales) {
         // initialize locale (if undefined) with sys and fields
         if (!locales[locale]) {
           locales[locale] = {
@@ -143,8 +140,8 @@ export class Contentfully {
 
         // set field
         locales[locale].fields[key] = field[locale]
-      })
-    })
+      }
+    }
 
     return locales
   }
@@ -166,22 +163,24 @@ export class Contentfully {
       // map asset to locale
       if (multiLocale) {
         const locales = this._parseAssetByLocale(asset)
-        forEach(locales, async (entry, locale) => {
+        for (const [locale, entry] of Object.entries<any>(locales)) {
           try {
             if (entry.fields.file) {
+
               // transform asset to media
               const transformed = await this._toMedia(sys, entry.fields, mediaTransform)
 
               // prune id
               delete transformed._id
 
+              // map locale data
               media[locale] = transformed
             }
           }
           catch (e) {
             console.error('[_createLinks] error with creating media', e)
           }
-        })
+        }
       }
       else {
         media = await this._toMedia(sys, asset.fields, mediaTransform)
@@ -278,7 +277,7 @@ export class Contentfully {
     log.debug('parsing entry: ', model._id)
 
     // transform entry fields to model
-    forEach(entry.fields, (value, key) => {
+    for (const [key, value] of Object.entries<any>(entry.fields)) {
 
       // parse values if multi-locale query
       if (multiLocale) {
@@ -309,7 +308,7 @@ export class Contentfully {
           model[key] = parsed
         }
       }
-    })
+    }
 
     // return parsed model
     return model
@@ -344,11 +343,13 @@ export class Contentfully {
     let values: any = {}
     // pull all locales
     const locales = keys(value)
-    forEach(locales, locale => {
+    for (const locale of locales) {
+
       // parse array of value
       if (isArray(value[locale])) {
         values[locale] = compact(map(value[locale], item => this._parseValue(item, links, locale)))
       }
+
       // or parse value
       else {
         const sys = value[locale].sys
@@ -363,7 +364,7 @@ export class Contentfully {
           values[locale] = this._dereferenceLink(value, links, locale)
         }
       }
-    })
+    }
 
     return values
   }
