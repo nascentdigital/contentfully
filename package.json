@@ -25,6 +25,7 @@
         "dev": "tsc -w"
     },
     "dependencies": {
+        "@contentful/rich-text-html-renderer": "^15.11.1",
         "@nascentdigital/scribe": "^0.11.2",
         "contentful": "^9.1.3",
         "contentful-management": "^7.44.2",

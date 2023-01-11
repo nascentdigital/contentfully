@@ -16,7 +16,7 @@ import {IContentfulClient} from './contentful'
 import {ContentModel, RichText} from './entities'
 import {MediaTransform, QueryOptions} from './QueryOptions'
 import {QueryResult} from './QueryResult'
-
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 // constants
 export const DEFAULT_OPTIONS: Readonly<ContentfullyOptions> = {
@@ -60,6 +60,7 @@ export class Contentfully {
 
   public readonly contentfulClient: IContentfulClient
   public readonly options: Readonly<Partial<ContentfullyOptions>>
+  public renderRichtext: boolean
 
 
   public constructor(client: IContentfulClient, options: Readonly<Partial<ContentfullyOptions>> = DEFAULT_OPTIONS) {
@@ -67,6 +68,7 @@ export class Contentfully {
     // initialize instance variables
     this.contentfulClient = client
     this.options = options
+    this.renderRichtext = false
   }
 
   public async getEntry<T extends KeyValueMap & ContentModel>(
@@ -103,6 +105,9 @@ export class Contentfully {
     // parse includes
     const links = await this._createLinks(entries, multiLocale, options.mediaTransform)
 
+    if(options.renderRichtext) {
+      this.renderRichtext = options.renderRichtext
+    }
     // parse core entries
     let items = this._parseEntries(entries.items, links, multiLocale)
 
@@ -389,7 +394,7 @@ export class Contentfully {
     return this._dereferenceLink(value, links, locale)
   }
 
-  private _parseRichTextValue(value: EntryFields.RichText, links: any, locale?: string): RichText[] | undefined {
+  private _parseRichTextValue(value: any, links: any, locale?: string): RichText[] | undefined | string{
 
     // resolve content list
     const {content} = value
@@ -397,6 +402,10 @@ export class Contentfully {
     // skip parsing if no content
     if (!content.length) {
       return undefined
+    }
+
+    if(this.renderRichtext) {
+      return documentToHtmlString(value)
     }
 
     return this._parseRichTextContent(content, links, locale)
