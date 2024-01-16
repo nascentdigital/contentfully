@@ -6,7 +6,8 @@ import {
     findEntry,
     TestData
 } from "../util";
-import { Media, RichText, RichTextRaw } from "../../src/entities";
+import {Media, RichText} from "../../src/entities";
+import {Contentfully} from '../../src';
 
 // types
 type EmbeddedEntryBlockNode = 'embedded-entry-block'
@@ -45,7 +46,7 @@ describe("Contentfully richtext parser", () => {
         richText: true
     });
 
-    let contentfully: any;
+    let contentfully: Contentfully;
 
     beforeEach(async () => {
         // prepare mock
@@ -87,7 +88,7 @@ describe("Contentfully richtext parser", () => {
         }
     }
 
-    const getRawRichTextField = (testData: TestData): RichTextRaw => {
+    const getRawRichTextField = (testData: TestData): RichText => {
         return testData.data.items[0].fields.richText
     }
 
@@ -95,8 +96,8 @@ describe("Contentfully richtext parser", () => {
 
         // get referenced object that should be embedded from test data
         const { embeddedEntry, nodeIndex } = getExpectedEmbeddedEntryBlock(testData);
-
-        const result = await contentfully.getModels({});
+        
+        const result = await contentfully.getEntries({});
 
         // get rich text node that is referencing an embedded-entry-block
         const richTextNode: EmbeddedEntryBlock = result.items[0].richText.content[nodeIndex];
@@ -110,7 +111,7 @@ describe("Contentfully richtext parser", () => {
         // get referenced object that should be embedded from test data
         const { embeddedAsset, nodeIndex } = getExpectedEmbeddedAsset(testData);
 
-        const result = await contentfully.getModels({});
+        const result = await contentfully.getEntries({});
 
         // get rich text node that is referencing an embedded-asset-block
         const richTextNode: EmbeddedAssetBlock = result.items[0].richText.content[nodeIndex];
@@ -135,7 +136,7 @@ describe("Contentfully richtext parser", () => {
         // get referenced object that should be embedded from test data
         const { embeddedInlineEntry, nodeIndex, contentIndex } = getExpectedShallowEmbeddedInlineEntry(testData);
 
-        const result = await contentfully.getModels({});
+        const result = await contentfully.getEntries({});
 
         // get rich text node that is referencing an embedded-entry-inline
         const richTextNode: EmbeddedEntryInline = result.items[0].richText.content[nodeIndex].content[contentIndex];
@@ -149,7 +150,7 @@ describe("Contentfully richtext parser", () => {
         // get referenced object that should be embedded from test data
         const { embeddedInlineEntry, nodeIndex, contentIndex } = getExpectedDeeplyEmbeddedInlineEntry(testData);
 
-        const result = await contentfully.getModels({});
+        const result = await contentfully.getEntries({});
 
         // get rich text node that is referencing a deeply embedded-entry-inline
         const richTextNode: EmbeddedEntryInline = result.items[0].richText.content[nodeIndex].content[0].content[0].content[contentIndex];
@@ -161,10 +162,10 @@ describe("Contentfully richtext parser", () => {
 
     it("should not overwrite the original properties of the richtext field", async () => {
         
-        const result = await contentfully.getModels({});
+        const result = await contentfully.getEntries({});
 
         // get rich text field
-        const { richText }: { richText: RichText } = result.items[0]
+        const richTexts = result.items[0].richText as RichText[]
 
         // get raw rich text field from test data
         const rawRichText = getRawRichTextField(testData)
@@ -172,7 +173,9 @@ describe("Contentfully richtext parser", () => {
         // get original property keys
         const rawRichTextKeys = Object.keys(rawRichText)
 
-        // transformed rich text should have the same object keys as raw richtext
-        expect(Object.keys(richText)).toEqual(expect.arrayContaining(rawRichTextKeys))
-    }) 
+        // transformed rich text should have the same object keys as raw richtext for each item
+        for (const richText of richTexts) {
+            expect(Object.keys(richText)).toEqual(expect.arrayContaining(rawRichTextKeys))
+        }
+    });
 })

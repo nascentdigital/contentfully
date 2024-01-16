@@ -15,7 +15,7 @@ function expectMetadataDate(value: any, experimental: boolean = false) {
     expect(value).toBeDefined();
 
     if (experimental) {
-        expect(value).toBeInstanceOf(Date);
+        expect(typeof value).toBe("number");
     }
     else {
         expect(typeof value).toBe("string");
@@ -26,18 +26,24 @@ function expectRevision(json: any, entryId: string, value: number) {
     const entry = findEntry(json, entryId);
     expect(entry.sys.revision).toBe(value);
 }
-function expectCreatedAt(json: any, entryId: string, value: string | Date) {
+function expectCreatedAt(json: any, entryId: string, value: string | Date | number) {
     const entry = findEntry(json, entryId);
-    if (value instanceof Date) {
+    if (typeof value === 'number') {
+        expect(new Date(entry.sys.createdAt).getTime()).toBe(value);
+    }
+    else if (value instanceof Date) {
         expect(new Date(entry.sys.createdAt).getTime()).toBe(value.getTime());
     }
     else {
         expect(entry.sys.createdAt).toBe(value);
     }
 }
-function expectUpdatedAt(json: any, entryId: string, value: string | Date) {
+function expectUpdatedAt(json: any, entryId: string, value: string | Date | number) {
     const entry = findEntry(json, entryId);
-    if (value instanceof Date) {
+    if (typeof value === 'number') {
+        expect(new Date(entry.sys.updatedAt).getTime()).toBe(value);
+    }
+    else if (value instanceof Date) {
         expect(new Date(entry.sys.updatedAt).getTime()).toBe(value.getTime());
     }
     else {
@@ -82,7 +88,7 @@ describe("Contentfully metadata", () => {
                 url => expectRequestSelect(url, ...REQUIRED_QUERY_SELECT));
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
         });
     });
@@ -95,7 +101,7 @@ describe("Contentfully metadata", () => {
             const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // verify blog was returned
             expect(result).toBeDefined();
@@ -114,7 +120,7 @@ describe("Contentfully metadata", () => {
             const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // verify legacy support is being used
             const blog = result.items[0];
@@ -134,7 +140,7 @@ describe("Contentfully metadata", () => {
             const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // verify legacy support is being used
             const blog = result.items[0];
@@ -159,7 +165,7 @@ describe("Contentfully metadata", () => {
             const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // verify blog metadata
             const blog = result.items[0];
@@ -180,7 +186,7 @@ describe("Contentfully metadata", () => {
             const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // verify blog metadata
             const blog = result.items[0];
@@ -200,7 +206,7 @@ describe("Contentfully metadata", () => {
             const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // verify metadata
             const blog = result.items[0];
@@ -220,7 +226,7 @@ describe("Contentfully metadata", () => {
                 {experimental: true});
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // verify legacy support is being used
             const blog = result.items[0];
@@ -251,7 +257,7 @@ describe("Contentfully metadata", () => {
                 {experimental: true});
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // verify blog metadata
             const blog = result.items[0];
@@ -272,7 +278,7 @@ describe("Contentfully metadata", () => {
                 {experimental: true});
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // verify metadata
             const blog = result.items[0];
@@ -292,7 +298,7 @@ describe("Contentfully metadata", () => {
                 {experimental: true});
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // verify metadata
             const blog = result.items[0];

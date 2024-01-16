@@ -1,7 +1,6 @@
 // imports
 import "jest";
 import fetch, {RequestInfo} from "node-fetch";
-import {mocked} from "ts-jest/utils";
 import {TestData} from "./TestData";
 import {
     ContentfulClient,
@@ -35,7 +34,7 @@ export class ContentfullyMock {
         beforeEach(() => {
 
             // clear mocks
-            mocked(fetch).mockClear();
+            jest.mocked(fetch).mockClear();
 
             // prepare contentful client
             this._contenfulClient = new ContentfulClient({
@@ -56,7 +55,7 @@ export class ContentfullyMock {
         }
 
         // bind data to mock client
-        mocked(fetch).mockImplementation(async (url: RequestInfo): Promise<any> => {
+        jest.mocked(fetch).mockImplementation(async (url: RequestInfo): Promise<any> => {
 
             // invoke validator (if provided)
             if (requestValidator) {

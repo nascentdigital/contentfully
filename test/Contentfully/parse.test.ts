@@ -32,7 +32,7 @@ describe("Contentfully.getModels()", () => {
             const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // validate
             expect(result).toBeDefined();
@@ -46,7 +46,7 @@ describe("Contentfully.getModels()", () => {
             const contentfully = ContentfullyMock.create(testData);
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // validate
             const model = result.items[0];
