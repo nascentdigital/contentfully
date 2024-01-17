@@ -665,11 +665,15 @@ export class Contentfully {
       ]))
     }
 
-    // remove locale from query, no longer supported by contentful client
-    const {locale: _, ...queryWithoutLocale} = query
+    // remove locale from query if locale='*' is specified,
+    // client throws error if this query option is passed in
+    const cleanedQuery = {...query}
+    if (cleanedQuery.locale === '*') {
+      delete cleanedQuery.locale
+    }
 
     // create normalized clone of user query
-    return assign({}, DEFAULT_QUERY, queryWithoutLocale, {select}) as EntriesQueries<EntrySkeletonType, any>
+    return assign({}, DEFAULT_QUERY, cleanedQuery, {select}) as EntriesQueries<EntrySkeletonType, any>
   }
 }
 
