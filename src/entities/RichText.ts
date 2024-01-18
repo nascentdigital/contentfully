@@ -1,4 +1,4 @@
-import type {Block, Inline, Text} from '@contentful/rich-text-types'
+import type {BLOCKS, INLINES} from '@contentful/rich-text-types'
 import type {JsonObject} from 'type-fest'
 
 
@@ -10,8 +10,8 @@ export interface RichText {
   data?: JsonObject
 }
 
-export namespace RichText {
 
+export namespace RichText {
   export type MarkType = 'bold' | 'underline' | 'code' | 'italic'
-  export type NodeType = (Block | Inline | Text)['nodeType'] | 'embedded-asset-block'
+  export type NodeType = BLOCKS | INLINES | 'text' | 'embedded-asset-block'
 }

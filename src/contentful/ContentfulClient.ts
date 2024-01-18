@@ -1,10 +1,8 @@
 // imports
-import {Scribe} from '@nascentdigital/scribe'
 import {CollectionProp, EntryProps, KeyValueMap, LocaleProps, QueryOptions} from 'contentful-management/types'
 import assign from 'lodash/assign'
 import get from 'lodash/get'
 import keys from 'lodash/keys'
-import nodeFetch from 'node-fetch'
 import {
   AuthenticationError,
   AuthorizationError,
@@ -16,10 +14,6 @@ import {
 } from '../errors'
 import {ContentfulClientOptions} from './ContentfulClientOptions'
 import {IContentfulClient} from './IContentfulClient'
-
-
-// constants
-const log = Scribe.getLog('contentfully:ContentfulClient')
 
 
 // class definition
@@ -34,7 +28,7 @@ export class ContentfulClient implements IContentfulClient {
 
   public constructor(options: ContentfulClientOptions) {
 
-    log.trace('constructing client with options: ', options)
+    // log.trace('constructing client with options: ', options)
 
     // initialize instance variables
     this.options = options
@@ -44,7 +38,7 @@ export class ContentfulClient implements IContentfulClient {
       : ContentfulClient.PRODUCTION_URL
     this._spaceUri = `${serverUrl}/spaces/${options.spaceId}/environments/${options.environmentId || 'master'}`
 
-    log.debug('setting Contentful endpoint to: ', this._spaceUri)
+    // log.debug('setting Contentful endpoint to: ', this._spaceUri)
   }
 
   public getEntry<T extends KeyValueMap>(entryId: string): Promise<EntryProps<T>> {
@@ -61,7 +55,7 @@ export class ContentfulClient implements IContentfulClient {
 
   private async query(path: string, options?: QueryOptions) {
 
-    log.trace('executing query: ', path, options)
+    // log.trace('executing query: ', path, options)
 
     // create request url
     let url = this._spaceUri
@@ -79,7 +73,7 @@ export class ContentfulClient implements IContentfulClient {
       url += key + '=' + encodeURIComponent(query[key])
     })
 
-    log.debug('fetching content with query: ', query)
+    // log.debug('fetching content with query: ', query)
 
     // fetch data (throw if there is an error)
     const fetchClient = this.getFetchClient()
@@ -156,11 +150,6 @@ export class ContentfulClient implements IContentfulClient {
     // or browser
     else if ('fetch' in global) {
       return fetch
-    }
-
-    // or node-fetch
-    else {
-      return nodeFetch
     }
   }
 

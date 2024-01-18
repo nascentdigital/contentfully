@@ -252,3 +252,21 @@ This gets you access to:
 By default, `Contentfully` uses the native fetch client in the browser, otherwise it will use `node-fetch`. Since IE does
 not have `fetch` native to it, use the `fetch` option with something like [`isomorphic-fetch`](https://www.npmjs.com/package/isomorphic-fetch)
 when instantiating `ContentfulClient`.
+
+
+## Todo: add into docs
+
+all locale cases with `getEntry` and `getEntries`:
+```
+1.  [ok]    getEntry('someid')
+2.  [warn]  getEntry('someid', 'en-US')
+3.  [warn]  getEntry('someid', '*')
+4.  [ok]    getEntry('someid', {allLocales: true})
+5.  [error] getEntry('someid', {locale: '*'})
+6.  [ok]    getEntry('someid', {locale: 'en-US'})
+7.  [ok]    getEntry('someid', {locale: 'en-US', allLocales: true}) note: allLocales overrides
+8.  [warn]  getEntries({locale: '*'})
+9.  [ok]    getEntries({locale: 'en-US'})
+10. [ok]    getEntries({}, {allLocales: true})
+11. [ok]    getEntries({locale: 'en-US'}, {allLocales: true}) note: allLocales overrides
+```

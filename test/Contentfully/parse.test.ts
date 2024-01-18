@@ -1,13 +1,10 @@
 // imports
 import "jest";
-import {Scribe} from "@nascentdigital/scribe";
 import {
     ContentfullyMock,
     TestData
 } from "../util";
 
-
-Scribe.setLogLevel("*", "debug");
 
 // suite
 describe("Contentfully.getModels()", () => {

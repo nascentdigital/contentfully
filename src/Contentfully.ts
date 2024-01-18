@@ -1,7 +1,6 @@
 // imports
-import {Scribe} from '@nascentdigital/scribe'
-import type {EntryFields, ContentfulClientApi, EntrySkeletonType, EntriesQueries} from 'contentful'
-import {EntryProps, KeyValueMap, QueryOptions as EntryQueryOptions} from 'contentful-management/types'
+import {type EntryFields, type ContentfulClientApi, type EntrySkeletonType, type EntriesQueries, type CreateClientParams, createClient} from 'contentful'
+import {KeyValueMap, QueryOptions as EntryQueryOptions} from 'contentful-management/types'
 import assign from 'lodash/assign'
 import compact from 'lodash/compact'
 import get from 'lodash/get'
@@ -13,9 +12,10 @@ import keys from 'lodash/keys'
 import map from 'lodash/map'
 import pick from 'lodash/pick'
 import {ContentModel, RichText} from './entities'
-import {MediaTransform, QueryOptions} from './QueryOptions'
+import {GetEntryQueryOptions, MediaTransform, QueryOptions} from './QueryOptions'
 import {QueryResult} from './QueryResult'
-import {type Block, type Inline, type Text, type Node, INLINES, BLOCKS} from '@contentful/rich-text-types'
+import {type Block, type Inline, type Text, helpers} from '@contentful/rich-text-types'
+import {InvalidRequestError} from './errors'
 
 
 // constants
@@ -39,7 +39,6 @@ export const REQUIRED_QUERY_SELECT: ReadonlyArray<string> = [
   QUERY_SELECT_CREATED_AT,
   QUERY_SELECT_UPDATED_AT
 ]
-const log = Scribe.getLog('contentfully:Contentfully')
 
 
 // types
@@ -61,22 +60,45 @@ export class Contentfully {
   public readonly contentfulClient: ContentfulClientApi<'WITHOUT_LINK_RESOLUTION'>
   public readonly options: Readonly<Partial<ContentfullyOptions>>
 
-
-  public constructor(client: ContentfulClientApi<undefined>, options: Readonly<Partial<ContentfullyOptions>> = DEFAULT_OPTIONS) {
-    console.log('linked contentfully client!')
-
+  public constructor(params: CreateClientParams, options: Readonly<Partial<ContentfullyOptions>> = DEFAULT_OPTIONS) {
     // initialize instance variables
-    this.contentfulClient = client.withoutLinkResolution
+    this.contentfulClient = createClient(params).withoutLinkResolution
     this.options = options
   }
 
   public async getEntry<T extends KeyValueMap & ContentModel>(
     entryId: string,
-    locale?: string
-  ): Promise<EntryProps<T>> {
+    options?: string | GetEntryQueryOptions
+  ): Promise<T> {
 
-    // determine if the query is multi-locale
-    const multiLocale = locale !== undefined && locale === '*'
+    let multiLocale = false
+    let locale: string | undefined
+
+    // check if options is the old locale string
+    if (typeof options === 'string') {
+      console.warn("[Contentfully] locale string will not be supported in future versions, please use `{allLocales: true}` or `{locale: 'en-US'}`")
+      multiLocale = options === '*'
+      // if not multi locale then options is a specific locale
+      if (!multiLocale) {
+        locale = options
+      }
+    }
+
+    // otherwise check if options is new object
+    else if (typeof options === 'object') {
+      multiLocale = options.allLocales === true
+      // warn about `allLocales` overriding `locale` if both specified
+      if (options.allLocales && options.locale !== undefined) {
+        console.warn("[Contentfully] `allLocales` overrides `locale`")
+      }
+      // ignore locale option if all locales are selected already
+      if (!multiLocale) {
+        if (options.locale === '*') {
+          throw new InvalidRequestError("locale='*' not supported, please use `{allLocales: true}`")
+        }
+        locale = options.locale
+      }
+    }
 
     // build client based on query.locale
     const client = multiLocale
@@ -84,7 +106,7 @@ export class Contentfully {
       : this.contentfulClient
 
     // fetch entry
-    const entry = await client.getEntry(entryId)
+    const entry = await client.getEntry(entryId, {locale})
 
     // return parsed
     return this._parseEntry({}, entry, [], multiLocale)
@@ -95,22 +117,35 @@ export class Contentfully {
     options: QueryOptions = {}
   ): Promise<QueryResult<T>> {
 
-    // determine if all locales option is specified
-    let multiLocale = query.locale === '*'
+    // determine if using multiple locales
+    let multiLocale = options.allLocales === true
+    // warn about `allLocales` overriding `locale` if both specified
+    if (options.allLocales && query.locale !== undefined) {
+      console.warn("[Contentfully] `options.allLocales` overrides `query.locales`")
+    }
+    // check if the old way of setting all locales is specified
+    if (!multiLocale && query.locale === '*') {
+      multiLocale = true
+      console.warn("[Contentfully] locale='*' will not be supported in future versions, please pass `{allLocales: true}` into options")
+    }
 
     // build client based on query.locale
     const client = multiLocale
       ? this.contentfulClient.withAllLocales
       : this.contentfulClient
 
-    // query for contentful client
-    const contentfulQuery = Contentfully.createQuery(query)
+    // remove locale from query if multiple locales is specified,
+    // Contentful client throws error if locale='*' query option is passed in
+    const cleanedQuery = {...query}
+    if (multiLocale) {
+      delete cleanedQuery.locale
+    }
 
     // create query
-    const entries = await client.getEntries(contentfulQuery)
+    const entries = await client.getEntries(Contentfully.createQuery(cleanedQuery))
 
-    log.debug('parsing Contentful data: ', entries)
-    log.debug('parsing entry collection')
+    // console.debug('[Contentfully] parsing Contentful data: ', entries)
+    // console.debug('[Contentfully] parsing entry collection')
 
     // parse includes
     const links = await this._createLinks(entries, multiLocale, options.mediaTransform)
@@ -165,7 +200,7 @@ export class Contentfully {
 
     // link included assets
     const assets = get(json, 'includes.Asset') || []
-    log.debug(`parsing ${assets.length} assets`)
+    // console.debug(`parsing ${assets.length} assets`)
     for (const asset of assets) {
 
       // TODO: handle non-image assets (e.g. video)
@@ -204,7 +239,7 @@ export class Contentfully {
 
     // link included entries
     const linkedEntries = get(json, 'includes.Entry') || []
-    log.debug(`parsing ${linkedEntries.length} linked entries`)
+    // console.debug(`parsing ${linkedEntries.length} linked entries`)
     for (const entry of linkedEntries) {
       links[entry.sys.id] = {
         _deferred: entry
@@ -213,7 +248,7 @@ export class Contentfully {
 
     // link payload entries
     const mainEntries = get(json, 'items') || []
-    log.debug(`parsing ${mainEntries.length} main entries`)
+    // console.debug(`parsing ${mainEntries.length} main entries`)
     for (const entry of mainEntries) {
       links[entry.sys.id] = {
         _deferred: entry
@@ -286,7 +321,7 @@ export class Contentfully {
     // bind metadata to model
     this._bindMetadata(entry, model)
 
-    log.debug('parsing entry: ', model._id)
+    // console.debug('parsing entry: ', model._id)
 
     // transform entry fields to model
     for (const [key, value] of Object.entries<any>(entry.fields)) {
@@ -428,7 +463,7 @@ export class Contentfully {
       }
 
       // bind text attributes
-      if (isText(item)) {
+      if (helpers.isText(item)) {
         richText.value = item.value
         richText.marks = item.marks.map(mark => mark.type as RichText.MarkType)
       }
@@ -444,7 +479,7 @@ export class Contentfully {
       }
 
       // recursively bind content (if any)
-      if (isBlock(item) || isInline(item)) {
+      if (helpers.isBlock(item) || helpers.isInline(item)) {
         richText.content = this._parseRichTextContent(item.content, links, locale)
       }
 
@@ -665,52 +700,7 @@ export class Contentfully {
       ]))
     }
 
-    // remove locale from query if locale='*' is specified,
-    // client throws error if this query option is passed in
-    const cleanedQuery = {...query}
-    if (cleanedQuery.locale === '*') {
-      delete cleanedQuery.locale
-    }
-
     // create normalized clone of user query
-    return assign({}, DEFAULT_QUERY, cleanedQuery, {select}) as EntriesQueries<EntrySkeletonType, any>
+    return assign({}, DEFAULT_QUERY, query, {select}) as EntriesQueries<EntrySkeletonType, any>
   }
-}
-
-
-// TODO: put somewhere else
-
-/**
- * Tiny replacement for Object.values(object).includes(key) to
- * avoid including CoreJS polyfills
- */
-function hasValue(obj: Record<string, unknown>, value: unknown) {
-  for (const key of Object.keys(obj)) {
-    if (value === obj[key]) {
-      return true;
-    }
-  }
-
-  return false;
-}
-
-/**
- * Checks if the node is an instance of Inline.
- */
-function isInline(node: Node): node is Inline {
-  return hasValue(INLINES, node.nodeType);
-}
-
-/**
- * Checks if the node is an instance of Block.
- */
-function isBlock(node: Node): node is Block {
-  return hasValue(BLOCKS, node.nodeType);
-}
-
-/**
- * Checks if the node is an instance of Text.
- */
-function isText(node: Node): node is Text {
-  return node.nodeType === 'text';
 }
