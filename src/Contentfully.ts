@@ -19,9 +19,6 @@ import {InvalidRequestError} from './errors'
 
 
 // constants
-export const DEFAULT_OPTIONS: Readonly<ContentfullyOptions> = {
-  experimental: false
-}
 export const DEFAULT_QUERY: Readonly<any> = {
   include: 10,
   limit: 1000
@@ -42,11 +39,6 @@ export const REQUIRED_QUERY_SELECT: ReadonlyArray<string> = [
 
 
 // types
-export type ContentfullyOptions = {
-  experimental: boolean;
-};
-
-
 interface Locale {
   name: string;
   code: string;
@@ -58,12 +50,10 @@ interface Locale {
 export class Contentfully {
 
   public readonly contentfulClient: ContentfulClientApi<'WITHOUT_LINK_RESOLUTION'>
-  public readonly options: Readonly<Partial<ContentfullyOptions>>
 
-  public constructor(params: CreateClientParams, options: Readonly<Partial<ContentfullyOptions>> = DEFAULT_OPTIONS) {
+  public constructor(params: CreateClientParams) {
     // initialize instance variables
     this.contentfulClient = createClient(params).withoutLinkResolution
-    this.options = options
   }
 
   public async getEntry<T extends KeyValueMap & ContentModel>(
@@ -73,11 +63,14 @@ export class Contentfully {
 
     let multiLocale = false
     let locale: string | undefined
+    let mediaTransform: MediaTransform | undefined
+    let flattenLocales = true
 
     // check if options is the old locale string
     if (typeof options === 'string') {
       console.warn("[Contentfully] locale string will not be supported in future versions, please use `{allLocales: true}` or `{locale: 'en-US'}`")
       multiLocale = options === '*'
+
       // if not multi locale then options is a specific locale
       if (!multiLocale) {
         locale = options
@@ -87,10 +80,14 @@ export class Contentfully {
     // otherwise check if options is new object
     else if (typeof options === 'object') {
       multiLocale = options.allLocales === true
+      mediaTransform = options.mediaTransform
+      flattenLocales = options.flatten ?? true // defaults to true
+
       // warn about `allLocales` overriding `locale` if both specified
       if (options.allLocales && options.locale !== undefined) {
-        console.warn("[Contentfully] `allLocales` overrides `locale`")
+        console.info("[Contentfully] `allLocales` overrides `locale`")
       }
+
       // ignore locale option if all locales are selected already
       if (!multiLocale) {
         if (options.locale === '*') {
@@ -108,8 +105,17 @@ export class Contentfully {
     // fetch entry
     const entry = await client.getEntry(entryId, {locale})
 
-    // return parsed
-    return this._parseEntry({}, entry, [], multiLocale)
+    // parse includes
+    const links = await this._createLinks([entry], multiLocale, mediaTransform)
+
+    // split locales to top level objects
+    if (multiLocale && flattenLocales) {
+      const locales = await this.contentfulClient.getLocales()
+      return this._flattenLocales(locales, [entry])
+    }
+    else {
+      return this._parseEntry({}, entry, links, multiLocale)
+    }
   }
 
   public async getEntries<T extends KeyValueMap & ContentModel>(
@@ -121,7 +127,7 @@ export class Contentfully {
     let multiLocale = options.allLocales === true
     // warn about `allLocales` overriding `locale` if both specified
     if (options.allLocales && query.locale !== undefined) {
-      console.warn("[Contentfully] `options.allLocales` overrides `query.locales`")
+      console.info("[Contentfully] `options.allLocales` overrides `query.locales`")
     }
     // check if the old way of setting all locales is specified
     if (!multiLocale && query.locale === '*') {
@@ -143,9 +149,6 @@ export class Contentfully {
 
     // create query
     const entries = await client.getEntries(Contentfully.createQuery(cleanedQuery))
-
-    // console.debug('[Contentfully] parsing Contentful data: ', entries)
-    // console.debug('[Contentfully] parsing entry collection')
 
     // parse includes
     const links = await this._createLinks(entries, multiLocale, options.mediaTransform)
@@ -366,23 +369,11 @@ export class Contentfully {
     // bind metadata to model
     const sys = entry.sys
     model._id = sys.id
-
-    // use experimental metadata format
-    if (this.options.experimental) {
-      model._metadata = {
-        type: sys.contentType.sys.id,
-        revision: sys.revision,
-        createdAt: sys.createdAt ? new Date(sys.createdAt).getTime() : 0,
-        updatedAt: sys.updatedAt ? new Date(sys.updatedAt).getTime() : 0
-      }
-    }
-
-    // or use legacy format
-    else {
-      model._type = sys.contentType.sys.id
-      model._revision = sys.revision
-      model._createdAt = sys.createdAt
-      model._updatedAt = sys.updatedAt
+    model._metadata = {
+      type: sys.contentType.sys.id,
+      revision: sys.revision,
+      createdAt: sys.createdAt ? new Date(sys.createdAt).getTime() : 0,
+      updatedAt: sys.updatedAt ? new Date(sys.updatedAt).getTime() : 0
     }
   }
 

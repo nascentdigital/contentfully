@@ -1,13 +1,10 @@
 // imports
 import "jest";
-import {
-    ContentfullyMock,
-    findAsset,
-    findEntry,
-    TestData
-} from "../util";
+import {findAsset, findEntry, TestData} from "../util";
 import {Media, RichText} from "../../src/entities";
 import {Contentfully} from '../../src';
+import {mockParams} from '../data/mockParams';
+
 
 // types
 type EmbeddedEntryBlockNode = 'embedded-entry-block'
@@ -32,67 +29,38 @@ type EmbeddedEntryInline = {
     nodeType: EmbeddedEntryInlineNode
 }
 
-// suite
+
+// setup test data
+const testData: TestData = TestData.for({
+    resultFormat: "collection",
+    resultCount: "one",
+    resultDepth: "deep",
+    sharedRefs: false,
+    richText: true
+});
+
+
+// setup mock contentful
+jest.mock("contentful", () => {
+    const originalModule = jest.requireActual("contentful")
+
+    return {
+        __esModule: true,
+        ...originalModule,
+        createClient: jest.fn(() => ({
+            withoutLinkResolution: {
+                getEntries: jest.fn(() => testData.data)
+            }
+        }))
+    }
+});
+
+
+// tests
 describe("Contentfully richtext parser", () => {
-    // initialize mock
-    ContentfullyMock.initialize();
-
-    // define data
-    const testData: TestData = TestData.for({
-        resultFormat: "collection",
-        resultCount: "one",
-        resultDepth: "deep",
-        sharedRefs: false,
-        richText: true
-    });
-
-    let contentfully: Contentfully;
-
-    beforeEach(async () => {
-        // prepare mock
-        contentfully = ContentfullyMock.create(testData)
-    });
-
-    const getExpectedEmbeddedEntryBlock = (testData: TestData): { embeddedEntry: any, nodeIndex: number }  => {
-        const { fields } = findEntry(testData.data, 'embeddedEntryBlockId', true);
-        return {
-            embeddedEntry: fields,
-            nodeIndex: 0
-        }
-    }
-
-    const getExpectedEmbeddedAsset = (testData: TestData): { embeddedAsset: any, nodeIndex: number }  => {
-        const { fields } = findAsset(testData.data, 'embeddedAssetBlockId', true);
-
-        return {
-            embeddedAsset: fields,
-            nodeIndex: 3
-        }
-    }
-
-    const getExpectedShallowEmbeddedInlineEntry = (testData: TestData): { embeddedInlineEntry: any, nodeIndex: number, contentIndex: number }  => {
-        const { fields } = findEntry(testData.data, 'shallowEmbeddedInlineEntryId', true);
-        return {
-            embeddedInlineEntry: fields,
-            nodeIndex: 1,
-            contentIndex: 1
-        }
-    }
-
-    const getExpectedDeeplyEmbeddedInlineEntry = (testData: TestData): { embeddedInlineEntry: any, nodeIndex: number, contentIndex: number }  => {
-        const { fields } = findEntry(testData.data, 'deeplyEmbeddedInlineEntryId', true);
-        return {
-            embeddedInlineEntry: fields,
-            nodeIndex: 2,
-            contentIndex: 1
-        }
-    }
-
-    const getRawRichTextField = (testData: TestData): RichText => {
-        return testData.data.items[0].fields.richText
-    }
 
     it("should replace reference with matching content for an embedded-entry-block rich text node", async () => {
+        const contentfully = new Contentfully(mockParams);
 
         // get referenced object that should be embedded from test data
         const { embeddedEntry, nodeIndex } = getExpectedEmbeddedEntryBlock(testData);
@@ -107,6 +75,7 @@ describe("Contentfully richtext parser", () => {
     });
 
     it("should replace reference with matching content for an embedded-asset-block rich text node", async () => {
+        const contentfully = new Contentfully(mockParams);
 
         // get referenced object that should be embedded from test data
         const { embeddedAsset, nodeIndex } = getExpectedEmbeddedAsset(testData);
@@ -132,6 +101,7 @@ describe("Contentfully richtext parser", () => {
     });    
 
     it("should replace reference with matching content for a shallow embedded-entry-inline rich text node", async () => {
+        const contentfully = new Contentfully(mockParams);
 
         // get referenced object that should be embedded from test data
         const { embeddedInlineEntry, nodeIndex, contentIndex } = getExpectedShallowEmbeddedInlineEntry(testData);
@@ -146,6 +116,7 @@ describe("Contentfully richtext parser", () => {
     });
 
     it("should replace reference with matching content for a deeply embedded-entry-inline rich text node", async () => {
+        const contentfully = new Contentfully(mockParams);
 
         // get referenced object that should be embedded from test data
         const { embeddedInlineEntry, nodeIndex, contentIndex } = getExpectedDeeplyEmbeddedInlineEntry(testData);
@@ -161,6 +132,7 @@ describe("Contentfully richtext parser", () => {
     });
 
     it("should not overwrite the original properties of the richtext field", async () => {
+        const contentfully = new Contentfully(mockParams);
         
         const result = await contentfully.getEntries({});
 
@@ -179,3 +151,44 @@ describe("Contentfully richtext parser", () => {
         }
     });
 })
+
+
+// helpers
+const getExpectedEmbeddedEntryBlock = (testData: TestData): { embeddedEntry: any, nodeIndex: number }  => {
+    const { fields } = findEntry(testData.data, 'embeddedEntryBlockId', true);
+    return {
+        embeddedEntry: fields,
+        nodeIndex: 0
+    }
+}
+
+const getExpectedEmbeddedAsset = (testData: TestData): { embeddedAsset: any, nodeIndex: number }  => {
+    const { fields } = findAsset(testData.data, 'embeddedAssetBlockId', true);
+
+    return {
+        embeddedAsset: fields,
+        nodeIndex: 3
+    }
+}
+
+const getExpectedShallowEmbeddedInlineEntry = (testData: TestData): { embeddedInlineEntry: any, nodeIndex: number, contentIndex: number }  => {
+    const { fields } = findEntry(testData.data, 'shallowEmbeddedInlineEntryId', true);
+    return {
+        embeddedInlineEntry: fields,
+        nodeIndex: 1,
+        contentIndex: 1
+    }
+}
+
+const getExpectedDeeplyEmbeddedInlineEntry = (testData: TestData): { embeddedInlineEntry: any, nodeIndex: number, contentIndex: number }  => {
+    const { fields } = findEntry(testData.data, 'deeplyEmbeddedInlineEntryId', true);
+    return {
+        embeddedInlineEntry: fields,
+        nodeIndex: 2,
+        contentIndex: 1
+    }
+}
+
+const getRawRichTextField = (testData: TestData): RichText => {
+    return testData.data.items[0].fields.richText
+}

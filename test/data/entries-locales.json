@@ -1,0 +1,344 @@
+{
+  "sys": {
+      "type": "Array"
+  },
+  "total": 1,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+      {
+          "metadata": {
+              "tags": []
+          },
+          "sys": {
+              "space": {
+                  "sys": {
+                      "type": "Link",
+                      "linkType": "Space",
+                      "id": "3viuren4us1n"
+                  }
+              },
+              "id": "contactContent",
+              "type": "Entry",
+              "createdAt": "2022-11-23T00:56:14.688Z",
+              "updatedAt": "2023-06-22T19:27:46.656Z",
+              "environment": {
+                  "sys": {
+                      "id": "preview",
+                      "type": "Link",
+                      "linkType": "Environment"
+                  }
+              },
+              "revision": 8,
+              "contentType": {
+                  "sys": {
+                      "type": "Link",
+                      "linkType": "ContentType",
+                      "id": "contactContent"
+                  }
+              }
+          },
+          "fields": {
+              "ref": {
+                  "en-US": "Contact Content"
+              },
+              "seo": {
+                  "en-US": {
+                      "sys": {
+                          "type": "Link",
+                          "linkType": "Entry",
+                          "id": "BsHPkmdsG7xXBtQ9SK9OK"
+                      }
+                  }
+              },
+              "title": {
+                  "de": "Kontaktieren Sie uns",
+                  "en-US": "Get in touch with us",
+                  "fr": "Contactez-nous",
+                  "pl": "Skontaktuj się z nami",
+                  "tr": "Bize Ulaşın"
+              },
+              "subtitle": {
+                  "en-US": "Looking for a digital customer experience (CX) partner? Give us a shout!"
+              },
+              "linksTitle": {
+                  "de": "Interesse an TELUS International?",
+                  "fr": "N'hésitez pas à nous contacter",
+                  "pl": "Zapraszamy do kontaktu",
+                  "tr": "Bizimle iletişime geçmekten çekinmeyin"
+              },
+              "linksSubtitle": {
+                  "de": "Nehmen Sie Kontakt mit uns auf",
+                  "fr": "Vous recherchez un partenaire Digital Customer Experience (CX) ? Appelez-nous!",
+                  "pl": "Szukasz partnera Digital Customer Experience (CX)? Zadzwoń do nas!",
+                  "tr": "Dijital Müşteri Deneyimi (CX) iş ortağı mı arıyorsunuz? Bizi arayın!"
+              },
+              "salesLinkTitle": {
+                  "de": "Vertrieb kontaktieren",
+                  "en-US": "Contact sales",
+                  "fr": "Contacter notre service commercial",
+                  "pl": "Skontaktuj się z działem sprzedaży",
+                  "tr": "Satış ekibimiz ile irtibat kurun"
+              },
+              "salesLinkDescription": {
+                  "de": "Lassen Sie uns darüber sprechen, wie wir Sie und Ihre Kunden unterstützen können.",
+                  "en-US": "Let’s talk about how we can support your customers, or schedule a demo to see our Digital CX and/or AI Data solutions in action.",
+                  "fr": "Comment pouvons-nous soutenir vos clients.",
+                  "pl": "Porozmawiajmy o tym, jak możemy wspierać Twoich klientów.",
+                  "tr": "Müşterilerinize nasıl destek olabileceğimizi konuşalım."
+              },
+              "salesLinkLabel": {
+                  "de": "Kontakt",
+                  "en-US": "Contact us",
+                  "fr": "Contact",
+                  "pl": "Kontakt",
+                  "tr": "İletişim"
+              },
+              "careersLinkTitle": {
+                  "de": "Jobs & Karriere ",
+                  "en-US": "Jobs & careers",
+                  "fr": "Emplois et carrières",
+                  "pl": "Praca i kariera",
+                  "tr": "İş ve kariyer"
+              },
+              "careersLinkDescription": {
+                  "de": "Teil unseres Teams zu werden klingt reizvoll? Jetzt einen unserer Standorte auswählen, um zu beginnen.",
+                  "en-US": "Explore employment opportunities or contact the talent acquisition team for assistance with job applications or HR related inquiries.",
+                  "fr": "Souhaitez-vous travailler dans l'un de nos bureaux ?  Choisissez l'un de nos emplacements pour commencer.",
+                  "pl": "Chcesz pracować w jednym z naszych miedzynarodowych biur? Wybierz jedną z naszych lokalizacji, aby rozpocząć.",
+                  "tr": "Global ofislerimizden birinde çalışmak ister misiniz? Başlamak için lokasyonlarımızdan birini seçin."
+              },
+              "careersLinkLabel": {
+                  "de": "Karriere",
+                  "en-US": "Career portal",
+                  "fr": "Carrières",
+                  "pl": "Kariera",
+                  "tr": "Kariyer"
+              },
+              "talentAcquisitionLinkLabel": {
+                  "en-US": "Career support"
+              },
+              "aiCommunitySupportLinkTitle": {
+                  "en-US": "AI Community support"
+              },
+              "paypalRefundLinkTitle": {
+                  "en-US": "PayPal refund"
+              },
+              "mediaInquiriesLabel": {
+                  "en-US": "Media inquiries"
+              },
+              "telusMobilitySupportLinkTitle": {
+                  "en-US": "TELUS Mobility support"
+              },
+              "ccpaLinkTitle": {
+                  "en-US": "California Consumer Privacy Act"
+              },
+              "salesTitle": {
+                  "de": "Vertrieb kontaktieren",
+                  "en-US": "Contact sales",
+                  "fr": "Contacter notre service commercial",
+                  "pl": "Skontaktuj się z działem sprzedaży",
+                  "tr": "Satış ekibimiz ile irtibat kurun"
+              },
+              "salesSubtitle": {
+                  "de": "Lassen Sie uns darüber sprechen, wie wir Ihr Unternehmen unterstützen können.",
+                  "en-US": "Let's discuss your customer experience and/or digital IT needs.",
+                  "fr": "Echangeons sur vos expériences clients et/ou sur vos besoins en informatique numérique.",
+                  "pl": "Porozmawiajmy o Twoim doświadczeniu klienta i/lub potrzebach w zakresie cyfrowego IT.",
+                  "tr": "Müşteri deneyiminizi ve/veya dijital BT ihtiyaçlarınızı görüşelim."
+              },
+              "demoTitle": {
+                  "en-US": "Schedule a demo"
+              },
+              "demoSubtitle": {
+                  "en-US": "Tell us what you'd like to see in digital CX innovation - Bots, RPA, AI Training Data - and more."
+              },
+              "ccpaTitle": {
+                  "en-US": "California Consumer Privacy Act"
+              },
+              "ccpaSubtitle": {
+                  "en-US": "If you’re a California resident and would like to make some changes to your personal information, let us know."
+              },
+              "countryFieldName": {
+                  "de": "Land ",
+                  "en-US": "Country",
+                  "fr": "pays",
+                  "pl": "Kraj",
+                  "tr": "ülke"
+              },
+              "countryFieldPlaceholder": {
+                  "de": "Land auswählen...",
+                  "en-US": "Select Country...",
+                  "fr": "Sélectionnez un pays...",
+                  "pl": "Wybierz kraj...",
+                  "tr": "ülke seçin..."
+              },
+              "phoneFieldName": {
+                  "de": "Telefon",
+                  "en-US": "Phone",
+                  "fr": "Téléphone",
+                  "pl": "Telefon",
+                  "tr": "telefon"
+              },
+              "firstNameFieldName": {
+                  "de": "Vorname",
+                  "en-US": "First name",
+                  "fr": "Prénom",
+                  "pl": "Imię",
+                  "tr": "İsim"
+              },
+              "lastNameFieldName": {
+                  "de": "Nachname",
+                  "en-US": "Last name",
+                  "fr": "Nom de famille",
+                  "pl": "Nazwisko",
+                  "tr": "Soyadı"
+              },
+              "businessEmailFieldName": {
+                  "de": "Ihre geschäftliche E-Mail ",
+                  "en-US": "Business email",
+                  "fr": "Votre e-mail professionnel",
+                  "pl": "Twój biznesowy adres e-mail",
+                  "tr": "İş e-postanız"
+              },
+              "businessEmailFieldPlaceholder": {
+                  "de": "name@company.com",
+                  "en-US": "name@company.com",
+                  "fr": "name@company.com",
+                  "pl": "name@company.com",
+                  "tr": "name@company.com"
+              },
+              "companyNameFieldName": {
+                  "de": "Firmenname",
+                  "en-US": "Company name",
+                  "fr": "Nom de la société",
+                  "pl": "Nazwa firmy",
+                  "tr": "Şirket Adı"
+              },
+              "industryFieldName": {
+                  "de": "Industrien",
+                  "en-US": "Industry",
+                  "fr": "les industries",
+                  "pl": "Branże",
+                  "tr": "Sektör"
+              },
+              "industryFieldPlaceholder": {
+                  "de": "Branche auswählen...",
+                  "en-US": "Select Industry...",
+                  "fr": "Sélectionnez les secteurs d'activité...",
+                  "pl": "Wybierz branże...",
+                  "tr": "Sektörleri seçin..."
+              },
+              "helpCompanyFieldName": {
+                  "de": "Lassen Sie uns wissen, wie wir Ihrem Unternehmen helfen können",
+                  "en-US": "Let us know how we can help your company, or which type of solution demo you would like to see",
+                  "fr": "Comment pouvons-nous aider votre entreprise",
+                  "pl": "Daj nam znać, jak możemy pomóc Twojej firmie",
+                  "tr": "İşletmenize nasıl yardımcı olabileceğimizi bize bildirin"
+              },
+              "helpCompanyFieldPlaceholder": {
+                  "de": "Bitte geben Sie Details zu Ihrem Interesse an einer Zusammenarbeit mit uns an",
+                  "en-US": "Please provide any details about your interest in working with us",
+                  "fr": "Veuillez nous décrire vos besoins",
+                  "pl": "Podaj szczegóły dotyczące Twojego zainteresowania współpracą z nami",
+                  "tr": "Lütfen bizimle çalışmak için ilgilendiğiniz alanları belirtin"
+              },
+              "contactUs": {
+                  "de": "Kontaktieren Sie uns",
+                  "en-US": "Contact Us",
+                  "fr": "Contactez-nous",
+                  "pl": "Skontaktuj się z nami",
+                  "tr": "Bize Ulaşın"
+              },
+              "privacyPolicy": {
+                  "de": "Wir verwenden diese Informationen ausschließlich für die beabsichtigten Zwecke der Kontaktaufnahme mit Ihnen aufgrund Ihrer Anfrage, mit jemandem von TELUS International zu sprechen. Diese Informationen können an unsere verbundenen Unternehmen bei TELUS International Inc., TELUS International U.S. Corp. und TELUS International Europe weitergegeben werden, um Ihre Anfrage ordnungsgemäß zu beantworten.\n\nFür weitere Details erfahren Sie hier mehr über unsere [Datenschutzrichtlinie für Kunden](https://www.telusinternational.com/de/privacypolicy \"Datenschutzrichtlinie für Kunden\").",
+                  "en-US": "We will use this information solely for its intended purposes of contacting you based on your request to speak to someone from TELUS International. This information may be shared with our affiliates at TELUS International Inc., TELUS International U.S. Corp., and TELUS International Europe in order to properly respond to your request.\n\nFor further details, learn more about our [Customer Privacy Policy](https://www.telusinternational.com/privacypolicy \"Customer Privacy Policy\") here.",
+                  "fr": "Nous n'utiliserons vos informations que dans le but de vous contacter au sujet de votre demande. Ces informations peuvent être partagées avec nos sociétés affiliées à TELUS International Inc., TELUS International US Corp. et TELUS International Europe pour répondre à vos attentes.\n\nPour plus de détails, en savoir plus sur notre politique de confidentialité des clients [ici](https://www.telusinternational.com/fr/privacypolicy \"ici\"). ",
+                  "pl": "Wykorzystamy te informacje wyłącznie w zamierzonym celu skontaktowania się z Tobą w sprawie Twojej prośby o rozmowę z osobą kontaktową w TELUS International. Informacje te mogą być udostępniane naszym podmiotom stowarzyszonym w TELUS International Inc., TELUS International US Corp. i TELUS International Europe w celu odpowiedzi na twoją prośbę.\n\nAby uzyskać więcej informacji przeczytaj więcej o naszej polityce prywatności klienta [tutaj](https://www.telusinternational.com/pl/privacypolicy \"tutaj\").\n",
+                  "tr": "Bu bilgileri yalnızca, TELUS International'daki bir kişiyle konuşma talebinizle ilgili olarak sizinle iletişim kurmak amacıyla kullanacağız. Talebinizi tam anlamıyla karşılayabilmek için bu bilgiler, TELUS International Inc., TELUS International US Corp. ve TELUS International Europe'daki bağlı şirketlerimizle paylaşılabilir.\n\nDaha fazla ayrıntı için, burada müşteri gizlilik politikamız hakkında daha fazla bilgiye [ulaşabilirsiniz](https://www.telusinternational.com/tr/privacypolicy \"ulaşabilirsiniz\")."
+              },
+              "mqlPrivacyPolicyNonAi": {
+                  "en-US": "In providing your information, you agree to receive company news, solutions and thought leadership content from TELUS International on topics that cover digital CX innovation and best practices. We do not sell your information to third parties and you may unsubscribe at any time.\n\nFor further details, learn more about our [Customer Privacy Policy](https://www.telusinternational.com/privacypolicy)."
+              },
+              "mqlPrivacyPolicyAi": {
+                  "en-US": "In providing your information, you agree to receive company news, solutions and thought leadership content from TELUS International on topics that cover AI data innovation and best practices. We do not sell your information to third parties and you may unsubscribe at any time.\n\nFor further details, learn more about our [Customer Privacy Policy](https://www.telusinternational.com/privacypolicy)."
+              },
+              "whereLocatedFieldName": {
+                  "en-US": "Where are you located?"
+              },
+              "whereLocatedFieldPlaceholder": {
+                  "en-US": "Select location..."
+              },
+              "subscribeCtaNonAi": {
+                  "en-US": "I would also like to subscribe to receive content on AI data innovation and best practices."
+              },
+              "subscribeCtaAi": {
+                  "en-US": "I would also like to subscribe to receive content on digital CX innovation and best practices."
+              }
+          }
+      }
+  ],
+  "includes": {
+      "Entry": [
+          {
+              "metadata": {
+                  "tags": []
+              },
+              "sys": {
+                  "space": {
+                      "sys": {
+                          "type": "Link",
+                          "linkType": "Space",
+                          "id": "3viuren4us1n"
+                      }
+                  },
+                  "id": "BsHPkmdsG7xXBtQ9SK9OK",
+                  "type": "Entry",
+                  "createdAt": "2019-01-29T15:39:17.252Z",
+                  "updatedAt": "2022-04-11T22:14:17.988Z",
+                  "environment": {
+                      "sys": {
+                          "id": "preview",
+                          "type": "Link",
+                          "linkType": "Environment"
+                      }
+                  },
+                  "revision": 15,
+                  "contentType": {
+                      "sys": {
+                          "type": "Link",
+                          "linkType": "ContentType",
+                          "id": "seo"
+                      }
+                  }
+              },
+              "fields": {
+                  "title": {
+                      "de": "Kontaktieren Sie uns | TELUS International",
+                      "en-US": "Contact us | TELUS International",
+                      "fr": "Contactez-nous | TELUS International",
+                      "pl": "Skontaktuj się z nami | TELUS International",
+                      "ro": "Contactați-ne | TELUS International",
+                      "tr": "Bize Ulaşın | TELUS İnternational"
+                  },
+                  "description": {
+                      "de": "Kontaktieren Sie TELUS International. Treten Sie online, telefonisch oder in den sozialen Medien mit uns in Kontakt.",
+                      "en-US": "\nContact TELUS International. Find out how to connect with us online, by phone or on social media.",
+                      "fr": "Contactez TELUS International. Découvrez comment nous contacter en ligne, par téléphone ou sur les réseaux sociaux.",
+                      "pl": "Skontaktuj się z TELUS International. Dowiedz się, jak skontaktować się z nami online, telefonicznie lub w mediach społecznościowych.",
+                      "ro": "Contactați TELUS International. Aflați cum să luați legătura cu noi online, prin telefon sau pe social media.",
+                      "tr": "TELUS International'a başvurun. Bizimle online, telefon veya sosyal medya aracılığıyla nasıl iletişime geçeceğinizi bulabilirsiniz."
+                  },
+                  "keywords": {
+                      "en-US": [
+                          "get in touch",
+                          "connect with us",
+                          "contact",
+                          "support"
+                      ]
+                  }
+              }
+          }
+      ]
+  }
+}
