@@ -9,6 +9,14 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/nascentdigital/contentfully/badge.svg)](https://snyk.io/test/github/nascentdigital/contentfully)
 
 
+## Table of Contents
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Prerequisites](#prerequisites)
+4. [Basic Ussage](#basic-usage)
+5. [Migration Guide](#migration-guide)
+
+
 ## Features
 - Transforms Contentful responses into simple / flat JavaScript objects.
 - Stripping of metadata, retaining the basics that you need (e.g. ID, contentType, and fields).
@@ -17,14 +25,13 @@
 - Supports custom transforms of assets URLs to allow caching or rewrites.
 - Supports full [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/search-parameters),
   including custom environments and preview servers.
-- Typescript 4 support.
+- Typescript 5 support.
 - React Native support.
-- **Customizable retries when Contentful rate-limit throttling occurs.**
 
 
 ## Installation
 
-Current stable release (`1.x`)
+Current stable release (`3.x`)
 
 ```sh
 $ npm i -s contentfully
@@ -47,58 +54,43 @@ You can get these by doing the following after logging into the
 
 ## Basic Usage
 
-Getting started is really easy. First you'll need to create and configure a
-`ContentfulClient` instance.
+Contentfully takes the same parameters as the Contentful client ([`CreateClientParams`](https://github.com/contentful/contentful.js/blob/a39c783e9db0b725d2109d5016b9e33ac01a2312/lib/contentful.ts#L23)). The following are the most used parameters:
 
- | Option             | Type    | Required? | Default            |
- |--------------------|----------|-----------|--------------------|
- | accessToken        | string   | YES       |                    |
- | spaceId            | string   | YES       |                    |
- | environmentId      | string   | NO        | master             |
- | preview            | boolean  | NO        | false              |
- | fetch              | Function | NO        | fetch / node-fetch |
- | onRateLimitError   | Function | NO        | () => false        |
+| Option             | Type     | Required? | Default            |
+|--------------------|----------|-----------|--------------------|
+| accessToken        | string   | YES       |                    |
+| space              | string   | YES       |                    |
+| environment        | string   | NO        | master             |
+| host               | string   | NO        | cdn.contentful.com |
 
- Once configured, pass the client into a `Contentfully` instance:
+Create an instance of `Contentfully`:
 
-```javascript
-import {ContentfulClient, Contentfully} from "contentfully";
-
-// create the contentful client (we can use this later)
-const contentfulClient = new ContentfulClient({
-
-    // credentials for the space
-    accessToken: "YOUR_API_KEY",
-    spaceId:     "YOUR_SPACE_ID",
-
-    // setup a handler to auto-retry when a rate-limit error occurs
-    onRateLimitError: ExponentialBackoffHandler.create()
-});
+```typescript
+import {Contentfully} from 'contentfully'
 
 // create a Contentfully instance
-const contentfully = new Contentfully(contentfulClient);
+const contentfully = new Contentfully({
+  accessToken: 'YOUR_API_KEY',
+  space: 'YOUR_SPACE_ID'
+})
 ```
 
-Next, we can now query Contentful using Contenfully's `getModels()` method.
-The first argument to `getModels()` is a query object that takes the same query
+Next, we can now query Contentful using Contenfully's `getEntries()` method.
+The first argument to `getEntries()` is a query object that takes the same query
 parameters as a direct [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/search-parameters)
 call.
 
-```javascript
-async function query() {
+```typescript
+// get the 3rd page of my model objects
+// can also pass in optional type for the models getting fetched
+const data = await contentfully.getEntries<MyModel>({
+    content_type: 'myModel',
+    skip: 20,
+    limit: 10
+})
 
-    // get the 3rd page of my model objects
-    const json = await contentfully.getModels({
-        content_type: "myModel",
-        skip: 20,
-        limit: 10
-    });
-
-    // print the result
-    console.log(json);
-};
-
-query();
+// print the result
+console.log(data)
 ```
 
 Contentfully will execute the query, recursively linking any assets or embedded
@@ -136,30 +128,43 @@ It should look something like this:
 
 ```
 
-### Localization with the wildcard locale parameter
-Just as with the Content Delivery API, you can query entries to retrieve all localized versions of an entry by using the 'wildcard' `locale=*` parameter.
+### Localization
+Just as with the Content Delivery API, you can query entries to retrieve a single locale or all localized versions of an entry.
 
-**However** the response is different from Contentful API.  The locales will be lifted to top level objects so each locale can be used holistically.  Please refer to the example response below.  The default locale from the space will be used to for values not defined in any locale.  Fallback locales are implemented for lifted responses following Contentful's "Considerations on fallback locales" documentation.  Flattening can be disabled for a query by passing the _Query Option_ `flatten=false`
+```typescript
+// single entry with specific locale
+const modelWithAllLocales = await contentfully.getEntry('myModel_id', {locale: 'en-US'})
 
+// mutliple entries with specific locale
+const modelsWithAllLocales = await contentfully.getEntries({
+    content_type: 'myModel',
+    skip: 20,
+    limit: 10,
+    locale: 'en-US'
+})
 
-```javascript
-async function query() {
+// single entry with all locales
+const modelWithAllLocales = await contentfully.getEntry('myModel_id', {allLocales: true})
 
-    const json = await contentfully.getModels({
-        content_type: "myModel",
-        skip: 20,
-        limit: 10,
-        locale: '*'
-    });
-
-    // print the result
-    console.log(json);
-};
-
-query();
+// mutliple entries with all locales
+const modelsWithAllLocales = await contentfully.getEntries({
+    content_type: 'myModel',
+    skip: 20,
+    limit: 10
+}, {allLocales: true})
 ```
 
-Which would return models mapped by locale:
+By default locales will be lifted to top level objects so each locale can be used holistically. Please refer to the example response below. The default locale from the space will be used to for values not defined in any locale. Fallback locales are implemented for lifted responses following Contentful's "Considerations on fallback locales" documentation. Flattening can be disabled for a query by passing the `{flatten: false}`
+
+```typescript
+// disable locale flattening for single entry
+await contentfully.getEntry('myModel_id', {allLocales: true, flatten: false})
+
+// disable locale flattening for multiple locales
+await contentfully.getEntries({query}, {allLocales: true, flatten: false})
+```
+
+Example output with (from `getEntries`) flattened locales:
 ```javascript
 {
     total: 10,
@@ -227,28 +232,71 @@ Which would return models mapped by locale:
 ```
 
 
-## Enabling `experimental` features
+## Migration Guide
 
-There are a couple of early-access features that have been included in the `v1.x.x` builds which you can enable as follows:
+This guide goes over migrating from `v2.x` to `v3.x`.
 
-```javascript
-// create a Contentfully instance with experimental features enabled
-const contentfully = new Contentfully(contentfulClient, {
-    experimental: true
+### Initializing
+
+Initializing Contentfully in `v2.x` was:
+```typescript
+// create the contentful client
+const contentfulClient = new ContentfulClient({
+
+  // credentials for the space
+  accessToken: "YOUR_API_KEY",
+  spaceId:     "YOUR_SPACE_ID",
+
+  // setup a handler to auto-retry when a rate-limit error occurs
+  onRateLimitError: ExponentialBackoffHandler.create()
 });
+
+// create a Contentfully instance
+const contentfully = new Contentfully(contentfulClient);
 ```
 
-This gets you access to:
+In `v3.x` settings are passed directly
 
-- Consolidates metadata (i.e. `type`, `revision`, `createdAt`, `updatedAt`) into a new `_metadata` property of each
-  entity, with dates translated to native Javascript `Date` objects.
-- *More to come...*
+> [!NOTE]
+> Also note that keys no longer have `Id`. For example `spaceId` is now `space`.
 
+```typescript
+// Contentful settings passed directly into contentfully
+const contentfully = new Contentfully({
+  accessToken: "YOUR_API_KEY",
+  space: "YOUR_SPACE_ID"
+})
+```
 
-## IE Support
+`onRateLimitError` is no longer supported however by default, on error, the request is tried again up to 5 times. This behaviour can be changed by passing in options `retryOnError` and `retryLimit`.
 
-> **TL;DR** - We don't support IE.
+In `v3.x` experimental behaviour is now the default behaviour.
 
-By default, `Contentfully` uses the native fetch client in the browser, otherwise it will use `node-fetch`. Since IE does
-not have `fetch` native to it, use the `fetch` option with something like [`isomorphic-fetch`](https://www.npmjs.com/package/isomorphic-fetch)
-when instantiating `ContentfulClient`.
+### Localization
+
+Get single locale for entry:
+```typescript
+// v2.x
+const model = await contentfully.getEntry('myModel_id', 'en-US')
+
+// v3.x
+const model = await contentfully.getEntry('myModel_id', {locale: 'en-US'})
+```
+
+Get all locales for entry:
+```typescript
+// v2.x
+const model = await contentfully.getEntry('myModel_id', '*')
+
+// v3.x
+const model = await contentfully.getEntry('myModel_id', {allLocales: true})
+```
+
+Get all locales for entries:
+```typescript
+// v2.x
+const model = await contentfully.getEntries({locale: '*'})
+
+// v3.x
+const model = await contentfully.getEntries({query}, {allLocales: true})
+```

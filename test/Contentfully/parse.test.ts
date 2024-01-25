@@ -1,38 +1,45 @@
 // imports
 import "jest";
-import {Scribe} from "@nascentdigital/scribe";
-import {
-    ContentfullyMock,
-    TestData
-} from "../util";
+import {TestData} from "../util";
+import {Contentfully} from '../../src';
+import {mockParams} from '../data/mockParams';
 
 
-Scribe.setLogLevel("*", "debug");
+// setup test data
+const testData: TestData = TestData.for({
+    resultFormat: "collection",
+    resultCount: "one",
+    resultDepth: "deep",
+    sharedRefs: true,
+    recursive: true
+});
+
+
+// setup mock
+jest.mock("contentful", () => {
+    const originalModule = jest.requireActual("contentful")
+
+    return {
+        __esModule: true,
+        ...originalModule,
+        createClient: jest.fn(() => ({
+            withoutLinkResolution: {
+                getEntries: jest.fn(() => testData.data)
+            }
+        }))
+    }
+});
+
 
 // suite
 describe("Contentfully.getModels()", () => {
-
-    // initialize mock
-    ContentfullyMock.initialize();
-
     describe("recursive data", () => {
 
-        // define data
-        const testData: TestData = TestData.for({
-            resultFormat: "collection",
-            resultCount: "one",
-            resultDepth: "deep",
-            sharedRefs: true,
-            recursive: true
-        });
-
         test("should parse without errors", async () => {
-
-            // prepare mock
-            const contentfully = ContentfullyMock.create(testData);
+            const contentfully = new Contentfully(mockParams)
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // validate
             expect(result).toBeDefined();
@@ -41,12 +48,10 @@ describe("Contentfully.getModels()", () => {
         });
 
         test("should not leave any residue (e.g. _model or _deferred)", async () => {
-
-            // prepare mock
-            const contentfully = ContentfullyMock.create(testData);
+            const contentfully = new Contentfully(mockParams)
 
             // execute query
-            const result = await contentfully.getModels({});
+            const result = await contentfully.getEntries({});
 
             // validate
             const model = result.items[0];

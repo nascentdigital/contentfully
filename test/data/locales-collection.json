@@ -1,0 +1,87 @@
+{
+  "sys": {
+      "type": "Array"
+  },
+  "total": 7,
+  "skip": 0,
+  "limit": 1000,
+  "items": [
+      {
+          "code": "en-US",
+          "name": "US English",
+          "default": true,
+          "fallbackCode": null,
+          "sys": {
+              "id": "17rehHkrTGvXUM585Oz0fG",
+              "type": "Locale",
+              "version": 1
+          }
+      },
+      {
+          "code": "zh-Hans",
+          "name": "Chinese (Simplified)",
+          "default": false,
+          "fallbackCode": "en-US",
+          "sys": {
+              "id": "0vqa1kKOEyjoMo7vdsnrHa",
+              "type": "Locale",
+              "version": 1
+          }
+      },
+      {
+          "code": "de",
+          "name": "German",
+          "default": false,
+          "fallbackCode": "en-US",
+          "sys": {
+              "id": "42WPo4VPzekUDovofdrIFm",
+              "type": "Locale",
+              "version": 1
+          }
+      },
+      {
+          "code": "fr",
+          "name": "French",
+          "default": false,
+          "fallbackCode": "en-US",
+          "sys": {
+              "id": "5D6X88YkVQ00BH3QScKEIX",
+              "type": "Locale",
+              "version": 1
+          }
+      },
+      {
+          "code": "tr",
+          "name": "Turkish",
+          "default": false,
+          "fallbackCode": "en-US",
+          "sys": {
+              "id": "67uUfSnhdvrPtotWo2HWje",
+              "type": "Locale",
+              "version": 1
+          }
+      },
+      {
+          "code": "pl",
+          "name": "Polish",
+          "default": false,
+          "fallbackCode": "en-US",
+          "sys": {
+              "id": "6pJhxDHeOg34NtAckidAiQ",
+              "type": "Locale",
+              "version": 1
+          }
+      },
+      {
+          "code": "ro",
+          "name": "Romanian",
+          "default": false,
+          "fallbackCode": "en-US",
+          "sys": {
+              "id": "5IyDY2p8xZQvQep0xf4aui",
+              "type": "Locale",
+              "version": 1
+          }
+      }
+  ]
+}

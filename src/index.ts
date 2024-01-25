@@ -1,4 +1,3 @@
-export * from "./contentful";
 export * from "./entities";
 export * from "./errors";
 export * from "./Contentfully";
