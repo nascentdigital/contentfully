@@ -1,6 +1,6 @@
 {
     "name": "contentfully",
-    "version": "3.0.0-canary",
+    "version": "3.0.0",
     "description": "A simple but performant REST client for Contentful.",
     "keywords": [
         "contentful",
