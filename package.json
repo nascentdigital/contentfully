@@ -1,6 +1,6 @@
 {
     "name": "contentfully",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "A simple but performant REST client for Contentful.",
     "keywords": [
         "contentful",
@@ -25,22 +25,19 @@
         "dev": "tsc -w"
     },
     "dependencies": {
-        "contentful": "^10.6.16",
-        "contentful-management": "^7.44.2",
+        "contentful": "^10.12.3",
+        "contentful-management": "^11.27.3",
         "lodash": "^4.17.21"
     },
     "devDependencies": {
-        "@contentful/rich-text-types": "^16.3.0",
-        "@jest/test-sequencer": "^27.0.5",
-        "@types/jest": "^29.5.11",
-        "@types/lodash": "^4.14.170",
+        "@contentful/rich-text-types": "^16.5.2",
+        "@jest/test-sequencer": "^29.7.0",
+        "@types/jest": "^29.5.12",
+        "@types/lodash": "^4.17.5",
         "jest": "^29.7.0",
-        "ts-jest": "^29.1.1",
-        "type-fest": "^1.4.0",
-        "typescript": "^5.3.3"
-    },
-    "engines": {
-        "node": ">=10.0.0"
+        "ts-jest": "^29.1.5",
+        "type-fest": "^4.20.1",
+        "typescript": "^5.5.2"
     },
     "browserslist": [
         "> 1%",
