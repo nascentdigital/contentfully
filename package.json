@@ -1,6 +1,6 @@
 {
     "name": "contentfully",
-    "version": "3.0.2",
+    "version": "3.0.3",
     "description": "A simple but performant REST client for Contentful.",
     "keywords": [
         "contentful",
@@ -34,6 +34,7 @@
         "@jest/test-sequencer": "^29.7.0",
         "@types/jest": "^29.5.12",
         "@types/lodash": "^4.17.5",
+        "@types/json-patch": "^0.0.33",
         "jest": "^29.7.0",
         "ts-jest": "^29.1.5",
         "type-fest": "^4.20.1",
