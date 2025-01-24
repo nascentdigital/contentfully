@@ -13,7 +13,7 @@
 1. [Features](#features)
 2. [Installation](#installation)
 3. [Prerequisites](#prerequisites)
-4. [Basic Ussage](#basic-usage)
+4. [Basic Usage](#basic-usage)
 5. [Migration Guide](#migration-guide)
 
 

@@ -264,17 +264,28 @@ export class Contentfully {
 
   private async _toMedia(sys: any, fields: any, mediaTransform?: MediaTransform) {
     // capture media file
-    const file = fields.file
     const description = fields.description
     const title = fields.title
+
+    let url, contentType, size
+    let dimensions = { height: 0, width: 0 }
+
+    // Account for possibility of missing file, if user removes file from media
+    if (fields.file) {
+      url = fields.file.url
+      contentType = fields.file.contentType
+      dimensions = pick(fields.file.details.image, ['width', 'height'])
+      size =  fields.file.details.size
+    }
+
     let media = {
       _id: sys.id,
-      url: file.url,
+      url,
       title: title,
       description: description,
-      contentType: file.contentType,
-      dimensions: pick(file.details.image, ['width', 'height']),
-      size: file.details.size,
+      contentType,
+      dimensions,
+      size,
       version: sys.revision
     }
 
@@ -447,7 +458,7 @@ export class Contentfully {
 
       const {nodeType, data} = item
 
-      
+
       // create baseline rich text
       const richText: RichText = {
         nodeType
@@ -657,7 +668,7 @@ export class Contentfully {
   }
 
   private static createQuery(query: Readonly<any>): EntriesQueries<EntrySkeletonType, any> {
-    
+
     // create default select (if required)
     let select: string[]
     if (!query.select) {
