@@ -1,6 +1,6 @@
 {
     "name": "contentfully",
-    "version": "3.0.5",
+    "version": "3.1.0",
     "description": "A simple but performant REST client for Contentful.",
     "keywords": [
         "contentful",
@@ -25,10 +25,10 @@
         "dev": "tsc -w"
     },
     "dependencies": {
-        "contentful": "^10.12.3",
+        "@types/json-patch": "^0.0.33",
+        "contentful": "^11.4.6",
         "contentful-management": "^11.27.3",
-        "lodash": "^4.17.21",
-        "@types/json-patch": "^0.0.33"
+        "lodash": "^4.17.21"
     },
     "devDependencies": {
         "@contentful/rich-text-types": "^16.5.2",
