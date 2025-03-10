@@ -274,8 +274,11 @@ export class Contentfully {
     if (fields.file) {
       url = fields.file.url
       contentType = fields.file.contentType
-      dimensions = pick(fields.file.details.image, ['width', 'height'])
-      size =  fields.file.details.size
+
+      if (fields.file.details) {
+        dimensions = pick(fields.file.details.image, ['width', 'height'])
+        size =  fields.file.details.size
+      }
     }
 
     let media = {
