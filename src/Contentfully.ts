@@ -340,6 +340,10 @@ export class Contentfully {
 
     // console.debug('parsing entry: ', model._id)
 
+    if (!entry.fields) {
+      return model
+    }
+
     // transform entry fields to model
     for (const [key, value] of Object.entries<any>(entry.fields)) {
 
