@@ -31,7 +31,7 @@
 
 ## Installation
 
-Current stable release (`3.x`)
+Current stable release (`4.x`)
 
 ```sh
 $ npm i -s contentfully
@@ -230,7 +230,6 @@ Example output with (from `getEntries`) flattened locales:
     }
 }
 ```
-
 
 ## Migration Guide
 

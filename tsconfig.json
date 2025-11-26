@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
-        "target": "ES5",
-        "module": "commonjs",
+        "target": "es6",
+        "module": "es6",
         "lib": [
             "es2017",
             "es2015",
@@ -17,6 +17,7 @@
         "types": [],
         "esModuleInterop": true,
         "resolveJsonModule": true,
+        "moduleResolution": "node",
         "skipLibCheck": true
     },
     "include": [
