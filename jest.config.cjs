@@ -9,7 +9,7 @@ module.exports = {
         "/node_modules/",
         "/legacy/"
     ],
-    testSequencer: "./test/Sequencer.js",
+    testSequencer: "./test/Sequencer.cjs",
     globals: {
         "ts-jest": {
             tsConfig: "./tsconfig.test.json"
